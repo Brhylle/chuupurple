@@ -1,16 +1,34 @@
 <template>
-  <div class="flex justify-center mt-8" style="background-image: url('C:\Users\acer\chuupurple\src\assets\Home.png');">
-    <h1> Components </h1>
+  <div class="flex justify-center mt-8" :style="{ backgroundImage: backgroundImage }">
+    <h1>Components</h1>
     <div class="tooltip">
-      <button v-tooltip="'Hover Me'" class="btn-purple">Hover over me</button>
-      <span class="tooltiptext tooltip-purple" v-tooltip.bottom="'Tooltip content'">ToolTip</span>
+      <button @mouseover="showTooltip = true" @mouseleave="showTooltip = false" class="btn-purple">Hover over me</button>
+      <span v-show="showTooltip" class="tooltiptext tooltip-purple">Tooltip content</span>
     </div>
     
     <div class="textarea-container">
-      <textarea placeholder="Enter text here" class="textarea-purple"></textarea>
+      <textarea v-model="textInput" placeholder="Enter text here" :class="{ 'textarea-purple': true }"></textarea>
+    </div>
+
+    <div class="number-input-container">
+      <label for="numberInput" class="text-purple">Enter a number: </label>
+      <input type="number" id="numberInput" v-model.number="numberInput" :class="{ 'input-purple': true }" min="0" max="100">
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      textInput: '',
+      numberInput: null,
+      showTooltip: false,
+      backgroundImage: "url('@/assets/Home.png')"
+    };
+  }
+};
+</script>
 
 <style>
 .tooltip {
