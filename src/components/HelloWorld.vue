@@ -1,58 +1,73 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-    <p>
-      For a guide and recipes on how to configure / customize this project,<br>
-      check out the
-      <a href="https://cli.vuejs.org" target="_blank" rel="noopener">vue-cli documentation</a>.
-    </p>
-    <h3>Installed CLI Plugins</h3>
-    <ul>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel" target="_blank" rel="noopener">babel</a></li>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-eslint" target="_blank" rel="noopener">eslint</a></li>
-    </ul>
-    <h3>Essential Links</h3>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank" rel="noopener">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank" rel="noopener">Forum</a></li>
-      <li><a href="https://chat.vuejs.org" target="_blank" rel="noopener">Community Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank" rel="noopener">Twitter</a></li>
-      <li><a href="https://news.vuejs.org" target="_blank" rel="noopener">News</a></li>
-    </ul>
-    <h3>Ecosystem</h3>
-    <ul>
-      <li><a href="https://router.vuejs.org" target="_blank" rel="noopener">vue-router</a></li>
-      <li><a href="https://vuex.vuejs.org" target="_blank" rel="noopener">vuex</a></li>
-      <li><a href="https://github.com/vuejs/vue-devtools#vue-devtools" target="_blank" rel="noopener">vue-devtools</a></li>
-      <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
-    </ul>
+  <div class="flex justify-center mt-8" style="background-image: url('C:\Users\acer\chuupurple\src\assets\Home.png');">
+    <h1> Components </h1>
+    <div class="tooltip">
+      <button v-tooltip="'Hover Me'" class="btn-purple">Hover over me</button>
+      <span class="tooltiptext tooltip-purple" v-tooltip.bottom="'Tooltip content'">ToolTip</span>
+    </div>
+    
+    <div class="textarea-container">
+      <textarea placeholder="Enter text here" class="textarea-purple"></textarea>
+    </div>
   </div>
 </template>
 
-<script>
-export default {
-  name: 'HelloWorld',
-  props: {
-    msg: String
-  }
-}
-</script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
+<style>
+.tooltip {
+  position: relative;
   display: inline-block;
-  margin: 0 10px;
+  cursor: pointer;
+  margin-right: 10px; 
 }
-a {
-  color: #42b983;
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #6a0dad; 
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+.btn-purple {
+  background-color: #6a0dad; 
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-purple:hover {
+  background-color: #4c0287; 
+}
+
+.textarea-container {
+  margin-top: 10px; 
+}
+
+.textarea-purple {
+  width: 300px;
+  height: 100px;
+  background-color: transparent; 
+  border: 2px solid #6a0dad; 
+  color: black; 
+  border-radius: 4px;
+  padding: 8px;
+  resize: none; 
 }
 </style>
