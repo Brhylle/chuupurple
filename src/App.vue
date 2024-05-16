@@ -14,7 +14,13 @@ export default {
 </script>
 
 <style>
+html {
+  background-color: #C0BADE; /* Set the background color of the entire website */
+}
+
 #app {
+  
+  
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
