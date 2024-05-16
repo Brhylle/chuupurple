@@ -1,8 +1,6 @@
 <template>
   <div class="gab-app-container">
-    <div class="gab-info-message">
-      You can navigate between tabs using arrow keys (left/right) or numpad keys (1, 2, 3, 4).
-    </div>
+
     <div class="gab-tabs">
       <div class="gab-tab-headers">
         <button :class="{ active: gabActiveTab === 'mission' }" @click="gabActiveTab = 'mission'" class="gab-archivo-black-regular">Mission</button>
