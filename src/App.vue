@@ -1,14 +1,14 @@
 <template>
-  <TabsCards msg="Welcome to Your Vue.js App"/>
+  <TabsComponent msg="Welcome to Your Vue.js App"/>
 </template>
 
 <script>
-import TabsCards from './components/TabsCards.vue'
+import TabsComponent from './components/TabsComponent.vue'
 
 export default {
   name: 'App',
   components: {
-    TabsCards
+    TabsComponent
   }
 }
 </script>
