@@ -1,8 +1,8 @@
 <template>
   <div id="app">
-    <input type="checkbox" id="toggle" v-model="isDarkMode">
-    <div class="display">
-      <label for="toggle">
+    <input type="checkbox" id="dlc-toggle" v-model="isDarkMode">
+    <div class="dlc-display">
+      <label id="dlc-label" for="dlc-toggle">
         <DarkToggleButton :isDarkMode="isDarkMode" @update:isDarkMode="toggleMode"></DarkToggleButton>
       </label>
     </div>
@@ -38,11 +38,11 @@ export default {
   transition: 0.5s;
 }
 
-input {
+#dlc-toggle {
   display: none;
 }
 
-.display {
+.dlc-display {
   width: 100%;
   height: 100vh;
   display: flex;
@@ -51,7 +51,7 @@ input {
   background: #CEC8EF;
 }
 
-label {
+#dlc-label {
   width: 400px;
   height: 200px;
   border-radius: 999px;
@@ -61,21 +61,21 @@ label {
   position: relative;
 }
 
-label:active .circle {
+#dlc-label:active .dlc-circle {
   width: 200px;
 }
 
-input[type=checkbox]:checked + .display {
+#dlc-toggle[type=checkbox]:checked + .dlc-display {
   background: #161037de;
 }
 
 /* dark mode label-background */
-input[type=checkbox]:checked + .display label {
+#dlc-toggle[type=checkbox]:checked + .dlc-display #dlc-label {
   background: rgb(50,23,77);
   box-shadow: 10px 10px 30px rgba(25, 11, 37, 0.5) inset;
 }
 
-input[type=checkbox]:checked + .display label .circle {
+#dlc-toggle[type=checkbox]:checked + .dlc-display #dlc-label .dlc-circle {
   left: 100%;
   transform: translate(-110%, -50%);
   background: #bb8affc9;
@@ -83,17 +83,17 @@ input[type=checkbox]:checked + .display label .circle {
     -10px -10px 30px rgba(63, 28, 93, 0.5) inset;
 }
 
-input[type=checkbox]:checked + .display label .circle .sun {
+#dlc-toggle[type=checkbox]:checked + .dlc-display #dlc-label .dlc-circle .dlc-sun {
   margin-top: 150%;
   opacity: 0;
 }
 
-input[type=checkbox]:checked + .display label .circle .moon {
+#dlc-toggle[type=checkbox]:checked + .dlc-display #dlc-label .dlc-circle .dlc-moon {
   margin-top: 0%;
   opacity: 1;
 }
 
-.circle {
+.dlc-circle {
   width: 160px;
   height: 160px;
   border-radius: 99px;
