@@ -15,7 +15,7 @@ export default {
 
 <style>
 html {
-  background-color: #C0BADE; /* Set the background color of the entire website */
+  background-color: #C0BADE; 
 }
 
 #app {

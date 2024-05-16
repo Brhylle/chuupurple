@@ -1,18 +1,18 @@
 <template>
-  <div class="app-container">
+  <div class="gab-app-container">
     <div class="gab-tabs">
       <div class="gab-tab-headers">
-        <button :class="{ active: gabActiveTab === 'mission' }" @click="gabActiveTab = 'mission'" class="archivo-black-regular">Mission</button>
-        <button :class="{ active: gabActiveTab === 'vision' }" @click="gabActiveTab = 'vision'" class="archivo-black-regular">Vision</button>
+        <button :class="{ active: gabActiveTab === 'mission' }" @click="gabActiveTab = 'mission'" class="gab-archivo-black-regular">Mission</button>
+        <button :class="{ active: gabActiveTab === 'vision' }" @click="gabActiveTab = 'vision'" class="gab-archivo-black-regular">Vision</button>
       </div>
       <div class="gab-tab-content">
-        <div v-if="gabActiveTab === 'mission'" class="gab-card" ref="missionCard">
+        <div v-if="gabActiveTab === 'mission'" class="gab-card" ref="gabMissionCard">
           <h2>Mission</h2>
-          <p ref="missionParagraph" class="ubuntu-mono-regular">At ChuPurple, our mission is to foster a vibrant community of coding enthusiasts within the Pamantasan ng Lungsod ng Pasig (PLP) campus. We are dedicated to providing a supportive environment where students can enhance their coding skills, collaborate on innovative projects, and explore diverse opportunities in the field of technology.<br><br>Through our programs and activities, we aim to empower students to become proficient coders, critical thinkers, and effective problem solvers. We strive to cultivate a culture of continuous learning, creativity, and excellence in software development.<br><br>At ChuPurple, we are committed to promoting inclusivity, diversity, and teamwork. We believe in harnessing the collective talents and strengths of our members to tackle challenges and achieve success together.<br><br>Together, we aspire to make a positive impact in the PLP community and beyond, contributing to the advancement of technology and shaping the future of coding education.</p>
+          <p ref="gabMissionParagraph" class="gab-ubuntu-mono-regular">At ChuPurple, our mission is to foster a vibrant community of coding enthusiasts within the Pamantasan ng Lungsod ng Pasig (PLP) campus. We are dedicated to providing a supportive environment where students can enhance their coding skills, collaborate on innovative projects, and explore diverse opportunities in the field of technology.<br><br>Through our programs and activities, we aim to empower students to become proficient coders, critical thinkers, and effective problem solvers. We strive to cultivate a culture of continuous learning, creativity, and excellence in software development.<br><br>At ChuPurple, we are committed to promoting inclusivity, diversity, and teamwork. We believe in harnessing the collective talents and strengths of our members to tackle challenges and achieve success together.<br><br>Together, we aspire to make a positive impact in the PLP community and beyond, contributing to the advancement of technology and shaping the future of coding education.</p>
         </div>
-        <div v-if="gabActiveTab === 'vision'" class="gab-card" ref="visionCard">
+        <div v-if="gabActiveTab === 'vision'" class="gab-card" ref="gabVisionCard">
           <h2>Vision</h2>
-          <p ref="visionParagraph" class="ubuntu-mono-regular">Our vision is to create a dynamic and innovative coding community within PLP, inspiring students to excel in technology and contribute to global advancements. We envision ChuPurple as a hub for creativity, collaboration, and growth, where students are empowered to unleash their full potential and lead transformative change in the digital world.</p>
+          <p ref="gabVisionParagraph" class="gab-ubuntu-mono-regular">Our vision is to create a dynamic and innovative coding community within PLP, inspiring students to excel in technology and contribute to global advancements. We envision ChuPurple as a hub for creativity, collaboration, and growth, where students are empowered to unleash their full potential and lead transformative change in the digital world.</p>
         </div>
       </div>
     </div>
@@ -28,23 +28,23 @@ export default {
     };
   },
   mounted() {
-    this.adjustCardWidth();
+    this.gabAdjustCardWidth();
   },
   methods: {
-    adjustCardWidth() {
-      const paragraphWidth = this.gabActiveTab === 'mission' ? this.$refs.missionParagraph.offsetWidth : this.$refs.visionParagraph.offsetWidth;
+    gabAdjustCardWidth() {
+      const gabParagraphWidth = this.gabActiveTab === 'mission' ? this.$refs.gabMissionParagraph.offsetWidth : this.$refs.gabVisionParagraph.offsetWidth;
      
       if (this.gabActiveTab === 'mission') {
-        this.$refs.missionCard.style.width = `${paragraphWidth + 40}px`;
+        this.$refs.gabMissionCard.style.width = `${gabParagraphWidth + 40}px`;
       } else {
-        this.$refs.visionCard.style.width = `${paragraphWidth + 40}px`;
+        this.$refs.gabVisionCard.style.width = `${gabParagraphWidth + 40}px`;
       }
     }
   },
   watch: {
     gabActiveTab() {
       this.$nextTick(() => {
-        this.adjustCardWidth();
+        this.gabAdjustCardWidth();
       });
     }
   }
@@ -58,7 +58,7 @@ html {
   background-color: #C0BADE; 
 }
 
-.app-container {
+.gab-app-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -128,19 +128,19 @@ html {
 }
 
 
-.archivo-black-regular {
+.gab-archivo-black-regular {
   font-family: "Archivo Black", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 
-.ubuntu-mono-regular {
+.gab-ubuntu-mono-regular {
   font-family: "Ubuntu Mono", monospace;
   font-weight: 400;
   font-style: normal;
 }
 
-.ubuntu-mono-bold {
+.gab-ubuntu-mono-bold {
   font-family: "Ubuntu Mono", monospace;
   font-weight: 700;
   font-style: normal;
