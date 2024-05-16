@@ -1,4 +1,4 @@
-# chuupurple
+# chuupurple test
 
 ## Project setup
 ```
