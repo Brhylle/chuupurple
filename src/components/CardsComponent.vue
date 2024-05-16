@@ -54,38 +54,34 @@ Together, we aspire to make a positive impact in the PLP community and beyond, c
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 40vh; 
+  height: 40vh;
 }
 
 .gab-card {
   position: absolute;
-  top: 60px; 
-  left: 50%; 
+  top: 60px;
+  left: 50%;
   transform: translateX(-50%);
-  border: 3px solid #29045D;
   border-radius: 18px;
-  box-shadow: 
-    0 0 0 2px rgba(0, 0, 0, 0.15), /* Top border */
-    0 0 0 4px #DDDBFF, /* Inner highlight */
-    0 0 0 6px rgba(0, 0, 0, 0.15), /* Outer shadow */
-    0 0 0 8px #29045D; /* Bottom border */
-  padding: 50px; 
+  padding: 50px;
   background-color: #DDDBFF;
-  max-width: 1200px; 
-}
+  max-width: 1200px;
+  box-shadow: inset 0 0 20px rgba(0,0,0,0.5); 
 
+
+}
 
 .gab-card h2 {
   font-family: "Archivo Black", sans-serif;
   margin-top: 0;
-  color: #160326; 
-  font-size: 24px; 
+  color: #160326;
+  font-size: 24px;
 }
 
 .gab-card p {
   margin: 0;
-  color: #160326; 
-  font-size: 18px; 
+  color: #160326;
+  font-size: 18px;
 }
 
 .gab-ubuntu-mono-regular {
@@ -93,4 +89,5 @@ Together, we aspire to make a positive impact in the PLP community and beyond, c
   font-weight: 400;
   font-style: normal;
 }
+
 </style>
