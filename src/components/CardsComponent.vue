@@ -61,14 +61,19 @@ Together, we aspire to make a positive impact in the PLP community and beyond, c
   position: absolute;
   top: 60px; 
   left: 50%; 
-  transform: translateX(-50%); 
-  border: 3px solid #29045D; 
+  transform: translateX(-50%);
+  border: 3px solid #29045D;
   border-radius: 18px;
-  box-shadow: 10px 14px 18px rgba(0, 0, 0, 0.1);
+  box-shadow: 
+    0 0 0 2px rgba(0, 0, 0, 0.15), /* Top border */
+    0 0 0 4px #DDDBFF, /* Inner highlight */
+    0 0 0 6px rgba(0, 0, 0, 0.15), /* Outer shadow */
+    0 0 0 8px #29045D; /* Bottom border */
   padding: 50px; 
   background-color: #DDDBFF;
   max-width: 1200px; 
 }
+
 
 .gab-card h2 {
   font-family: "Archivo Black", sans-serif;
