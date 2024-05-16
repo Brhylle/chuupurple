@@ -6,16 +6,19 @@
         <DarkToggleButton :isDarkMode="isDarkMode" @update:isDarkMode="toggleMode"></DarkToggleButton>
       </label>
     </div>
+    <TabsComponent msg="Welcome to Your Vue.js App"/>
   </div>
 </template>
 
 <script>
 import DarkToggleButton from './components/DarkToggleButton.vue';
+import TabsComponent from './components/TabsComponent.vue'
 
 export default {
   name: 'App',
   components: {
-    DarkToggleButton
+    DarkToggleButton,
+    TabsComponent
   },
   data() {
     return {
@@ -31,6 +34,7 @@ export default {
 </script>
 
 <style>
+/* Styles from the second template */
 * {
   margin: 0;
   padding: 0;
