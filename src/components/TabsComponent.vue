@@ -1,11 +1,17 @@
 <template>
   <div class="gab-app-container">
+    <div class="gab-info-message">
+      You can navigate between tabs using arrow keys (left/right) or numpad keys (1, 2, 3, 4).
+    </div>
     <div class="gab-tabs">
       <div class="gab-tab-headers">
         <button :class="{ active: gabActiveTab === 'mission' }" @click="gabActiveTab = 'mission'" class="gab-archivo-black-regular">Mission</button>
         <button :class="{ active: gabActiveTab === 'vision' }" @click="gabActiveTab = 'vision'" class="gab-archivo-black-regular">Vision</button>
-        
+        <button :class="{ active: gabActiveTab === 'newTab1' }" @click="gabActiveTab = 'newTab1'" class="gab-archivo-black-regular">New Tab</button>
+        <button :class="{ active: gabActiveTab === 'newTab2' }" @click="gabActiveTab = 'newTab2'" class="gab-archivo-black-regular">New Tab</button>
+
       </div>
+      
     </div>
   </div>
 </template>
@@ -18,6 +24,49 @@ export default {
       gabActiveTab: 'mission'
     };
   },
+  methods: {
+    changeTab(tab) {
+      this.gabActiveTab = tab;
+    },
+    handleKeyPress(event) {
+      const key = event.key;
+      if (key === 'ArrowLeft') {
+        this.moveLeft();
+      } else if (key === 'ArrowRight') {
+        this.moveRight();
+      } else if (parseInt(key) >= 1 && parseInt(key) <= 4) {
+        const index = parseInt(key) - 1;
+        const tabs = ['mission', 'vision', 'newTab1', 'newTab2'];
+        if (index < tabs.length) {
+          this.gabActiveTab = tabs[index];
+        }
+      }
+    },
+    moveLeft() {
+      const tabs = ['mission', 'vision', 'newTab1', 'newTab2'];
+      const currentIndex = tabs.indexOf(this.gabActiveTab);
+      if (currentIndex > 0) {
+        this.gabActiveTab = tabs[currentIndex - 1];
+      } else {
+        this.gabActiveTab = tabs[tabs.length - 1];
+      }
+    },
+    moveRight() {
+      const tabs = ['mission', 'vision', 'newTab1', 'newTab2'];
+      const currentIndex = tabs.indexOf(this.gabActiveTab);
+      if (currentIndex < tabs.length - 1) {
+        this.gabActiveTab = tabs[currentIndex + 1];
+      } else {
+        this.gabActiveTab = tabs[0];
+      }
+    }
+  },
+  mounted() {
+    document.addEventListener('keydown', this.handleKeyPress);
+  },
+  beforeUnmount() {
+    document.removeEventListener('keydown', this.handleKeyPress);
+  }
 };
 </script>
 
@@ -26,6 +75,19 @@ export default {
 
 html {
   background-color: #C0BADE; 
+}
+.gab-info-message {
+  background-color: #e0e0e0;
+  margin-top: 30px;
+  color: #333;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .gab-app-container {
@@ -43,9 +105,10 @@ html {
 }
 
 .gab-tab-headers {
-  display: flex;
+  flex-wrap: nowrap;
   justify-content: center;
   margin-bottom: -10px;
+  
 }
 
 .gab-tab-headers button {
@@ -57,12 +120,17 @@ html {
   transition: background-color 0.3s ease;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
-  font-size: 18px; 
+  font-size: 18px;
+  box-shadow: inset -10px -5px 10px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.3s ease; 
 }
 
 .gab-tab-headers button.active {
   background-color: #29045D; 
+  font-size: 20px; /* Increase font size */
+  transform: scale(1); /* Increase size slightly */
 }
+
 
 .gab-archivo-black-regular {
   font-family: "Archivo Black", sans-serif;
