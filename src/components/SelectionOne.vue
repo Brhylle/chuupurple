@@ -16,6 +16,10 @@
       <audio v-if="currentAudio" ref="audioPlayer" :src="currentAudio" autoplay></audio>
     </div>
 
+    <div class="song_name_rjt" v-if="selectedSong">
+      <h5>{{ getCurrentSongName() }}</h5>
+    </div>
+
     <div class="controls_rjt" v-if="currentAudio">
       <button @click="togglePlay">{{ isPlaying ? "Pause" : "Play" }}</button>
       <label for="volumeSliderRJT">Volume</label>
@@ -73,37 +77,37 @@ export default {
       songs: [
         {
           id: "song1",
-          name: "Song 1",
+          name: "Taylor Swift - Everything Has Changed",
           imgSrc: require("@/assets/Taylor Swift - Everything Has Changed.jpg"),
           audioSrc: require("@/assets/Taylor Swift - Everything Has Changed.mp3"),
         },
         {
           id: "song2",
-          name: "Song 2",
+          name: "BINI - Pantropiko",
           imgSrc: require("@/assets/BINI - Pantropiko.jpg"),
           audioSrc: require("@/assets/BINI - Pantropiko.mp3"),
         },
         {
           id: "song3",
-          name: "Song 3",
+          name: "TJ Monterde - Palagi",
           imgSrc: require("@/assets/TJ Monterde - Palagi.jpg"),
           audioSrc: require("@/assets/TJ Monterde - Palagi.mp3"),
         },
         {
           id: "song4",
-          name: "Song 4",
+          name: "Juan Karlos - Buwan",
           imgSrc: require("@/assets/Juan Karlos - Buwan.jpg"),
           audioSrc: require("@/assets/Juan Karlos - Buwan.mp3"),
         },
         {
           id: "song5",
-          name: "Song 5",
+          name: "Le Sserafim - Smart",
           imgSrc: require("@/assets/Le Sserafim - Smart.jpg"),
           audioSrc: require("@/assets/Le Sserafim - Smart.mp3"),
         },
         {
           id: "song6",
-          name: "Song 6",
+          name: "Orange & Lemons - Heaven Knows",
           imgSrc: require("@/assets/Orange & Lemons - Heaven Knows.jpg"),
           audioSrc: require("@/assets/Orange & Lemons - Heaven Knows.mp3"),
         },
@@ -172,6 +176,10 @@ export default {
         this.currentPage--;
       }
     },
+    getCurrentSongName() {
+      const currentSong = this.songs.find((song) => song.id === this.selectedSong);
+      return currentSong ? currentSong.name : "";
+    },
   },
   mounted() {
     const audio = this.$refs.audioPlayer;
@@ -190,7 +198,7 @@ export default {
   max-width: 800px;
   padding: 30px;
   border-radius: 20px;
-  background: #c0bade; /* Light Mode Background Color */
+  background: #cba2dd; /* Light Mode Primary Color */
   box-shadow: 0 8px 30px rgba(123, 97, 255, 0.3);
   text-align: center;
   font-family: "Poppins", sans-serif;
@@ -221,6 +229,13 @@ export default {
   border-radius: 10px;
 }
 
+.song_name_rjt {
+  margin: 10px 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #29045d; /* Light Mode Accent Color */
+}
+
 .controls_rjt {
   margin: 10px 0;
   display: flex;
@@ -241,7 +256,7 @@ export default {
 }
 
 .controls_rjt button:hover {
-  background-color: #cba2dd; /* Light Mode Primary Color */
+  background-color: #c4c2e5; /* Light Mode Secondary Color Hover */
 }
 
 .controls_rjt label {
@@ -263,7 +278,7 @@ export default {
 .controls_rjt input[type="range"]::-webkit-slider-runnable-track {
   width: 100%;
   height: 5px;
-  background: linear-gradient(to right, #cba2dd var(--value), #ddd var(--value)); /* Light Mode Primary Color */
+  background: linear-gradient(to right, #dddbff var(--value), #ddd var(--value)); /* Light Mode Secondary Color */
   border-radius: 5px;
 }
 
@@ -271,7 +286,7 @@ export default {
   -webkit-appearance: none;
   width: 10px;
   height: 20px;
-  background: #cba2dd; /* Light Mode Primary Color */
+  background: #dddbff; /* Light Mode Secondary Color */
   cursor: pointer;
   border-radius: 50%;
   margin-top: -7.5px;
@@ -290,8 +305,8 @@ export default {
 }
 
 .arrow_rjt {
-  background-color: #cba2dd; /* Light Mode Primary Color */
-  color: #fff;
+  background-color: #c4c2e5; /* Light Mode Secondary Color */
+  color: #160326; /* Light Mode Text Color */
   border: none;
   padding: 10px;
   border-radius: 50%;
@@ -301,18 +316,19 @@ export default {
 }
 
 .arrow_rjt:disabled {
-  background-color: #ddd;
+  background-color: #c0c0c0;
   cursor: not-allowed;
 }
 
 .arrow_rjt:not(:disabled):hover {
-  background-color: #a36cba; /* Light Mode Primary Color */
+  background-color: #29045d; /* Light Mode Accent Color */
+  color: #dddbff; /* Light Mode Secondary Color */
 }
 
 .playlist_selection_rjt h5 {
   margin-bottom: 10px;
   font-size: 20px;
-  color: #5e35b1;
+  color: #160326; /* Light Mode Text Color */
   font-weight: 600;
 }
 
@@ -331,7 +347,7 @@ export default {
 
 .thumbnail_rjt:hover {
   transform: scale(1.1);
-  box-shadow: 0 4px 20px rgba(103, 58, 183, 0.5);
+  box-shadow: 0 4px 20px rgba(117, 92, 175, 0.5);
 }
 
 .thumbnail_rjt.selected_rjt {
