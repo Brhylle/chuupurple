@@ -34,7 +34,6 @@ export default {
 </script>
 
 <style>
-/* Styles from the second template */
 * {
   margin: 0;
   padding: 0;

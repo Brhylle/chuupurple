@@ -125,8 +125,8 @@ html {
 
 .gab-tab-headers button.active {
   background-color: #29045D; 
-  font-size: 20px; /* Increase font size */
-  transform: scale(1); /* Increase size slightly */
+  font-size: 20px; 
+  transform: scale(1); 
 }
 
 
