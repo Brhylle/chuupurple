@@ -8,17 +8,21 @@
     </div>
     <TabsComponent msg="Welcome to Your Vue.js App"/>
   </div>
+
+  <NewComponent msg="ts"></NewComponent>
 </template>
 
 <script>
 import DarkToggleButton from './components/DarkToggleButton.vue';
 import TabsComponent from './components/TabsComponent.vue'
+import NewComponent from './components/NewComponent.vue'
 
 export default {
   name: 'App',
   components: {
     DarkToggleButton,
-    TabsComponent
+    TabsComponent,
+    NewComponent
   },
   data() {
     return {
