@@ -5,8 +5,14 @@
       <label id="dlc-label" for="dlc-toggle">
         <DarkToggleButton :isDarkMode="isDarkMode" @update:isDarkMode="toggleMode"></DarkToggleButton>
       </label>
+      <div>
+        <TabsComponent msg="Welcome to Your Vue.js App"/>
+      </div>
     </div>
-    <TabsComponent msg="Welcome to Your Vue.js App"/>
+
+    <div>
+      <CarouselComponent msg="THIS IS A CAROUSEL COMPONENT"></CarouselComponent>
+    </div>
   </div>
 
   <NewComponent msg="ts"></NewComponent>
@@ -16,13 +22,15 @@
 import DarkToggleButton from './components/DarkToggleButton.vue';
 import TabsComponent from './components/TabsComponent.vue'
 import NewComponent from './components/NewComponent.vue'
+import CarouselComponent from './components/CarouselComponent.vue'
 
 export default {
   name: 'App',
   components: {
     DarkToggleButton,
     TabsComponent,
-    NewComponent
+    NewComponent,
+    CarouselComponent,
   },
   data() {
     return {
@@ -39,6 +47,27 @@ export default {
 
 <style>
 /* Styles from the second template */
+:root{
+  --white: #fff;
+  --black: rgb(0,0,0);
+}
+
+:root[data-theme="light"] {
+  --text: rgb(14, 2, 23);
+  --background: rgb(192, 186, 222);
+  --primary: rgb(203, 162, 221);
+  --secondary: rgb(221, 219, 255);
+  --accent: rgb(40, 0, 97);
+}
+
+:root[data-theme="dark"] {
+  --text: rgb(244, 232, 253);
+  --background: rgb(39, 33, 69);
+  --primary: rgb(75, 34, 93);
+  --secondary: rgb(2, 0, 36);
+  --accent: rgb(198, 158, 255);
+}
+
 * {
   margin: 0;
   padding: 0;
