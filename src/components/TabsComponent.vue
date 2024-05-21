@@ -1,141 +1,116 @@
 <template>
-  <div class="gab-app-container">
-    <div class="gab-info-message">
-      You can navigate between tabs using arrow keys (left/right) or numpad keys (1, 2, 3, 4).
-    </div>
+  <div class="gab-container">
     <div class="gab-tabs">
-      <div class="gab-tab-headers">
-        <button :class="{ active: gabActiveTab === 'mission' }" @click="gabActiveTab = 'mission'" class="gab-archivo-black-regular">Mission</button>
-        <button :class="{ active: gabActiveTab === 'vision' }" @click="gabActiveTab = 'vision'" class="gab-archivo-black-regular">Vision</button>
-        <button :class="{ active: gabActiveTab === 'newTab1' }" @click="gabActiveTab = 'newTab1'" class="gab-archivo-black-regular">New Tab</button>
-        <button :class="{ active: gabActiveTab === 'newTab2' }" @click="gabActiveTab = 'newTab2'" class="gab-archivo-black-regular">New Tab</button>
-
-      </div>
-      
+      <input type="radio" id="gab-radio-1" name="gab-tabs" checked @click="gabChangeTab(1)" />
+      <label class="gab-tab" for="gab-radio-1">Issues<span class="gab-notification">2</span></label>
+      <input type="radio" id="gab-radio-2" name="gab-tabs" @click="gabChangeTab(2)" />
+      <label class="gab-tab" for="gab-radio-2">Development</label>
+      <input type="radio" id="gab-radio-3" name="gab-tabs" @click="gabChangeTab(3)" />
+      <label class="gab-tab" for="gab-radio-3">Completed</label>
+      <span class="gab-glider" :style="{ transform: 'translateX(' + gabGliderPosition + ')' }"></span>
     </div>
   </div>
 </template>
 
+
 <script>
 export default {
-  name: 'GabTabsComponent',
   data() {
     return {
-      gabActiveTab: 'mission'
+      gabGliderPosition: '0',
     };
   },
   methods: {
-    changeTab(tab) {
-      this.gabActiveTab = tab;
-    },
-    handleKeyPress(event) {
-      const key = event.key;
-      if (key === 'ArrowLeft') {
-        this.moveLeft();
-      } else if (key === 'ArrowRight') {
-        this.moveRight();
-      } else if (parseInt(key) >= 1 && parseInt(key) <= 4) {
-        const index = parseInt(key) - 1;
-        const tabs = ['mission', 'vision', 'newTab1', 'newTab2'];
-        if (index < tabs.length) {
-          this.gabActiveTab = tabs[index];
-        }
+    gabChangeTab(tab) {
+      if (tab === 1) {
+        this.gabGliderPosition = '0';
+      } else if (tab === 2) {
+        this.gabGliderPosition = '100%';
+      } else if (tab === 3) {
+        this.gabGliderPosition = '200%';
       }
     },
-    moveLeft() {
-      const tabs = ['mission', 'vision', 'newTab1', 'newTab2'];
-      const currentIndex = tabs.indexOf(this.gabActiveTab);
-      if (currentIndex > 0) {
-        this.gabActiveTab = tabs[currentIndex - 1];
-      } else {
-        this.gabActiveTab = tabs[tabs.length - 1];
-      }
-    },
-    moveRight() {
-      const tabs = ['mission', 'vision', 'newTab1', 'newTab2'];
-      const currentIndex = tabs.indexOf(this.gabActiveTab);
-      if (currentIndex < tabs.length - 1) {
-        this.gabActiveTab = tabs[currentIndex + 1];
-      } else {
-        this.gabActiveTab = tabs[0];
-      }
-    }
   },
-  mounted() {
-    document.addEventListener('keydown', this.handleKeyPress);
-  },
-  beforeUnmount() {
-    document.removeEventListener('keydown', this.handleKeyPress);
-  }
 };
 </script>
 
+
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-
-html {
-  background-color: #C0BADE; 
-}
-.gab-info-message {
-  background-color: #e0e0e0;
-  margin-top: 30px;
-  color: #333;
-  padding: 10px;
-  text-align: center;
-  border-radius: 5px;
-  margin-bottom: 10px;
+.gab-container {
   position: absolute;
+  left: 0;
   top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.gab-app-container {
+  right: 0;
+  bottom: 0;
   display: flex;
-  justify-content: center;
   align-items: center;
-  height: 40vh; 
+  justify-content: center;
+  background-color: #C0BADE; 
 }
 
 .gab-tabs {
-  font-family: Arial, sans-serif;
-  text-align: center;
-  color: #160326;
-  border-radius: 8px;
+  display: flex;
+  position: relative;
+  background-color: #fff; 
+  box-shadow: 0 0 1px 0 rgba(24, 94, 224, 0.15), 0 6px 12px 0 rgba(24, 94, 224, 0.15);
+  padding: 0.75rem;
+  border-radius: 99px;
 }
 
-.gab-tab-headers {
-  flex-wrap: nowrap;
+.gab-tab {
+  display: flex;
+  align-items: center;
   justify-content: center;
-  margin-bottom: -10px;
-  
-}
-
-.gab-tab-headers button {
-  background-color: #CBA2DD; 
-  border: none;
-  color: #DDDBFF; 
-  padding: 15px 30px; 
+  height: 54px;
+  width: 200px;
+  font-size: 1.25rem;
+  font-weight: 500;
+  border-radius: 99px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
-  font-size: 18px;
-  box-shadow: inset -10px -5px 10px rgba(0, 0, 0, 0.2);
-  transition: background-color 0.3s ease, transform 0.3s ease; 
+  transition: color 0.15s ease-in;
+  color: #160326; /* TEXT */
 }
 
-.gab-tab-headers button.active {
-  background-color: #29045D; 
-  font-size: 20px; /* Increase font size */
-  transform: scale(1); /* Increase size slightly */
+.gab-notification {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  margin-left: 0.75rem;
+  border-radius: 50%;
+  background-color: #DDDBFF; 
+  transition: 0.15s ease-in;
+  color: #160326; 
 }
 
-
-.gab-archivo-black-regular {
-  font-family: "Archivo Black", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+input[type="radio"] {
+  display: none;
 }
 
+input[type="radio"]:checked + label {
+  color: #29045D; /* ACCENT */
+}
+
+input[type="radio"]:checked + label > .gab-notification {
+  background-color: #29045D; /* ACCENT */
+  color: #fff; /* WHITE */
+}
+
+.gab-glider {
+  position: absolute;
+  display: flex;
+  height: 54px;
+  width: 200px;
+  background-color: rgba(203, 162, 221, 0.5); 
+  z-index: 0;
+  border-radius: 99px;
+  transition: 0.25s ease-out;
+}
+
+@media (max-width: 700px) {
+  .gab-tabs {
+    transform: scale(0.6);
+  }
+}
 </style>
