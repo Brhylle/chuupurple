@@ -54,7 +54,7 @@ Together, we aspire to make a positive impact in the PLP community and beyond, c
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 40vh;
+  height: 400vh;
 }
 
 .gab-card {
