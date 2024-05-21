@@ -1,11 +1,11 @@
 <template>
-  <div class="flex justify-center mt-8" :style="{ backgroundImage: backgroundImage }">
+  <div class="bg-container">
     <h1>Components</h1>
     <div class="tooltip">
       <button @mouseover="showTooltip = true" @mouseleave="showTooltip = false" class="btn-purple">Hover over me</button>
       <span v-show="showTooltip" class="tooltiptext tooltip-purple">Tooltip content</span>
     </div>
-    
+
     <div class="textarea-container">
       <textarea v-model="textInput" placeholder="Enter text here" :class="{ 'textarea-purple': true }"></textarea>
     </div>
@@ -24,13 +24,28 @@ export default {
       textInput: '',
       numberInput: null,
       showTooltip: false,
-      backgroundImage: "url('@/assets/Home.png')"
+      backgroundImage: require('@/assets/Home.png') 
     };
   }
 };
 </script>
 
 <style>
+h1{
+  color: white;
+}
+.bg-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-image: url('@/assets/Home.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .tooltip {
   position: relative;
   display: inline-block;
@@ -81,11 +96,25 @@ export default {
 .textarea-purple {
   width: 300px;
   height: 100px;
-  background-color: transparent; 
-  border: 2px solid #6a0dad; 
-  color: black; 
+  background-color: #6a0dad; 
+  border: 2px solid white; 
+  color: white; 
   border-radius: 4px;
   padding: 8px;
   resize: none; 
+}
+
+.number-input-container {
+  margin-top: 10px;
+}
+
+.input-purple {
+  border: 2px solid #6a0dad;
+  border-radius: 4px;
+  padding: 5px;
+}
+
+.text-purple {
+  color: white;
 }
 </style>
