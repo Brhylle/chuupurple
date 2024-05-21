@@ -7,6 +7,9 @@
       </label>
     </div>
     <TabsComponent msg="Welcome to Your Vue.js App"/>
+    <SearchComponent>
+      <PostComponent></PostComponent>
+    </SearchComponent>
   </div>
 
   <NewComponent msg="ts"></NewComponent>
@@ -16,13 +19,18 @@
 import DarkToggleButton from './components/DarkToggleButton.vue';
 import TabsComponent from './components/TabsComponent.vue'
 import NewComponent from './components/NewComponent.vue'
+import SearchComponent from './components/SearchComponent.vue'
+import PostComponent from './components/PostComponent.vue'
+
 
 export default {
   name: 'App',
   components: {
     DarkToggleButton,
     TabsComponent,
-    NewComponent
+    NewComponent,
+    SearchComponent,
+    PostComponent
   },
   data() {
     return {
