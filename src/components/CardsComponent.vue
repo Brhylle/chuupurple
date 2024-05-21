@@ -1,93 +1,126 @@
 <template>
-  <div class="gab-app-container">
-    <div class="gab-card" ref="gabCard">
-      <h2>{{ activeTab }}</h2>
-      <p ref="gabParagraph" class="gab-ubuntu-mono-regular">
-        {{ tabContent }}
-      </p>
+  <div class="gab-cards-list">
+    <div class="gab-card" v-for="card in gabCards" :key="card.id">
+      <div class="gab-card_image">
+        <img :src="card.image" />
+        <div class="gab-card_overlay"></div>
+      </div>
+      <div class="gab-card_title" :class="card.titleClass">
+        <p>{{ card.title }}</p>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'TabsCards',
-  props: {
-    activeTab: {
-      type: String,
-      default: 'Mission'
-    },
-    tabContent: {
-      type: String,
-      default: `At ChuPurple, our mission is to foster a vibrant community of coding enthusiasts within the Pamantasan ng Lungsod ng Pasig (PLP) campus. We are dedicated to providing a supportive environment where students can enhance their coding skills, collaborate on innovative projects, and explore diverse opportunities in the field of technology.
-
-Through our programs and activities, we aim to empower students to become proficient coders, critical thinkers, and effective problem solvers. We strive to cultivate a culture of continuous learning, creativity, and excellence in software development.
-
-At ChuPurple, we are committed to promoting inclusivity, diversity, and teamwork. We believe in harnessing the collective talents and strengths of our members to tackle challenges and achieve success together.
-
-Together, we aspire to make a positive impact in the PLP community and beyond, contributing to the advancement of technology and shaping the future of coding education.`
-    }
-  },
-  mounted() {
-    this.adjustCardWidth();
-  },
-  methods: {
-    adjustCardWidth() {
-      const paragraphWidth = this.$refs.gabParagraph.offsetWidth;
-      this.$refs.gabCard.style.width = `${paragraphWidth + 40}px`;
-    }
-  },
-  watch: {
-    activeTab() {
-      this.$nextTick(() => {
-        this.adjustCardWidth();
-      });
-    }
+  name: 'GabCardList',
+  data() {
+    return {
+      gabCards: [
+        {
+          id: 1,
+          image: 'https://i.giphy.com/ij1WvlilscRFoIRn7u.gif',
+          title: 'Moonlight',
+          titleClass: 'gab-title-white'
+        },
+        {
+          id: 2,
+          image: 'https://i.giphy.com/cMhglZMLwT8e1jYkfC.gif',
+          title: 'Acid Wave',
+          titleClass: 'gab-title-white'
+        },
+        {
+          id: 3,
+          image: 'https://i.giphy.com/eJmUEoeU1K4d4IUbpS.gif',
+          title: 'Cosmic Infinity',
+          titleClass: 'gab-title-white'
+        },
+        {
+          id: 4,
+          image: 'https://i.giphy.com/Q66QRhhdXhkL7PIed8.gif',
+          title: 'Neon Dreams',
+          titleClass: 'gab-title-white'
+        }
+      ]
+    };
   }
-}
+};
 </script>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-
-.gab-app-container {
+.gab-cards-list {
+  z-index: 0;
+  width: 100%;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 400vh;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .gab-card {
+  margin: 30px auto;
+  width: 300px;
+  height: 300px;
+  border-radius: 40px;
+  box-shadow: 5px 5px 30px 7px rgba(0, 0, 0, 0.25), -5px -5px 30px 7px rgba(0, 0, 0, 0.22);
+  cursor: pointer;
+  transition: 0.4s;
+  position: relative;
+}
+
+.gab-card .gab-card_image {
+  width: inherit;
+  height: inherit;
+  border-radius: 40px;
+  overflow: hidden;
+  position: relative;
+}
+
+.gab-card .gab-card_image img {
+  width: inherit;
+  height: inherit;
+  border-radius: 40px;
+  object-fit: cover;
+}
+
+.gab-card .gab-card_overlay {
   position: absolute;
-  top: 60px;
-  left: 50%;
-  transform: translateX(-50%);
-  border-radius: 18px;
-  padding: 50px;
-  background-color: #DDDBFF;
-  max-width: 1200px;
-  box-shadow: inset 0 0 20px rgba(0,0,0,0.5); 
-
-
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  background: linear-gradient(to top, rgba(128, 0, 128, 0.8), rgba(128, 0, 128, 0)); 
+  border-radius: 0 0 40px 40px;
 }
 
-.gab-card h2 {
-  font-family: "Archivo Black", sans-serif;
-  margin-top: 0;
-  color: #160326;
-  font-size: 24px;
+.gab-card .gab-card_title {
+  position: absolute;
+  bottom: -2px;
+  width: 100%;
+  text-align: center;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+  color: white; 
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
 }
 
-.gab-card p {
-  margin: 0;
-  color: #160326;
-  font-size: 18px;
+.gab-card:hover {
+  transform: scale(0.9, 0.9);
+  box-shadow: 5px 5px 30px 15px rgba(0, 0, 0, 0.25), -5px -5px 30px 15px rgba(0, 0, 0, 0.22);
 }
 
-.gab-ubuntu-mono-regular {
-  font-family: "Ubuntu Mono", monospace;
-  font-weight: 400;
-  font-style: normal;
+.gab-title-white {
+  color: white;
 }
 
+.gab-title-black {
+  color: black;
+}
+
+@media all and (max-width: 500px) {
+  .gab-cards-list {
+    flex-direction: column;
+  }
+}
 </style>
