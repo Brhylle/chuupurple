@@ -1,16 +1,16 @@
 <template>
   <div id="app">
-    <SelectionOne />
+    <SelectionTwo />
   </div>
 </template>
 
 <script>
-import SelectionOne from "./components/SelectionOne.vue";
+import SelectionTwo from "./components/SelectionTwo.vue";
 
 export default {
   name: "App",
   components: {
-    SelectionOne,
+    SelectionTwo,
   },
 };
 </script>
