@@ -69,7 +69,7 @@ export default {
         },
         {
           name: "Sheena",
-          image: require("@/assets/Aiah.jpg"),
+          image: require("@/assets/Sheena.jpg"),
           position: "Main Dancer, Sub Vocalist, Maknae",
           birthdate: "May 9, 2004",
         },
