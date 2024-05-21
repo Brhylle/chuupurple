@@ -1,14 +1,14 @@
 <template>
-  <TabsComponent msg="Welcome to Your Vue.js App"/>
+  <SearchBarComponent msg="Welcome to Your Vue.js App"/>
 </template>
 
 <script>
-import TabsComponent from './components/TabsComponent.vue'
+import SearchBarComponent from './components/SearchBarComponent.vue'
 
 export default {
   name: 'App',
   components: {
-    TabsComponent
+    SearchBarComponent
   }
 }
 </script>
