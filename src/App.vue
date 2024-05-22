@@ -1,16 +1,20 @@
+<!-- App.vue Template -->
 <template>
+
+  <!-- GAB -->
   <div id="app">
     <div>
         <TabsComponent msg="Welcome to Your Vue.js App"/>
     </div>
 
+    <!-- GM -->
     <div>
-      <CarouselComponent></CarouselComponent>
+      <CarouselComponent></CarouselComponent> 
     </div>
   </div>
-
-  <NewComponent msg="ts"></NewComponent>
 </template>
+
+<!-- App.vue Script -->
 
 <script>
 import TabsComponent from './components/TabsComponent.vue'
@@ -27,7 +31,7 @@ export default {
 
 <style>
 * {
-  /* set the  */
+  /* App.vue CSS Styling */
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
