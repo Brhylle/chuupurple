@@ -1,119 +1,47 @@
 <template>
   <div id="app">
-    <input type="checkbox" id="dlc-toggle" v-model="isDarkMode">
-    <div class="dlc-display">
-      <label id="dlc-label" for="dlc-toggle">
-        <DarkToggleButton :isDarkMode="isDarkMode" @update:isDarkMode="toggleMode"></DarkToggleButton>
-      </label>
+    <div>
+        <TabsComponent msg="Welcome to Your Vue.js App"/>
     </div>
-    <TabsComponent msg="Welcome to Your Vue.js App"/>
+
+    <div>
+      <CarouselComponent></CarouselComponent>
+    </div>
   </div>
 
   <NewComponent msg="ts"></NewComponent>
 </template>
 
 <script>
-import DarkToggleButton from './components/DarkToggleButton.vue';
 import TabsComponent from './components/TabsComponent.vue'
-import NewComponent from './components/NewComponent.vue'
+import CarouselComponent from './components/CarouselComponent.vue'
 
 export default {
   name: 'App',
   components: {
-    DarkToggleButton,
     TabsComponent,
-    NewComponent
+    CarouselComponent,
   },
-  data() {
-    return {
-      isDarkMode: false
-    };
-  },
-  methods: {
-    toggleMode(mode) {
-      this.isDarkMode = mode;
-    }
-  }
 };
 </script>
 
 <style>
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  transition: 0.5s;
+  /* set the  */
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-#dlc-toggle {
-  display: none;
-}
+:root{
+  --text-light: rgb(14, 2, 23);
+  --background-light: rgb(192, 186, 222);
+  --primary-light: rgb(203, 162, 221);
+  --secondary-light: rgb(221, 219, 255);
+  --accent-light: rgb(40, 0, 97);
 
-.dlc-display {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #CEC8EF;
-}
-
-#dlc-label {
-  width: 400px;
-  height: 200px;
-  border-radius: 999px;
-  background: #C9A0DC;
-  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.5) inset;
-  cursor: pointer;
-  position: relative;
-}
-
-#dlc-label:active .dlc-circle {
-  width: 200px;
-}
-
-#dlc-toggle[type=checkbox]:checked + .dlc-display {
-  background: #161037de;
-}
-
-/* dark mode label-background */
-#dlc-toggle[type=checkbox]:checked + .dlc-display #dlc-label {
-  background: rgb(50,23,77);
-  box-shadow: 10px 10px 30px rgba(25, 11, 37, 0.5) inset;
-}
-
-#dlc-toggle[type=checkbox]:checked + .dlc-display #dlc-label .dlc-circle {
-  left: 100%;
-  transform: translate(-110%, -50%);
-  background: #bb8affc9;
-  box-shadow: 10px 10px 20px rgba(36, 16, 57, 0.5),
-    -10px -10px 30px rgba(63, 28, 93, 0.5) inset;
-}
-
-#dlc-toggle[type=checkbox]:checked + .dlc-display #dlc-label .dlc-circle .dlc-sun {
-  margin-top: 150%;
-  opacity: 0;
-}
-
-#dlc-toggle[type=checkbox]:checked + .dlc-display #dlc-label .dlc-circle .dlc-moon {
-  margin-top: 0%;
-  opacity: 1;
-}
-
-.dlc-circle {
-  width: 160px;
-  height: 160px;
-  border-radius: 99px;
-  background: white;
-  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.05),
-    -10px -10px 30px rgba(0, 0, 0, 0.05) inset;
-  position: absolute;
-  top: 50%;
-  left: 0%;
-  transform: translate(10%, -50%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
+  --text-dark: rgb(244, 232, 253);
+  --background-dark: rgb(39, 33, 69);
+  --primary-dark: rgb(75, 34, 93);
+  --secondary-dark: 2,0,36;
+  --accent-dark: rgb(198, 158, 255);
 }
 </style>

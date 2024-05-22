@@ -1,5 +1,5 @@
 <template>
-  <div class="gab-app-container">
+  <div class="gab-app-container bg-dark-background">
 
     <div class="gab-tabs">
       <div class="gab-tab-headers">
