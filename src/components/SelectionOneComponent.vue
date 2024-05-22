@@ -1,5 +1,5 @@
 <!-- Ritchmond James Tajarros -->
-<!-- GUSTO MO BAGUHIN YUNG ASSETS? EDI BAGUHIN MO -->
+<!-- Assets are just placeholder -->
 
 <!-- ICON PARA DUN SA ARROW SLIDER -->
 <!-- npm install --save @fortawesome/fontawesome-free -->
@@ -111,7 +111,7 @@ export default {
           imgSrc: require("@/assets/Orange & Lemons - Heaven Knows.jpg"),
           audioSrc: require("@/assets/Orange & Lemons - Heaven Knows.mp3"),
         },
-        // PWEDE PA MAG ADD KUNG GUSTO PA!!!
+        // PWEDE PA MAG ADD KUNG GUSTO PA
       ],
     };
   },
