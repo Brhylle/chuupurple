@@ -36,7 +36,7 @@ export default {
     return {
       galleryItems: [
         { src: require('../assets/imgs/hover-carousel/delacruz_pic.jpg'), alt: 'Leading Programmer 1', isHovered: false },
-        { src: require('../assets/imgs/hover-carousel/landscape-2.jpg'), alt: 'Leading Programmer 2', isHovered: false },
+        { src: require('../assets/imgs/hover-carousel/ventura_pic.jpg'), alt: 'Leading Programmer 2', isHovered: false },
         { src: require('../assets/imgs/hover-carousel/tajarros_pic.jpg'), alt: 'Programmer 1', isHovered: false },
         { src: require('../assets/imgs/hover-carousel/fortin_pic.jpg'), alt: 'Programmer 2', isHovered: false },
         { src: require('../assets/imgs/hover-carousel/perez_pic.jpg'), alt: 'Programmer 3', isHovered: false },
