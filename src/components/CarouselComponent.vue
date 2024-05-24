@@ -1,11 +1,12 @@
 <template>
   <main class="bg-dark-background">
     <section class="">
-      <div class="header text-dark-text text-center text-4xl mt-12 font-bold">Meet the Team.</div>
+      <div class="header ">Meet the Team.</div>
+      <div class="footer" :class="{ 'blink': !anyHovered }">{{ additionalInfo }}</div>
       <div class="dlc-container">
-        <div class="bg-light-primary" :class="['dlc-indicator', { 'pulsate': !anyHovered }]" :style="{ left: indicatorLeft + 'px' }"></div>
-        <div :class="['dlc-label']" :style="{ left: indicatorLeft + 'px' }">
-          <span :class="{ 'blink': !anyHovered }">{{ currentLabel }}</span>
+        <div class="" :class="['dlc-indicator', { 'pulsate': !anyHovered }]" :style="{ left: indicatorLeft + 'px' }"></div>
+        <div :class="['dlc-label', { 'blink': !anyHovered }]" :style="{ left: indicatorLeft + 'px' }">
+          <span>{{ currentLabel }}</span>
         </div>
         
         <div class="dlc-gallery" @mousemove="updateIndicatorPosition" @mouseleave="resetGalleryItems">
@@ -25,7 +26,6 @@
           </div>
         </div>
       </div>
-      <div class="footer font-[100] text-dark-text" :class="{ 'blink': !anyHovered }">{{ additionalInfo }}</div>
     </section>
   </main>
 </template>
@@ -154,10 +154,10 @@ main, section {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, 15%);
+  transform: translate(-50%, -30%);
   transform-origin: center;
   width: 1000px;
-  margin: 0 auto 2em auto;
+  margin: 0 auto 0em auto;
   padding: 1em 0.5em;
   display: flex;
   justify-content: center;
@@ -171,6 +171,7 @@ main, section {
   height: 5px;
   border-radius: 100%;
   transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+  background: var(--primary-500);
 }
 
 .pulsate {
@@ -213,8 +214,8 @@ main, section {
   top: -40px; /* Adjust this value as needed to position the label at the top */
   left: 0;
   transform: translateX(-50%);
-  background: rgba(255, 255, 255, 0.02);
-  color: #fff;
+  background: rgba(103, 45, 210, 0.2);
+  color: var(--text-200);
   padding: 5px 10px;
   border-radius: 1rem;
   pointer-events: none;
@@ -251,6 +252,7 @@ main, section {
   background: #000;
   overflow: hidden;
   transition: flex 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+    border: 0.1em solid var(--accent-300);
 }
 
 .dlc-gallery-item img {
@@ -269,8 +271,20 @@ main, section {
 
 .footer {
   text-align: center;
-  color: #fff;
-  margin-top: 37%;
-  font-size: 1.5em;
+  color: var(--text-200);
+  font-size: 2em;
+  font-family: "PP Neue Montreal Medium";
+  margin: -3rem 5rem 0 0;
+  z-index: 0;
+  width: 100%
+}
+
+div.header {
+  color: var(--primary-400);
+  text-align: end;
+  font-size: 10vw;
+  font-family: "Humane SemiBold";
+  margin: 0.5em 3.8em 0em 0em;
+  text-transform: uppercase;
 }
 </style>
