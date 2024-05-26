@@ -214,7 +214,7 @@ main, section {
   top: -40px; /* Adjust this value as needed to position the label at the top */
   left: 0;
   transform: translateX(-50%);
-  background: rgba(103, 45, 210, 0.2);
+  background: var(--transparent-200);
   color: var(--text-200);
   padding: 5px 10px;
   border-radius: 1rem;
@@ -249,7 +249,7 @@ main, section {
   flex: 0 1 20px;
   height: 400px;
   margin: 0 5px;
-  background: #000;
+  background: var(--background-900);
   overflow: hidden;
   transition: flex 1s cubic-bezier(0.075, 0.82, 0.165, 1);
     border: 0.1em solid var(--accent-300);

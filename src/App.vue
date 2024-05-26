@@ -15,13 +15,12 @@ import ShowcasePlatform from './components/ShowcasePlatform.vue';
 export default {
   name: 'App',
   components: {
-    // TabsComponent,
-    // CarouselComponent,
     ShowcasePlatform,
   },
 };
 </script>
 
+<!-- App.vue Styling -->
 <style>
   /* never put anything here, app.vue is just pulling styles under "index.css" */
 </style>

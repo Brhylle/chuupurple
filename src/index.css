@@ -52,7 +52,7 @@
     font-family: 'Humane Thin';
     src: url('./assets/fonts/humane/Humane-Thin.woff') format('woff'), /* Modern Browsers */
          url('./assets/fonts/humane/Humane-Thin.otf') format('opentype'); /* Safari, Android, iOS */
-             font-style: normal;
+    font-style: normal;
     font-weight: normal;
     text-rendering: optimizeLegibility;
 }
@@ -111,13 +111,7 @@
     text-rendering: optimizeLegibility;
 }
 
-:root {
-  /* put customized colors (COLORS OUT OF PALLETTES) */
-  --green-high: #008001;
-  --pink-mid: var(--secondary-300);
-}
-
-/* reusable pallettes */
+/* reusable palettes */
 :root[data-theme="light"] {
   --text-50: #f1eef7;
   --text-100: #e3dcef;
@@ -179,6 +173,7 @@
   --accent-900: #21072c;
   --accent-950: #100416;
 
+  --transparent-200: #672dd233;
 }
 :root[data-theme="dark"] {
   --text-50: #0c0811;
@@ -240,7 +235,7 @@
   --accent-800: #dba7f1;
   --accent-900: #edd3f8;
   --accent-950: #f6e9fb;
-
+  --transparent-200: #672dd233;
 }
 
 * {

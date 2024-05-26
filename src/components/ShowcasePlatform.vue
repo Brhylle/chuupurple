@@ -9,7 +9,7 @@
                             <a href="#">Purple</a>
                         </div>
                         <div class="dlc-links">
-                            <a href="#">Our Team</a>
+                            <a href="#our-team" id="">Our Team</a>
                             <a href="#section-header">Components</a>
                             <DarkToggleMode class="dark-mode"></DarkToggleMode>
                         </div>
@@ -41,7 +41,6 @@
                                 </div>
                             </div>
                             
-                            
                             <div class="dlc-mouth-wrapper">
                                 <div class="dlc-mouth"></div>
                             </div>
@@ -49,7 +48,6 @@
                     </div>
                 </section>
 
-                <!-- * * -->
                 <section class="dlc-platform-content" ref="websiteContent">
                     <div class="dlc-section-header">
                         <h1>Components Crafted By Us.</h1>
@@ -60,13 +58,15 @@
                         <BentoComponent/>
                     </div> -->
 
-                                                            <div>
+                    <div id="our-team">
                         <TabsComponent/>
                     </div>
 
                     <div>
                         <CarouselComponent/>
                     </div>
+
+                    <!-- * all new components should be injected here * -->
 
                 </section>
 
@@ -75,7 +75,7 @@
     </main>
 </template>
 
-<script>
+<script> // never put any script here, refactor your code first.
 // LAHAT NG PLUGIN IMPORTS DITO
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
