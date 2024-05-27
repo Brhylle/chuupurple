@@ -1,9 +1,9 @@
 <template>
-    <div class="bg-container">
-    <h1>Tooltip Component</h1>
-    <div class="tooltip">
-        <button @mouseover="showTooltip = true" @mouseleave="showTooltip = false" class="btn-purple">Hover over me</button>
-        <span v-show="showTooltip" class="tooltiptext tooltip-purple">Tooltip</span>
+    <div class="fortin-bg-container">
+    <h1>Fortin Tooltip Component</h1>
+    <div class="fortin-tooltip">
+        <button @mouseover="fortin_showTooltip = true" @mouseleave="fortin_showTooltip = false" class="fortin-btn-purple">Hover over me</button>
+        <span v-show="fortin_showTooltip" class="fortin-tooltiptext fortin-tooltip-purple">Tooltip</span>
       </div>
     </div>
 </template>
@@ -12,8 +12,8 @@
 export default {
   data() {
     return {
-        showTooltip: false,
-        backgroundImage: require('@/assets/Home.png') 
+        fortin_showTooltip: false,
+        fortin_backgroundImage: require('@/assets/Home.png') 
     };
   }
 };
@@ -23,7 +23,7 @@ export default {
 h1{
     color: white;
   }
-  .bg-container {
+  .fortin-bg-container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -36,14 +36,14 @@ h1{
     background-position: center;
   }
 
-  .tooltip {
+  .fortin-tooltip {
     position: relative;
     display: inline-block;
     cursor: pointer;
     margin-right: 10px; 
   }
 
-  .btn-purple {
+  .fortin-btn-purple {
     background-color: #6a0dad; 
     color: #fff;
     border: none;
@@ -54,11 +54,11 @@ h1{
     transition: background-color 0.3s;
   }
   
-  .btn-purple:hover {
+  .fortin-btn-purple:hover {
     background-color: #4c0287; 
   }
 
-  .tooltip .tooltiptext {
+  .fortin-tooltip .fortin-tooltiptext {
     visibility: hidden;
     width: 120px;
     background-color: #6a0dad; 
@@ -75,7 +75,7 @@ h1{
     transition: opacity 0.3s;
   }
 
-  .tooltip:hover .tooltiptext {
+  .fortin-tooltip:hover .fortin-tooltiptext {
     visibility: visible;
     opacity: 1;
   }
