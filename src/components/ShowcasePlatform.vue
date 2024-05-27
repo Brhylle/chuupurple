@@ -58,8 +58,8 @@
                         <BentoComponent/>
                     </div> -->
 
-                    <div id="our-team">
-                        <TabsComponent/>
+                    <div>
+                        <TabsComponent id="our-team"/>
                     </div>
 
                     <div>
@@ -186,7 +186,12 @@ export default {
 
         wrapper.addEventListener("mousemove", moveEvent);
         wrapper.addEventListener("mouseleave", leaveEvent);
-    }
+    },
+    beforeUnmount() {
+        if (this.$$lenis) { 
+            this.$lenis.destroy();
+        }
+    },
 }
 </script>
 
