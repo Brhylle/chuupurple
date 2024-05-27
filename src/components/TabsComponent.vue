@@ -1,5 +1,6 @@
 <template>
-  <div class="gab-container">
+  <div class="gab-app-container">
+
     <div class="gab-tabs">
       <input type="radio" id="gab-radio-1" name="gab-tabs" checked @click="gabChangeTab(1)" />
       <label class="gab-tab" for="gab-radio-1">Issues<span class="gab-notification">2</span></label>
