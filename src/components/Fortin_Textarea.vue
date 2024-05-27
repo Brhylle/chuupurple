@@ -1,9 +1,9 @@
 <template>
-    <div class="bg-container">
-    <h1>Textarea Component</h1>
+    <div class="fortin-bg-container">
+    <h1>Fortin Textarea Component</h1>
     
-    <div class="textarea-container">
-      <textarea v-model="textInput" placeholder="Enter text here" :class="{ 'textarea-purple': true }"></textarea>
+    <div class="fortin-textarea-container">
+      <textarea v-model="fortin_textInput" placeholder="Enter text here" :class="{ 'fortin-textarea-purple': true }"></textarea>
     </div>
 
   </div>
@@ -13,8 +13,8 @@
 export default {
   data() {
     return {
-      textInput: '',
-      backgroundImage: require('@/assets/Home.png') 
+      fortin_textInput: '',
+      fortin_backgroundImage: require('@/assets/Home.png') 
     };
   }
 };
@@ -24,7 +24,7 @@ export default {
 h1{
     color: white;
   }
-  .bg-container {
+  .fortin-bg-container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -36,11 +36,11 @@ h1{
     background-position: center;
   }
   
-  .textarea-container {
+  .fortin-textarea-container {
     margin-top: 10px; 
   }
   
-  .textarea-purple {
+  .fortin-textarea-purple {
     width: 300px;
     height: 100px;
     background-color: #6a0dad; 
