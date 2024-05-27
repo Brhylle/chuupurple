@@ -1,14 +1,20 @@
 <template>
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <TooltipComponent/>
+  <TextareaComponent/>
+  <NumberInputComponent/>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import TooltipComponent from './components/TooltipComponent.vue'
+import TextareaComponent from './components/TextareaComponent.vue'
+import NumberInputComponent from './components/NumberInputComponent.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    TooltipComponent,
+    TextareaComponent,
+    NumberInputComponent,
   }
 }
 </script>
