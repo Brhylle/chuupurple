@@ -1,7 +1,7 @@
 <template>
     <div class="programmers">
-      <h3>{{ post.title }}</h3>
-      <p>{{post.description}}</p>
+      <h3 class="godes-to-post">{{ post.title }}</h3>
+      <p class="godes-p">{{post.description}}</p>
     </div>
 </template>
 
@@ -12,12 +12,12 @@
 </script>
 
 <style scoped>
-h3 {
+.godes-to-post{
     color: purple;
     font-size: 24px;
     font-weight: bold;
 }
-p {
+.godes-p {
     color: black;
     font-size: 20px;
 }
