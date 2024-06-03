@@ -28,7 +28,7 @@
                         <img src="../assets/chuu-light-badge.svg" alt="chuupurple">
                     </div>
 
-                    <div class="dlc-tracker" ref="tracker">
+                    <div class="dlc-tracker" ref="">
                         <div class="dlc-emoji" ref="emoji">
                             <div class="dlc-emoji-face" ref="emojiFace">
                                 <div class="dlc-eyes">
