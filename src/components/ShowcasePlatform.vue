@@ -4,7 +4,7 @@
             <div class="dlc-container">
                 
                 <section class="dlc-sticky" ref="sticky">
-                    <nav>
+                    <nav class="dlc-nav">
                         <div class="dlc-logo">
                             <a href="#">Purple</a>
                         </div>
@@ -97,6 +97,7 @@ export default {
     mounted() {
         // GSAP ScrollTrigger initialization
         gsap.registerPlugin(ScrollTrigger);
+        
 
         // GSAP animation for sticky section
         gsap.to(".dlc-sticky", {
@@ -173,6 +174,7 @@ export default {
             ease: "power3.out",
             duration: 0.35,
         });
+        
         };
 
         const leaveEvent = () => {
@@ -186,6 +188,7 @@ export default {
 
         wrapper.addEventListener("mousemove", moveEvent);
         wrapper.addEventListener("mouseleave", leaveEvent);
+
     },
     beforeUnmount() {
         if (this.$$lenis) { 
@@ -218,7 +221,7 @@ section.dlc-sticky {
     background: var(--background-200);
 }
 
-nav {
+.dlc-nav {
     position: absolute;
     top: 0;
     width: 100%;
@@ -369,7 +372,7 @@ section.dlc-platform-content {
 
 .dlc-eyes {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 
 .dlc-eyes svg {

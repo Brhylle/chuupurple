@@ -65,7 +65,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 /* Add these classes to your tailwind.config.js for custom colors */
 .MBLbg-secondary {
   background-color: #DDDBFF;
