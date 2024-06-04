@@ -22,7 +22,8 @@ export default {
   },
   computed: {
     progressBarStyle() {
-      const lightPalette = ['#CBA2DD', '#DDDBFF', '#C0BADE', '#DDDBFF', '#CBA2DD', '#29045D', '#DDDBFF', '#CBA2DD', '#DDDBFF', '#160326'];
+      const lightPalette = ['var(--accent-50)', 'var(--accent-100)', 'var(--accent-200)', 'var(--accent-300)', 'var(--accent-400)', 'var(--accent-500)', 'var(--accent-600)', 'var(--accent-700)', 'var(--accent-800)', 'var(--accent-900)'];
+      console.log(lightPalette.length);
       const index = Math.min(Math.floor(this.MBLprogress / 10), 9);
       const color = lightPalette[index];
 
@@ -44,7 +45,6 @@ export default {
 
 <style scoped>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -70,7 +70,7 @@ export default {
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
-  background-color: #CBA2DD;
+  background-color: var(--primary-500);
   color: #160326;
   cursor: pointer;
   font-size: 16px;
@@ -78,7 +78,8 @@ export default {
 }
 
 .button:hover {
-  background-color: #29045D;
+  background-color: var(--primary-800);
+  color: var(--text-50);
 }
 
 .ml-2 {

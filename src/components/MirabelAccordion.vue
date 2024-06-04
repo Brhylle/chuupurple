@@ -42,13 +42,13 @@ export default {
 
 <style>
 .MBLbg-secondary {
-  background-color: #DDDBFF;
+  background-color: var(--background-300);
 }
 .MBLtext-text {
-  color: #160326;
+  color: var(--text-800);
 }
 .MBLbg-background {
-  background-color: #C0BADE;
+  background-color: var(--background-100);
 }
 .MBLspace-y-2 > :not(:first-child) {
   --space-y-reverse: 0;

@@ -49,11 +49,11 @@ export default {
 }
 
 .MBLbg-primary {
-  background-color: #CBA2DD;
+  background-color: var(--primary-800);
 }
 
 .MBLtext-accent {
-  color: #29045D;
+  color: var(--accent-100);
 }
 
 .MBLflex {
@@ -79,10 +79,10 @@ export default {
 }
 
 .MBLbg-secondary {
-  background-color: #DDDBFF;
+  background-color: var(--secondary-100);
 }
 
 .MBLtext-text {
-  color: #160326;
+  color: var(--text-700);
 }
 </style>
