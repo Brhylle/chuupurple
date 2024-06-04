@@ -1,15 +1,12 @@
 <template>
   <div :class="MBLcontainerClass">
     <h1 class="MBLtext-3xl MBLfont-bold MBLmb-6">Accordion Component Example</h1>
-    <button @click="MBLtoggleDarkMode" class="MBLmb-6 MBLpx-4 MBLpy-2 MBLborder MBLrounded">
-      Toggle Dark Mode
-    </button>
     <div class="MBLspace-y-2">
       <div v-for="(item, index) in MBLaccordionItems" :key="index" class="MBLborder-b MBLborder-gray-300">
-        <button @click="MBLtoggle(index)" :class="MBLbuttonClass(index)">
+        <button @click="MBLtoggle(index)" class="MBLw-full MBLtext-left MBLpy-3 MBLpx-4 MBLfocus:outline-none">
           {{ item.title }}
         </button>
-        <div v-if="MBLactiveIndex === index" :class="MBLcontentClass">
+        <div v-if="MBLactiveIndex === index" class="MBLp-4 MBLbg-background MBLtext-text">
           <p>{{ item.content }}</p>
         </div>
       </div>
@@ -23,7 +20,6 @@ export default {
   data() {
     return {
       MBLactiveIndex: null,
-      MBLisDarkMode: false,
       MBLaccordionItems: [
         { title: 'Item 1', content: 'Content for item 1' },
         { title: 'Item 2', content: 'Content for item 2' },
@@ -34,56 +30,25 @@ export default {
   methods: {
     MBLtoggle(index) {
       this.MBLactiveIndex = this.MBLactiveIndex === index ? null : index;
-    },
-    MBLtoggleDarkMode() {
-      this.MBLisDarkMode = !this.MBLisDarkMode;
-    },
-    MBLbuttonClass(index) {
-      return {
-        'MBLw-full MBLtext-left MBLpy-3 MBLpx-4 MBLfocus:outline-none': true,
-        'MBLbg-secondary MBLtext-text': !this.MBLisDarkMode,
-        'MBLbg-dark-secondary MBLtext-dark-text': this.MBLisDarkMode,
-      };
-    },
-    MBLcontentClass() {
-      return {
-        'MBLp-4': true,
-        'MBLbg-background MBLtext-text': !this.MBLisDarkMode,
-        'MBLbg-dark-background MBLtext-dark-text': this.MBLisDarkMode,
-      };
     }
   },
   computed: {
     MBLcontainerClass() {
-      return {
-        'MBLbg-white MBLtext-black': !this.MBLisDarkMode,
-        'MBLbg-black MBLtext-white': this.MBLisDarkMode,
-        'MBLmin-h-screen MBLp-8': true
-      };
+      return 'MBLbg-white MBLtext-black MBLmin-h-screen MBLp-8';
     }
   }
 };
 </script>
 
 <style>
-/* Add these classes to your tailwind.config.js for custom colors */
 .MBLbg-secondary {
   background-color: #DDDBFF;
 }
 .MBLtext-text {
   color: #160326;
 }
-.MBLbg-dark-secondary {
-  background-color: #020024;
-}
-.MBLtext-dark-text {
-  color: #ECD9FC;
-}
 .MBLbg-background {
   background-color: #C0BADE;
-}
-.MBLbg-dark-background {
-  background-color: #272145;
 }
 .MBLspace-y-2 > :not(:first-child) {
   --space-y-reverse: 0;
