@@ -58,6 +58,8 @@ export default {
 
 .MBLflex {
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .MBLspace-x-2 > :not(:first-child) {

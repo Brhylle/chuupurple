@@ -56,6 +56,7 @@
                     <div class="uniform-container">
                         <TabsComponent/>
                         <CardsComponent/>
+                        <SearchBarComponent/>
                     </div>
 
                     <!-- * RDC components should be injected here * -->
@@ -100,6 +101,7 @@ import Fortin_Tooltip from './Fortin_Tooltip.vue';
 import MirabelAccordion from './MirabelAccordion.vue';
 import MirabelProgressBar from './MirabelProgressBar.vue';
 import MirabelPagination from './MirabelPagination.vue';
+import SearchBarComponent from './SearchBarComponent.vue';
 
 export default {
 
@@ -108,6 +110,7 @@ export default {
         // CarouselComponent,
         TabsComponent,
         CardsComponent,
+        SearchBarComponent,
         // CruzNotification,
         // CruzPopup,
         Fortin_NumberInput,
