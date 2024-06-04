@@ -53,23 +53,14 @@
                     </div>
 
                     <!-- * GAB components should be injected here * -->
-                    <div>
+                    <div class="uniform-container">
                         <TabsComponent/>
                         <CardsComponent/>
                     </div>
 
-                    <!-- * GMB components should be injected here * -->
-                    <div>
-                        <CarouselComponent id="our-team"/>
-                    </div>
-
                     <!-- * RDC components should be injected here * -->
-                    <div>
-                        <CruzNotification/>
-                        <CruzPopup/>
-                    </div>
 
-                    <div>
+                    <div class="uniform-container">
                         <MirabelAccordion/>
                         <MirabelProgressBar/>
                         <MirabelPagination/>
@@ -98,11 +89,11 @@ import SplitType from 'split-type';
 
 // LAHAT NG COMPONENT IMPORTS DITO
 import DarkToggleMode from './DarkToggleMode.vue';
-import CarouselComponent from './CarouselComponent.vue';
+// import CarouselComponent from './CarouselComponent.vue';
 import TabsComponent from './TabsComponent.vue';
 import CardsComponent from './CardsComponent.vue';
-import CruzNotification from './CruzNotification.vue';
-import CruzPopup from './CruzPopup.vue';
+// import CruzNotification from './CruzNotification.vue';
+// import CruzPopup from './CruzPopup.vue';
 import Fortin_NumberInput from './Fortin_NumberInput.vue';
 import Fortin_Textarea from './Fortin_Textarea.vue';
 import Fortin_Tooltip from './Fortin_Tooltip.vue';
@@ -114,11 +105,11 @@ export default {
 
     components: {
         DarkToggleMode,
-        CarouselComponent,
+        // CarouselComponent,
         TabsComponent,
         CardsComponent,
-        CruzNotification,
-        CruzPopup,
+        // CruzNotification,
+        // CruzPopup,
         Fortin_NumberInput,
         Fortin_Textarea,
         Fortin_Tooltip,
@@ -140,7 +131,7 @@ export default {
                 scrollTrigger: {
                     trigger: char,
                     start:'50% 25%',
-                    end: '75% 25%',
+                    end: '100% 25%',
                     scrub: true,
                     markers: true,
                 },
@@ -161,9 +152,9 @@ export default {
                 scrollTrigger: {
                     trigger: char,
                     start:'top 200%',
-                    end: 'top 85%',
+                    end: 'top 95%',
                     scrub: true,
-                    markers: false,
+                    markers: true,
                 },
                 opacity: 0.2,
                 stagger: 0.1,
@@ -387,7 +378,7 @@ section.dlc-platform-content {
     width: 100%;
     height: 300vh;
     background: var(--background-900);
-    padding: 6em 2em;
+    padding: 6em;
 }
 
 .dlc-tracker {
@@ -503,6 +494,11 @@ section.dlc-platform-content {
 
 .dlc-row img {
     height: 600px;
+}
+
+/* SEGREGATED COMPONENT CSS CONTAINERS */
+.uniform-container {
+    margin: 10rem;
 }
 
 /* ANIMATIONS */
