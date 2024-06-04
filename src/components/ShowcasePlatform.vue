@@ -59,7 +59,7 @@
                         <SearchBarComponent/>
                     </div>
 
-                    <!-- * RDC components should be injected here * -->
+                    <!-- * MRBL components should be injected here * -->
 
                     <div class="uniform-container">
                         <MirabelAccordion/>
