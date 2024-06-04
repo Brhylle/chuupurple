@@ -98,7 +98,6 @@ export default {
   bottom: -2px;
   width: 100%;
   text-align: center;
-  font-family: sans-serif;
   font-weight: bold;
   font-size: 30px;
   color: white; 

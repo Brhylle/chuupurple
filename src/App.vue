@@ -1,6 +1,6 @@
 <!-- App.vue Template -->
 <template>
-  <div id="app">
+  <div class="app">
     <ShowcasePlatform>
       <!-- all components should be injected inside @ShowcasePlatform -->
     </ShowcasePlatform>

@@ -15,12 +15,10 @@
                         </div>
                     </nav>
 
-                    <div class="dlc-sub-logo mt-24 ml-5">
-                        <h5>by team purple</h5>
-                    </div>
+                    <h5 class="dlc-sub-logo">× martians</h5>
 
-                    <div class="dlc-header">
-                        <h1>purple</h1>
+                    <div class="dlc-header" >
+                        <h1 class="reveal-header">purple</h1>
                     </div>
                     
                     <div class="dlc-badge-container">
@@ -28,7 +26,7 @@
                         <img src="../assets/chuu-light-badge.svg" alt="chuupurple">
                     </div>
 
-                    <div class="dlc-tracker" ref="">
+                    <div class="dlc-tracker" ref="tracker">
                         <div class="dlc-emoji" ref="emoji">
                             <div class="dlc-emoji-face" ref="emojiFace">
                                 <div class="dlc-eyes">
@@ -50,24 +48,32 @@
 
                 <section class="dlc-platform-content" ref="websiteContent">
                     <div class="dlc-section-header">
-                        <h1>Components Crafted By Us.</h1>
-                        <p>These components, lovingly created by the team, beckon you to delve into a realm brimming with creativity and innovation. Embark on a journey of exploration filled with happiness and excitement, and uncover the enchantment meticulously woven into every intricate detail.</p>
+                        <h1 class="reveal-type">Components Crafted By Us.</h1>
+                        <p class="reveal-type">These components, lovingly created by the team, beckon you to delve into a realm brimming with creativity and innovation. Embark on a journey of exploration filled with happiness and excitement, and uncover the enchantment meticulously woven into every intricate detail.</p>
                     </div>
 
-                    <!-- <div class="dlc-bento-ui">
-                        <BentoComponent/>
-                    </div> -->
+                    <!-- * GAB components should be injected here * -->
+                    <div class="uniform-container">
+                        <TabsComponent/>
+                        <CardsComponent/>
+                    </div>
 
+                    <!-- * RDC components should be injected here * -->
+
+                    <div class="uniform-container">
+                        <MirabelAccordion/>
+                        <MirabelProgressBar/>
+                        <MirabelPagination/>
+                    </div>
+
+
+
+                    <!-- * FRTN components should be injected here * -->
                     <div>
-                        <TabsComponent id="our-team"/>
+                        <Fortin_NumberInput/>
+                        <Fortin_Textarea/>
+                        <Fortin_Tooltip/>
                     </div>
-
-                    <div>
-                        <CarouselComponent/>
-                    </div>
-
-                    <!-- * all new components should be injected here * -->
-
                 </section>
 
             </div>
@@ -79,24 +85,81 @@
 // LAHAT NG PLUGIN IMPORTS DITO
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import SplitType from 'split-type';
 
 // LAHAT NG COMPONENT IMPORTS DITO
 import DarkToggleMode from './DarkToggleMode.vue';
-// import BentoComponent from './BentoComponent.vue';
-import CarouselComponent from './CarouselComponent.vue';
+// import CarouselComponent from './CarouselComponent.vue';
 import TabsComponent from './TabsComponent.vue';
+import CardsComponent from './CardsComponent.vue';
+// import CruzNotification from './CruzNotification.vue';
+// import CruzPopup from './CruzPopup.vue';
+import Fortin_NumberInput from './Fortin_NumberInput.vue';
+import Fortin_Textarea from './Fortin_Textarea.vue';
+import Fortin_Tooltip from './Fortin_Tooltip.vue';
+import MirabelAccordion from './MirabelAccordion.vue';
+import MirabelProgressBar from './MirabelProgressBar.vue';
+import MirabelPagination from './MirabelPagination.vue';
 
 export default {
 
     components: {
         DarkToggleMode,
-        // BentoComponent,
-        CarouselComponent,
+        // CarouselComponent,
         TabsComponent,
+        CardsComponent,
+        // CruzNotification,
+        // CruzPopup,
+        Fortin_NumberInput,
+        Fortin_Textarea,
+        Fortin_Tooltip,
+        MirabelAccordion,
+        MirabelPagination,
+        MirabelProgressBar,
     },
     mounted() {
         // GSAP ScrollTrigger initialization
         gsap.registerPlugin(ScrollTrigger);
+
+        // animation for the first section of the showcase
+        const splitHeader = document.querySelectorAll(".reveal-header");
+        splitHeader.forEach((char) => {
+            const splitText = new SplitType(char, { types: 'chars' });
+            console.log(splitText.chars);
+            
+            gsap.to(splitText.chars, {
+                scrollTrigger: {
+                    trigger: char,
+                    start:'50% 25%',
+                    end: '100% 25%',
+                    scrub: true,
+                    markers: true,
+                },
+                opacity: 0.05,
+                y: 95,
+                stagger: 0.1,
+            })
+        })
+
+
+        // animation for the first section of the showcase
+        const splitTypes = document.querySelectorAll(".reveal-type");
+
+        // Apply SplitType to each char
+        splitTypes.forEach((char) => {
+            const splitText = new SplitType(char, { types: 'chars' });
+            gsap.from(splitText.chars, {
+                scrollTrigger: {
+                    trigger: char,
+                    start:'top 200%',
+                    end: 'top 95%',
+                    scrub: true,
+                    markers: true,
+                },
+                opacity: 0.2,
+                stagger: 0.1,
+            })
+        });
 
         // GSAP animation for sticky section
         gsap.to(".dlc-sticky", {
@@ -129,7 +192,7 @@ export default {
             trigger: ".dlc-platform-content",
             start: "top 200%",
             end: "top 50%",
-            scrub: 1,
+            scrub: true,
             },
             x: 0,
             scale: 1,
@@ -185,7 +248,7 @@ export default {
         };
         wrapper.addEventListener("mousemove", moveEvent);
         wrapper.addEventListener("mouseleave", leaveEvent);
-    },
+    },  // * END OF MOUNTED()
     beforeUnmount() {
         if (this.$$lenis) { 
             this.$lenis.destroy();
@@ -239,6 +302,7 @@ nav {
 
 .dlc-sub-logo {
     color: var(--text-600);
+    margin: 92px 0 0 34px;
 }
 
 .dlc-links {
@@ -273,7 +337,7 @@ nav {
 .dlc-header h1 {
     text-transform: uppercase;
     font-family: Humane SemiBold;
-    font-size: 45vw;
+    font-size: 42vw;
     font-weight: 400;
     color: var(--text-700);
     line-height: 100%;
@@ -314,7 +378,7 @@ section.dlc-platform-content {
     width: 100%;
     height: 300vh;
     background: var(--background-900);
-    padding: 6em 2em;
+    padding: 6em;
 }
 
 .dlc-tracker {
@@ -430,6 +494,11 @@ section.dlc-platform-content {
 
 .dlc-row img {
     height: 600px;
+}
+
+/* SEGREGATED COMPONENT CSS CONTAINERS */
+.uniform-container {
+    margin: 10rem;
 }
 
 /* ANIMATIONS */
