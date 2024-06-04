@@ -8,29 +8,23 @@
       <button @click="increaseProgress" class="button">
         Increase Progress
       </button>
-      <button @click="toggleDarkMode" class="button ml-2">
-        Toggle Dark Mode
-      </button>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'MBLApp',
+  name: 'ProgressBarComponent',
   data() {
     return {
-      MBLprogress: 0,
-      MBLisDarkMode: false,
+      MBLprogress: 0
     };
   },
   computed: {
     progressBarStyle() {
       const lightPalette = ['#CBA2DD', '#DDDBFF', '#C0BADE', '#DDDBFF', '#CBA2DD', '#29045D', '#DDDBFF', '#CBA2DD', '#DDDBFF', '#160326'];
-      const darkPalette = ['#4B225D', '#020024', '#272145', '#020024', '#4B225D', '#C7A2FB', '#020024', '#4B225D', '#020024', '#ECD9FC'];
-
       const index = Math.min(Math.floor(this.MBLprogress / 10), 9);
-      const color = this.MBLisDarkMode ? darkPalette[index] : lightPalette[index];
+      const color = lightPalette[index];
 
       return {
         width: this.MBLprogress + '%',
@@ -43,14 +37,7 @@ export default {
       if (this.MBLprogress < 100) {
         this.MBLprogress += 10;
       }
-    },
-    toggleDarkMode() {
-      this.MBLisDarkMode = !this.MBLisDarkMode;
-      document.documentElement.style.setProperty('--bg-color', this.MBLisDarkMode ? '#272145' : '#f3f3f3');
     }
-  },
-  mounted() {
-    this.MBLisDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
   }
 };
 </script>
