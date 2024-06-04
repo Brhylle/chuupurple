@@ -15,12 +15,10 @@
                         </div>
                     </nav>
 
-                    <div class="dlc-sub-logo mt-24 ml-5">
-                        <h5 class="pt-24">by team purple</h5>
-                    </div>
+                    <h5 class="dlc-sub-logo">× martians</h5>
 
-                    <div class="dlc-header">
-                        <h1>purple</h1>
+                    <div class="dlc-header" >
+                        <h1 class="reveal-header">purple</h1>
                     </div>
                     
                     <div class="dlc-badge-container">
@@ -96,6 +94,7 @@
 // LAHAT NG PLUGIN IMPORTS DITO
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import SplitType from 'split-type';
 
 // LAHAT NG COMPONENT IMPORTS DITO
 import DarkToggleMode from './DarkToggleMode.vue';
@@ -130,6 +129,46 @@ export default {
     mounted() {
         // GSAP ScrollTrigger initialization
         gsap.registerPlugin(ScrollTrigger);
+
+        // animation for the first section of the showcase
+        const splitHeader = document.querySelectorAll(".reveal-header");
+        splitHeader.forEach((char) => {
+            const splitText = new SplitType(char, { types: 'chars' });
+            console.log(splitText.chars);
+            
+            gsap.to(splitText.chars, {
+                scrollTrigger: {
+                    trigger: char,
+                    start:'50% 25%',
+                    end: '75% 25%',
+                    scrub: true,
+                    markers: true,
+                },
+                opacity: 0.05,
+                y: 95,
+                stagger: 0.1,
+            })
+        })
+
+
+        // animation for the first section of the showcase
+        const splitTypes = document.querySelectorAll(".reveal-type");
+
+        // Apply SplitType to each char
+        splitTypes.forEach((char) => {
+            const splitText = new SplitType(char, { types: 'chars' });
+            gsap.from(splitText.chars, {
+                scrollTrigger: {
+                    trigger: char,
+                    start:'top 200%',
+                    end: 'top 85%',
+                    scrub: true,
+                    markers: false,
+                },
+                opacity: 0.2,
+                stagger: 0.1,
+            })
+        });
 
         // GSAP animation for sticky section
         gsap.to(".dlc-sticky", {
@@ -218,7 +257,7 @@ export default {
         };
         wrapper.addEventListener("mousemove", moveEvent);
         wrapper.addEventListener("mouseleave", leaveEvent);
-    },
+    },  // * END OF MOUNTED()
     beforeUnmount() {
         if (this.$$lenis) { 
             this.$lenis.destroy();
@@ -272,6 +311,7 @@ nav {
 
 .dlc-sub-logo {
     color: var(--text-600);
+    margin: 92px 0 0 34px;
 }
 
 .dlc-links {
@@ -306,7 +346,7 @@ nav {
 .dlc-header h1 {
     text-transform: uppercase;
     font-family: Humane SemiBold;
-    font-size: 45vw;
+    font-size: 42vw;
     font-weight: 400;
     color: var(--text-700);
     line-height: 100%;
