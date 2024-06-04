@@ -28,7 +28,7 @@
                         <img src="../assets/chuu-light-badge.svg" alt="chuupurple">
                     </div>
 
-                    <div class="dlc-tracker" ref="tracker">
+                    <div class="dlc-tracker" ref="">
                         <div class="dlc-emoji" ref="emoji">
                             <div class="dlc-emoji-face" ref="emojiFace">
                                 <div class="dlc-eyes">
@@ -144,46 +144,45 @@ export default {
         const emojiFace = this.$refs.emojiFace;
 
         const moveEvent = (e) => {
-        const wrapperRect = wrapper.getBoundingClientRect();
+            const wrapperRect = wrapper.getBoundingClientRect();
 
-        const relX = e.clientX - (wrapperRect.left + wrapperRect.width / 2);
-        const relY = e.clientY - (wrapperRect.top + wrapperRect.height / 2);
+            const relX = e.clientX - (wrapperRect.left + wrapperRect.width / 2);
+            const relY = e.clientY - (wrapperRect.top + wrapperRect.height / 2);
 
-        const emojiMaxDisplacement = 50;
-        const emojiFaceMaxDisplacement = 75;
+            const emojiMaxDisplacement = 50;
+            const emojiFaceMaxDisplacement = 75;
 
-        // emoji max displacement
-        const emojiDisplacementX = (relX / wrapperRect.width) * emojiMaxDisplacement;
-        const emojiDisplacementY = (relY / wrapperRect.height) * emojiMaxDisplacement;
+            // emoji max displacement
+            const emojiDisplacementX = (relX / wrapperRect.width) * emojiMaxDisplacement;
+            const emojiDisplacementY = (relY / wrapperRect.height) * emojiMaxDisplacement;
 
-        // face of emoji max displacement
-        const emojiFaceDisplacementX = (relX / wrapperRect.width) * emojiFaceMaxDisplacement;
-        const emojiFaceDisplacementY = (relY / wrapperRect.height) * emojiFaceMaxDisplacement;
+            // face of emoji max displacement
+            const emojiFaceDisplacementX = (relX / wrapperRect.width) * emojiFaceMaxDisplacement;
+            const emojiFaceDisplacementY = (relY / wrapperRect.height) * emojiFaceMaxDisplacement;
 
-        gsap.to(emoji, {
-            x: emojiDisplacementX,
-            y: emojiDisplacementY,
-            ease: "power3.out",
-            duration: 0.35,
-        });
+            gsap.to(emoji, {
+                x: emojiDisplacementX,
+                y: emojiDisplacementY,
+                ease: "power3.out",
+                duration: 0.35,
+            });
 
-        gsap.to(emojiFace, {
-            x: emojiFaceDisplacementX,
-            y: emojiFaceDisplacementY,
-            ease: "power3.out",
-            duration: 0.35,
-        });
+            gsap.to(emojiFace, {
+                x: emojiFaceDisplacementX,
+                y: emojiFaceDisplacementY,
+                ease: "power3.out",
+                duration: 0.35,
+            });
         };
 
         const leaveEvent = () => {
-        gsap.to([emoji, emojiFace], {
-            x: 0,
-            y: 0,
-            ease: "power3.out",
-            duration: 1,
-        });
+            gsap.to([emoji, emojiFace], {
+                x: 0,
+                y: 0,
+                ease: "power3.out",
+                duration: 1,
+            });
         };
-
         wrapper.addEventListener("mousemove", moveEvent);
         wrapper.addEventListener("mouseleave", leaveEvent);
     },
@@ -191,6 +190,7 @@ export default {
         if (this.$$lenis) { 
             this.$lenis.destroy();
         }
+        
     },
 }
 </script>
