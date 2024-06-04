@@ -48,17 +48,18 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: var(--text-300);
   margin-top: 60px;
 }
 
 .progress-bar-container {
   width: 100%;
-  background-color: #f3f3f3;
+  background-color: var(--primary-50);
   border-radius: 5px;
   overflow: hidden;
   height: 20px;
   margin: 10px 0;
+  outline: 2px solid var(--background-100);
 }
 
 .progress-bar {
@@ -70,8 +71,8 @@ export default {
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
-  background-color: var(--primary-500);
-  color: #160326;
+  background-color: var(--primary-600);
+  color: var(--text-950);
   cursor: pointer;
   font-size: 16px;
   transition: background-color 0.3s;
