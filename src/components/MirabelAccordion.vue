@@ -38,7 +38,7 @@ export default {
     MBLtoggleDarkMode() {
       this.MBLisDarkMode = !this.MBLisDarkMode;
     },
-    MBLbuttonClass(index) {
+    MBLbuttonClass() {
       return {
         'MBLw-full MBLtext-left MBLpy-3 MBLpx-4 MBLfocus:outline-none': true,
         'MBLbg-secondary MBLtext-text': !this.MBLisDarkMode,

@@ -16,7 +16,7 @@
                     </nav>
 
                     <div class="dlc-sub-logo mt-24 ml-5">
-                        <h5>by team purple</h5>
+                        <h5 class="pt-24">by team purple</h5>
                     </div>
 
                     <div class="dlc-header">
@@ -28,7 +28,7 @@
                         <img src="../assets/chuu-light-badge.svg" alt="chuupurple">
                     </div>
 
-                    <div class="dlc-tracker" ref="">
+                    <div class="dlc-tracker" ref="tracker">
                         <div class="dlc-emoji" ref="emoji">
                             <div class="dlc-emoji-face" ref="emojiFace">
                                 <div class="dlc-eyes">
@@ -50,24 +50,41 @@
 
                 <section class="dlc-platform-content" ref="websiteContent">
                     <div class="dlc-section-header">
-                        <h1>Components Crafted By Us.</h1>
-                        <p>These components, lovingly created by the team, beckon you to delve into a realm brimming with creativity and innovation. Embark on a journey of exploration filled with happiness and excitement, and uncover the enchantment meticulously woven into every intricate detail.</p>
+                        <h1 class="reveal-type">Components Crafted By Us.</h1>
+                        <p class="reveal-type">These components, lovingly created by the team, beckon you to delve into a realm brimming with creativity and innovation. Embark on a journey of exploration filled with happiness and excitement, and uncover the enchantment meticulously woven into every intricate detail.</p>
                     </div>
 
-                    <!-- <div class="dlc-bento-ui">
-                        <BentoComponent/>
-                    </div> -->
+                    <!-- * GAB components should be injected here * -->
+                    <div>
+                        <TabsComponent/>
+                        <CardsComponent/>
+                    </div>
+
+                    <!-- * GMB components should be injected here * -->
+                    <div>
+                        <CarouselComponent id="our-team"/>
+                    </div>
+
+                    <!-- * RDC components should be injected here * -->
+                    <div>
+                        <CruzNotification/>
+                        <CruzPopup/>
+                    </div>
 
                     <div>
-                        <TabsComponent id="our-team"/>
+                        <MirabelAccordion/>
+                        <MirabelProgressBar/>
+                        <MirabelPagination/>
                     </div>
 
+
+
+                    <!-- * FRTN components should be injected here * -->
                     <div>
-                        <CarouselComponent/>
+                        <Fortin_NumberInput/>
+                        <Fortin_Textarea/>
+                        <Fortin_Tooltip/>
                     </div>
-
-                    <!-- * all new components should be injected here * -->
-
                 </section>
 
             </div>
@@ -82,17 +99,33 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 // LAHAT NG COMPONENT IMPORTS DITO
 import DarkToggleMode from './DarkToggleMode.vue';
-// import BentoComponent from './BentoComponent.vue';
 import CarouselComponent from './CarouselComponent.vue';
 import TabsComponent from './TabsComponent.vue';
+import CardsComponent from './CardsComponent.vue';
+import CruzNotification from './CruzNotification.vue';
+import CruzPopup from './CruzPopup.vue';
+import Fortin_NumberInput from './Fortin_NumberInput.vue';
+import Fortin_Textarea from './Fortin_Textarea.vue';
+import Fortin_Tooltip from './Fortin_Tooltip.vue';
+import MirabelAccordion from './MirabelAccordion.vue';
+import MirabelProgressBar from './MirabelProgressBar.vue';
+import MirabelPagination from './MirabelPagination.vue';
 
 export default {
 
     components: {
         DarkToggleMode,
-        // BentoComponent,
         CarouselComponent,
         TabsComponent,
+        CardsComponent,
+        CruzNotification,
+        CruzPopup,
+        Fortin_NumberInput,
+        Fortin_Textarea,
+        Fortin_Tooltip,
+        MirabelAccordion,
+        MirabelPagination,
+        MirabelProgressBar,
     },
     mounted() {
         // GSAP ScrollTrigger initialization
@@ -129,7 +162,7 @@ export default {
             trigger: ".dlc-platform-content",
             start: "top 200%",
             end: "top 50%",
-            scrub: 1,
+            scrub: true,
             },
             x: 0,
             scale: 1,
