@@ -1,7 +1,7 @@
 <template>
   <div class="gab-app-container">
 
-    <div class="gab-tabs">
+    <div class="gab-tabs" ref="tabsContainer">
       <input type="radio" id="gab-radio-1" name="gab-tabs" checked @click="gabChangeTab(1)" />
       <label class="gab-tab" for="gab-radio-1">Issues<span class="gab-notification">2</span></label>
       <input type="radio" id="gab-radio-2" name="gab-tabs" @click="gabChangeTab(2)" />
@@ -31,6 +31,24 @@ export default {
         this.gabGliderPosition = '200%';
       }
     },
+  },
+  mounted() {
+    // ScrollTrigger animation for the tabs component
+    this.$nextTick(() => {
+      this.$gsap.from(this.$refs.tabsContainer, {
+        opacity: 0,
+        y: 100,
+        scrollTrigger: {
+          trigger: this.$refs.tabsContainer,
+          start: 'top 125%', // Adjust the start position based on your needs
+          end: 'top 75%', // Adjust the end position based on your needs
+          scrub: true,
+          markers: false, // Set to false when you are done with debugging
+        },
+        duration: 1,
+        ease: 'power3.out',
+      });
+    });
   },
 };
 </script>

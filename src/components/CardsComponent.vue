@@ -1,6 +1,6 @@
 <template>
   <div class="gab-cards-list">
-    <div class="gab-card" v-for="card in gabCards" :key="card.id">
+    <div class="gab-card" v-for="card in gabCards" :key="card.id" ref="cards">
       <div class="gab-card_image">
         <img :src="card.image" />
         <div class="gab-card_overlay"></div>
@@ -44,7 +44,30 @@ export default {
         }
       ]
     };
-  }
+  },
+  mounted() {
+    this.$nextTick(() => {
+      this.$refs.cards.forEach((card, index) => {
+        this.$gsap.from(card, {
+          scale: 0,
+          opacity: 0,
+          duration: 0.2,
+          delay: index * 0.001, // Stagger the animation for each card
+          
+          scrollTrigger: {
+            trigger: card,
+            start: 'top 95%',
+            end: 'top 95%',
+            scrub: true,
+            markers: false, // Set to true for debugging
+            toggleActions: 'play none none reverse',
+          },
+          y: 100,
+          scrub: true,
+        });
+      });
+    });
+  },
 };
 </script>
 

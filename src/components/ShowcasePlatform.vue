@@ -15,10 +15,10 @@
                         </div>
                     </nav>
 
-                    <h5 class="dlc-sub-logo">× martians</h5>
+                    <h5 class="dlc-sub-logo">× presents</h5>
 
                     <div class="dlc-header" >
-                        <h1 class="reveal-header">purple</h1>
+                        <h1 class="animated-header-1">purple</h1>
                     </div>
                     
                     <div class="dlc-badge-container">
@@ -48,15 +48,27 @@
 
                 <section class="dlc-platform-content" ref="websiteContent">
                     <div class="dlc-section-header">
-                        <h1 class="reveal-type">Components Crafted By Us.</h1>
-                        <p class="reveal-type">These components, lovingly created by the team, beckon you to delve into a realm brimming with creativity and innovation. Embark on a journey of exploration filled with happiness and excitement, and uncover the enchantment meticulously woven into every intricate detail.</p>
+                        <h1 class="animated-text-1"><span class="animated-emphasization-2">Components</span> Crafted By...</h1>
+                        <p class="animated-text-1">These components, <span class="animated-emphasization-2">lovingly created</span> by the team, beckon you to delve into a realm brimming with creativity and innovation. Embark on a journey of exploration filled with happiness and excitement, and <span class="animated-emphasization-2">uncover the enchantment</span> meticulously woven into every <span class="animated-emphasization-2">intricate detail</span>.</p>
                     </div>
 
                     <!-- * GAB components should be injected here * -->
                     <div class="uniform-container">
-                        <TabsComponent/>
-                        <CardsComponent/>
-                        <SearchBarComponent/>
+                        <h2 class="presenter-header" id="animated-text-2"><span class="animated-emphasization">Gabriel</span> Ventura,</h2>
+                            <h4 class="component-name" id="animated-text-5"><span class="animated-emphasization">Tabs</span> Component & <span class="animated-emphasization">Search Bar</span> Component 1</h4>
+                                <div class="component-row">
+                                    <div class="component-left">
+                                        <TabsComponent/>
+                                    </div>
+                                    <div class="component-right">
+                                        <SearchBarComponent class="search-bar-wrapper"/>
+                                    </div>
+                                </div>
+                        
+                            <div class="component-card-container">
+                                <h4 class="component-name" id="animated-text-3"><span class="animated-emphasization">Cards</span> Component</h4>
+                                <CardsComponent/>
+                            </div>
                     </div>
 
                     <!-- * MRBL components should be injected here * -->
@@ -115,7 +127,7 @@ export default {
   },
   mounted() {
     // Animation for the first section of the showcase
-    const splitHeader = document.querySelectorAll('.reveal-header');
+    const splitHeader = document.querySelectorAll('.animated-header-1');
     splitHeader.forEach((char) => {
       const splitText = new this.$SplitType(char, { types: 'chars' });
       this.$gsap.to(splitText.chars, {
@@ -133,8 +145,8 @@ export default {
     });
 
     // Animation for the second section of the showcase
-    const splitTypes = document.querySelectorAll('.reveal-type');
-    splitTypes.forEach((char) => {
+    const splitTypeOne = document.querySelectorAll('.animated-text-1');
+    splitTypeOne.forEach((char) => {
       const splitText = new this.$SplitType(char, { types: 'chars' });
       this.$gsap.from(splitText.chars, {
         scrollTrigger: {
@@ -149,6 +161,149 @@ export default {
       });
     });
 
+    // * FIRST PRESENTER - GAB
+    const splitTypeTwo = document.querySelectorAll('#animated-text-2');
+    splitTypeTwo.forEach((char) => {
+        const splitText = new this.$SplitType(char, { types: 'chars' });
+        this.$gsap.from(splitText.chars, {
+          scrollTrigger: {
+            trigger: char,
+            start: 'top 120%',
+            end: 'top 75%',
+            scrub: true,
+            markers: false,
+          },
+            opacity: 0,
+            stagger: 1,
+            y: 1920,
+            ease: 'power3.out',
+        });
+      });
+
+      const splitTypeThree = document.querySelectorAll('#animated-text-3');
+      splitTypeThree.forEach((char) => {
+        const splitText = new this.$SplitType(char, { types: 'chars' });
+          this.$gsap.from(splitText.chars, {
+            scrollTrigger: {
+              trigger: char,
+              start: 'top 120%',
+              end: 'top 75%',
+              scrub: true,
+              markers: false,
+            },
+              opacity: 0,
+              stagger: 0.1,
+              z: 100,
+              ease: 'power3.in',
+          });
+      });
+
+    const splitTypeFour = document.querySelectorAll('#animated-text-4');
+      splitTypeFour.forEach((char) => {
+        const splitText = new this.$SplitType(char, { types: 'chars' });
+          this.$gsap.from(splitText.chars, {
+            scrollTrigger: {
+              trigger: char,
+              start: 'top 90%',
+              end: 'top 75%',
+              scrub: true,
+              markers: false,
+            },
+            opacity: 0,
+            x: -240,
+            ease: 'power3.in',
+            stagger: 0.5,
+          });
+      });
+
+      const emphasisAnimation = document.querySelectorAll('.animated-emphasization');
+      emphasisAnimation.forEach((char) => {
+          const splitText = new this.$SplitType(char, { types: 'chars' });
+        
+        // Get the computed background color from CSS
+        const fgColor = getComputedStyle(document.documentElement).getPropertyValue('--primary-600');
+
+        // Get the computed foreground color from CSS
+        const bgColor = getComputedStyle(document.documentElement).getPropertyValue('--text-400');
+
+
+          this.$gsap.fromTo(splitText.chars, {
+            color: bgColor,
+          },
+        {
+            color: fgColor,
+            duration: 0.3,
+            stagger: 0.05,
+            scrollTrigger: {
+                trigger: char,
+                start: 'top 90%',
+                end: 'top 85%',
+                scrub: false,
+                markers: true,
+                toggleActions: 'play play reverse reverse',
+                
+            }        
+      });
+      });
+    
+    const splitTypeFive = document.querySelectorAll('#animated-text-5');
+    splitTypeFive.forEach((char) => {
+      const splitText = new this.$SplitType(char, { types: 'chars' });
+        this.$gsap.from(splitText.chars, {
+          scrollTrigger: {
+            trigger: char,
+            start: 'top 110%',
+            end: 'top 85%',
+            scrub: true,
+            markers: false,
+          },
+          scaleY: 0,
+          y: -20,
+          transformOrigin: 'top',
+          stagger: 0.1,
+        });
+    });
+
+    // new preset animations insert here
+    
+    this.$gsap.from(".component-left", {
+        opacity: 0,
+        x: -50,
+        scrollTrigger: {
+            trigger: ".component-left",
+            start: "top 100%", // Adjust according to your needs
+            end: "bottom 100%", // Adjust according to your needs
+            scrub: true,
+            markers: false,
+        },
+    });
+
+    // Add a delay before animating the next container
+    this.$gsap.from(".component-right", {
+        opacity: 0,
+        y: -50,
+        scrollTrigger: {
+            trigger: ".component-left",
+            start: `top 100%`, // Adjust according to your needs
+            end: `bottom 90%`, // Adjust according to your needs
+            scrub: true,
+            markers: false,
+        },
+    });
+
+    // Add a delay before animating the next container
+    this.$gsap.from(".component-card-container", {
+        opacity: 0,
+        x: 50,
+        scrollTrigger: {
+            trigger: ".component-left",
+            start: `top 100%`, // Adjust according to your needs
+            end: `bottom 80%`, // Adjust according to your needs
+            scrub: true,
+            markers: false,
+        },
+    });
+    
     // GSAP animation for sticky section
     this.$gsap.to('.dlc-sticky', {
       scrollTrigger: {
@@ -159,7 +314,7 @@ export default {
         pin: true,
       },
       y: 250,
-      scale: 0.75,
+      scale: 0.50,
       rotation: -15,
       ease: 'power3.out',
     });
@@ -254,6 +409,67 @@ export default {
 </script>
 
 <style scoped>
+
+.component-card-container {
+    padding: 1rem;
+}
+
+.component-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+}
+
+.component-left, .component-right, .component-card-container {
+    border: solid;
+  border-width: 0.33rem;
+}
+
+.component-left {
+  flex: 1;
+  margin-right: 1rem;
+  padding: 2rem;
+}
+
+.component-right {
+  flex: 1;
+  margin-left: 1rem;
+  display: flex;
+  justify-content: flex-end;
+  padding: 1.33rem;
+}
+
+.search-bar-wrapper {
+  width: 100%;
+  max-width: 400px; /* Adjust as needed */
+  position: relative;
+}
+
+.component-name {
+    font-family: "PP Neue Montreal Bold";
+    font-size: 3rem;
+    line-height: 1.1;
+    color: var(--text-400);
+    text-align: center;
+}
+
+.presenter-header {
+    font-family: "Humane Bold", sans-serif;
+    font-size: 10rem;
+    line-height: 1.1;
+    color: var(--text-400);
+    text-align: center;
+}
+
+/* SEGREGATED COMPONENT CSS CONTAINERS */
+.uniform-container {
+    margin: 5rem;
+    border: solid 0.63rem var(--accent-300);
+    border-radius: 2rem;
+    padding: 2rem;
+}
 
 img {
     width: 100%;
@@ -491,10 +707,7 @@ section.dlc-platform-content {
     height: 600px;
 }
 
-/* SEGREGATED COMPONENT CSS CONTAINERS */
-.uniform-container {
-    margin: 10rem;
-}
+
 
 /* ANIMATIONS */
 
