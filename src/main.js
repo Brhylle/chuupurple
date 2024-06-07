@@ -1,6 +1,7 @@
 import { createApp } from 'vue';
 import App from './App.vue';
 import './index.css';
+import '@fortawesome/fontawesome-free/css/all.css';
 import lenisPlugin from '../plugins/lenis.js';
 
 // for reusability
