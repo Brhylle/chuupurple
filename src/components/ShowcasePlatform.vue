@@ -82,13 +82,7 @@
     </main>
 </template>
 
-<script> // never put any script here, refactor your code first.
-// LAHAT NG PLUGIN IMPORTS DITO
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import SplitType from 'split-type';
-
-// LAHAT NG COMPONENT IMPORTS DITO
+<script>
 import DarkToggleMode from './DarkToggleMode.vue';
 // import CarouselComponent from './CarouselComponent.vue';
 import TabsComponent from './TabsComponent.vue';
@@ -104,161 +98,159 @@ import MirabelPagination from './MirabelPagination.vue';
 import SearchBarComponent from './SearchBarComponent.vue';
 
 export default {
-
-    components: {
-        DarkToggleMode,
-        // CarouselComponent,
-        TabsComponent,
-        CardsComponent,
-        SearchBarComponent,
-        // CruzNotification,
-        // CruzPopup,
-        Fortin_NumberInput,
-        Fortin_Textarea,
-        Fortin_Tooltip,
-        MirabelAccordion,
-        MirabelPagination,
-        MirabelProgressBar,
-    },
-    mounted() {
-        // GSAP ScrollTrigger initialization
-        gsap.registerPlugin(ScrollTrigger);
-
-        // animation for the first section of the showcase
-        const splitHeader = document.querySelectorAll(".reveal-header");
-        splitHeader.forEach((char) => {
-            const splitText = new SplitType(char, { types: 'chars' });
-            console.log(splitText.chars);
-            
-            gsap.to(splitText.chars, {
-                scrollTrigger: {
-                    trigger: char,
-                    start:'50% 25%',
-                    end: '100% 25%',
-                    scrub: true,
-                    markers: false,
-                },
-                opacity: 0.05,
-                y: 95,
-                stagger: 0.1,
-            })
-        })
-
-
-        // animation for the first section of the showcase
-        const splitTypes = document.querySelectorAll(".reveal-type");
-
-        // Apply SplitType to each char
-        splitTypes.forEach((char) => {
-            const splitText = new SplitType(char, { types: 'chars' });
-            gsap.from(splitText.chars, {
-                scrollTrigger: {
-                    trigger: char,
-                    start:'top 200%',
-                    end: 'top 95%',
-                    scrub: true,
-                    markers: false,
-                },
-                opacity: 0.2,
-                stagger: 0.1,
-            })
-        });
-
-        // GSAP animation for sticky section
-        gsap.to(".dlc-sticky", {
+  components: {
+    DarkToggleMode,
+    // CarouselComponent,
+    TabsComponent,
+    CardsComponent,
+    SearchBarComponent,
+    // CruzNotification,
+    // CruzPopup,
+    Fortin_NumberInput,
+    Fortin_Textarea,
+    Fortin_Tooltip,
+    MirabelAccordion,
+    MirabelPagination,
+    MirabelProgressBar,
+  },
+  mounted() {
+    // Animation for the first section of the showcase
+    const splitHeader = document.querySelectorAll('.reveal-header');
+    splitHeader.forEach((char) => {
+      const splitText = new this.$SplitType(char, { types: 'chars' });
+      this.$gsap.to(splitText.chars, {
         scrollTrigger: {
-            trigger: ".dlc-sticky",
-            start: "top top",
-            end: () =>
-            "+=" +
-            (window.innerHeight +
-                this.$refs.websiteContent.offsetHeight * 0.5),
-            scrub: 1,
-            pin: true,
+          trigger: char,
+          start: '50% 25%',
+          end: '100% 25%',
+          scrub: true,
+          markers: false,
         },
-        y: 250,
-        scale: 0.75,
-        rotation: -15,
-        ease: "power3.out",
-        });
+        opacity: 0.05,
+        y: 95,
+        stagger: 0.1,
+      });
+    });
 
-        // GSAP animation for website content
-        gsap.fromTo(
-        ".dlc-platform-content",
-        {
-            x: -100,
-            scale: 0.3,
-            rotation: 15,
+    // Animation for the second section of the showcase
+    const splitTypes = document.querySelectorAll('.reveal-type');
+    splitTypes.forEach((char) => {
+      const splitText = new this.$SplitType(char, { types: 'chars' });
+      this.$gsap.from(splitText.chars, {
+        scrollTrigger: {
+          trigger: char,
+          start: 'top 200%',
+          end: 'top 95%',
+          scrub: true,
+          markers: false,
         },
-        {
-            scrollTrigger: {
-            trigger: ".dlc-platform-content",
-            start: "top 200%",
-            end: "top 50%",
-            scrub: true,
-            },
-            x: 0,
-            scale: 1,
-            rotation: 0,
-            ease: "power3.out",
-        }
-        );
+        opacity: 0.2,
+        stagger: 0.1,
+      });
+    });
 
-        // Mousemove event handling
-        const wrapper = this.$refs.tracker;
-        const emoji = this.$refs.emoji;
-        const emojiFace = this.$refs.emojiFace;
+    // GSAP animation for sticky section
+    this.$gsap.to('.dlc-sticky', {
+      scrollTrigger: {
+        trigger: '.dlc-sticky',
+        start: 'top top',
+        end: () => '+=' + (window.innerHeight + this.$refs.websiteContent.offsetHeight * 0.5),
+        scrub: 1,
+        pin: true,
+      },
+      y: 250,
+      scale: 0.75,
+      rotation: -15,
+      ease: 'power3.out',
+    });
 
-        const moveEvent = (e) => {
-            const wrapperRect = wrapper.getBoundingClientRect();
+    // GSAP animation for website content
+    this.$gsap.fromTo(
+      '.dlc-platform-content',
+      {
+        x: -100,
+        scale: 0.3,
+        rotation: 15,
+      },
+      {
+        scrollTrigger: {
+          trigger: '.dlc-platform-content',
+          start: 'top 200%',
+          end: 'top 50%',
+          scrub: true,
+        },
+        x: 0,
+        scale: 1,
+        rotation: 0,
+        ease: 'power3.out',
+      }
+    );
 
-            const relX = e.clientX - (wrapperRect.left + wrapperRect.width / 2);
-            const relY = e.clientY - (wrapperRect.top + wrapperRect.height / 2);
+    // Mousemove event handling
+    const wrapper = this.$refs.tracker;
+    const emoji = this.$refs.emoji;
+    const emojiFace = this.$refs.emojiFace;
 
-            const emojiMaxDisplacement = 50;
-            const emojiFaceMaxDisplacement = 75;
+    const moveEvent = (e) => {
+      const wrapperRect = wrapper.getBoundingClientRect();
+      const relX = e.clientX - (wrapperRect.left + wrapperRect.width / 2);
+      const relY = e.clientY - (wrapperRect.top + wrapperRect.height / 2);
 
-            // emoji max displacement
-            const emojiDisplacementX = (relX / wrapperRect.width) * emojiMaxDisplacement;
-            const emojiDisplacementY = (relY / wrapperRect.height) * emojiMaxDisplacement;
+      const emojiMaxDisplacement = 50;
+      const emojiFaceMaxDisplacement = 75;
 
-            // face of emoji max displacement
-            const emojiFaceDisplacementX = (relX / wrapperRect.width) * emojiFaceMaxDisplacement;
-            const emojiFaceDisplacementY = (relY / wrapperRect.height) * emojiFaceMaxDisplacement;
+      const emojiDisplacementX = (relX / wrapperRect.width) * emojiMaxDisplacement;
+      const emojiDisplacementY = (relY / wrapperRect.height) * emojiMaxDisplacement;
 
-            gsap.to(emoji, {
-                x: emojiDisplacementX,
-                y: emojiDisplacementY,
-                ease: "power3.out",
-                duration: 0.35,
-            });
+      const emojiFaceDisplacementX = (relX / wrapperRect.width) * emojiFaceMaxDisplacement;
+      const emojiFaceDisplacementY = (relY / wrapperRect.height) * emojiFaceMaxDisplacement;
 
-            gsap.to(emojiFace, {
-                x: emojiFaceDisplacementX,
-                y: emojiFaceDisplacementY,
-                ease: "power3.out",
-                duration: 0.35,
-            });
-        };
+      this.$gsap.to(emoji, {
+        x: emojiDisplacementX,
+        y: emojiDisplacementY,
+        ease: 'power3.out',
+        duration: 0.35,
+      });
 
-        const leaveEvent = () => {
-            gsap.to([emoji, emojiFace], {
-                x: 0,
-                y: 0,
-                ease: "power3.out",
-                duration: 1,
-            });
-        };
-        wrapper.addEventListener("mousemove", moveEvent);
-        wrapper.addEventListener("mouseleave", leaveEvent);
-    },  // * END OF MOUNTED()
-    beforeUnmount() {
-        if (this.$$lenis) { 
-            this.$lenis.destroy();
-        }
-        
-    },
-}
+      this.$gsap.to(emojiFace, {
+        x: emojiFaceDisplacementX,
+        y: emojiFaceDisplacementY,
+        ease: 'power3.out',
+        duration: 0.35,
+      });
+    };
+
+    const leaveEvent = () => {
+      this.$gsap.to([emoji, emojiFace], {
+        x: 0,
+        y: 0,
+        ease: 'power3.out',
+        duration: 1,
+      });
+    };
+
+    wrapper.addEventListener('mousemove', moveEvent);
+    wrapper.addEventListener('mouseleave', leaveEvent);
+
+    // Initialize Lenis for smooth scrolling
+    this.$lenis = new this.$Lenis({
+      duration: 1.2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+    });
+
+    const raf = (time) => {
+      this.$lenis.raf(time);
+      requestAnimationFrame(raf);
+    };
+
+    requestAnimationFrame(raf);
+  },
+  beforeUnmount() {
+    if (this.$lenis) {
+      this.$lenis.destroy();
+    }
+  },
+};
 </script>
 
 <style scoped>
