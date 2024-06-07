@@ -188,13 +188,14 @@ export default {
               trigger: char,
               start: 'top 120%',
               end: 'top 75%',
-              scrub: true,
+              scrub: false,
               markers: false,
             },
               opacity: 0,
               stagger: 0.1,
               z: 100,
               ease: 'power3.in',
+              toggleActions: 'play play reverse reverse',
           });
       });
 
@@ -206,13 +207,14 @@ export default {
               trigger: char,
               start: 'top 90%',
               end: 'top 75%',
-              scrub: true,
+              scrub: false,
               markers: false,
             },
             opacity: 0,
             x: -240,
             ease: 'power3.in',
             stagger: 0.5,
+            toggleActions: 'play play reverse reverse',
           });
       });
 
@@ -236,8 +238,8 @@ export default {
             stagger: 0.05,
             scrollTrigger: {
                 trigger: char,
-                start: 'top 90%',
-                end: 'top 85%',
+                start: 'top 100%',
+                end: 'top 95%',
                 scrub: false,
                 markers: true,
                 toggleActions: 'play play reverse reverse',
@@ -260,7 +262,7 @@ export default {
           scaleY: 0,
           y: -20,
           transformOrigin: 'top',
-          stagger: 0.1,
+            stagger: 0.1,
         });
     });
 
