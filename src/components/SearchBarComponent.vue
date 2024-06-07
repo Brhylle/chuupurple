@@ -1,5 +1,5 @@
 <template>
-  <div class="gab-container">
+  <div class="gab-container" ref="gabContainer">
     <input type="text" class="gab-input" placeholder="Search..." v-model="gabSearchQuery" @focus="gabOnFocus" @blur="gabOnBlur" ref="gabSearchInput">
     <div class="gab-search" @click="gabOnSearchClick"></div>
   </div>
@@ -25,7 +25,25 @@ export default {
         this.gabIsFocused = false;
       }
     }
-  }
+  },
+    mounted() {
+    // ScrollTrigger animation for the tabs component
+    this.$nextTick(() => {
+      this.$gsap.from(this.$refs.gabContainer, {
+        opacity: 0,
+        y: 100,
+        scrollTrigger: {
+          trigger: this.$refs.gabContainer,
+          start: 'top 125%', // Adjust the start position based on your needs
+          end: 'top 75%', // Adjust the end position based on your needs
+          scrub: true,
+          markers: false, // Set to false when you are done with debugging
+        },
+        duration: 1,
+        ease: 'power3.out',
+      });
+    });
+  },
 };
 </script>
 

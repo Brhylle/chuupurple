@@ -1,13 +1,13 @@
 import { createApp } from 'vue';
 import App from './App.vue';
 import './index.css';
-import lenisPlugin from '../plugins/lenis.js';
+import animations from '../plugins/animations';
 
 // for reusability
 const app = createApp(App);
 
 // for smooth-scrolling
-app.use(lenisPlugin);
+app.use(animations);
 
 // mount the this js file to a div class named "app" within index.html
 app.mount("#app");
