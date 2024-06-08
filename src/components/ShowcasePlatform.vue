@@ -82,7 +82,7 @@
 
 
                     <!-- * FRTN components should be injected here * -->
-                    <div>
+                    <div class="uniform-container">
                         <Fortin_NumberInput/>
                         <Fortin_Textarea/>
                         <Fortin_Tooltip/>
@@ -332,14 +332,16 @@ export default {
       {
         scrollTrigger: {
           trigger: '.dlc-platform-content',
-          start: 'top 200%',
-          end: 'top 50%',
+          start: 'top 250%', // Adjusted start position
+          end: 'top 40%',   // Adjusted end position
           scrub: true,
+          markers: false,   // Set markers to false for production
         },
         x: 0,
         scale: 1,
         rotation: 0,
         ease: 'power3.out',
+        duration: 2,        // Increased duration
       }
     );
 
