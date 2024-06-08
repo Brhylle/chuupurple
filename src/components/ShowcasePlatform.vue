@@ -74,6 +74,8 @@
                     <!-- * MRBL components should be injected here * -->
 
                     <div class="uniform-container">
+                        <h2 class="presenter-header" id="animated-text-2"><span class="animated-emphasization">Mirabel</span> Robert Leoni,</h2>
+                        
                         <MirabelAccordion/>
                         <MirabelProgressBar/>
                         <MirabelPagination/>
@@ -127,282 +129,280 @@ export default {
   },
   mounted() {
     // Animation for the first section of the showcase
-    const splitHeader = document.querySelectorAll('.animated-header-1');
-    splitHeader.forEach((char) => {
-      const splitText = new this.$SplitType(char, { types: 'chars' });
-      this.$gsap.to(splitText.chars, {
-        scrollTrigger: {
-          trigger: char,
-          start: '50% 25%',
-          end: '100% 25%',
-          scrub: true,
-          markers: false,
-        },
-        opacity: 0.05,
-        y: 95,
-        stagger: 0.1,
-      });
-    });
+const splitHeader = document.querySelectorAll('.animated-header-1');
+splitHeader.forEach((char) => {
+  const splitText = new this.$SplitType(char, { types: 'chars' });
+  this.$gsap.to(splitText.chars, {
+    scrollTrigger: {
+      trigger: char,
+      start: '50% 25%',
+      end: '100% 25%',
+      scrub: true,
+      markers: false,
+    },
+    opacity: 0.05,
+    y: 95,
+    stagger: 0.1,
+  });
+});
 
-    // Animation for the second section of the showcase
-    const splitTypeOne = document.querySelectorAll('.animated-text-1');
-    splitTypeOne.forEach((char) => {
-      const splitText = new this.$SplitType(char, { types: 'chars' });
+// Animation for the second section of the showcase
+const splitTypeOne = document.querySelectorAll('.animated-text-1');
+splitTypeOne.forEach((char) => {
+  const splitText = new this.$SplitType(char, { types: 'chars' });
+  this.$gsap.from(splitText.chars, {
+    scrollTrigger: {
+      trigger: char,
+      start: 'top 200%', // Adjusted start position
+      end: 'top 95%',   // Adjusted end position
+      scrub: true,
+      markers: false,
+    },
+    opacity: 0.2,
+    stagger: 0.1,
+  });
+});
+
+// * FIRST PRESENTER - GAB
+const splitTypeTwo = document.querySelectorAll('#animated-text-2');
+splitTypeTwo.forEach((char) => {
+    const splitText = new this.$SplitType(char, { types: 'chars' });
+    this.$gsap.from(splitText.chars, {
+      scrollTrigger: {
+        trigger: char,
+        start: 'top 120%', // Adjusted start position
+        end: 'top 75%',   // Adjusted end position
+        scrub: true,
+        markers: false,
+      },
+        opacity: 0,
+        stagger: 1,
+        y: 1920,
+        ease: 'power3.out',
+    });
+  });
+
+  const splitTypeThree = document.querySelectorAll('#animated-text-3');
+  splitTypeThree.forEach((char) => {
+    const splitText = new this.$SplitType(char, { types: 'chars' });
       this.$gsap.from(splitText.chars, {
         scrollTrigger: {
           trigger: char,
-          start: 'top 200%',
-          end: 'top 95%',
-          scrub: true,
+          start: 'top 120%', // Adjusted start position
+          end: 'top 75%',   // Adjusted end position
+          scrub: false,
           markers: false,
         },
-        opacity: 0.2,
-        stagger: 0.1,
+          opacity: 0,
+          stagger: 0.1,
+          z: 100,
+          ease: 'power3.in',
+          toggleActions: 'play play reverse reverse',
       });
-    });
+  });
 
-    // * FIRST PRESENTER - GAB
-    const splitTypeTwo = document.querySelectorAll('#animated-text-2');
-    splitTypeTwo.forEach((char) => {
-        const splitText = new this.$SplitType(char, { types: 'chars' });
-        this.$gsap.from(splitText.chars, {
-          scrollTrigger: {
-            trigger: char,
-            start: 'top 120%',
-            end: 'top 75%',
-            scrub: true,
-            markers: false,
-          },
-            opacity: 0,
-            stagger: 1,
-            y: 1920,
-            ease: 'power3.out',
-        });
+const splitTypeFour = document.querySelectorAll('#animated-text-4');
+  splitTypeFour.forEach((char) => {
+    const splitText = new this.$SplitType(char, { types: 'chars' });
+      this.$gsap.from(splitText.chars, {
+        scrollTrigger: {
+          trigger: char,
+          start: 'top 90%', // Adjusted start position
+          end: 'top 75%',   // Adjusted end position
+          scrub: false,
+          markers: false,
+        },
+        opacity: 0,
+        x: -240,
+        ease: 'power3.in',
+        stagger: 0.5,
+        toggleActions: 'play play reverse reverse',
       });
+  });
 
-      const splitTypeThree = document.querySelectorAll('#animated-text-3');
-      splitTypeThree.forEach((char) => {
-        const splitText = new this.$SplitType(char, { types: 'chars' });
-          this.$gsap.from(splitText.chars, {
-            scrollTrigger: {
-              trigger: char,
-              start: 'top 120%',
-              end: 'top 75%',
-              scrub: false,
-              markers: false,
-            },
-              opacity: 0,
-              stagger: 0.1,
-              z: 100,
-              ease: 'power3.in',
-              toggleActions: 'play play reverse reverse',
-          });
-      });
-
-    const splitTypeFour = document.querySelectorAll('#animated-text-4');
-      splitTypeFour.forEach((char) => {
-        const splitText = new this.$SplitType(char, { types: 'chars' });
-          this.$gsap.from(splitText.chars, {
-            scrollTrigger: {
-              trigger: char,
-              start: 'top 90%',
-              end: 'top 75%',
-              scrub: false,
-              markers: false,
-            },
-            opacity: 0,
-            x: -240,
-            ease: 'power3.in',
-            stagger: 0.5,
-            toggleActions: 'play play reverse reverse',
-          });
-      });
-
-      const emphasisAnimation = document.querySelectorAll('.animated-emphasization');
-      emphasisAnimation.forEach((char) => {
-          const splitText = new this.$SplitType(char, { types: 'chars' });
-        
-        // Get the computed background color from CSS
-        const fgColor = getComputedStyle(document.documentElement).getPropertyValue('--primary-600');
-
-        // Get the computed foreground color from CSS
-        const bgColor = getComputedStyle(document.documentElement).getPropertyValue('--text-400');
-
-
-          this.$gsap.fromTo(splitText.chars, {
-            color: bgColor,
-          },
-        {
-            color: fgColor,
-            duration: 0.3,
-            stagger: 0.05,
-            scrollTrigger: {
-                trigger: char,
-                start: 'top 100%',
-                end: 'top 95%',
-                scrub: false,
-                markers: true,
-                toggleActions: 'play play reverse reverse',
-                
-            }        
-      });
-      });
-    
-    const splitTypeFive = document.querySelectorAll('#animated-text-5');
-    splitTypeFive.forEach((char) => {
+  const emphasisAnimation = document.querySelectorAll('.animated-emphasization');
+  emphasisAnimation.forEach((char) => {
       const splitText = new this.$SplitType(char, { types: 'chars' });
-        this.$gsap.from(splitText.chars, {
-          scrollTrigger: {
+    
+    // Get the computed background color from CSS
+    const fgColor = getComputedStyle(document.documentElement).getPropertyValue('--primary-600');
+
+    // Get the computed foreground color from CSS
+    const bgColor = getComputedStyle(document.documentElement).getPropertyValue('--text-400');
+
+
+      this.$gsap.fromTo(splitText.chars, {
+        color: bgColor,
+      },
+    {
+        color: fgColor,
+        duration: 0.3,
+        stagger: 0.05,
+        scrollTrigger: {
             trigger: char,
-            start: 'top 110%',
-            end: 'top 85%',
-            scrub: true,
+            start: 'top 100%',
+            end: 'top 95%',
+            scrub: false,
             markers: false,
-          },
-          scaleY: 0,
-          y: -20,
-          transformOrigin: 'top',
-            stagger: 0.1,
-        });
-    });
+            toggleActions: 'play play reverse reverse',
+            
+        }        
+  });
+  });
 
-    // new preset animations insert here
-    
-    this.$gsap.from(".component-left", {
-        opacity: 0,
-        x: -50,
-        scrollTrigger: {
-            trigger: ".component-left",
-            start: "top 100%", // Adjust according to your needs
-            end: "bottom 100%", // Adjust according to your needs
-            scrub: true,
-            markers: false,
-        },
-    });
-
-    // Add a delay before animating the next container
-    this.$gsap.from(".component-right", {
-        opacity: 0,
-        y: -50,
-        scrollTrigger: {
-            trigger: ".component-left",
-            start: `top 100%`, // Adjust according to your needs
-            end: `bottom 90%`, // Adjust according to your needs
-            scrub: true,
-            markers: false,
-        },
-    });
-
-    // Add a delay before animating the next container
-    this.$gsap.from(".component-card-container", {
-        opacity: 0,
-        x: 50,
-        scrollTrigger: {
-            trigger: ".component-left",
-            start: `top 100%`, // Adjust according to your needs
-            end: `bottom 80%`, // Adjust according to your needs
-            scrub: true,
-            markers: false,
-        },
-    });
-    
-    // GSAP animation for sticky section
-    this.$gsap.to('.dlc-sticky', {
+const splitTypeFive = document.querySelectorAll('#animated-text-5');
+splitTypeFive.forEach((char) => {
+  const splitText = new this.$SplitType(char, { types: 'chars' });
+    this.$gsap.from(splitText.chars, {
       scrollTrigger: {
-        trigger: '.dlc-sticky',
-        start: 'top top',
-        end: () => '+=' + (window.innerHeight + this.$refs.websiteContent.offsetHeight * 0.5),
-        scrub: 1,
-        pin: true,
+        trigger: char,
+        start: 'top 110%', // Adjusted start position
+        end: 'top 85%',   // Adjusted end position
+        scrub: true,
+        markers: false,
       },
-      y: 250,
-      scale: 0.50,
-      rotation: -15,
-      ease: 'power3.out',
+      scaleY: 0,
+      y: -20,
+      transformOrigin: 'top',
+        stagger: 0.1,
     });
+});
 
-    // GSAP animation for website content
-    this.$gsap.fromTo(
-      '.dlc-platform-content',
-      {
-        x: -100,
-        scale: 0.3,
-        rotation: 15,
-      },
-      {
-        scrollTrigger: {
-          trigger: '.dlc-platform-content',
-          start: 'top 250%', // Adjusted start position
-          end: 'top 40%',   // Adjusted end position
-          scrub: true,
-          markers: false,   // Set markers to false for production
-        },
-        x: 0,
-        scale: 1,
+// Add a delay before animating the next container
+this.$gsap.from(".component-left", {
+    opacity: 0,
+    x: -50,
+    scrollTrigger: {
+        trigger: ".component-left",
+        start: "top 150%", // Adjust according to your needs
+        end: "bottom 100%", // Adjust according to your needs
+        scrub: true,
+        markers: false,
+    },
+});
+
+// Add a delay before animating the next container
+this.$gsap.from(".component-right", {
+    opacity: 0,
+    y: -50,
+    scrollTrigger: {
+        trigger: ".component-left",
+        start: `top 150%`, // Adjust according to your needs
+        end: `bottom 90%`, // Adjust according to your needs
+        scrub: true,
+        markers: false,
+    },
+});
+
+// Add a delay before animating the next container
+this.$gsap.from(".component-card-container", {
+    opacity: 0,
+    x: 50,
+    scrollTrigger: {
+        trigger: ".component-left",
+        start: `top 150%`, // Adjust according to your needs
+        end: `bottom 80%`, // Adjust according to your needs
+        scrub: true,
+        markers: false,
+    },
+});
+
+// GSAP animation for sticky section
+this.$gsap.to('.dlc-sticky', {
+  scrollTrigger: {
+    trigger: '.dlc-sticky',
+    start: 'top top',
+    end: () => '+=' + (window.innerHeight + this.$refs.websiteContent.offsetHeight * 0.5),
+    scrub: 1,
+    pin: true,
+  },
+  y: 250,
+  scale: 0.50,
+  rotation: -15,
+  ease: 'power3.out',
+});
+
+// GSAP animation for website content
+this.$gsap.fromTo(
+  '.dlc-platform-content',
+  {
+    x: -100,
+    scale: 0.3,
+    rotation: 15,
+  },
+  {
+    scrollTrigger: {
+      trigger: '.dlc-platform-content',
+      start: 'top 250%', // Adjusted start position
+      end: 'top 40%',   // Adjusted end position
+      scrub: true,
+    },
+    x: 0,
+    scale: 1,
         rotation: 0,
-        ease: 'power3.out',
-        duration: 2,        // Increased duration
-      }
-    );
+    ease: 'power3.out',
+    duration: 2,        // Increased duration
+  }
+);
 
-    // Mousemove event handling
-    const wrapper = this.$refs.tracker;
-    const emoji = this.$refs.emoji;
-    const emojiFace = this.$refs.emojiFace;
+// Mousemove event handling
+const wrapper = this.$refs.tracker;
+const emoji = this.$refs.emoji;
+const emojiFace = this.$refs.emojiFace;
 
-    const moveEvent = (e) => {
-      const wrapperRect = wrapper.getBoundingClientRect();
-      const relX = e.clientX - (wrapperRect.left + wrapperRect.width / 2);
-      const relY = e.clientY - (wrapperRect.top + wrapperRect.height / 2);
+const moveEvent = (e) => {
+  const wrapperRect = wrapper.getBoundingClientRect();
+  const relX = e.clientX - (wrapperRect.left + wrapperRect.width / 2);
+  const relY = e.clientY - (wrapperRect.top + wrapperRect.height / 2);
 
-      const emojiMaxDisplacement = 50;
-      const emojiFaceMaxDisplacement = 75;
+  const emojiMaxDisplacement = 50;
+  const emojiFaceMaxDisplacement = 75;
 
-      const emojiDisplacementX = (relX / wrapperRect.width) * emojiMaxDisplacement;
-      const emojiDisplacementY = (relY / wrapperRect.height) * emojiMaxDisplacement;
+  const emojiDisplacementX = (relX / wrapperRect.width) * emojiMaxDisplacement;
+  const emojiDisplacementY = (relY / wrapperRect.height) * emojiMaxDisplacement;
 
-      const emojiFaceDisplacementX = (relX / wrapperRect.width) * emojiFaceMaxDisplacement;
-      const emojiFaceDisplacementY = (relY / wrapperRect.height) * emojiFaceMaxDisplacement;
+  const emojiFaceDisplacementX = (relX / wrapperRect.width) * emojiFaceMaxDisplacement;
+  const emojiFaceDisplacementY = (relY / wrapperRect.height) * emojiFaceMaxDisplacement;
 
-      this.$gsap.to(emoji, {
-        x: emojiDisplacementX,
-        y: emojiDisplacementY,
-        ease: 'power3.out',
-        duration: 0.35,
-      });
+  this.$gsap.to(emoji, {
+    x: emojiDisplacementX,
+    y: emojiDisplacementY,
+    ease: 'power3.out',
+    duration: 0.35,
+  });
 
-      this.$gsap.to(emojiFace, {
-        x: emojiFaceDisplacementX,
-        y: emojiFaceDisplacementY,
-        ease: 'power3.out',
-        duration: 0.35,
-      });
-    };
+  this.$gsap.to(emojiFace, {
+    x: emojiFaceDisplacementX,
+    y: emojiFaceDisplacementY,
+    ease: 'power3.out',
+    duration: 0.35,
+  });
+};
 
-    const leaveEvent = () => {
-      this.$gsap.to([emoji, emojiFace], {
-        x: 0,
-        y: 0,
-        ease: 'power3.out',
-        duration: 1,
-      });
-    };
+const leaveEvent = () => {
+  this.$gsap.to([emoji, emojiFace], {
+    x: 0,
+    y: 0,
+    ease: 'power3.out',
+    duration: 1,
+  });
+};
 
-    wrapper.addEventListener('mousemove', moveEvent);
-    wrapper.addEventListener('mouseleave', leaveEvent);
+wrapper.addEventListener('mousemove', moveEvent);
+wrapper.addEventListener('mouseleave', leaveEvent);
 
-    // Initialize Lenis for smooth scrolling
-    this.$lenis = new this.$Lenis({
-      duration: 1.2,
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-    });
+// Initialize Lenis for smooth scrolling
+this.$lenis = new this.$Lenis({
+  duration: 1.2,
+  easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+});
 
-    const raf = (time) => {
-      this.$lenis.raf(time);
-      requestAnimationFrame(raf);
-    };
+const raf = (time) => {
+  this.$lenis.raf(time);
+  requestAnimationFrame(raf);
+};
 
-    requestAnimationFrame(raf);
+requestAnimationFrame(raf);
   },
   beforeUnmount() {
     if (this.$lenis) {

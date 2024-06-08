@@ -31,15 +31,15 @@ export default {
     this.$nextTick(() => {
       this.$gsap.from(this.$refs.gabContainer, {
         opacity: 0,
-        y: 100,
+        y: 500,
         scrollTrigger: {
           trigger: this.$refs.gabContainer,
-          start: 'top 125%', // Adjust the start position based on your needs
-          end: 'top 75%', // Adjust the end position based on your needs
+          start: 'top 85%', // Adjust the start position based on your needs
+          end: 'top 80%', // Adjust the end position based on your needs
           scrub: true,
-          markers: false, // Set to false when you are done with debugging
+          markers: true, // Set to false when you are done with debugging
         },
-        duration: 1,
+        duration: 3,
         ease: 'power3.out',
       });
     });

@@ -49,20 +49,20 @@ export default {
     this.$nextTick(() => {
       this.$refs.cards.forEach((card, index) => {
         this.$gsap.from(card, {
+          y: 800,
           scale: 0,
           opacity: 0,
-          duration: 0.2,
+          duration: 3,
           delay: index * 0.001, // Stagger the animation for each card
           
           scrollTrigger: {
             trigger: card,
-            start: 'top 95%',
-            end: 'top 95%',
+            start: 'top 75%',
+            end: 'top 65%',
             scrub: true,
-            markers: false, // Set to true for debugging
+            markers: true, // Set to true for debugging
             toggleActions: 'play none none reverse',
           },
-          y: 100,
           scrub: true,
         });
       });
