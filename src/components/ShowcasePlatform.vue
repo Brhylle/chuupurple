@@ -237,7 +237,8 @@ const splitTypeFour = document.querySelectorAll('#animated-text-4');
     {
         color: fgColor,
         duration: 0.3,
-        stagger: 0.05,
+      stagger: 0.05,
+        opacity: 1,
         scrollTrigger: {
             trigger: char,
             start: 'top 100%',
@@ -245,7 +246,6 @@ const splitTypeFour = document.querySelectorAll('#animated-text-4');
             scrub: false,
             markers: false,
             toggleActions: 'play play reverse reverse',
-            
         }        
   });
   });
@@ -339,7 +339,7 @@ this.$gsap.fromTo(
     },
     x: 0,
     scale: 1,
-        rotation: 0,
+    rotation: 0,
     ease: 'power3.out',
     duration: 2,        // Increased duration
   }

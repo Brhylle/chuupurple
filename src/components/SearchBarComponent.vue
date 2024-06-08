@@ -31,7 +31,7 @@ export default {
     this.$nextTick(() => {
       this.$gsap.from(this.$refs.gabContainer, {
         opacity: 0,
-        y: 500,
+        y: 400,
         scrollTrigger: {
           trigger: this.$refs.gabContainer,
           start: 'top 85%', // Adjust the start position based on your needs
@@ -39,7 +39,7 @@ export default {
           scrub: true,
           markers: true, // Set to false when you are done with debugging
         },
-        duration: 3,
+        duration: 2,
         ease: 'power3.out',
       });
     });

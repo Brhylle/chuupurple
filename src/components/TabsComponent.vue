@@ -37,7 +37,7 @@ export default {
     this.$nextTick(() => {
       this.$gsap.from(this.$refs.tabsContainer, {
         opacity: 0,
-        y: 500,
+        y: 400,
         scrollTrigger: {
           trigger: this.$refs.tabsContainer,
           start: 'top 85%', 
@@ -45,7 +45,7 @@ export default {
           scrub: true,
           markers: true,
         },
-        duration: 3,
+        duration: 2,
         ease: 'power3.out',
       });
     });
