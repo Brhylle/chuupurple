@@ -1,6 +1,5 @@
 <template>
   <div :class="MBLcontainerClass">
-    <h1 class="">Accordion Component Example</h1>
     <div class="MBLspace-y-2">
       <div v-for="(item, index) in MBLaccordionItems" :key="index" class="MBLborder-b MBLborder-gray-300">
         <button @click="MBLtoggle(index)" class="MBLw-full MBLtext-left MBLpy-3 MBLpx-4 MBLfocus:outline-none MBLbg-secondary MBLtext-text">

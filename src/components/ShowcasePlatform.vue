@@ -23,7 +23,7 @@
                     
                     <div class="dlc-badge-container">
                         <h2 class="dlc-badge-name">chuu</h2>
-                        <img src="../assets/chuu-light-badge.svg" alt="chuupurple">
+                        <img src="../assets/public/chuu-light-badge.svg" alt="chuupurple">
                     </div>
 
                     <div class="dlc-tracker" ref="tracker">
@@ -52,9 +52,9 @@
                         <p class="animated-text-1">These components, <span class="animated-emphasization-2">lovingly created</span> by the team, beckon you to delve into a realm brimming with creativity and innovation. Embark on a journey of exploration filled with happiness and excitement, and <span class="animated-emphasization-2">uncover the enchantment</span> meticulously woven into every <span class="animated-emphasization-2">intricate detail</span>.</p>
                     </div>
 
-                    <!-- * GAB components should be injected here * -->
+                    <!-- *** GAB COMPONENTS *** -->
                     <div class="uniform-container">
-                        <h2 class="presenter-header" id="animated-text-2"><span class="animated-emphasization">Gabriel</span> Ventura,</h2>
+                        <h2 class="presenter-header" id="animated-text-5"><span class="animated-emphasization">Gabriel</span> Ventura,</h2>
                             <h4 class="component-name" id="animated-text-5"><span class="animated-emphasization">Tabs</span> Component & <span class="animated-emphasization">Search Bar</span> Component 1</h4>
                                 <div class="component-row">
                                     <div class="component-left">
@@ -66,31 +66,76 @@
                                 </div>
                         
                             <div class="component-card-container">
-                                <h4 class="component-name" id="animated-text-3"><span class="animated-emphasization">Cards</span> Component</h4>
+                                <h4 class="component-name" id="animated-text-5"><span class="animated-emphasization">Cards</span> Component</h4>
                                 <CardsComponent/>
+                            </div>
+
+                            <div class="component-countdown-wrapper">
+                              <h3 class="countdown-numerator" id="animated-text-5">Twenty-Five (25)</h3>
+                              <span class="overline" id="animated-text-5"><span class="no-line-spacing">----------</span> components <span class="no-line-spacing">----------</span></span>
+                              <h2 class="countdown-denominator" id="animated-text-5"><span class="animated-emphasization">Five (5)</span></h2>
                             </div>
                     </div>
 
-                    <!-- * MRBL components should be injected here * -->
 
-                    <div class="uniform-container">
-                        <h2 class="presenter-header" id="animated-text-2"><span class="animated-emphasization">Mirabel</span> Robert Leoni,</h2>
-                        
-                        <MirabelAccordion/>
-                        <MirabelProgressBar/>
-                        <MirabelPagination/>
-                    </div>
-
-
-
-                    <!-- * FRTN components should be injected here * -->
-                    <div class="uniform-container">
-                        <Fortin_NumberInput/>
-                        <Fortin_Textarea/>
-                        <Fortin_Tooltip/>
-                    </div>
                 </section>
 
+                <section class="dlc-banner-1" id="animated-text-6">
+  
+                  <h1>More 
+                      components, waiting to be <span class="animated-emphasization-1"> scrolled.</span></h1></section>
+
+                <section class="dlc-platform-content-2" ref="websiteContent">
+                    <!-- *** MIRABEL COMPONENTS *** -->
+                    <div class="uniform-container">
+                        <h2 class="presenter-header" id="animated-text-2"><span class="animated-emphasization">Mirabel</span> Robert Leoni,</h2>
+                            <div class="component-row">
+                              <div class="component-left">
+                                <div class="component-wrapper">
+                                  <h4 class="component-name" id="animated-text-5"><span class="animated-emphasization">Pagination</span></h4>
+                                  <MirabelPagination/>
+                                </div>
+
+                                <div class="component-wrapper">
+                                  <h4 class="component-name" id="animated-text-5"><span class="animated-emphasization">Progress Bar</span> </h4>
+                                  <MirabelProgressBar/> 
+                                </div>
+
+                                <div class="component-wrapper">
+                                  <h4 class="component-name" id="animated-text-5"><span class="animated-emphasization">Accordion</span> </h4>
+                                  <MirabelAccordion/>
+                                </div>
+                              </div>
+
+                              <!-- *** CRUZ COMPONENTS *** -->
+                              <div class="component-right-2">
+                               <CruzNotification/>
+                               <CruzPopup/>
+                              </div>
+                            </div>
+                            
+                    </div>
+
+                    <!-- *** FORTIN COMPONENTS *** -->
+                    
+                    <div class="uniform-container">
+                      <Fortin_NumberInput/>
+                      <Fortin_Textarea/>
+                      <Fortin_Tooltip/>
+                    </div>
+
+                    <div class="uniform-container">
+                      <SemifraniaComponent/>
+                      <SemifraniaMenuComponent/>
+                    </div>
+
+
+                    <!-- *** OTHER COMPONENTS *** -->
+                </section>
+            </div>
+            <div class="scroll-down-container">
+              <h5 class="scroll-down-text">scroll down to start.</h5>
+              <img src="../assets/public/scroll-down.gif" alt="scroll-down-to-scroll" class="scroll-down">
             </div>
         </section>
     </main>
@@ -101,8 +146,8 @@ import DarkToggleMode from './DarkToggleMode.vue';
 // import CarouselComponent from './CarouselComponent.vue';
 import TabsComponent from './TabsComponent.vue';
 import CardsComponent from './CardsComponent.vue';
-// import CruzNotification from './CruzNotification.vue';
-// import CruzPopup from './CruzPopup.vue';
+import CruzNotification from './CruzNotification.vue';
+import CruzPopup from './CruzPopup.vue';
 import Fortin_NumberInput from './Fortin_NumberInput.vue';
 import Fortin_Textarea from './Fortin_Textarea.vue';
 import Fortin_Tooltip from './Fortin_Tooltip.vue';
@@ -110,6 +155,8 @@ import MirabelAccordion from './MirabelAccordion.vue';
 import MirabelProgressBar from './MirabelProgressBar.vue';
 import MirabelPagination from './MirabelPagination.vue';
 import SearchBarComponent from './SearchBarComponent.vue';
+import SemifraniaComponent from './SemifraniaComponent.vue';
+import SemifraniaMenuComponent from './SemifraniaMenuComponent.vue';
 
 export default {
   components: {
@@ -118,16 +165,19 @@ export default {
     TabsComponent,
     CardsComponent,
     SearchBarComponent,
-    // CruzNotification,
-    // CruzPopup,
+    CruzNotification,
+    CruzPopup,
     Fortin_NumberInput,
     Fortin_Textarea,
     Fortin_Tooltip,
     MirabelAccordion,
     MirabelPagination,
     MirabelProgressBar,
+    SemifraniaComponent,
+    SemifraniaMenuComponent
   },
   mounted() {
+
     // Animation for the first section of the showcase
 const splitHeader = document.querySelectorAll('.animated-header-1');
 splitHeader.forEach((char) => {
@@ -236,8 +286,8 @@ const splitTypeFour = document.querySelectorAll('#animated-text-4');
       },
     {
         color: fgColor,
-        duration: 0.3,
-      stagger: 0.05,
+        duration: 1,
+        stagger: 0.05,
         opacity: 1,
         scrollTrigger: {
             trigger: char,
@@ -250,23 +300,85 @@ const splitTypeFour = document.querySelectorAll('#animated-text-4');
   });
   });
 
-const splitTypeFive = document.querySelectorAll('#animated-text-5');
-splitTypeFive.forEach((char) => {
-  const splitText = new this.$SplitType(char, { types: 'chars' });
-    this.$gsap.from(splitText.chars, {
-      scrollTrigger: {
-        trigger: char,
-        start: 'top 110%', // Adjusted start position
-        end: 'top 85%',   // Adjusted end position
-        scrub: true,
-        markers: false,
+    const emphasisAnimationScrub = document.querySelectorAll('.animated-emphasization-1');
+  emphasisAnimationScrub.forEach((char) => {
+      const splitText = new this.$SplitType(char, { types: 'chars' });
+    
+    // Get the computed background color from CSS
+    const fgColor = getComputedStyle(document.documentElement).getPropertyValue('--primary-600');
+
+    // Get the computed foreground color from CSS
+    const bgColor = getComputedStyle(document.documentElement).getPropertyValue('--secondary-800');
+
+
+      this.$gsap.fromTo(splitText.chars, {
+        color: bgColor,
       },
-      scaleY: 0,
-      y: -20,
-      transformOrigin: 'top',
+    {
+        color: fgColor,
+        duration: 2,
+        stagger: 1,
+        opacity: 1,
+        scrollTrigger: {
+            trigger: char,
+            start: 'top 50%',
+            end: 'top 15%',
+            scrub: true,
+            markers: false,
+            // toggleActions: 'play play reverse reverse',
+        }        
+  });
+  });
+
+  const splitTypeFive = document.querySelectorAll('#animated-text-5');
+  splitTypeFive.forEach((char) => {
+    const splitText = new this.$SplitType(char, { types: 'chars' });
+      this.$gsap.from(splitText.chars, {
+        scrollTrigger: {
+          trigger: char,
+          start: 'top 110%', // Adjusted start position
+          end: 'top 85%',   // Adjusted end position
+          scrub: true,
+          markers: false,
+        },
+        scaleY: 0,
+        y: -20,
+        transformOrigin: 'top',
+          stagger: 0.1,
+      });
+  });
+
+  const splitTypeSix = document.querySelectorAll('#animated-text-6');
+  splitTypeSix.forEach((char) => {
+    const splitText = new this.$SplitType(char, { types: 'chars' });
+      this.$gsap.from(splitText.chars, {
+        scrollTrigger: {
+          trigger: char,
+          start: 'top 85%',
+          end: 'top 35%',   
+          scrub: true,
+          markers: false,
+        },
+        scaleY: 0,
+        y: 20,
+        transformOrigin: 'bottom',
+          stagger: 0.1,
+      });
+      // Exit Animation
+      this.$gsap.to(splitText.chars, {
+        scrollTrigger: {
+          trigger: char,
+          start: 'bottom 35%', // Start when 65% of the element is above the bottom of the viewport
+          end: 'bottom 15%',   // End when 15% of the element is above the bottom of the viewport
+          scrub: true,
+          markers: false,
+        },
+        scaleY: 0,
+        y: 20,
+        transformOrigin: 'bottom',
         stagger: 0.1,
-    });
-});
+      });
+  });
 
 // Add a delay before animating the next container
 this.$gsap.from(".component-left", {
@@ -302,8 +414,9 @@ this.$gsap.from(".component-card-container", {
         trigger: ".component-left",
         start: `top 150%`, // Adjust according to your needs
         end: `bottom 80%`, // Adjust according to your needs
-        scrub: true,
-        markers: false,
+        scrub: false,
+      markers: false,
+      toggleActions: 'play play reverse reverse',
     },
 });
 
@@ -414,330 +527,455 @@ requestAnimationFrame(raf);
 
 <style scoped>
 
-.component-card-container {
-    padding: 1rem;
-}
-
-.component-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 2rem;
-  margin-top: 1rem;
-}
-
-.component-left, .component-right, .component-card-container {
-    border: solid;
-  border-width: 0.33rem;
-}
-
-.component-left {
-  flex: 1;
-  margin-right: 1rem;
-  padding: 2rem;
-}
-
-.component-right {
-  flex: 1;
-  margin-left: 1rem;
-  display: flex;
-  justify-content: flex-end;
-  padding: 1.33rem;
-}
-
-.search-bar-wrapper {
-  width: 100%;
-  max-width: 400px; /* Adjust as needed */
-  position: relative;
-}
-
-.component-name {
-    font-family: "PP Neue Montreal Bold";
-    font-size: 3rem;
-    line-height: 1.1;
-    color: var(--text-400);
-    text-align: center;
-}
-
-.presenter-header {
-    font-family: "Humane Bold", sans-serif;
-    font-size: 10rem;
-    line-height: 1.1;
-    color: var(--text-400);
-    text-align: center;
-}
-
-/* SEGREGATED COMPONENT CSS CONTAINERS */
-.uniform-container {
-    margin: 5rem;
-    border: solid 0.63rem var(--accent-300);
-    border-radius: 2rem;
-    padding: 2rem;
-}
-
-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.dlc-container {
-    width: 100%;
-    height: 100%;
-    display: flex;
-}
-
-section.dlc-sticky {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: var(--background-200);
-}
-
-nav {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    padding: 2em;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 1;
-}
-
-.dlc-logo a {
-    text-decoration: none;
-    text-transform: uppercase;
-    font-family: "Humane Bold", sans-serif;
-    font-size: 60px;
-    color: var(--primary-900);
-}
-
-.dlc-sub-logo {
-    color: var(--text-600);
-    margin: 92px 0 0 34px;
-}
-
-.dlc-links {
-    display: flex;
-    align-items: center;
-    gap: 1em;
-}
-
-.dlc-links a {
-    text-decoration: none;
-    text-transform: uppercase;
-    padding: 0.5em 1em;
-    font-size: 13px;
-    color: var(--text-700);
-    border: 1px solid var(--accent-900);
-    border-radius: 20px;
-}
-
-.dlc-links a:hover {
-    color: var(--text-50);
-    background: var(--secondary-800);
-}
-
-.dlc-header {
-    position: absolute;
-    top: 55%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-/* MAKE THE TEXT RESPONSIVE BY USING MEDIA QUERY? */
-.dlc-header h1 {
-    text-transform: uppercase;
-    font-family: Humane SemiBold;
-    font-size: 42vw;
-    font-weight: 400;
-    color: var(--text-700);
-    line-height: 100%;
-}
-
-.dlc-badge-container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(95%, 20%);
+  .scroll-down-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
-    z-index: 0;
-
-}
-
-.dlc-badge-container img {
-    width: 240px;
-    height: auto;
-    animation: rotateBadge 15s infinite linear;
-}
-
-.dlc-badge-name {
-    position: absolute;
-    color: var(--primary-950);
-    font-family: "Humane SemiBold", sans-serif;
-    font-size: 5em;
-    text-transform: uppercase;
-    z-index: 1;
-    margin: 0.8em;
-}
-
-section.dlc-platform-content {
-    position: absolute;
-    top: 100vh;
+    justify-content: center;
     width: 100%;
-    height: 300vh;
+  }
+
+  img.scroll-down {
+    z-index: 9999;
+    position: absolute;
+    width: 5rem;
+    height: 5rem;
+    top: 88%;
+  }
+
+  .scroll-down-text {
+    font-family: PP Neue Montreal Bold;
+    z-index: 100;
+    position: absolute;
+    font-size: 1rem;
+    /* font-weight: bolder; */
+    color: var(--primary-800);
+    text-transform: uppercase;
+    font-style: italic;
+    top: 87%;
+    animation: blink 1.5s infinite;
+  }
+
+  .blink {
+    animation: blink 5s infinite;
+  }
+
+  @keyframes blink {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .component-wrapper {
+    margin-bottom: 2rem;
+  }
+
+  .no-line-spacing {
+    line-height: 0;
+    letter-spacing: -0.09em;
+  }
+
+  .overline {
+    font-size: 2.5rem;
+    font-family: PP Neue Montreal Book;
+    font-kerning: 10rem;
+    font-style: italic;
+    letter-spacing: 2.5rem;
+  }
+
+  .countdown-numerator {
+    font-size: 5rem;
+    text-transform: uppercase;
+  }
+
+  .countdown-denominator,
+  .countdown-numerator {
+    font-family: PP Neue Montreal Medium;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+  }
+
+  .countdown-denominator {
+    font-family: PP Neue Montreal Bold;
+    font-size: 5rem;
+    kerning: 0;
+    text-transform: uppercase;
+  }
+
+  .component-countdown-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem;
+  }
+
+  .component-card-container {
+      padding: 1rem;
+  }
+
+  .component-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+  }
+
+  .component-left, .component-right, .component-card-container, .component-right-2 {
+    border: solid 0.33rem var(--accent-500);
+  }
+
+  .component-left {
+    flex: 1;
+    margin-right: 1rem;
+    padding: 2rem;
+  }
+
+  .component-right {
+    flex: 1;
+    margin-left: 1rem;
+    display: flex;
+    justify-content: flex-end;
+    padding: 1.33rem;
+  }
+
+  .component-right-2 {
+    flex: 1;
+    margin-left: 1rem;
+    padding: 1.33rem;
+    height: auto;
+    width: auto;
+  }
+
+  .search-bar-wrapper {
+    width: 100%;
+    max-width: 400px; /* Adjust as needed */
+    position: relative;
+  }
+
+  .component-name {
+      font-family: "PP Neue Montreal Bold";
+      font-size: 3rem;
+      line-height: 1.1;
+      color: var(--text-400);
+      text-align: center;
+  }
+
+  .presenter-header {
+      font-family: "Humane Bold", sans-serif;
+      font-size: 10rem;
+      line-height: 1.1;
+      color: var(--text-400);
+      text-align: center;
+  }
+
+  /* SEGREGATED COMPONENT CSS CONTAINERS */
+  .uniform-container {
+      margin: 5rem;
+      border: solid 0.63rem var(--accent-300);
+      border-radius: 2rem;
+      padding: 2rem;
+  }
+
+  img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+  }
+
+  .dlc-container {
+      width: 100%;
+      height: 100%;
+      display: flex;
+  }
+
+  section.dlc-sticky {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: var(--background-200);
+  }
+
+  nav {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      padding: 2em;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1;
+  }
+
+  .dlc-logo a {
+      text-decoration: none;
+      text-transform: uppercase;
+      font-family: "Humane Bold", sans-serif;
+      font-size: 60px;
+      color: var(--primary-900);
+  }
+
+  .dlc-sub-logo {
+      color: var(--text-600);
+      margin: 92px 0 0 34px;
+  }
+
+  .dlc-links {
+      display: flex;
+      align-items: center;
+      gap: 1em;
+  }
+
+  .dlc-links a {
+      text-decoration: none;
+      text-transform: uppercase;
+      padding: 0.5em 1em;
+      font-size: 13px;
+      color: var(--text-700);
+      border: 1px solid var(--accent-900);
+      border-radius: 20px;
+  }
+
+  .dlc-links a:hover {
+      color: var(--text-50);
+      background: var(--secondary-800);
+  }
+
+  .dlc-header {
+      position: absolute;
+      top: 55%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+  }
+
+  /* MAKE THE TEXT RESPONSIVE BY USING MEDIA QUERY? */
+  .dlc-header h1 {
+      text-transform: uppercase;
+      font-family: Humane SemiBold;
+      font-size: 42vw;
+      font-weight: 400;
+      color: var(--text-700);
+      line-height: 100%;
+  }
+
+  .dlc-badge-container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(95%, 20%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      z-index: 0;
+
+  }
+
+  .dlc-badge-container img {
+      width: 240px;
+      height: auto;
+      animation: rotateBadge 15s infinite linear;
+  }
+
+  .dlc-badge-name {
+      position: absolute;
+      color: var(--primary-950);
+      font-family: "Humane SemiBold", sans-serif;
+      font-size: 5em;
+      text-transform: uppercase;
+      z-index: 1;
+      margin: 0.8em;
+  }
+
+  section.dlc-platform-content {
+      position: absolute;
+      top: 100vh;
+      width: 100%;
+      background: var(--background-900);
+      padding: 6em;
+  }
+
+  section.dlc-banner-1 {
+    position: absolute;
+    top: 360vh;
+    height: 300px;
+    width: 100%;
+    background: var(--accent-100);
+    z-index: 1;
+    display: flex;
+  align-items: center; 
+  justify-content: center; 
+  font-size: 10rem; 
+  color: var(--secondary-800); 
+  text-align: center; 
+  font-family: Humane Bold; 
+  padding: 0;
+    margin: 0;
+    text-transform: uppercase;
+    line-height: 0.4;
+  }
+
+  section.dlc-platform-content-2 {
+    position: absolute;
+    top: 380vh;
+    width: 100%;
     background: var(--background-900);
     padding: 6em;
-}
+  }
 
-.dlc-tracker {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    height: 100%;
-    padding: 2em 0;
-}
+  .dlc-tracker {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      height: 100%;
+      padding: 2em 0;
+  }
 
-.dlc-emoji {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 300px;
-    height: 300px;
-    background: url('../assets/emoji-light.png') no-repeat 50% 50%;
-    background-size: cover;
-    border-radius: 100%;
-}
+  .dlc-emoji {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 300px;
+      height: 300px;
+      background: url('../assets/public/emoji-light.png') no-repeat 50% 50%;
+      background-size: cover;
+      border-radius: 100%;
+  }
 
-[data-theme="dark"] .dlc-emoji {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 300px;
-    height: 300px;
-    background: url('../assets/emoji-dark.png') no-repeat 50% 50%;
-    background-size: cover;
-    border-radius: 100%;
-}
+  [data-theme="dark"] .dlc-emoji {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 300px;
+      height: 300px;
+      background: url('../assets/public/emoji-dark.png') no-repeat 50% 50%;
+      background-size: cover;
+      border-radius: 100%;
+  }
 
-.dlc-emoji-face {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 225px;
-    height: 200px;
-    display: flex;
-    flex-direction: column;
+  .dlc-emoji-face {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 225px;
+      height: 200px;
+      display: flex;
+      flex-direction: column;
 
-}
+  }
 
-.dlc-eyes, .dlc-mouth-wrapper {
-    flex: 1;
-}
+  .dlc-eyes, .dlc-mouth-wrapper {
+      flex: 1;
+  }
 
-.dlc-eyes {
-    display: flex;
-    justify-content: space-around;
-}
+  .dlc-eyes {
+      display: flex;
+      justify-content: space-around;
+  }
 
-.dlc-eyes svg {
-    width: 75px;
-    height: 75px;
-    animation: rotateEyes 4s infinite linear;
-}
+  .dlc-eyes svg {
+      width: 75px;
+      height: 75px;
+      animation: rotateEyes 4s infinite linear;
+  }
 
-.dlc-eyes svg path {
-    fill: var(--secondary-900);
-}
+  .dlc-eyes svg path {
+      fill: var(--secondary-900);
+  }
 
-.dlc-mouth-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-}
+  .dlc-mouth-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+  }
 
-.dlc-mouth {
-    width: 40px;
-    height: 40px;
-    margin-top: 10rem;
-    border-radius: 50px;
-    background: var(--secondary-900);
-    animation: wonderFace 2s infinite cubic-bezier(0.075, 0.82, 0.165, 1);
-}
+  .dlc-mouth {
+      width: 40px;
+      height: 40px;
+      margin-top: 10rem;
+      border-radius: 50px;
+      background: var(--secondary-900);
+      animation: wonderFace 2s infinite cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
 
-.dlc-section-header {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 2em;
-}
+  .dlc-section-header {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 2em;
+  }
 
-.dlc-section-header h1 {
-    font-family: "Humane SemiBold";
-    font-size: 10vw;
-    font-weight: 400;
-    color: var(--primary-400);
-    line-height: 100%;
-    text-transform: uppercase;
-}
+  .dlc-section-header h1 {
+      font-family: "Humane SemiBold";
+      font-size: 10vw;
+      font-weight: 400;
+      color: var(--primary-400);
+      line-height: 100%;
+      text-transform: uppercase;
+  }
 
-.dlc-section-header p {
-    color: var(--text-400);
-    font-size: 13px;
-    text-transform: uppercase;
-    text-align: right;
-    width: 25%;
-}
+  .dlc-section-header p {
+      color: var(--text-400);
+      font-size: 13px;
+      text-transform: uppercase;
+      text-align: right;
+      width: 25%;
+  }
 
-.dlc-row {
-    display: flex;
-    gap: 2em;
-    margin: 2em 0;
+  .dlc-row {
+      display: flex;
+      gap: 2em;
+      margin: 2em 0;
 
-}
+  }
 
-.dlc-row img {
-    height: 600px;
-}
+  .dlc-row img {
+      height: 600px;
+  }
 
 
 
-/* ANIMATIONS */
+  /* ANIMATIONS */
 
-@keyframes rotateEyes {
-    0% {
-        transform: rotate(0deg);
-    }
+  @keyframes rotateEyes {
+      0% {
+          transform: rotate(0deg);
+      }
 
-    100% {
-        transform: rotate(360deg);
-    }
-}
+      100% {
+          transform: rotate(360deg);
+      }
+  }
 
-@keyframes wonderFace {
-    0% {height: 40px;}
-    50% {height: 80px;}
-    100% {height: 40px;}
-}
+  @keyframes wonderFace {
+      0% {height: 40px;}
+      50% {height: 80px;}
+      100% {height: 40px;}
+  }
 
-@keyframes rotateBadge {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-}
+  @keyframes rotateBadge {
+      0% {
+          transform: rotate(0deg);
+      }
+      100% {
+          transform: rotate(360deg);
+      }
+  }
 
 </style>

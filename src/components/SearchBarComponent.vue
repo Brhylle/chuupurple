@@ -34,10 +34,10 @@ export default {
         y: 400,
         scrollTrigger: {
           trigger: this.$refs.gabContainer,
-          start: 'top 85%', // Adjust the start position based on your needs
-          end: 'top 80%', // Adjust the end position based on your needs
+          start: 'top 95%', // Adjust the start position based on your needs
+          end: 'top 85%', // Adjust the end position based on your needs
           scrub: true,
-          markers: true, // Set to false when you are done with debugging
+          markers: false, // Set to false when you are done with debugging
         },
         duration: 2,
         ease: 'power3.out',

@@ -71,7 +71,7 @@ export default {
   background: transparent;
   border: none;
   font-size: 20px;
-  color: #333;
+  color: rgb(var(--primary-600));
 }
 
 .RDCbasic-popup {
@@ -79,10 +79,10 @@ export default {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: #c999ff;
+  background: rgb(var(--background-900));
   padding: 20px;
-  border: 1px solid #ccc;
-  z-index: 9999;
+  border: 0.25rem solid rgb(var(--accent-50));
+  z-index: 5;
 }
 
 .RDCbackground-popup {
@@ -90,8 +90,8 @@ export default {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: #9233ff;
-  z-index: 9999;
+  background: rgb(var(--background-900));
+  z-index: 5;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -111,8 +111,8 @@ export default {
   left: 0;
   width: 100%;
   height: 100%;
-  background: #e4ccff;
-  z-index: 9999;
+  background: rgb(var(--background-100));
+  z-index: 5;
   display: flex;
   justify-content: center;
   align-items: center;

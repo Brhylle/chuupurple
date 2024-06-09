@@ -40,10 +40,10 @@ export default {
         y: 400,
         scrollTrigger: {
           trigger: this.$refs.tabsContainer,
-          start: 'top 85%', 
-          end: 'top 80%', 
+          start: 'top 100%', 
+          end: 'top 90%', 
           scrub: true,
-          markers: true,
+          markers: false,
         },
         duration: 2,
         ease: 'power3.out',

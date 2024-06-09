@@ -60,7 +60,7 @@ export default {
             start: 'top 75%',
             end: 'top 65%',
             scrub: true,
-            markers: true, // Set to true for debugging
+            markers: false, // Set to true for debugging
             toggleActions: 'play none none reverse',
           },
           scrub: true,

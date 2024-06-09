@@ -1,10 +1,9 @@
 <template>
   <div id="app">
-    <h1>Progress Bar Component</h1>
-    <div class="progress-bar-container">
+    <div class="progress-bar-container" ref="progressBarContainer">
       <div class="progress-bar" :style="progressBarStyle"></div>
     </div>
-    <div class="mt-4">
+    <div class="mt-4" ref="incrementProgress">
       <button @click="increaseProgress" class="button">
         Increase Progress
       </button>
@@ -19,6 +18,40 @@ export default {
     return {
       MBLprogress: 0
     };
+  },
+  mounted() {
+    // ScrollTrigger animation for the tabs component
+    this.$nextTick(() => {
+      this.$gsap.from(this.$refs.progressBarContainer, {
+        opacity: 0,
+        y: 100,
+        scrollTrigger: {
+          trigger: this.$refs.progressBarContainer,
+          start: 'top 100%', 
+          end: 'top 80%', 
+          scrub: true,
+          markers: false,
+        },
+        duration: 2,
+        ease: 'power3.out',
+      });
+    });
+        this.$nextTick(() => {
+      this.$gsap.from(this.$refs.incrementProgress, {
+        opacity: 0,
+        y: -50,
+        scrollTrigger: {
+          trigger: this.$refs.incrementProgress,
+          start: 'top 75%', 
+          end: 'top 50%', 
+          scrub: true,
+          markers: false,
+        },
+        duration: 2,
+        ease: 'power3.out',
+      });
+    });
+    
   },
   computed: {
     progressBarStyle() {

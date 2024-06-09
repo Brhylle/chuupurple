@@ -1,7 +1,7 @@
 // tailwind.config.js
 module.exports = {
   purge: ['./src/**/*.{js,jsx,ts,tsx,html}'],
-  darkMode: 'selector',
+  darkMode: 'class',
   theme: {
     extend: {
       fontFamily: {

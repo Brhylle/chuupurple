@@ -1,6 +1,5 @@
 <template>
   <div id="MBLapp">
-    <h1>Pagination Component</h1>
     <div class="MBLflex MBLspace-x-2">
       <button
         v-for="page in MBLtotalPages"
@@ -10,6 +9,7 @@
           'MBLpx-4 MBLpy-2 MBLrounded',
           MBLcurrentPage === page ? 'MBLbg-primary MBLtext-accent' : 'MBLbg-secondary MBLtext-text'
         ]"
+        ref="cards"
       >
         {{ page }}
       </button>
@@ -18,6 +18,11 @@
 </template>
 
 <script>
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
+
 export default {
   name: 'PaginationComponent',
   data() {
@@ -34,7 +39,28 @@ export default {
       this.MBLhandlePageChange(page);
       this.$emit('MBLpage-changed', page);
     }
-  }
+  },
+  mounted() {
+    this.$nextTick(() => {
+      this.$refs.cards.forEach((card, index) => {
+        gsap.from(card, {
+          x: -100,
+          scale: 0,
+          opacity: 0,
+          duration: 0.5,
+          delay: index * 0.1, // Stagger the animation for each card
+          scrollTrigger: {
+            trigger: card,
+            start: 'top 85%',
+            end: 'top 75%',
+            scrub: false,
+            markers: false, // Set to true for debugging
+            toggleActions: 'play play reverse reverse',
+          },
+        });
+      });
+    });
+  },
 };
 </script>
 

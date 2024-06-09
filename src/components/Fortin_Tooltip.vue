@@ -34,6 +34,7 @@ h1{
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    z-index: 0;
   }
 
   .fortin-tooltip {
