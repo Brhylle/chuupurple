@@ -1,36 +1,46 @@
 <template>
-  <div class="bg-blue-500 h-screen flex justify-center items-center">
-    <div class="bg-white p-8 rounded-lg shadow-md w-96">
-      <h1 class="text-4xl font-semibold mb-4 text-center text-gray-700">Notifications</h1>
-      <p class="text-xl font-semibold mb-4 text-center text-gray-700">
+  <div class="rdc-background-popup rounded-xl bg-background-300 h-full flex justify-center p-4 items-center">
+    <div class="bg-background-100 p-8 rounded-lg shadow-md w-96">
+      <p class="text-sm font-medium mb-4 text-center text-text-700">
         The notification component supports different types of notifications such as success, error, warning, and info messages, making it versatile and essential for user communication. Here are the various designs or formats a notification can take:
       </p>
 
+      <!-- *** DEFAULT NOTIFICATIONS -->
       <div class="mb-6 text-center">
-        <h2 class="text-2xl font-bold mb-4 text-gray-700">Default Notifications</h2>
-        <div class="space-y-4">
-          <button class="btn-light w-full py-2 px-4 bg-indigo-600 text-white rounded-md hover:bg-indigo-700" @click="RDCshowNotification('Notification Light', 'This is a notification in light mode.', 'light')">Notification Light</button>
-          <button class="btn-dark w-full py-2 px-4 bg-gray-800 text-white rounded-md hover:bg-gray-900" @click="RDCshowNotification('Notification Dark', 'This is a notification in dark mode.', 'dark')">Notification Dark</button>
+        <h2 class="text-2xl font-bold mb-4 text-text-700">Default Notifications</h2>
+        <div class="flex gap-2">
+          <button class="btn-light w-1/2 py-2 px-4 bg-primary-600 text-text-50 rounded-md hover:bg-primary-700" @click="RDCshowNotification('Notification Light', 'This is a notification in light mode.', 'light')">Notification Light</button>
+
+          <button class="btn-dark w-1/2 py-2 px-4 bg-primary-800 text-text-50 rounded-md hover:bg-primary-900" @click="RDCshowNotification('Notification Dark', 'This is a notification in dark mode.', 'dark')">Notification Dark</button>
         </div>
       </div>
 
+      <!-- *** NOTIFICATION POSITIONS -->
       <div class="mb-6 text-center">
-        <h2 class="text-2xl font-bold mb-4 text-gray-700">Notification Positions</h2>
-        <div class="space-y-4">
-          <button class="btn-light w-full py-2 px-4 bg-indigo-600 text-white rounded-md hover:bg-indigo-700" @click="RDCshowPositionNotification('Notification', 'This is a top right notification.', 'light', 'tr')">Top Right</button>
-          <button class="btn-light w-full py-2 px-4 bg-indigo-600 text-white rounded-md hover:bg-indigo-700" @click="RDCshowPositionNotification('Notification', 'This is a top left notification.', 'light', 'tl')">Top Left</button>
-          <button class="btn-light w-full py-2 px-4 bg-indigo-600 text-white rounded-md hover:bg-indigo-700" @click="RDCshowPositionNotification('Notification', 'This is a bottom right notification.', 'light', 'lr')">Bottom Right</button>
-          <button class="btn-light w-full py-2 px-4 bg-indigo-600 text-white rounded-md hover:bg-indigo-700" @click="RDCshowPositionNotification('Notification', 'This is a bottom left notification.', 'light', 'll')">Bottom Left</button>
-          <button class="btn-light w-full py-2 px-4 bg-indigo-600 text-white rounded-md hover:bg-indigo-700" @click="RDCshowPositionNotification('Notification', 'This is a center notification.', 'light', 'tc')">Center</button>
+        <h2 class="text-2xl font-bold mb-4 text-text-700">Notification Positions</h2>
+        <div class="flex flex-col gap-2 justify-center align-items">
+          <div class="flex justify-center align-items gap-2">
+            <button class="btn-light w-1/2 py-2 px-4 bg-primary-600 text-text-50 rounded-md hover:bg-primary-700" @click="RDCshowPositionNotification('Notification', 'This is a top right notification.', 'info', 'tr')">Top Right</button>
+
+            <button class="btn-light w-1/2 py-2 px-4 bg-primary-600 text-text-50 rounded-md hover:bg-primary-700" @click="RDCshowPositionNotification('Notification', 'This is a top left notification.', 'info', 'tl')">Top Left</button>
+          </div>
+
+          <div class="flex justify-center align-items gap-2">
+            <button class="btn-light w-1/3 py-2 px-4 bg-primary-600 text-text-50 rounded-md hover:bg-primary-700" @click="RDCshowPositionNotification('Notification', 'This is a bottom right notification.', 'info', 'lr')">Bottom Right</button>
+            <button class="btn-light w-1/3 py-2 px-4 bg-primary-600 text-text-50 rounded-md hover:bg-primary-700" @click="RDCshowPositionNotification('Notification', 'This is a bottom left notification.', 'info', 'll')">Bottom Left</button>
+            <button class="btn-light w-1/3 py-2 px-4 bg-primary-600 text-text-50 rounded-md hover:bg-primary-700" @click="RDCshowPositionNotification('Notification', 'This is a center notification.', 'info', 'tc')">Center</button>
+          </div>
+
         </div>
       </div>
        
+      <!-- *** NOTIFICATION ICON -->
       <div class="mb-6 text-center">
-        <h2 class="text-2xl font-bold mb-4 text-gray-700">Notification Icons</h2>
-        <div class="space-y-4">
-          <button class="btn-light w-full py-2 px-4 bg-indigo-600 text-white rounded-md hover:bg-indigo-700" @click="RDCshowPositionNotification('Notification Icon Mail', 'This is a top right notification.', 'light', 'tr')">Notification Icon Mail</button>
-        t  <button class="btn-light w-full py-2 px-4 bg-indigo-600 text-white rounded-md hover:bg-indigo-700" @click="RDCshowPositionNotification('Notification Icon Error', 'This is a top left notification.', 'light', 'tl')">Notification Icon Error</button>
-          <button class="btn-light w-full py-2 px-4 bg-indigo-600 text-white rounded-md hover:bg-indigo-700" @click="RDCshowPositionNotification('Notification Icon Chat', 'This is a bottom right notification.', 'light', 'lr')">Notification Icon Chat</button>
+        <h2 class="text-2xl font-bold mb-4 text-text-700">Notification Icons</h2>
+        <div class="flex gap-2 justify-center ">
+          <button class="btn-light w-1/3 py-2 px-4 bg-primary-600 text-text-50 rounded-md hover:bg-primary-700" @click="RDCshowPositionNotification('Notification Icon Mail', 'This is a top right notification.', 'mail', 'tr')">Notification Icon Mail</button>
+          <button class="btn-light w-1/3 py-2 px-4 bg-primary-600 text-text-50 rounded-md hover:bg-primary-700" @click="RDCshowPositionNotification('Notification Icon Error', 'This is a top left notification.', 'error', 'tl')">Notification Icon Error</button>
+          <button class="btn-light w-1/3 py-2 px-4 bg-primary-600 text-text-50 rounded-md hover:bg-primary-700" @click="RDCshowPositionNotification('Notification Icon Chat', 'This is a bottom right notification.', 'chat', 'lr')">Notification Icon Chat</button>
         </div>
       </div>
     </div>
@@ -143,11 +153,19 @@ export default {
     RDCgetIconClass(type) {
       switch (type) {
         case 'dark':
-          return 'fas fa-moon RDCtext-yellow-500';
+          return 'fas fa-moon text-yellow-500';
         case 'light':
-          return 'fas fa-sun RDCtext-yellow-500';
+          return 'fas fa-sun text-yellow-500';
+        case 'info':
+          return 'fa-solid fa-circle-info text-blue-500';
+        case 'error':
+          return 'fa-solid fa-circle-exclamation text-red-500';
+        case 'chat':
+          return 'fa-solid fa-message text-blue-500';
+        case 'mail': 
+          return 'fa-solid fa-envelope text-blue-500';
         default:
-          return 'fas fa-info-circle RDCtext-blue-500';
+          return 'fa-solid fa-circle-warning text-blue-500';
       }
     },
 
@@ -162,7 +180,7 @@ export default {
 <style scoped>
 .RDCnotification-container {
   position: fixed;
-  z-index: 9999;
+  z-index: 4;
   top: 0;
   left: 0;
   right: 0;
@@ -187,8 +205,28 @@ export default {
 }
 
 .RDCnotification.dark {
-  background-color: var(--background-800-dark);
-  color: var(--text-100-dark);
+  background-color: var(--background-200);
+  color: var(--text-800);
+}
+
+.RDCnotification.info {
+  background-color: var(--background-800);
+  color: var(--text-100);
+}
+
+.RDCnotification.error {
+  background-color: var(--background-200);
+  color: var(--text-800);
+}
+
+.RDCnotification.chat {
+  background-color: var(--background-800);
+  color: var(--text-100);
+}
+
+.RDCnotification.mail {
+  background-color: var(--background-200);
+  color: var(--text-800);
 }
 
 .RDCnotification.fadeOutDown {

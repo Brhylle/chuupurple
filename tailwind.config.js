@@ -1,27 +1,23 @@
-// tailwind.config.js
+/** @type {import('tailwindcss').Config} */
 module.exports = {
-  purge: ['./src/**/*.{js,jsx,ts,tsx,html}'],
-  darkMode: 'class',
+  content: ['./src/**/*.{vue,js,ts,jsx,tsx}'],
   theme: {
     extend: {
       fontFamily: {
-        'pp-neue': [
-          'PP Neue Montreal Book',
-          'PP Neue Montreal Italic',
-          'PP Neue Montreal Thin',
-          'PP Neue Montreal Medium',
-          'PP Neue Montreal SemiBold italic',
-          'PP Neue Montreal Bold',
-        ],
-        'humane': [
-          'Humane Thin',
-          'Humane SemiBold',
-          'Humane Regular',
-          'Humane Medium',
-          'Humane Light',
-          'Humane ExtraLight',
-          'Humane Bold',
-        ],
+        'pp-regular': ['PP Neue Montreal Regular', 'sans-serif'],
+        'pp-medium': ['PP Neue Montreal Medium', 'sans-serif'],
+        'pp-bold': ['PP Neue Montreal Bold', 'sans-serif'],
+        'pp-light': ['PP Neue Montreal Light', 'sans-serif'],
+        'pp-thin': ['PP Neue Montreal Thin', 'sans-serif'],
+        'pp-italic': ['PP Neue Montreal Italic', 'sans-serif'],
+
+        'humane': ['Humane', 'sans-serif'],
+        'humane-italic': ['Humane Italic', 'sans-serif'],
+        'humane-light': ['Humane Light', 'sans-serif'],
+        'humane-medium': ['Humane Medium', 'sans-serif'],
+        'humane-bold': ['Humane Bold', 'sans-serif'],
+        'humane-extra-light': ['Humane ExtraLight', 'sans-serif'],
+        'humane-thin': ['Humane Thin', 'sans-serif'],
       },
       colors: {
         green: {
@@ -98,8 +94,6 @@ module.exports = {
       },
     },
   },
-  variants: {
-    extend: {},
-  },
   plugins: [],
 }
+

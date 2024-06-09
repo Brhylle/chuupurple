@@ -72,7 +72,7 @@
 
                             <div class="component-countdown-wrapper">
                               <h3 class="countdown-numerator" id="animated-text-5">Twenty-Five (25)</h3>
-                              <span class="overline" id="animated-text-5"><span class="no-line-spacing">----------</span> components <span class="no-line-spacing">----------</span></span>
+                                <span class="overline" id="animated-text"><span class="no-line-spacing">----------</span> components <span class="no-line-spacing">----------</span></span>
                               <h2 class="countdown-denominator" id="animated-text-5"><span class="animated-emphasization">Five (5)</span></h2>
                             </div>
                     </div>
@@ -83,46 +83,74 @@
                 <section class="dlc-banner-1" id="animated-text-6">
   
                   <h1>More 
-                      components, waiting to be <span class="animated-emphasization-1"> scrolled.</span></h1></section>
+                      components, waiting to be <span class="animated-emphasization-1"> scrolled.</span></h1>
+                </section>
 
                 <section class="dlc-platform-content-2" ref="websiteContent">
-                    <!-- *** MIRABEL COMPONENTS *** -->
-                    <div class="uniform-container">
-                        <h2 class="presenter-header" id="animated-text-2"><span class="animated-emphasization">Mirabel</span> Robert Leoni,</h2>
-                            <div class="component-row">
-                              <div class="component-left">
-                                <div class="component-wrapper">
-                                  <h4 class="component-name" id="animated-text-5"><span class="animated-emphasization">Pagination</span></h4>
-                                  <MirabelPagination/>
-                                </div>
-
-                                <div class="component-wrapper">
-                                  <h4 class="component-name" id="animated-text-5"><span class="animated-emphasization">Progress Bar</span> </h4>
-                                  <MirabelProgressBar/> 
-                                </div>
-
-                                <div class="component-wrapper">
-                                  <h4 class="component-name" id="animated-text-5"><span class="animated-emphasization">Accordion</span> </h4>
-                                  <MirabelAccordion/>
-                                </div>
+                  <div class="flex justify-content align-items">
+                    <!-- ! LEFT -->
+                    <div class="text-left mt-[10%] p-0 w-1/12">
+                      <h2 class="writing-mode-vertical m-0 p-0 leading-0 text-[10rem] uppercase">
+                        mirabel
+                      </h2>
+                    </div>
+                    
+                    <!-- ? MIDDLE -->
+                    <div class="main-content-wrap m-0 p-0 align-items w-10/12">
+                      <div class="uniform-container">
+                        <h2 class="presenter-header uppercase text-text-300" id="animated-text-2"><span class="animated-emphasization-1 ">Twenty (20)</span> to be exact.</h2>
+                        <div class="component-row">
+                          <!-- *** MIRABEL COMPONENTS *** -->
+                          <div class="component-left">
+                            <div class="component-wrapper">
+                              <h4 class="component-name" id="animated-text-5"><span class="animated-emphasization">Pagination</span></h4>
+                              <MirabelPagination/>
+                            </div>
+                            
+                            <div class="component-wrapper">
+                                <h4 class="component-name" id="animated-text-5"><span class="animated-emphasization">Progress Bar</span> </h4>
+                                <MirabelProgressBar/> 
                               </div>
-
-                              <!-- *** CRUZ COMPONENTS *** -->
-                              <div class="component-right-2">
-                               <CruzNotification/>
-                               <CruzPopup/>
+                              
+                              <div class="component-wrapper">
+                                <h4 class="component-name mb-4" id="animated-text-5"><span class="animated-emphasization">Accordion</span> </h4>
+                                <MirabelAccordion/>
                               </div>
                             </div>
                             
-                    </div>
-
+                            <!-- *** CRUZ COMPONENTS *** -->
+                            <div class="component-right-2">
+                              <h4 class="component-name mb-2" id="animated-text-5">
+                                <span class="animated-emphasization-1">Notifications</span> &
+                              </h4>
+                              <CruzNotification/>
+                              <CruzPopup/>
+                              <h4 class="component-name mt-2" id="animated-text-5"><span class="animated-emphasization">Pop-Up</span></h4>
+                            </div>
+                            
+                          </div>
+                          <div class="text-foot-wrap flex flex-col">
+                            <h4 class="font-pp-bold text-[3.5rem] gap-0 leading-none m-2 p-0 text-text-300" id="animated-text-2">Robert Leoni <span class="animated-emphasization-1">&</span></h4>
+                            <h2 class="font-humane-bold leading-none gap-0 uppercase m-2 p-0 text-[14rem] text-center" id="animated-text-2">components</h2>
+                            <h4 class="font-pp-bold text-[3.5rem] gap-0 leading-none m-2 p-0 text-text-300 text-right" id="animated-text-2">Raven Drake</h4>
+                          </div>
+                        </div>
+                        </div>
+                        
+                        <!-- *** TEXT ON THE right -->
+                        <div class="text-right m-0 p-0 w-1/12 absolute top-[40%] left-[85%]">
+                          <h2 class="writing-mode-vertical text-[10rem] uppercase">
+                            cruz
+                          </h2>
+                        </div>
+                  </div>
                     <!-- *** FORTIN COMPONENTS *** -->
                     
-                    <div class="uniform-container">
+                    <!-- <div class="uniform-container">
                       <Fortin_NumberInput/>
                       <Fortin_Textarea/>
                       <Fortin_Tooltip/>
-                    </div>
+                    </div> -->
 
                     <div class="uniform-container">
                       <SemifraniaComponent/>
@@ -132,6 +160,7 @@
 
                     <!-- *** OTHER COMPONENTS *** -->
                 </section>
+
             </div>
             <div class="scroll-down-container">
               <h5 class="scroll-down-text">scroll down to start.</h5>
@@ -148,9 +177,9 @@ import TabsComponent from './TabsComponent.vue';
 import CardsComponent from './CardsComponent.vue';
 import CruzNotification from './CruzNotification.vue';
 import CruzPopup from './CruzPopup.vue';
-import Fortin_NumberInput from './Fortin_NumberInput.vue';
-import Fortin_Textarea from './Fortin_Textarea.vue';
-import Fortin_Tooltip from './Fortin_Tooltip.vue';
+// import Fortin_NumberInput from './Fortin_NumberInput.vue';
+// import Fortin_Textarea from './Fortin_Textarea.vue';
+// import Fortin_Tooltip from './Fortin_Tooltip.vue';
 import MirabelAccordion from './MirabelAccordion.vue';
 import MirabelProgressBar from './MirabelProgressBar.vue';
 import MirabelPagination from './MirabelPagination.vue';
@@ -167,9 +196,9 @@ export default {
     SearchBarComponent,
     CruzNotification,
     CruzPopup,
-    Fortin_NumberInput,
-    Fortin_Textarea,
-    Fortin_Tooltip,
+    // Fortin_NumberInput,
+    // Fortin_Textarea,
+    // Fortin_Tooltip,
     MirabelAccordion,
     MirabelPagination,
     MirabelProgressBar,
@@ -527,6 +556,11 @@ requestAnimationFrame(raf);
 
 <style scoped>
 
+  .writing-mode-vertical {
+    text-orientation: upright;
+    writing-mode: vertical-rl;
+  }
+
   .scroll-down-container {
     display: flex;
     flex-direction: column;
@@ -541,6 +575,7 @@ requestAnimationFrame(raf);
     width: 5rem;
     height: 5rem;
     top: 88%;
+    animation: blink 1.5s infinite;
   }
 
   .scroll-down-text {
@@ -553,7 +588,7 @@ requestAnimationFrame(raf);
     text-transform: uppercase;
     font-style: italic;
     top: 87%;
-    animation: blink 1.5s infinite;
+    animation: blink 2s infinite;
   }
 
   .blink {
@@ -582,10 +617,9 @@ requestAnimationFrame(raf);
   }
 
   .overline {
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-family: PP Neue Montreal Book;
     font-kerning: 10rem;
-    font-style: italic;
     letter-spacing: 2.5rem;
   }
 
@@ -635,7 +669,6 @@ requestAnimationFrame(raf);
   }
 
   .component-left {
-    flex: 1;
     margin-right: 1rem;
     padding: 2rem;
   }
@@ -649,7 +682,6 @@ requestAnimationFrame(raf);
   }
 
   .component-right-2 {
-    flex: 1;
     margin-left: 1rem;
     padding: 1.33rem;
     height: auto;
@@ -808,8 +840,8 @@ requestAnimationFrame(raf);
 
   section.dlc-banner-1 {
     position: absolute;
-    top: 360vh;
-    height: 300px;
+    top: 350vh;
+    height: 420px;
     width: 100%;
     background: var(--accent-100);
     z-index: 1;
@@ -827,11 +859,11 @@ requestAnimationFrame(raf);
   }
 
   section.dlc-platform-content-2 {
+
     position: absolute;
-    top: 380vh;
+    top: 400vh;
     width: 100%;
     background: var(--background-900);
-    padding: 6em;
   }
 
   .dlc-tracker {
