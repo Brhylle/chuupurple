@@ -141,7 +141,7 @@
                         <!-- *** TEXT ON THE right -->
                         <div class="text-right m-0 p-0 w-1/12 absolute top-[20%] left-[85%]" id="animated-text-8">
                           <h2 class="writing-mode-vertical text-[10rem] uppercase">
-                            <span class="animated-emphasization-2">cruz</span>
+                            <span class="animated-emphasization-2f">cruz</span>
                           </h2>
                         </div>
                   </div>
