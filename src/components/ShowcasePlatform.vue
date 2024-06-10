@@ -141,12 +141,25 @@
                         <!-- *** TEXT ON THE right -->
                         <div class="text-right m-0 p-0 w-1/12 absolute top-[20%] left-[85%]" id="animated-text-8">
                           <h2 class="writing-mode-vertical text-[10rem] uppercase">
-                            <span class="animated-emphasization-2f">cruz</span>
+                            <span class="animated-emphasization-2">cruz</span>
                           </h2>
                         </div>
                   </div>
 
                     <!-- ! TOP TEXT -->
+                  <div class="marquee">
+                    <div>
+                      <span id="marquee-text"><span class="animated-emphasization-3">Semifrania</span>, Joshua Jehiel</span>
+                      <span class="seperator-x">×</span>
+                      <span id="marquee-text"><span class="animated-emphasization-3">Fortin</span>, Raven</span>
+                      <span class="seperator-x">×</span>
+                      <span id="marquee-text"><span class="animated-emphasization-3">Semifrania</span>, Joshua Jehiel</span>
+                      <span class="seperator-x">×</span>
+                      <span id="marquee-text"><span class="animated-emphasization-3">Fortin</span>, Raven</span>
+                      <span class="seperator-x">×</span>
+                    </div>
+                  </div>
+
                   <div class="marquee">
                     <div>
                       <span id="marquee-text"><span class="animated-emphasization-3">Semifrania</span>, Joshua Jehiel</span>
@@ -200,21 +213,27 @@
                             </div>
                           </div>
                         </div> 
+                        </div> 
                       </div>
                     </div>
                 </section>
 
                 <section class="dlc-banner-2">
-                  
+                    <!-- *** BOTTOM MARQUEE TEXT -->
+                      <div class="marquee-reverse">
+                      <div>
+                        <span>Fortin, Raven</span>
+                        <span>× Entering Phase III ×</span>
+                        <span>Fortin, Raven</span>
+                        <span>× Entering Phase III ×</span>
+                      </div>
+                      </div>
                 </section>
 
                 <!-- *** GODES, MAGNAYE, PEREZ COMPONENTS *** -->
                 <section class="dlc-platform-content-3">
-                  <!-- <div class="magnaye-wrap w-[3rem]">
+                  <div class="magnaye-wrap w-[10rem]">
                     <BreadCrumb/>
-                  </div> -->
-                  <div class="godes-wrap z-[100]">
-                    <SearchComponents/>
                   </div>
                 </section>
             </div>
@@ -244,8 +263,7 @@ import MirabelPagination from './MirabelPagination.vue';
 import SearchBarComponent from './SearchBarComponent.vue';
 import SemifraniaComponent from './SemifraniaComponent.vue';
 import SemifraniaMenuComponent from './SemifraniaMenuComponent.vue';
-import SearchComponents from './SearchComponents.vue';
-// import BreadCrumb from './BreadCrumb.vue';
+import BreadCrumb from './BreadCrumb.vue';
 
 export default {
   components: {
@@ -264,8 +282,7 @@ export default {
     MirabelProgressBar,
     SemifraniaComponent,
     SemifraniaMenuComponent,
-    SearchComponents,
-    // BreadCrumb,
+    BreadCrumb,
   },
   mounted() {
 
@@ -451,6 +468,7 @@ const splitTypeFour = document.querySelectorAll('#animated-text-4');
   });
   });
 
+      const emphasisAnimationScrubThree = document.querySelectorAll('.animated-emphasization-3');
       const emphasisAnimationScrubThree = document.querySelectorAll('.animated-emphasization-3');
   emphasisAnimationScrubThree.forEach((char) => {
       const splitText = new this.$SplitType(char, { types: 'chars' });
@@ -717,7 +735,91 @@ requestAnimationFrame(raf);
     position: absolute;
     top: 725vh;
     height: 420px;
+
+  section.dlc-banner-2 {
+    position: absolute;
+    top: 725vh;
+    height: 420px;
     width: 100%;
+    background: var(--background-200);
+    z-index: 1;
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    font-size: 10rem; 
+    color: var(--secondary-800); 
+    text-align: center;
+    font-family: Humane Bold; 
+    padding: 0;
+    margin: 0;
+    text-transform: uppercase;
+    line-height: 0.4;
+  }
+
+section.dlc-platform-content-3 {
+    position: absolute;
+    top: 750vh;
+    height: 300vh;
+    width: 100%;
+    left: 0;
+    background: var(--background-900);
+}
+
+  /* marquee div container */
+.marquee {
+    font-size: 10vw;
+    color: var(--text-800);
+    font-family: Humane SemiBold;
+    height: 14.5vw;
+    overflow: hidden;
+    background-color: var(--background-200);
+    position: relative;
+}  /* marquee div container */
+
+.marquee-reverse {
+    font-size: 10vw;
+    color: var(--text-700);
+    font-family: Humane SemiBold;
+    height: 14.5vw;
+    overflow: hidden;
+    background-color: var(--background-200);
+    position: relative;
+}
+
+/* nested div inside the container */
+.marquee div {
+    display: flex; /* Use flexbox for a continuous scrolling effect */
+    width: 200%; /* Ensure the div is wide enough to contain all repeated spans */
+    position: absolute;
+    animation: marquee 12s linear infinite;
+}
+
+/* nested div inside the container */
+.marquee-reverse div {
+    display: flex; /* Use flexbox for a continuous scrolling effect */
+    width: 200%; /* Ensure the div is wide enough to contain all repeated spans */
+    position: absolute;
+    animation: marquee-reverse 12s linear infinite;
+}
+
+/* span with text */
+.marquee span#marquee-text {
+    flex: 1 0 auto; /* Flex items to ensure they take equal space */
+    padding-right: 10vw; /* Adjust the spacing between texts */
+}
+
+/* keyframe */
+@keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+/* keyframe reversed */
+@keyframes marquee-reverse {
+    0% { transform: translateX(-50%); }
+    100% { transform: translateX(0); }
+}
+
     background: var(--background-200);
     z-index: 1;
     display: flex;
@@ -1094,8 +1196,16 @@ section.dlc-platform-content-3 {
     height: 420px;
     width: 100%;
     background: var(--background-200);
+    background: var(--background-200);
     z-index: 1;
     display: flex;
+    align-items: center; 
+    justify-content: center; 
+    font-size: 10rem; 
+    color: var(--secondary-800); 
+    text-align: center; 
+    font-family: Humane Bold; 
+    padding: 0;
     align-items: center; 
     justify-content: center; 
     font-size: 10rem; 
