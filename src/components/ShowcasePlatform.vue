@@ -90,8 +90,8 @@
                   <div class="flex justify-content align-items">
                     <!-- ! LEFT -->
                     <div class="text-left mt-[10%] p-0 w-1/12">
-                      <h2 class="writing-mode-vertical m-0 p-0 leading-0 text-[10rem] uppercase">
-                        mirabel
+                      <h2 class="writing-mode-vertical m-0 p-0 leading-0 text-[10rem] uppercase" id="animated-text-7">
+                        <span class="animated-emphasization-1">mirabel</span>
                       </h2>
                     </div>
                     
@@ -132,15 +132,15 @@
                           <div class="text-foot-wrap flex flex-col">
                             <h4 class="font-pp-bold text-[3.5rem] gap-0 leading-none m-2 p-0 text-text-300" id="animated-text-2">Robert Leoni <span class="animated-emphasization-1">&</span></h4>
                             <h2 class="font-humane-bold leading-none gap-0 uppercase m-2 p-0 text-[14rem] text-center" id="animated-text-2">components</h2>
-                            <h4 class="font-pp-bold text-[3.5rem] gap-0 leading-none m-2 p-0 text-text-300 text-right" id="animated-text-2">Raven Drake</h4>
+                            <h4 class="font-pp-bold text-[3.5rem] gap-0 leading-none m-2 p-0 text-text-300 text-right" id="animated-text-2">& Raven Drake</h4>
                           </div>
                         </div>
                         </div>
                         
                         <!-- *** TEXT ON THE right -->
-                        <div class="text-right m-0 p-0 w-1/12 absolute top-[40%] left-[85%]">
+                        <div class="text-right m-0 p-0 w-1/12 absolute top-[20%] left-[85%]" id="animated-text-8">
                           <h2 class="writing-mode-vertical text-[10rem] uppercase">
-                            cruz
+                            <span class="animated-emphasization-2">cruz</span>
                           </h2>
                         </div>
                   </div>
@@ -406,6 +406,41 @@ const splitTypeFour = document.querySelectorAll('#animated-text-4');
         y: 20,
         transformOrigin: 'bottom',
         stagger: 0.1,
+      });
+  });
+
+  const splitTypeSeven = document.querySelectorAll('#animated-text-7');
+  splitTypeSeven.forEach((word) => {
+    const splitText = new this.$SplitType(word, { types: 'words' });
+      this.$gsap.from(splitText.words, {
+        scrollTrigger: {
+          trigger: word,
+          start: 'top 90%', // Adjusted start position
+          end: 'top 50%',   // Adjusted end position
+          scrub: true,
+          markers: true,
+        },
+        opacity: 0,
+        x: 50,
+        ease: 'power3.inOut',
+      });
+  });
+
+  
+  const splitTypeEight = document.querySelectorAll('#animated-text-8');
+  splitTypeEight.forEach((word) => {
+    const splitText = new this.$SplitType(word, { types: 'words' });
+      this.$gsap.from(splitText.words, {
+        scrollTrigger: {
+          trigger: word,
+          start: 'top 90%', // Adjusted start position
+          end: 'top 50%',   // Adjusted end position
+          scrub: true,
+          markers: true,
+        },
+        opacity: 0,
+        x: -50,
+        ease: 'power3.inOut',
       });
   });
 
