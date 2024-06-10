@@ -219,21 +219,16 @@
                 </section>
 
                 <section class="dlc-banner-2">
-                    <!-- *** BOTTOM MARQUEE TEXT -->
-                      <div class="marquee-reverse">
-                      <div>
-                        <span>Fortin, Raven</span>
-                        <span>× Entering Phase III ×</span>
-                        <span>Fortin, Raven</span>
-                        <span>× Entering Phase III ×</span>
-                      </div>
-                      </div>
+                  
                 </section>
 
                 <!-- *** GODES, MAGNAYE, PEREZ COMPONENTS *** -->
                 <section class="dlc-platform-content-3">
-                  <div class="magnaye-wrap w-[10rem]">
+                  <!-- <div class="magnaye-wrap w-[3rem]">
                     <BreadCrumb/>
+                  </div> -->
+                  <div class="godes-wrap z-[100]">
+                    <SearchComponents/>
                   </div>
                 </section>
             </div>
@@ -263,7 +258,8 @@ import MirabelPagination from './MirabelPagination.vue';
 import SearchBarComponent from './SearchBarComponent.vue';
 import SemifraniaComponent from './SemifraniaComponent.vue';
 import SemifraniaMenuComponent from './SemifraniaMenuComponent.vue';
-import BreadCrumb from './BreadCrumb.vue';
+import SearchComponents from './SearchComponents.vue';
+// import BreadCrumb from './BreadCrumb.vue';
 
 export default {
   components: {
@@ -282,7 +278,8 @@ export default {
     MirabelProgressBar,
     SemifraniaComponent,
     SemifraniaMenuComponent,
-    BreadCrumb,
+    SearchComponents,
+    // BreadCrumb,
   },
   mounted() {
 
