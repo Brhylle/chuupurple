@@ -1,9 +1,8 @@
 <template>
     <div class="fortin-bg-container">
-    <h1>Fortin Textarea Component</h1>
-    
+      <label for="fortin-textarea" class="fortin-text-purple">Enter a phrase: </label>
     <div class="fortin-textarea-container">
-      <textarea v-model="fortin_textInput" placeholder="Enter text here" :class="{ 'fortin-textarea-purple': true }"></textarea>
+      <textarea id="fortin-textarea" v-model="fortin_textInput" placeholder="assignment hello boat bread pop banana butterfly gate home daughter six up down work eat sleep" :class="{ 'fortin-textarea-purple': true }"></textarea>
     </div>
 
   </div>
@@ -22,20 +21,13 @@ export default {
 
 <style scoped>
 h1{
-    color: white;
-  }
-  .fortin-bg-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    background-image: url('@/assets/Home.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+    color: var(--text-100);
   }
   
+  label {
+    color: var(--text-100);
+  }
+
   .fortin-textarea-container {
     margin-top: 10px; 
   }
@@ -43,9 +35,9 @@ h1{
   .fortin-textarea-purple {
     width: 300px;
     height: 100px;
-    background-color: #6a0dad; 
-    border: 2px solid white; 
-    color: white; 
+    background-color: var(--background-100); 
+    border: 2px solid var(--secondary-600); 
+    color: var(--text-700); 
     border-radius: 4px;
     padding: 8px;
     resize: none; 

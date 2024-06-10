@@ -46,10 +46,11 @@
                     </div>
                 </section>
 
+                <!-- *** VENTURA COMPONENTS *** -->
                 <section class="dlc-platform-content" ref="websiteContent">
                     <div class="dlc-section-header">
-                        <h1 class="animated-text-1"><span class="animated-emphasization-2">Components</span> Crafted By...</h1>
-                        <p class="animated-text-1">These components, <span class="animated-emphasization-2">lovingly created</span> by the team, beckon you to delve into a realm brimming with creativity and innovation. Embark on a journey of exploration filled with happiness and excitement, and <span class="animated-emphasization-2">uncover the enchantment</span> meticulously woven into every <span class="animated-emphasization-2">intricate detail</span>.</p>
+                        <h1 class="animated-text-1"><span class="animated-emphasization-1">Components</span> Crafted By...</h1>
+                        <p class="animated-text-1">These components, <span class="animated-emphasization-1">lovingly created</span> by the team, beckon you to delve into a realm brimming with creativity and innovation. Embark on a journey of exploration filled with happiness and excitement, and <span class="animated-emphasization-1">uncover the enchantment</span> meticulously woven into every <span class="animated-emphasization-1">intricate detail</span>.</p>
                     </div>
 
                     <!-- *** GAB COMPONENTS *** -->
@@ -76,16 +77,16 @@
                               <h2 class="countdown-denominator" id="animated-text-5"><span class="animated-emphasization">Five (5)</span></h2>
                             </div>
                     </div>
-
-
                 </section>
 
+                <!-- ? CHECKPOINT 1 -->
                 <section class="dlc-banner-1" id="animated-text-6">
   
                   <h1>More 
                       components, waiting to be <span class="animated-emphasization-1"> scrolled.</span></h1>
                 </section>
 
+                <!-- *** MIRABEL, CRUZ, FORTIN, SEMIFRANIA COMPONENTS -->
                 <section class="dlc-platform-content-2" ref="websiteContent">
                   <div class="flex justify-content align-items">
                     <!-- ! LEFT -->
@@ -130,9 +131,9 @@
                             
                           </div>
                           <div class="text-foot-wrap flex flex-col">
-                            <h4 class="font-pp-bold text-[3.5rem] gap-0 leading-none m-2 p-0 text-text-300" id="animated-text-2">Robert Leoni <span class="animated-emphasization-1">&</span></h4>
+                            <h4 class="font-pp-bold text-[3.5rem] gap-0 leading-none m-2 p-0 text-text-300" id="animated-text-2"><span class="animated-emphasization-2">Robert Leoni</span> <span class="animated-emphasization-1">&</span></h4>
                             <h2 class="font-humane-bold leading-none gap-0 uppercase m-2 p-0 text-[14rem] text-center" id="animated-text-2">components</h2>
-                            <h4 class="font-pp-bold text-[3.5rem] gap-0 leading-none m-2 p-0 text-text-300 text-right" id="animated-text-2">& Raven Drake</h4>
+                            <h4 class="font-pp-bold text-[3.5rem] gap-0 leading-none m-2 p-0 text-text-300 text-right" id="animated-text-2"><span class="animated-emphasization-2">&</span> <span class="animated-emphasization-1">Raven Drake</span></h4>
                           </div>
                         </div>
                         </div>
@@ -140,28 +141,71 @@
                         <!-- *** TEXT ON THE right -->
                         <div class="text-right m-0 p-0 w-1/12 absolute top-[20%] left-[85%]" id="animated-text-8">
                           <h2 class="writing-mode-vertical text-[10rem] uppercase">
-                            <span class="animated-emphasization-2">cruz</span>
+                            <span class="animated-emphasization-2f">cruz</span>
                           </h2>
                         </div>
                   </div>
-                    <!-- *** FORTIN COMPONENTS *** -->
-                    
-                    <!-- <div class="uniform-container">
-                      <Fortin_NumberInput/>
-                      <Fortin_Textarea/>
-                      <Fortin_Tooltip/>
-                    </div> -->
 
-                    <div class="uniform-container">
-                      <SemifraniaComponent/>
-                      <SemifraniaMenuComponent/>
+                    <!-- ! TOP TEXT -->
+                    <div class="text-top">
+
                     </div>
 
+                    <!-- *** FORTIN & SEMIFRANIA COMPONENTS *** -->
+                    <!-- ? MIDDLE -->
+                    <div class="main-content-wrap m-0 p-0">
+                      <div class="uniform-container">
+                        <div class="flex gap-2">
+                          <div class="semifrania-wrap">
+                            <h4 class="component-name mb-4">Feedback, Menu & Bottom Sheets</h4>
+                            <div class="flex component-container border-[0.33rem] p-4">
+                              <div class="bg-background-600 p-8">
+                                <SemifraniaComponent/>
+                              </div>
+                              <div class="bg-background-800 p-8 w-full">
+                                <SemifraniaMenuComponent/>
+                              </div>
+                            </div>
+                          </div>
+                          
+                          <div class="fortin-wrap">
+                            <div class="component-name-container">
+                              <h4 class="component-name mb-4">Number Input, Textarea & Tooltip</h4>
+                            </div>
+  
+                            
+                              <div class="flex gap-2 p-4 border-[0.33rem]">
+                                <div class="p-8 bg-background-300">
+                                  <Fortin_NumberInput/>
+                                </div>
+                                <div class="bg-background-500 p-8">
+                                  <Fortin_Textarea/>
+                                </div>
+                              </div>
+  
+                            <div class="border-[0.33rem] mt-2">
+                              <div class="flex justify-center items-center bg-background-400 m-4 p-8">
+                                <Fortin_Tooltip/>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        
+  
+                      </div>
+                    </div>
+
+                    <!-- *** BOTTOM TEXT -->
+                    <div class="text-bottom">
+                      
+                    </div>
 
                     <!-- *** OTHER COMPONENTS *** -->
                 </section>
 
             </div>
+
+            <!-- ! SCROLL DOWN SIGN -->
             <div class="scroll-down-container">
               <h5 class="scroll-down-text">scroll down to start.</h5>
               <img src="../assets/public/scroll-down.gif" alt="scroll-down-to-scroll" class="scroll-down">
@@ -177,9 +221,9 @@ import TabsComponent from './TabsComponent.vue';
 import CardsComponent from './CardsComponent.vue';
 import CruzNotification from './CruzNotification.vue';
 import CruzPopup from './CruzPopup.vue';
-// import Fortin_NumberInput from './Fortin_NumberInput.vue';
-// import Fortin_Textarea from './Fortin_Textarea.vue';
-// import Fortin_Tooltip from './Fortin_Tooltip.vue';
+import Fortin_NumberInput from './Fortin_NumberInput.vue';
+import Fortin_Textarea from './Fortin_Textarea.vue';
+import Fortin_Tooltip from './Fortin_Tooltip.vue';
 import MirabelAccordion from './MirabelAccordion.vue';
 import MirabelProgressBar from './MirabelProgressBar.vue';
 import MirabelPagination from './MirabelPagination.vue';
@@ -196,9 +240,9 @@ export default {
     SearchBarComponent,
     CruzNotification,
     CruzPopup,
-    // Fortin_NumberInput,
-    // Fortin_Textarea,
-    // Fortin_Tooltip,
+    Fortin_NumberInput,
+    Fortin_Textarea,
+    Fortin_Tooltip,
     MirabelAccordion,
     MirabelPagination,
     MirabelProgressBar,
@@ -249,7 +293,7 @@ splitTypeTwo.forEach((char) => {
     this.$gsap.from(splitText.chars, {
       scrollTrigger: {
         trigger: char,
-        start: 'top 120%', // Adjusted start position
+        start: 'top 95%', // Adjusted start position
         end: 'top 75%',   // Adjusted end position
         scrub: true,
         markers: false,
@@ -359,6 +403,66 @@ const splitTypeFour = document.querySelectorAll('#animated-text-4');
   });
   });
 
+      const emphasisAnimationScrubTwo = document.querySelectorAll('.animated-emphasization-2');
+  emphasisAnimationScrubTwo.forEach((char) => {
+      const splitText = new this.$SplitType(char, { types: 'chars' });
+    
+    // Get the computed background color from CSS
+    const fgColor = getComputedStyle(document.documentElement).getPropertyValue('--text-300');
+
+    // Get the computed foreground color from CSS
+    const bgColor = getComputedStyle(document.documentElement).getPropertyValue('--primary-600');
+
+
+      this.$gsap.fromTo(splitText.chars, {
+        color: bgColor,
+      },
+    {
+        color: fgColor,
+        duration: 5,
+        stagger: 2,
+        opacity: 1,
+        scrollTrigger: {
+            trigger: char,
+            start: 'top 55%',
+            end: 'top 45%',
+            scrub: true,
+            markers: false,
+            // toggleActions: 'play play reverse reverse',
+        }        
+  });
+  });
+
+      const emphasisAnimationScrubThree = document.querySelectorAll('.animated-emphasization-1');
+  emphasisAnimationScrubThree.forEach((char) => {
+      const splitText = new this.$SplitType(char, { types: 'chars' });
+    
+    // Get the computed background color from CSS
+    const fgColor = getComputedStyle(document.documentElement).getPropertyValue('--primary-600');
+
+    // Get the computed foreground color from CSS
+    const bgColor = getComputedStyle(document.documentElement).getPropertyValue('--secondary-800');
+
+
+      this.$gsap.fromTo(splitText.chars, {
+        color: bgColor,
+      },
+    {
+        color: fgColor,
+        duration: 5,
+        stagger: 2,
+        opacity: 1,
+        scrollTrigger: {
+            trigger: char,
+            start: 'top 55%',
+            end: 'top 45%',
+            scrub: true,
+            markers: false,
+            // toggleActions: 'play play reverse reverse',
+        }        
+  });
+  });
+
   const splitTypeFive = document.querySelectorAll('#animated-text-5');
   splitTypeFive.forEach((char) => {
     const splitText = new this.$SplitType(char, { types: 'chars' });
@@ -397,8 +501,8 @@ const splitTypeFour = document.querySelectorAll('#animated-text-4');
       this.$gsap.to(splitText.chars, {
         scrollTrigger: {
           trigger: char,
-          start: 'bottom 35%', // Start when 65% of the element is above the bottom of the viewport
-          end: 'bottom 15%',   // End when 15% of the element is above the bottom of the viewport
+          start: 'bottom 35%', 
+          end: 'bottom 15%',  
           scrub: true,
           markers: false,
         },
@@ -418,7 +522,7 @@ const splitTypeFour = document.querySelectorAll('#animated-text-4');
           start: 'top 90%', // Adjusted start position
           end: 'top 50%',   // Adjusted end position
           scrub: true,
-          markers: true,
+          markers: false,
         },
         opacity: 0,
         x: 50,
@@ -436,7 +540,7 @@ const splitTypeFour = document.querySelectorAll('#animated-text-4');
           start: 'top 90%', // Adjusted start position
           end: 'top 50%',   // Adjusted end position
           scrub: true,
-          markers: true,
+          markers: false,
         },
         opacity: 0,
         x: -50,
@@ -590,10 +694,26 @@ requestAnimationFrame(raf);
 </script>
 
 <style scoped>
+  .fortin-container {
+    background: url('../assets/Home.png');
+    background-size: scale;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 75%;
+    width: 100%;
+  }
+
+
+  .background-image-default {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
 
   .writing-mode-vertical {
     text-orientation: upright;
     writing-mode: vertical-rl;
+    letter-spacing: -1rem;
   }
 
   .scroll-down-container {
@@ -605,7 +725,7 @@ requestAnimationFrame(raf);
   }
 
   img.scroll-down {
-    z-index: 9999;
+    /* z-index: 1; */
     position: absolute;
     width: 5rem;
     height: 5rem;
@@ -615,7 +735,7 @@ requestAnimationFrame(raf);
 
   .scroll-down-text {
     font-family: PP Neue Montreal Bold;
-    z-index: 100;
+    /* z-index: 100; */
     position: absolute;
     font-size: 1rem;
     /* font-weight: bolder; */
@@ -909,6 +1029,7 @@ requestAnimationFrame(raf);
       width: 100%;
       height: 100%;
       padding: 2em 0;
+      z-index: 0;
   }
 
   .dlc-emoji {
