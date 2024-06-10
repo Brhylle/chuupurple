@@ -99,7 +99,7 @@
                     <!-- ? MIDDLE -->
                     <div class="main-content-wrap m-0 p-0 align-items w-10/12">
                       <div class="uniform-container">
-                        <h2 class="presenter-header uppercase text-text-300" id="animated-text-2"><span class="animated-emphasization-1 ">Twenty (20)</span> to be exact.</h2>
+                        <h2 class="presenter-header uppercase text-text-400" id="animated-text-2"><span class="animated-emphasization-1 ">Twenty (20)</span> to be exact.</h2>
                         <div class="component-row">
                           <!-- *** MIRABEL COMPONENTS *** -->
                           <div class="component-left">
@@ -131,9 +131,9 @@
                             
                           </div>
                           <div class="text-foot-wrap flex flex-col">
-                            <h4 class="font-pp-bold text-[3.5rem] gap-0 leading-none m-2 p-0 text-text-300" id="animated-text-2"><span class="animated-emphasization-2">Robert Leoni</span> <span class="animated-emphasization-1">&</span></h4>
+                            <h4 class="font-pp-bold text-[3.5rem] gap-0 leading-none m-2 p-0 text-text-400" id="animated-text-2"><span class="animated-emphasization-2">Robert Leoni</span> <span class="animated-emphasization-1">&</span></h4>
                             <h2 class="font-humane-bold leading-none gap-0 uppercase m-2 p-0 text-[14rem] text-center" id="animated-text-2">components</h2>
-                            <h4 class="font-pp-bold text-[3.5rem] gap-0 leading-none m-2 p-0 text-text-300 text-right" id="animated-text-2"><span class="animated-emphasization-2">&</span> <span class="animated-emphasization-1">Raven Drake</span></h4>
+                            <h4 class="font-pp-bold text-[3.5rem] gap-0 leading-none m-2 p-0 text-text-400 text-right" id="animated-text-2"><span class="animated-emphasization-2">&</span> <span class="animated-emphasization-1">Raven Drake</span></h4>
                           </div>
                         </div>
                         </div>
@@ -205,21 +205,16 @@
                 </section>
 
                 <section class="dlc-banner-2">
-                    <!-- *** BOTTOM MARQUEE TEXT -->
-                      <div class="marquee-reverse">
-                      <div>
-                        <span>Fortin, Raven</span>
-                        <span>× Entering Phase III ×</span>
-                        <span>Fortin, Raven</span>
-                        <span>× Entering Phase III ×</span>
-                      </div>
-                      </div>
+                  
                 </section>
 
                 <!-- *** GODES, MAGNAYE, PEREZ COMPONENTS *** -->
                 <section class="dlc-platform-content-3">
-                  <div class="magnaye-wrap w-[10rem]">
+                  <!-- <div class="magnaye-wrap w-[3rem]">
                     <BreadCrumb/>
+                  </div> -->
+                  <div class="godes-wrap z-[100]">
+                    <SearchComponents/>
                   </div>
                 </section>
             </div>
@@ -249,7 +244,8 @@ import MirabelPagination from './MirabelPagination.vue';
 import SearchBarComponent from './SearchBarComponent.vue';
 import SemifraniaComponent from './SemifraniaComponent.vue';
 import SemifraniaMenuComponent from './SemifraniaMenuComponent.vue';
-import BreadCrumb from './BreadCrumb.vue';
+import SearchComponents from './SearchComponents.vue';
+// import BreadCrumb from './BreadCrumb.vue';
 
 export default {
   components: {
@@ -268,7 +264,8 @@ export default {
     MirabelProgressBar,
     SemifraniaComponent,
     SemifraniaMenuComponent,
-    BreadCrumb,
+    SearchComponents,
+    // BreadCrumb,
   },
   mounted() {
 
