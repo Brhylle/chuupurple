@@ -1,6 +1,5 @@
 <template>
     <div class="fortin-bg-container">
-    <h1>Fortin Tooltip Component</h1>
     <div class="fortin-tooltip">
         <button @mouseover="fortin_showTooltip = true" @mouseleave="fortin_showTooltip = false" class="fortin-btn-purple">Hover over me</button>
         <span v-show="fortin_showTooltip" class="fortin-tooltiptext fortin-tooltip-purple">Tooltip</span>
@@ -21,20 +20,7 @@ export default {
 
 <style scoped>
 h1{
-    color: white;
-  }
-  .fortin-bg-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    width: 100vw;
-    background-image: url('@/assets/Home.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    z-index: 0;
+    color: var(--text-100);
   }
 
   .fortin-tooltip {
@@ -45,8 +31,8 @@ h1{
   }
 
   .fortin-btn-purple {
-    background-color: #6a0dad; 
-    color: #fff;
+    background-color: var(--primary-600); 
+    color: var(--text-100);
     border: none;
     padding: 12px 24px;
     font-size: large;
@@ -56,14 +42,14 @@ h1{
   }
   
   .fortin-btn-purple:hover {
-    background-color: #4c0287; 
+    background-color: var(--primary-800); 
   }
 
   .fortin-tooltip .fortin-tooltiptext {
     visibility: hidden;
     width: 120px;
-    background-color: #6a0dad; 
-    color: #fff;
+    background-color: var(--background-600); 
+    color: var(--text-100);
     text-align: center;
     border-radius: 6px;
     padding: 5px;

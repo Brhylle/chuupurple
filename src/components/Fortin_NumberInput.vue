@@ -1,9 +1,7 @@
 <template>
     <div class="fortin-bg-container">
-      <h1>Fortin NumberInput Component</h1>
-  
+      <label for="fortin_numberInput" class="fortin-text-purple">Enter a number: </label>
       <div class="fortin-number-input-container">
-        <label for="fortin_numberInput" class="fortin-text-purple">Enter a number: </label>
         <input type="number" id="fortin_numberInput" v-model.number="fortin_numberInput" :class="{ 'fortin-input-purple': true }" min="0" max="100">
       </div>
     </div>
@@ -22,18 +20,7 @@
   
   <style scoped>
   h1{
-    color: white;
-  }
-  .fortin-bg-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    background-image: url('@/assets/Home.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+    color: var(--text-100);
   }
   
   .fortin-number-input-container {
@@ -41,12 +28,14 @@
   }
   
   .fortin-input-purple {
-    border: 2px solid #6a0dad;
+    border: 2px solid var(--secondary-600);
     border-radius: 4px;
     padding: 5px;
+    background-color: var(--background-100);
+    color: var(--text-700);
   }
   
   .fortin-text-purple {
-    color: white;
+    color: var(--text-100);
   }
   </style>

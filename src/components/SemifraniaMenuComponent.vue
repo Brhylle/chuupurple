@@ -59,41 +59,49 @@ export default {
 
 <style scoped>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  /* font-family: Avenir, Helvetica, Arial, sans-serif; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  color: var(--text-50);
 }
 
 .jjms-semifrania-menu {
   text-align: center;
   margin-top: 20px;
+  width: 100%;
 }
 
 .jjms-menu-btn {
   margin-top: 20px;
   padding: 10px 20px;
-
-  color: white;
-  border: none;
+  border: solid 2px var(--secondary-600);
+  background-color: var(--primary-700);
   border-radius: 5px;
   cursor: pointer;
 }
 
+jjms-menu-btn:hover {
+  background-color: var(--secondary-600);
+  color: var(--text-50)
+}
+
 .jjms-menu-list {
+  max-width: min-content;
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.3s ease-out;
+  transition: max-width 0.3s ease-out;
+  background-color: var(--primary-700);
 }
 
 .jjms-menu-item {
   cursor: pointer;
   padding: 10px 20px;
+  background: var(--secondary-500);
 }
 
 .jjms-menu-item:hover {
-  background-color: #f0f0f0;
+  background-color: var(--secondary-600);
+  color: var(--text-50)
 }
 </style>
