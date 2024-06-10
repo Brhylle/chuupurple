@@ -2,7 +2,7 @@
   <div :class="MBLcontainerClass">
     <div class="MBLspace-y-2">
       <div v-for="(item, index) in MBLaccordionItems" :key="index" class="MBLborder-b MBLborder-gray-300">
-        <button @click="MBLtoggle(index)" class="MBLw-full MBLtext-left MBLpy-3 MBLpx-4 MBLfocus:outline-none MBLbg-secondary MBLtext-text">
+        <button @click="MBLtoggle(index)" class="MBLw-full MBLtext-left MBLpy-3 MBLpx-4 focus:outline-none MBLbg-secondary MBLtext-text">
           {{ item.title }}
         </button>
         <div v-if="MBLactiveIndex === index" class="MBLp-4 MBLbg-background MBLtext-text">
