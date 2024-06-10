@@ -58,7 +58,7 @@
     display: flex;
     justify-content: center;
     padding: 20px;
-    background-color: #C0BADE;
+    z-index: 5;
   }
   
   .godes-SearchComponent {
@@ -69,11 +69,12 @@
     margin-bottom: 30px;
     padding: 20px;
     border-radius: 8px;
+    z-index: 5;
   }
   
   .godes-search-label {
     font-size: 24px;
-    color: #160326;
+    color: var(--text-800);
     font-weight: bold;
   }
   
@@ -82,6 +83,7 @@
     padding: 10px;
     box-sizing: border-box;
     outline: none;
+    z-index: 5;
   }
   
   .placeholder {
@@ -98,19 +100,19 @@
   
   .godes-input-search:focus + .placeholder {
     top: 16px;
-    color:#160326;
-    text-shadow: purple;
-    background-color: #C0BADE;
+    color:var(--text-800);
+    text-shadow: var(--accent-800);
+    background-color: var(--background-50);
   }
   
   .godes-input-search {
     padding: 10px;
     margin-top: 20px;
     margin-bottom: 20px;
-    border: 1px solid #160326;
+    border: 1px solid var(--background-900);
     border-radius: 4px;
     transition: box-shadow 0.3s ease; 
-    background-color: #C0BADE;
+    background-color: var(--background-50);
   }
   
   .godes-input-search:focus {
@@ -126,8 +128,8 @@
   }
   
   .godes-programmer-box {
-    background-color: white;
-    border: 1px solid #ccc;
+    background-color: var(--background-200);
+    border: 1px solid var(--accent-800);
     border-radius: 8px;
     padding: 20px;
     margin: 10px;
