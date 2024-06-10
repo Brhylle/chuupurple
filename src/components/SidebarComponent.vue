@@ -15,7 +15,7 @@
 
 <script>
 export default {
-  name: "Sidebar",
+  name: "SidebarComponent",
   data() {
     return {
       isOpen: false,
