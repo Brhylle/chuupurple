@@ -1,46 +1,46 @@
 <template>
-  <div class="sidebar" :class="{ 'is-open': isOpen }" :style="{ backgroundColor: sidebarColor, color: textColor }">
+  <div class="Perez-sidebar" :class="{ 'Perez-is-open': PerezIsOpen }" :style="{ backgroundColor: PerezSidebarColor, color: PerezTextColor }">
     <ul>
-      <li><a href="#home" @mouseover="hover = true" @mouseout="hover = false">Home</a></li>
-      <li><a href="#about" @mouseover="hover = true" @mouseout="hover = false">About</a></li>
-      <li><a href="#services" @mouseover="hover = true" @mouseout="hover = false">Services</a></li>
-      <li><a href="#contact" @mouseover="hover = true" @mouseout="hover = false">Contact</a></li>
+      <li><a href="#home" @mouseover="PerezHover = true" @mouseout="PerezHover = false">Home</a></li>
+      <li><a href="#about" @mouseover="PerezHover = true" @mouseout="PerezHover = false">About</a></li>
+      <li><a href="#services" @mouseover="PerezHover = true" @mouseout="PerezHover = false">Services</a></li>
+      <li><a href="#contact" @mouseover="PerezHover = true" @mouseout="PerezHover = false">Contact</a></li>
     </ul>
     <!-- Toggle Theme Button at the bottom -->
-    <div class="theme-toggle-container">
-      <button @click="toggleTheme">Toggle Theme</button>
+    <div class="Perez-theme-toggle-container">
+      <button @click="PerezToggleTheme">Toggle Theme</button>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: "Sidebar",
+  name: "PerezSidebar",
   data() {
     return {
-      isOpen: false,
-      hover: false,
-      darkMode: false, // Add darkMode state
+      PerezIsOpen: false,
+      PerezHover: false,
+      PerezDarkMode: false, // Add darkMode state
     };
   },
   computed: {
-    sidebarColor() { // Compute sidebar background color based on darkMode
-      return this.darkMode? "#4B225D" : "#6A5ACD"; // Light mode background color
+    PerezSidebarColor() { // Compute sidebar background color based on darkMode
+      return this.PerezDarkMode ? "#4B225D" : "#6A5ACD"; // Light mode background color
     },
-    textColor() { // Compute text color based on darkMode
-      return this.darkMode? "#ECD9FC" : "white"; // Light mode text color
+    PerezTextColor() { // Compute text color based on darkMode
+      return this.PerezDarkMode ? "#ECD9FC" : "white"; // Light mode text color
     },
   },
   methods: {
-    toggleTheme() { // Method to toggle darkMode
-      this.darkMode =!this.darkMode;
+    PerezToggleTheme() { // Method to toggle darkMode
+      this.PerezDarkMode = !this.PerezDarkMode;
     },
   },
 };
 </script>
 
 <style scoped>
-.sidebar {
+.Perez-sidebar {
   width: 200px;
   height: 100vh;
   padding-top: 20px;
@@ -49,30 +49,30 @@ export default {
   justify-content: space-between; /* Space between items vertically */
 }
 
-.sidebar ul {
+.Perez-sidebar ul {
   list-style-type: none;
   padding: 0;
   margin-left: 20px;
 }
 
-.sidebar li a {
+.Perez-sidebar li a {
   display: block;
   padding: 10px;
   text-decoration: none;
   transition: transform 0.2s ease-in-out;
 }
 
-.sidebar li a:hover {
+.Perez-sidebar li a:hover {
   background-color: #020024; /* Adjusted hover color for dark mode */
   transform: scale(1.1);
 }
 
-.theme-toggle-container {
+.Perez-theme-toggle-container {
   margin-top: auto; /* Pushes the container to the bottom */
   text-align: center; /* Center aligns the button */
 }
 
-button {
+Perez-button {
   background-color: transparent;
   border: none;
   color: inherit;
@@ -83,7 +83,8 @@ button {
   margin-left: 10px;
 }
 
-button:hover {
+Perez-button:hover {
   background-color: #DDDBFF;
 }
 </style>
+
