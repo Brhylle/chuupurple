@@ -94,15 +94,15 @@ export default {
 
 <style scoped>
 .JJMS_bottom-sheet {
-  position: fixed;
+  position: relative;
   bottom: 0;
   left: 0;
   width: 100%;
-  background-color: white;
-  transition: transform 0.3s ease-out;
+  background-color: var(--background-700);
+  transition: transform 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
   transform: translateY(100%);
   box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.2);
-  z-index: 1000;
+  z-index: 0;
 }
 
 .JJMS_bottom-sheet.open {
@@ -111,6 +111,7 @@ export default {
 
 .JJMS_bottom-sheet-content {
   padding: 20px;
+  color: var(--text-100);
 }
 
 form {
@@ -127,8 +128,10 @@ input,
 textarea {
   padding: 8px;
   margin-top: 5px;
-  border: 1px solid #ccc;
+  border: 1px solid var(--accent-800);
   border-radius: 5px;
+  font-size: 16px;
+  color: var(--text-800);
 }
 
 .JJMS_button-container {
@@ -141,13 +144,14 @@ button {
   padding: 8px 20px;
   border: none;
   border-radius: 5px;
-  background-color: #007bff;
-  color: white;
+  background-color: var(--primary-700);
+  color: var(--text-100);
   cursor: pointer;
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: var(--primary-800);
+  color: var(--text-100);
 }
 
 .typing-enter-active,
