@@ -1,7 +1,7 @@
 <template>
   <div :class="MBLcontainerClass">
     <div class="MBLspace-y-2">
-      <div v-for="(item, index) in MBLaccordionItems" :key="index" class="MBLborder-b MBLborder-gray-300">
+      <div ref="cards" v-for="(item, index) in MBLaccordionItems" :key="index" class="MBLborder-b MBLborder-gray-300">
         <button @click="MBLtoggle(index)" class="MBLw-full MBLtext-left MBLpy-3 MBLpx-4 focus:outline-none MBLbg-secondary MBLtext-text">
           {{ item.title }}
         </button>
@@ -25,6 +25,27 @@ export default {
         { title: 'Item 3', content: 'Content for item 3' }
       ]
     };
+  },
+    mounted() {
+    this.$nextTick(() => {
+      this.$refs.cards.forEach((card, index) => {
+        this.$gsap.from(card, {
+          y: -100,
+          scale: 0,
+          opacity: 0,
+          duration: 0.5,
+          delay: index * 0.1, // Stagger the animation for each card
+          scrollTrigger: {
+            trigger: card,
+            start: 'top 85%',
+            end: 'top 75%',
+            scrub: false,
+            markers: false, // Set to true for debugging
+            toggleActions: 'play play reverse reverse',
+          },
+        });
+      });
+    });
   },
   methods: {
     MBLtoggle(index) {

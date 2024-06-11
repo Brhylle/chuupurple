@@ -49,10 +49,10 @@ export default {
     this.$nextTick(() => {
       this.$refs.cards.forEach((card, index) => {
         this.$gsap.from(card, {
-          y: 800,
+          y: 300,
           scale: 0,
           opacity: 0,
-          duration: 3,
+          duration: 1,
           delay: index * 0.001, // Stagger the animation for each card
           
           scrollTrigger: {
