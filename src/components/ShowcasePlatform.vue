@@ -224,8 +224,17 @@
                             <NavbarComponent/>
                           </div>
                         </div>
+                        <div class="clock-wrapper flex flex-col countdown justify-center items-center" ref="clockWrapper">
+                          <p class="clock-text text-[25rem] text-text-300 font-pp-bold m-0 p-0 " id="animate-clock-1">18</p>
+                          <p class="clock-text text-[25rem] text-text-300 font-pp-bold m-0 p-0 absolute" id="animate-clock-2">19</p>
+                          <p class="clock-text text-[25rem] text-text-300 font-pp-bold m-0 p-0 absolute" id="animate-clock-3">20</p>
+                          <p class="clock-text text-[25rem] text-text-300 font-pp-bold m-0 p-0 absolute" id="animate-clock-4">21</p>
+                          <p class="clock-text text-[25rem] text-text-300 font-pp-bold m-0 p-0 absolute" id="animate-clock-5">22</p>
+                          <p class="clock-text text-[25rem] text-text-300 font-pp-bold m-0 p-0 absolute" id="animate-clock-6">23</p>
+                          <p class="divider text-[5.5rem] text-primary-800 font-pp-bold m-0 p-0 absolute">/</p>
+                          <p class="components-displayed text-[2.5rem] text-text-50 font-pp-medium m-0 p-0 top-[] absolute" id="stays-at-50-perc-viewport-only-scrolls">components displayed.</p>
+                        </div>
                       </div>
-                      
                       <div class="w-1/2 bg-background-800">
                         <h4 class=" font-pp-bold mt-8 text-[3rem] leading-[1.1] text-center text-text-100">Search + Post Component</h4>
                         <h4 class="subheading font-pp-thin text-primary-100 text-center text-[2.5rem] italic">by Godes, Paul Adrian</h4>
@@ -361,9 +370,11 @@ export default {
 
   mounted() {
 
+    
+
     // Animation for the first section of the showcase
-    const splitHeader = document.querySelectorAll('.animated-header-1');
-    splitHeader.forEach((char) => {
+  const splitHeader = document.querySelectorAll('.animated-header-1');
+  splitHeader.forEach((char) => {
       const splitText = new this.$SplitType(char, { types: 'chars' });
       this.$gsap.to(splitText.chars, {
         scrollTrigger: {
@@ -751,6 +762,195 @@ const splitTypeFour = document.querySelectorAll('#animated-text-4');
 
   });
 
+  const firstClock = document.querySelectorAll('#animate-clock-1');
+  firstClock.forEach((char) => {
+    const splitText = new this.$SplitType(char, { types: 'chars' });
+      this.$gsap.from(splitText.chars, {
+        scrollTrigger: {
+          // pin: true,
+          trigger: char,
+          start: 'top 80%',
+          end: 'top 75%',   
+          scrub: true,
+          markers: false,
+        },
+        opacity: 0,
+        scaleY: 0,
+        y: 20,
+        transformOrigin: 'bottom',
+          stagger: 0.05,
+      });
+      // Exit Animation
+      this.$gsap.to(splitText.chars, {
+        scrollTrigger: {
+          trigger: char,
+          start: 'top 70%', 
+          end: 'top 65%',  
+          scrub: true,
+          markers: false,
+        },
+        opacity: 0,
+        scaleY: 0,
+        y: 20,
+        transformOrigin: 'top',
+        stagger: 0.05,
+      });
+  });
+  const secondClock = document.querySelectorAll('#animate-clock-2');
+  secondClock.forEach((char) => {
+    const splitText = new this.$SplitType(char, { types: 'chars' });
+      this.$gsap.from(splitText.chars, {
+        scrollTrigger: {
+          // pin: true,
+          trigger: char,
+          start: 'top 65%',
+          end: 'top 60%',   
+          scrub: true,
+          markers: false,
+        },
+        opacity: 0,
+        scaleY: 0,
+        y: 20,
+        transformOrigin: 'bottom',
+          stagger: 0.05,
+      });
+      // Exit Animation
+      this.$gsap.to(splitText.chars, {
+        scrollTrigger: {
+          trigger: char,
+          start: 'top 55%', 
+          end: 'top 50%',  
+          scrub: true,
+          markers: false,
+        },
+        opacity: 0,
+        scaleY: 0,
+        y: 20,
+        transformOrigin: 'top',
+        stagger: 0.05,
+      });
+  });
+  const thirdClock = document.querySelectorAll('#animate-clock-3');
+  thirdClock.forEach((char) => {
+    const splitText = new this.$SplitType(char, { types: 'chars' });
+      this.$gsap.from(splitText.chars, {
+        scrollTrigger: {
+          // pin: true,
+          trigger: char,
+          start: 'top 50%',
+          end: 'top 45%',   
+          scrub: true,
+          markers: false,
+        },
+        opacity: 0,
+        scaleY: 0,
+        y: 20,
+        transformOrigin: 'bottom',
+          stagger: 0.05,
+      });
+      // Exit Animation
+      this.$gsap.to(splitText.chars, {
+        scrollTrigger: {
+          trigger: char,
+          start: 'top 40%', 
+          end: 'top 35%',  
+          scrub: true,
+          markers: false,
+        },
+        opacity: 0,
+        scaleY: 0,
+        y: 20,
+        transformOrigin: 'top',
+        stagger: 0.05,
+      });
+  });
+  const fourthClock = document.querySelectorAll('#animate-clock-4');
+  fourthClock.forEach((char) => {
+    const splitText = new this.$SplitType(char, { types: 'chars' });
+      this.$gsap.from(splitText.chars, {
+        scrollTrigger: {
+          // pin: true,
+          trigger: char,
+          start: 'top 35%',
+          end: 'top 30%',   
+          scrub: true,
+          markers: false,
+        },
+        opacity: 0,
+        scaleY: 0,
+        y: 20,
+        transformOrigin: 'bottom',
+          stagger: 0.05,
+      });
+      // Exit Animation
+      this.$gsap.to(splitText.chars, {
+        scrollTrigger: {
+          trigger: char,
+          start: 'top 25%', 
+          end: 'top 20%',  
+          scrub: true,
+          markers: false,
+        },
+        opacity: 0,
+        scaleY: 0,
+        y: 20,
+        transformOrigin: 'top',
+        stagger: 0.05,
+      });
+  });
+  const fifthClock = document.querySelectorAll('#animate-clock-5');
+  fifthClock.forEach((char) => {
+    const splitText = new this.$SplitType(char, { types: 'chars' });
+      this.$gsap.from(splitText.chars, {
+        scrollTrigger: {
+          // pin: true,
+          trigger: char,
+          start: 'top 20%',
+          end: 'top 15%',   
+          scrub: true,
+          markers: false,
+        },
+        opacity: 0,
+        scaleY: 0,
+        y: 20,
+        transformOrigin: 'bottom',
+          stagger: 0.05,
+      });
+      // Exit Animation
+      this.$gsap.to(splitText.chars, {
+        scrollTrigger: {
+          trigger: char,
+          start: 'top 10%', 
+          end: 'top 5%',  
+          scrub: true,
+          markers: false,
+        },
+        opacity: 0,
+        scaleY: 0,
+        y: 20,
+        transformOrigin: 'top',
+        stagger: 0.05,
+      });
+  });
+  const sixthClock = document.querySelectorAll('#animate-clock-6');
+  sixthClock.forEach((char) => {
+    const splitText = new this.$SplitType(char, { types: 'chars' });
+      this.$gsap.from(splitText.chars, {
+        scrollTrigger: {
+          // pin: true,
+          trigger: char,
+          start: 'top 5%',
+          end: 'top 0%',   
+          scrub: true,
+          markers: false,
+        },
+        opacity: 0,
+        scaleY: 0,
+        y: 20,
+        transformOrigin: 'bottom',
+          stagger: 0.05,
+      });
+  });
 // Add a delay before animating the next container
 this.$gsap.from(".component-left", {
     opacity: 0,
