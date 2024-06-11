@@ -49,8 +49,8 @@
                 <!-- *** VENTURA COMPONENTS *** -->
                 <section class="dlc-platform-content" ref="websiteContent">
                     <div class="dlc-section-header">
-                        <h1 class="animated-text-1"><span class="animated-emphasization-1">Components</span> Crafted By...</h1>
-                        <p class="animated-text-1">These components, <span class="animated-emphasization-1">lovingly created</span> by the team, beckon you to delve into a realm brimming with creativity and innovation. Embark on a journey of exploration filled with happiness and excitement, and <span class="animated-emphasization-1">uncover the enchantment</span> meticulously woven into every <span class="animated-emphasization-1">intricate detail</span>.</p>
+                        <h1 class="animated-text-1"><span class="animated-emphasization-10">Components</span> Crafted By...</h1>
+                        <p class="animated-text-1">These components, <span class="animated-emphasization-10">lovingly created</span> by the team, beckon you to delve into a realm brimming with creativity and innovation. Embark on a journey of exploration filled with happiness and excitement, and <span class="animated-emphasization-10">uncover the enchantment</span> meticulously woven into every <span class="animated-emphasization-10">intricate detail</span>.</p>
                     </div>
 
                     <!-- *** GAB COMPONENTS *** -->
@@ -264,9 +264,13 @@
                 </div>
               </section>
 
-                <section class="dlc-banner-3">
-                  <h1 id="animated-text-8" class="absolute">Now warping towards <span class="animated-emphasization-4">Final Phase V...</span></h1>
-                  <h1 id="animated-text-9" class="absolute"><span class="animated-emphasization-5">>>></span></h1>
+                  <section class="dlc-banner-3">
+                  <h1 id="animate-clock-1" class="absolute">Now</h1>
+                  <h1 id="animate-clock-2" class="absolute">warping</h1>
+                  <h1 id="animate-clock-3" class="absolute">towards </h1>
+                  <h1 id="animate-clock-4" class="absolute"><span class="animated-emphasization-4">Final</span></h1>
+                  <h1 id="animate-clock-5" class="absolute"><span class="animated-emphasization-4">Final Phase V...</span></h1>
+                  <h1 id="animated-text-6" class="absolute"><span class="animated-emphasization-5">>>></span></h1>
                   </section>
                   
                   <section class="dlc-platform-content-4"> 
@@ -283,28 +287,45 @@
                             
                             </div>
                             <div class="square bg-background-300 w-[70%] h-auto text-text-900 p-4 flex-grow">
-                              <SelectionOne/> 
                               <TuazonDialog/>
+                              <SelectionOne/> 
                         </div>
                         </div>
+                      
+                      
+                      </div>
+
                           <div class="flex flex-row pak_row"> 
                             <div class="square bg-background-800 w-[70%] h-auto text-text-100 p-4 flex-grow">
                               <CarouselComponent/>
                             </div>
                             
-                            <div class="w-[30%] h-auto text-text-100 bg-background-700 p-4">
-                              <h4 class="font-pp-bold mt-0 text-[5rem] leading-[1.1] text-right text-text-100 mb-2">Hover-Type Carousel Component</h4>
+                            <div class="w-[30%] h-[55rem] text-text-100 bg-background-700 p-4 text-wrap">
+                              <h4 class="font-pp-bold mt-0 text-[5rem] leading-[1.1] text-left text-text-100">Hovered-On Carousel</h4>
+                              <h4 class="subheading font-pp-thin text-primary-100 text-left text-[2.5rem] italic">by</h4>
+                              <h4 class="subheading font-pp-thin text-primary-100 text-left text-[2.5rem] italic">Dela Cruz, Jheizon Brhylle</h4>
                             </div>
                           </div>
-                      
-                      
-                      </div>
-                      
-                      <div class="dela-cruz-content">
-                        <div class="wrapper mt-8 flex items-center">
-                                <SelectionTwo/>
-                              </div>
-                    </div>
+
+                          <div class="flex flex-row pak_row"> 
+                            <div class="w-[30%] h-auto text-text-800 p-8 bg-background-400">
+                              <h4 class="font-pp-bold mt-0 text-[5rem] leading-[1.1] text-left text-text-800">Selection Two</h4>
+                              <h4 class="subheading font-pp-thin text-primary-950 text-left text-[2.5rem] italic">by</h4>
+                              <h4 class="subheading font-pp-thin text-primary-950 text-left text-[2.5rem] italic">Tajarros, Ritchmond James</h4>
+                            </div>
+                            <div class="square bg-background-600 w-[70%] h-auto text-text-900 p-4 flex-grow">
+                              <SelectionTwo/>
+                            </div>
+                            
+                          </div>
+                  </div>
+                  <div class="flex flex-col justify-center items-center text-[25rem] font-humane-bold" id="animated-text-5">
+         
+
+                      <h1>The <span class="animated-emphasization-2" id="animated-text-9">End.</span></h1>
+                      <h4 class="subheading font-pp-bold text-primary-200 text-left text-[10rem] absolute top-[230rem]" id="animated-text-4">27/27</h4>
+
+                
                   </div>
                 </section>
 
@@ -505,14 +526,14 @@ const splitTypeFour = document.querySelectorAll('#animated-text-4');
           trigger: char,
           start: 'top 90%', // Adjusted start position
           end: 'top 75%',   // Adjusted end position
-          scrub: false,
+          scrub: true,
           markers: false,
         },
         opacity: 0,
-        x: -240,
+        x: -25,
         ease: 'power3.in',
-        stagger: 0.5,
-        toggleActions: 'play play reverse reverse',
+        stagger: 0.7,
+        // toggleActions: 'play play reverse reverse',
       });
   });
 
@@ -569,6 +590,36 @@ const splitTypeFour = document.querySelectorAll('#animated-text-4');
             trigger: char,
             start: 'top 50%',
             end: 'top 15%',
+            scrub: true,
+            markers: false,
+            // toggleActions: 'play play reverse reverse',
+        }        
+  });
+  });
+
+  const emphasisAnimationScrubTen = document.querySelectorAll('.animated-emphasization-10');
+  emphasisAnimationScrubTen.forEach((char) => {
+      const splitText = new this.$SplitType(char, { types: 'chars' });
+    
+    // Get the computed background color from CSS
+    const fgColor = getComputedStyle(document.documentElement).getPropertyValue('--primary-600');
+
+    // Get the computed foreground color from CSS
+    const bgColor = getComputedStyle(document.documentElement).getPropertyValue('--secondary-800');
+
+
+      this.$gsap.fromTo(splitText.chars, {
+        color: bgColor,
+      },
+    {
+        color: fgColor,
+        duration: 2,
+        stagger: 1,
+        opacity: 1,
+        scrollTrigger: {
+            trigger: char,
+            start: 'top 150%',
+            end: 'top 95%',
             scrub: true,
             markers: false,
             // toggleActions: 'play play reverse reverse',
@@ -1181,7 +1232,7 @@ requestAnimationFrame(raf);
   section.dlc-platform-content-4 {
       position: absolute;
       top: 1050vh;
-      height: 300vh;
+      height: 500vh;
       width: 100%;
       left: 0;
       background: var(--background-900);

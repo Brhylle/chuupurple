@@ -77,12 +77,15 @@ export default {
 }
 
 .background-color {
-  background-color: #95cee5;
+  background-color: var(--background-300);
 }
 
 .dialog-header h2 {
   margin: 0;
-  color: #160326;
+  padding: 1rem;
+  color: var(--secondary-800);
+  font-size: 5rem;
+  font-family: Humane SemiBold;
 }
 
 .dialog-body {
@@ -97,8 +100,8 @@ export default {
 
 .check-button,
 .close-button {
-  background-color: #CBA2DD;
-  color: #0b2250;
+  background-color: var(--background-800);
+  color: var(--text-100);
   border: none;
   border-radius: 20px;
   padding: 10px 20px;
@@ -108,6 +111,7 @@ export default {
 
 .check-button:hover,
 .close-button:hover {
-  background-color: #373565;
+  background-color: var(--background-900);
+  color: var(--text-300)
 }
 </style>

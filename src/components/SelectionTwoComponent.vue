@@ -1,9 +1,9 @@
 <template>
   <div class="member-container">
     <div class="member-details">
-      <h1>BINI P-POP MEMBERS</h1>
+      <h1 class="font-pp-bold">BINI P-POP MEMBERS</h1>
       <div class="member-selection">
-        <h2>Select Member</h2>
+        <h2 class="font-pp-normal">Select Member</h2>
         <div class="member-options">
           <span v-for="member in members" :key="member.name" class="member-button" @click="changeMember(member)">
             {{ member.name }}
