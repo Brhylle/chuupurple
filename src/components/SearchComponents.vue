@@ -1,14 +1,14 @@
 <template>
     <div class="godes-main-container">
       <div class="godes-SearchComponent">
-        <label class="godes-search-label">Search Component</label>
+        <label class="godes-search-label">Try to enter a character!</label>
         <div class="godes-input-container">
           <input type="text" v-model="search" class="godes-input-search">
           <label class="placeholder">Search Programmers</label>
         </div>
   
         <transition-group name="fade" tag="ul" class="godes-programmer-list">
-          <li v-for="post in filteredPosts" :key="post.id" class="godes-programmer-box">
+          <li v-for="post in filteredPosts" :key="post.id" class="godes-programmer-box" ref="cards">
             <PostComponent :post="post"></PostComponent>
           </li>
         </transition-group>
@@ -49,7 +49,31 @@
           return post.description.toLowerCase().includes(searchLower) || post.title.toLowerCase().includes(searchLower);
         });
       }
-    }
+    },
+
+     mounted() {
+    this.$nextTick(() => {
+      this.$refs.cards.forEach((card, index) => {
+        this.$gsap.from(card, {
+          x: 100,
+          scale: 0,
+          opacity: 0,
+          duration: 3,
+          delay: index * 0.01, // Stagger the animation for each card
+          
+          scrollTrigger: {
+            trigger: card,
+            start: 'top 100%',
+            end: 'top 90%',
+            scrub: true,
+            markers: false, // Set to true for debugging
+            toggleActions: 'play none none reverse',
+          },
+          // scrub: true,
+        });
+      });
+    });
+  },
   }
   </script>
   
@@ -65,7 +89,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 30px;
+    margin-top: 0px;
     margin-bottom: 30px;
     padding: 20px;
     border-radius: 8px;
@@ -74,8 +98,14 @@
   
   .godes-search-label {
     font-size: 24px;
-    color: var(--text-800);
+    color: var(--text-100);
     font-weight: bold;
+    animation: blink 5s infinite both;
+  }
+
+  @keyframes blink {
+    0%, 50%, 100% { opacity: 1; }
+    25%, 75% { opacity: 0; }
   }
   
   .godes-input-container {
@@ -90,7 +120,7 @@
     position: absolute;
     top: 41px;
     left: 15px;
-    color: purple;
+    color: var(--accent-400);
     text-transform: capitalize;
     font-size: 14px;
     transition: top .3s;

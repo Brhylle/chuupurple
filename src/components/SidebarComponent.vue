@@ -1,14 +1,17 @@
 <template>
-  <div class="sidebar" :class="{ 'is-open': isOpen }" :style="{ backgroundColor: sidebarColor, color: textColor }">
-    <ul>
-      <li><a href="#home" @mouseover="hover = true" @mouseout="hover = false">Home</a></li>
-      <li><a href="#about" @mouseover="hover = true" @mouseout="hover = false">About</a></li>
-      <li><a href="#services" @mouseover="hover = true" @mouseout="hover = false">Services</a></li>
-      <li><a href="#contact" @mouseover="hover = true" @mouseout="hover = false">Contact</a></li>
-    </ul>
-    <!-- Toggle Theme Button at the bottom -->
-    <div class="theme-toggle-container">
-      <button @click="toggleTheme">Toggle Theme</button>
+  <div refs="tabsContainer">
+    <button class="toggle-button" @click="toggleSidebar">Toggle Sidebar</button>
+    <div class="sidebar" :class="{ 'is-open': isOpen }" :style="{ right: isOpen ? '0' : '-200px', backgroundColor: sidebarColor, color: textColor }">
+      <ul>
+        <li><a href="#home" @mouseover="hover = true" @mouseout="hover = false">Home</a></li>
+        <li><a href="#about" @mouseover="hover = true" @mouseout="hover = false">About</a></li>
+        <li><a href="#services" @mouseover="hover = true" @mouseout="hover = false">Services</a></li>
+        <li><a href="#contact" @mouseover="hover = true" @mouseout="hover = false">Contact</a></li>
+      </ul>
+      <!-- Toggle Theme Button at the bottom -->
+      <div class="theme-toggle-container">
+        <button @click="toggleTheme">Toggle Theme</button>
+      </div>
     </div>
   </div>
 </template>
@@ -33,20 +36,30 @@ export default {
   },
   methods: {
     toggleTheme() { // Method to toggle darkMode
-      this.darkMode =!this.darkMode;
+      this.darkMode = !this.darkMode;
+    },
+    toggleSidebar() {
+      this.isOpen = !this.isOpen;
     },
   },
+
+
 };
 </script>
 
 <style scoped>
 .sidebar {
+  position: fixed;
+  top: 0;
+  right: -200px; /* Start position outside of the screen */
   width: 200px;
   height: 100vh;
   padding-top: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between; /* Space between items vertically */
+  transition: right 0.3s ease; /* Slide animation */
+  z-index: 100;
 }
 
 .sidebar ul {
@@ -72,18 +85,22 @@ export default {
   text-align: center; /* Center aligns the button */
 }
 
-button {
-  background-color: transparent;
+.toggle-button {
+  position: relative;
+  top: 8.5rem;
+  left: 4.5rem;
+  z-index: 5; /* Ensure the button stays on top */
+  background-color: var(--primary-800);
   border: none;
-  color: inherit;
+  color: var(--text-100);
   cursor: pointer;
-  font-size: 14px;
+  font-size: 1.5rem;
   padding: 5px 10px;
   border-radius: 5px;
   margin-left: 10px;
 }
 
 button:hover {
-  background-color: #DDDBFF;
+  background-color: var(--background-100);
 }
 </style>

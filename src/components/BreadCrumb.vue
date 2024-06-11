@@ -1,58 +1,71 @@
-
 <template>
-  <nav class="breadcrumb" aria-label="breadcrumbs">
+  <div class="breadcrumbs">
     <ul>
-      <li v-for="(crumb, index) in crumbs" :key="index">
-        <a :href="crumb.link">{{ crumb.text }}</a>
-        <span v-if="index < crumbs.length - 1"> / </span>
+      <li v-for="(item, index) in items" :key="index">
+        <a v-if="!item.isSpan" :href="item.link" class="breadcrumb-link">
+          <svg v-if="item.icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="w-4 h-4 stroke-current">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" :d="item.icon"></path>
+          </svg>
+          {{ item.label }}
+        </a>
+        <span v-else class="breadcrumb-span">
+          <svg v-if="item.icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="w-4 h-4 stroke-current">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" :d="item.icon"></path>
+          </svg>
+          {{ item.label }}
+        </span>
+        <span v-if="index < items.length - 1" class="separator">/</span>
       </li>
     </ul>
-  </nav>  
+  </div>
 </template>
 
 <script>
 export default {
-  name: 'BreadCrumb',
   props: {
-    crumbs: {
+    items: {
       type: Array,
       required: true
     }
   }
-}
+};
 </script>
 
 <style scoped>
-.breadcrumb {
-  font-family: 'Times New Roman';
-  /* margin-left: 560px; */
-  /* margin-top: 300px; */
-  font-size: 20px;
-  border: 1px solid #000000; 
-  background-color: #808080;
-  /* width: fit-content; */
-  padding: 3px 5px;
-  border-radius: 5px;
+.breadcrumbs {
+  margin: 0;
+  padding: 0;
+  background: var(--background-200);
 }
-.breadcrumb ul {
+
+ul {
   list-style: none;
   padding: 0;
-  margin: 0;
+  display: flex;
 }
 
-.breadcrumb li {
-  display: inline;
-  /* margin-right: 4px;
-  margin-left: 4px; */
-}
-
-.breadcrumb a {
+.breadcrumb-link, .breadcrumb-span {
+  display: inline-flex;
+  align-items: center;
   text-decoration: none;
-  color: #3898ff; 
+  color: var(--text-700);
+  transition: color 0.3s; /* Add transition for smooth color change */
 }
 
-.breadcrumb a:hover {
-  text-decoration: underline; 
-  font-weight: bold;
-} 
+.breadcrumb-link:hover, .breadcrumb-span:hover {
+    background-color: var(--accent-800); /* Adjust to your desired hover color */
+  color: var(--text-100);
+  text-decoration: underline;
+}
+
+.breadcrumb-link svg, .breadcrumb-span svg {
+  margin-right: 5px;
+}
+
+.separator {
+  margin: 0 5px;
+  color: var(--text-600);
+}
+
+/* Customize other styles as needed */
 </style>

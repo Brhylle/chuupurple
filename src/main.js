@@ -1,7 +1,9 @@
+/* eslint-disable vue/multi-word-component-names */
 import { createApp } from 'vue';
 import App from './App.vue';
 import './index.css';
 import animations from '../plugins/animations';
+
 
 // for reusability
 const app = createApp(App);
