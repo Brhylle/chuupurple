@@ -12,6 +12,7 @@
                             <a href="#our-team" id="">Our Team</a>
                             <a href="#section-header">Components</a>
                             <DarkToggleMode :currentTheme="currentTheme" @toggleTheme="toggleTheme" :scrollDownImageSrc="scrollDownImageSrc"/>
+                            <DarkToggleMode :currentTheme="currentTheme" @toggleTheme="toggleTheme" :scrollDownImageSrc="scrollDownImageSrc"/>
                         </div>
                     </nav>
 
@@ -47,8 +48,11 @@
                 </section>
 
                 <!-- *** VENTURA COMPONENTS *** -->
+                <!-- *** VENTURA COMPONENTS *** -->
                 <section class="dlc-platform-content" ref="websiteContent">
                     <div class="dlc-section-header">
+                        <h1 class="animated-text-1"><span class="animated-emphasization-10">Components</span> Crafted By...</h1>
+                        <p class="animated-text-1">These components, <span class="animated-emphasization-10">lovingly created</span> by the team, beckon you to delve into a realm brimming with creativity and innovation. Embark on a journey of exploration filled with happiness and excitement, and <span class="animated-emphasization-10">uncover the enchantment</span> meticulously woven into every <span class="animated-emphasization-10">intricate detail</span>.</p>
                         <h1 class="animated-text-1"><span class="animated-emphasization-10">Components</span> Crafted By...</h1>
                         <p class="animated-text-1">These components, <span class="animated-emphasization-10">lovingly created</span> by the team, beckon you to delve into a realm brimming with creativity and innovation. Embark on a journey of exploration filled with happiness and excitement, and <span class="animated-emphasization-10">uncover the enchantment</span> meticulously woven into every <span class="animated-emphasization-10">intricate detail</span>.</p>
                     </div>
@@ -74,11 +78,14 @@
                             <div class="component-countdown-wrapper">
                               <h3 class="countdown-numerator" id="animated-text-5">Twenty-Seven (27)</h3>
                                 <span class="dlc-overline" id="animated-text"><span class="no-line-spacing">----------</span> components <span class="no-line-spacing">----------</span></span>
+                              <h3 class="countdown-numerator" id="animated-text-5">Twenty-Seven (27)</h3>
+                                <span class="dlc-overline" id="animated-text"><span class="no-line-spacing">----------</span> components <span class="no-line-spacing">----------</span></span>
                               <h2 class="countdown-denominator" id="animated-text-5"><span class="animated-emphasization">Five (5)</span></h2>
                             </div>
                     </div>
                 </section>
 
+                <!-- ? CHECKPOINT 1 -->
                 <!-- ? CHECKPOINT 1 -->
                 <section class="dlc-banner-1" id="animated-text-6">
   
@@ -87,10 +94,13 @@
                 </section>
 
                 <!-- *** MIRABEL, CRUZ, FORTIN, SEMIFRANIA COMPONENTS -->
+                <!-- *** MIRABEL, CRUZ, FORTIN, SEMIFRANIA COMPONENTS -->
                 <section class="dlc-platform-content-2" ref="websiteContent">
                   <div class="flex justify-content align-items">
                     <!-- ! LEFT -->
                     <div class="text-left mt-[10%] p-0 w-1/12">
+                      <h2 class="writing-mode-vertical m-0 p-0 leading-0 text-[10rem] uppercase font-pp-bold" id="animated-text-7">
+                        <span class="animated-emphasization-1">mirabel</span>
                       <h2 class="writing-mode-vertical m-0 p-0 leading-0 text-[10rem] uppercase font-pp-bold" id="animated-text-7">
                         <span class="animated-emphasization-1">mirabel</span>
                       </h2>
@@ -99,6 +109,7 @@
                     <!-- ? MIDDLE -->
                     <div class="main-content-wrap m-0 p-0 align-items w-10/12">
                       <div class="uniform-container">
+                        <h2 class="presenter-header uppercase text-text-400" id="animated-text-2"><span class="animated-emphasization-1 ">Twenty-Two (22)</span> to be exact.</h2>
                         <h2 class="presenter-header uppercase text-text-400" id="animated-text-2"><span class="animated-emphasization-1 ">Twenty-Two (22)</span> to be exact.</h2>
                         <div class="component-row">
                           <!-- *** MIRABEL COMPONENTS *** -->
@@ -132,13 +143,18 @@
                           </div>
                           <div class="text-foot-wrap flex flex-col">
                             <h4 class="font-pp-bold text-[3.5rem] gap-0 leading-none m-2 p-0 text-text-400" id="animated-text-2"><span class="animated-emphasization-2">Robert Leoni</span> <span class="animated-emphasization-1">&</span></h4>
+                            <h4 class="font-pp-bold text-[3.5rem] gap-0 leading-none m-2 p-0 text-text-400" id="animated-text-2"><span class="animated-emphasization-2">Robert Leoni</span> <span class="animated-emphasization-1">&</span></h4>
                             <h2 class="font-humane-bold leading-none gap-0 uppercase m-2 p-0 text-[14rem] text-center" id="animated-text-2">components</h2>
+                            <h4 class="font-pp-bold text-[3.5rem] gap-0 leading-none m-2 p-0 text-text-400 text-right" id="animated-text-2"><span class="animated-emphasization-2">&</span> <span class="animated-emphasization-1">Raven Drake</span></h4>
                             <h4 class="font-pp-bold text-[3.5rem] gap-0 leading-none m-2 p-0 text-text-400 text-right" id="animated-text-2"><span class="animated-emphasization-2">&</span> <span class="animated-emphasization-1">Raven Drake</span></h4>
                           </div>
                         </div>
                         </div>
                         
                         <!-- *** TEXT ON THE right -->
+                        <div class="text-right m-0 p-0 w-1/12 absolute top-[20%] left-[85%]" id="animated-text-7">
+                          <h2 class="writing-mode-vertical text-[10rem] font-pp-bold uppercase">
+                            <span class="animated-emphasization-2">cruz</span>
                         <div class="text-right m-0 p-0 w-1/12 absolute top-[20%] left-[85%]" id="animated-text-7">
                           <h2 class="writing-mode-vertical text-[10rem] font-pp-bold uppercase">
                             <span class="animated-emphasization-2">cruz</span>
@@ -337,13 +353,68 @@
 
                 
                   </div>
+                      <div class="flex-container flex-col">
+                        
+                        <div class="flex flex-row pak_row">
+                          <div class="square bg-background-200 w-[30%] h-auto text-text-800 p-4">
+                            <h4 class=" font-pp-bold mt-0 text-[5rem] leading-[1.1] text-right text-text-800 mb-2">Selection One + Dialog & List</h4>
+                            <h4 class="subheading font-pp-thin text-primary-900 text-right text-[2.5rem] italic mb-2">by</h4>
+                            <!-- <h4 class=" font-pp-bold mt-0 text-[5rem] leading-[1.1] text-right text-text-800">Bread Crumb + Tree Component</h4> -->
+                            <h4 class="subheading font-pp-thin text-primary-900 text-right text-[2.5rem] italic mb-2">Tajarros, Ritchmond James</h4>
+                            <h4 class="subheading font-pp-thin text-primary-900 text-right text-[2.5rem] italic mb-2">Tuazon, Leomar</h4>
+                            
+                            </div>
+                            <div class="square bg-background-300 w-[70%] h-auto text-text-900 p-4 flex-grow">
+                              <TuazonDialog/>
+                              <SelectionOne/> 
+                        </div>
+                        </div>
+                      
+                      
+                      </div>
+
+                          <div class="flex flex-row pak_row"> 
+                            <div class="square bg-background-800 w-[70%] h-auto text-text-100 p-4 flex-grow">
+                              <CarouselComponent/>
+                            </div>
+                            
+                            <div class="w-[30%] h-[55rem] text-text-100 bg-background-700 p-4 text-wrap">
+                              <h4 class="font-pp-bold mt-0 text-[5rem] leading-[1.1] text-left text-text-100">Hovered-On Carousel</h4>
+                              <h4 class="subheading font-pp-thin text-primary-100 text-left text-[2.5rem] italic">by</h4>
+                              <h4 class="subheading font-pp-thin text-primary-100 text-left text-[2.5rem] italic">Dela Cruz, Jheizon Brhylle</h4>
+                            </div>
+                          </div>
+
+                          <div class="flex flex-row pak_row"> 
+                            <div class="w-[30%] h-auto text-text-800 p-8 bg-background-400">
+                              <h4 class="font-pp-bold mt-0 text-[5rem] leading-[1.1] text-left text-text-800">Selection Two</h4>
+                              <h4 class="subheading font-pp-thin text-primary-950 text-left text-[2.5rem] italic">by</h4>
+                              <h4 class="subheading font-pp-thin text-primary-950 text-left text-[2.5rem] italic">Tajarros, Ritchmond James</h4>
+                            </div>
+                            <div class="square bg-background-600 w-[70%] h-auto text-text-900 p-4 flex-grow">
+                              <SelectionTwo/>
+                            </div>
+                            
+                          </div>
+                  </div>
+                  <div class="flex flex-col justify-center items-center text-[25rem] font-humane-bold" id="animated-text-5">
+         
+
+                      <h1>The <span class="animated-emphasization-2" id="animated-text-9">End.</span></h1>
+                      <h4 class="subheading font-pp-bold text-primary-200 text-left text-[10rem] absolute top-[230rem]" id="animated-text-4">27/27</h4>
+
+                
+                  </div>
                 </section>
 
             </div>
 
             <!-- ! SCROLL DOWN SIGN -->
+
+            <!-- ! SCROLL DOWN SIGN -->
             <div class="scroll-down-container">
               <h5 class="scroll-down-text">scroll down to start.</h5>
+              <img src="" data-theme="light" alt="scroll-down-to-scroll" id="scroll-down" class="scroll-down">
               <img src="" data-theme="light" alt="scroll-down-to-scroll" id="scroll-down" class="scroll-down">
             </div>
         </section>
@@ -356,6 +427,9 @@ import TabsComponent from './TabsComponent.vue';
 import CardsComponent from './CardsComponent.vue';
 import CruzNotification from './CruzNotification.vue';
 import CruzPopup from './CruzPopup.vue';
+import Fortin_NumberInput from './Fortin_NumberInput.vue';
+import Fortin_Textarea from './Fortin_Textarea.vue';
+import Fortin_Tooltip from './Fortin_Tooltip.vue';
 import Fortin_NumberInput from './Fortin_NumberInput.vue';
 import Fortin_Textarea from './Fortin_Textarea.vue';
 import Fortin_Tooltip from './Fortin_Tooltip.vue';
@@ -374,16 +448,29 @@ import SelectionOne from './SelectionOne.vue';
 import SelectionTwo from './SelectionTwoComponent.vue';
 import CarouselComponent from './CarouselComponent.vue';
 import TuazonDialog from './TuazonDialog.vue';
+import SearchComponents from './SearchComponents.vue';
+import BreadCrumb from './BreadCrumb.vue';
+import TreeComponent from './TreeComponent.vue';
+import SidebarComponent from './SidebarComponent.vue';
+import NavbarComponent from './NavbarComponent.vue';
+import SelectionOne from './SelectionOne.vue';
+import SelectionTwo from './SelectionTwoComponent.vue';
+import CarouselComponent from './CarouselComponent.vue';
+import TuazonDialog from './TuazonDialog.vue';
 
 export default {
   components: {
     DarkToggleMode,
+    CarouselComponent,
     CarouselComponent,
     TabsComponent,
     CardsComponent,
     SearchBarComponent,
     CruzNotification,
     CruzPopup,
+    Fortin_NumberInput,
+    Fortin_Textarea,
+    Fortin_Tooltip,
     Fortin_NumberInput,
     Fortin_Textarea,
     Fortin_Tooltip,
@@ -468,11 +555,106 @@ export default {
     }
   },
 
+    SemifraniaMenuComponent,
+    SearchComponents,
+    SidebarComponent,
+    NavbarComponent,
+    BreadCrumb,
+    TreeComponent,
+    SelectionOne,
+    SelectionTwo,
+    TuazonDialog
+  },
+
+  methods: {
+    toggleTheme() {
+      this.currentTheme = this.currentTheme === 'light' ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', this.currentTheme);
+      localStorage.setItem('theme', this.currentTheme);
+
+        // Change scroll-down image source based on theme
+      this.scrollDownImageSrc = this.currentTheme === 'light' ? 'var(--image-light)' : 'var(--image-dark)';
+    }
+  },
+
+  data() {
+    return {
+      currentTheme: 'light',
+      breadcrumbItems: [
+        { label: 'Desktop', link: '/home', icon: 'M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z' },
+        { label: 'Documents', link: '/documents', icon: 'M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z' },
+        { label: 'Add Document', icon: 'M9 13h6m-3-3v6m5 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z', isSpan: true }
+      ],
+      treeData: [
+        {
+          id: 1,
+          name: 'ChuuPurple',
+          children: []
+        },
+        {
+          id: 2,
+          name: 'Desktop',
+          children: [
+            {
+              id: 3,
+              name: 'Documents',
+              children: [
+                {
+                  id: 5,
+                  name: 'Add Document',
+                  children: []
+                }
+              ]
+            },
+            {
+              id: 4,
+              name: 'Desktop',
+              children: []
+            }
+          ]
+        },
+        {
+          id: 6,
+          name: 'Local Drive (C:)',
+          children: []
+        },
+        {
+          id: 7,
+          name: 'Network Drive (S:)',
+          children: []
+        }
+      ]
+    };
+  },
+    computed: {
+    scrollDownImageSrc() {
+      return this.currentTheme === 'light' ? 'var(--scroll-down-light)' : 'var(--scroll-down-dark)';
+    }
+  },
+
   mounted() {
 
     
 
+    
+
     // Animation for the first section of the showcase
+  const splitHeader = document.querySelectorAll('.animated-header-1');
+  splitHeader.forEach((char) => {
+      const splitText = new this.$SplitType(char, { types: 'chars' });
+      this.$gsap.to(splitText.chars, {
+        scrollTrigger: {
+          trigger: char,
+          start: '50% 25%',
+          end: '100% 25%',
+          scrub: true,
+          markers: false,
+        },
+        opacity: 0.05,
+        y: 95,
+        stagger: 0.1,
+      });
+    });
   const splitHeader = document.querySelectorAll('.animated-header-1');
   splitHeader.forEach((char) => {
       const splitText = new this.$SplitType(char, { types: 'chars' });
@@ -515,6 +697,7 @@ splitTypeTwo.forEach((char) => {
       scrollTrigger: {
         trigger: char,
         start: 'top 95%', // Adjusted start position
+        start: 'top 95%', // Adjusted start position
         end: 'top 75%',   // Adjusted end position
         scrub: true,
         markers: false,
@@ -554,11 +737,15 @@ const splitTypeFour = document.querySelectorAll('#animated-text-4');
           start: 'top 90%', // Adjusted start position
           end: 'top 75%',   // Adjusted end position
           scrub: true,
+          scrub: true,
           markers: false,
         },
         opacity: 0,
         x: -25,
+        x: -25,
         ease: 'power3.in',
+        stagger: 0.7,
+        // toggleActions: 'play play reverse reverse',
         stagger: 0.7,
         // toggleActions: 'play play reverse reverse',
       });
@@ -595,6 +782,7 @@ const splitTypeFour = document.querySelectorAll('#animated-text-4');
   });
 
   const emphasisAnimationScrub = document.querySelectorAll('.animated-emphasization-1');
+  const emphasisAnimationScrub = document.querySelectorAll('.animated-emphasization-1');
   emphasisAnimationScrub.forEach((char) => {
       const splitText = new this.$SplitType(char, { types: 'chars' });
     
@@ -617,6 +805,185 @@ const splitTypeFour = document.querySelectorAll('#animated-text-4');
             trigger: char,
             start: 'top 50%',
             end: 'top 15%',
+            scrub: true,
+            markers: false,
+            // toggleActions: 'play play reverse reverse',
+        }        
+  });
+  });
+
+  const emphasisAnimationScrubTen = document.querySelectorAll('.animated-emphasization-10');
+  emphasisAnimationScrubTen.forEach((char) => {
+      const splitText = new this.$SplitType(char, { types: 'chars' });
+    
+    // Get the computed background color from CSS
+    const fgColor = getComputedStyle(document.documentElement).getPropertyValue('--primary-600');
+
+    // Get the computed foreground color from CSS
+    const bgColor = getComputedStyle(document.documentElement).getPropertyValue('--secondary-800');
+
+
+      this.$gsap.fromTo(splitText.chars, {
+        color: bgColor,
+      },
+    {
+        color: fgColor,
+        duration: 2,
+        stagger: 1,
+        opacity: 1,
+        scrollTrigger: {
+            trigger: char,
+            start: 'top 150%',
+            end: 'top 95%',
+            scrub: true,
+            markers: false,
+            // toggleActions: 'play play reverse reverse',
+        }        
+  });
+  });
+
+  const emphasisAnimationScrubTwo = document.querySelectorAll('.animated-emphasization-2');
+  emphasisAnimationScrubTwo.forEach((char) => {
+      const splitText = new this.$SplitType(char, { types: 'chars' });
+    
+    // Get the computed background color from CSS
+    const fgColor = getComputedStyle(document.documentElement).getPropertyValue('--text-300');
+
+    // Get the computed foreground color from CSS
+    const bgColor = getComputedStyle(document.documentElement).getPropertyValue('--primary-600');
+
+
+      this.$gsap.fromTo(splitText.chars, {
+        color: bgColor,
+      },
+    {
+        color: fgColor,
+        duration: 5,
+        stagger: 2,
+        opacity: 1,
+        scrollTrigger: {
+            trigger: char,
+            start: 'top 55%',
+            end: 'top 45%',
+            scrub: true,
+            markers: false,
+            // toggleActions: 'play play reverse reverse',
+        }        
+  });
+  });
+
+  const emphasisAnimationScrubThree = document.querySelectorAll('.animated-emphasization-3');
+  emphasisAnimationScrubThree.forEach((char) => {
+      const splitText = new this.$SplitType(char, { types: 'chars' });
+    
+    // Get the computed background color from CSS
+    const fgColor = getComputedStyle(document.documentElement).getPropertyValue('--primary-600');
+
+    // Get the computed foreground color from CSS
+    const bgColor = getComputedStyle(document.documentElement).getPropertyValue('--secondary-800');
+
+
+      this.$gsap.fromTo(splitText.chars, {
+        color: bgColor,
+      },
+    {
+        color: fgColor,
+        duration: 5,
+        stagger: 2,
+        opacity: 1,
+        scrollTrigger: {
+            trigger: char,
+            start: 'top 55%',
+            end: 'top 45%',
+            scrub: true,
+            markers: false,
+            // toggleActions: 'play play reverse reverse',
+        }        
+  });
+  });
+
+  const emphasisAnimationScrubFour = document.querySelectorAll('.animated-emphasization-4');
+  emphasisAnimationScrubFour.forEach((char) => {
+      const splitText = new this.$SplitType(char, { types: 'chars' });
+    
+    // Get the computed background color from CSS
+    const fgColor = getComputedStyle(document.documentElement).getPropertyValue('--primary-600');
+
+    // Get the computed foreground color from CSS
+    const bgColor = getComputedStyle(document.documentElement).getPropertyValue('--secondary-800');
+
+
+      this.$gsap.fromTo(splitText.chars, {
+        color: bgColor,
+      },
+    {
+        color: fgColor,
+        duration: 2,
+        stagger: 2,
+        opacity: 1,
+        scrollTrigger: {
+            trigger: char,
+            start: 'top 75%',
+            end: 'top 65%',
+            scrub: true,
+            markers: false,
+            // toggleActions: 'play play reverse reverse',
+        }        
+  });
+  });
+  
+  const emphasisAnimationScrubFive = document.querySelectorAll('.animated-emphasization-5');
+  emphasisAnimationScrubFive.forEach((char) => {
+      const splitText = new this.$SplitType(char, { types: 'chars' });
+    
+    // Get the computed background color from CSS
+    const fgColor = getComputedStyle(document.documentElement).getPropertyValue('--primary-600');
+
+    // Get the computed foreground color from CSS
+    const bgColor = getComputedStyle(document.documentElement).getPropertyValue('--secondary-800');
+
+
+      this.$gsap.fromTo(splitText.chars, {
+        color: bgColor,
+      },
+    {
+        color: fgColor,
+        duration: 2,
+        stagger: 2,
+        opacity: 1,
+        scrollTrigger: {
+            trigger: char,
+            start: 'top 40%',
+            end: 'top 30%',
+            scrub: true,
+            markers: false,
+            // toggleActions: 'play play reverse reverse',
+        }        
+  });
+  });
+  const emphasisAnimationScrubSix = document.querySelectorAll('.animated-emphasization-6');
+  emphasisAnimationScrubSix.forEach((char) => {
+      const splitText = new this.$SplitType(char, { types: 'chars' });
+    
+    // Get the computed background color from CSS
+    const fgColor = getComputedStyle(document.documentElement).getPropertyValue('--primary-200');
+
+    // Get the computed foreground color from CSS
+    const bgColor = getComputedStyle(document.documentElement).getPropertyValue('--text-100');
+
+
+      this.$gsap.fromTo(splitText.chars, {
+        color: bgColor,
+      },
+    {
+        color: fgColor,
+        duration: 2,
+        stagger: 2,
+        opacity: 1,
+        scrollTrigger: {
+            trigger: char,
+            start: 'top 85%',
+            end: 'top 50%',
             scrub: true,
             markers: false,
             // toggleActions: 'play play reverse reverse',
@@ -843,6 +1210,8 @@ const splitTypeFour = document.querySelectorAll('#animated-text-4');
           trigger: char,
           start: 'bottom 50%', 
           end: 'bottom 25%',  
+          start: 'bottom 50%', 
+          end: 'bottom 25%',  
           scrub: true,
           markers: false,
         },
@@ -853,6 +1222,263 @@ const splitTypeFour = document.querySelectorAll('#animated-text-4');
       });
   });
 
+  const splitTypeSeven = document.querySelectorAll('#animated-text-7');
+  splitTypeSeven.forEach((word) => {
+    const splitText = new this.$SplitType(word, { types: 'words' });
+      this.$gsap.from(splitText.words, {
+        scrollTrigger: {
+          trigger: word,
+          start: 'top 90%', // Adjusted start position
+          end: 'top 50%',   // Adjusted end position
+          scrub: true,
+          markers: false,
+        },
+        opacity: 0,
+        x: 50,
+        ease: 'power3.inOut',
+      });
+  });
+
+  
+  const splitTypeEight = document.querySelectorAll('#animated-text-8');
+  splitTypeEight.forEach((char) => {
+    const splitText = new this.$SplitType(char, { types: 'words, chars' });
+      this.$gsap.from(splitText.words, {
+        scrollTrigger: {
+          trigger: char,
+          start: 'top 105%', // Adjusted start position
+          end: 'top 75%',   // Adjusted end position
+          scrub: true,
+          markers: false,
+        },
+        opacity: 0,
+        x: -50,
+        ease: 'power3.inOut',
+      });
+
+    this.$gsap.to(splitText.chars, {
+      scrollTrigger: {
+        trigger: char,
+        start: 'top 65%', // Adjusted start position
+        end: 'top 50%',   // Adjusted end position
+        scrub: true,
+        markers: false,
+      },
+      opacity: 0,
+      y: 50,
+      ease: 'power3.inOut',
+
+    });
+
+  });
+  
+  const splitTypeNine = document.querySelectorAll('#animated-text-9');
+  splitTypeNine.forEach((char) => {
+    const splitText = new this.$SplitType(char, { types: 'words, chars' });
+      this.$gsap.from(splitText.words, {
+        scrollTrigger: {
+          trigger: char,
+          start: 'top 75%', // Adjusted start position
+          end: 'top 25%',   // Adjusted end position
+          scrub: true,
+          markers: false,
+        },
+        opacity: 0,
+        y: -50,
+        ease: 'power3.inOut',
+      });
+
+  });
+
+  const firstClock = document.querySelectorAll('#animate-clock-1');
+  firstClock.forEach((char) => {
+    const splitText = new this.$SplitType(char, { types: 'chars' });
+      this.$gsap.from(splitText.chars, {
+        scrollTrigger: {
+          // pin: true,
+          trigger: char,
+          start: 'top 80%',
+          end: 'top 75%',   
+          scrub: true,
+          markers: false,
+        },
+        opacity: 0,
+        scaleY: 0,
+        y: 20,
+        transformOrigin: 'bottom',
+          stagger: 0.05,
+      });
+      // Exit Animation
+      this.$gsap.to(splitText.chars, {
+        scrollTrigger: {
+          trigger: char,
+          start: 'top 70%', 
+          end: 'top 65%',  
+          scrub: true,
+          markers: false,
+        },
+        opacity: 0,
+        scaleY: 0,
+        y: 20,
+        transformOrigin: 'top',
+        stagger: 0.05,
+      });
+  });
+  const secondClock = document.querySelectorAll('#animate-clock-2');
+  secondClock.forEach((char) => {
+    const splitText = new this.$SplitType(char, { types: 'chars' });
+      this.$gsap.from(splitText.chars, {
+        scrollTrigger: {
+          // pin: true,
+          trigger: char,
+          start: 'top 65%',
+          end: 'top 60%',   
+          scrub: true,
+          markers: false,
+        },
+        opacity: 0,
+        scaleY: 0,
+        y: 20,
+        transformOrigin: 'bottom',
+          stagger: 0.05,
+      });
+      // Exit Animation
+      this.$gsap.to(splitText.chars, {
+        scrollTrigger: {
+          trigger: char,
+          start: 'top 55%', 
+          end: 'top 50%',  
+          scrub: true,
+          markers: false,
+        },
+        opacity: 0,
+        scaleY: 0,
+        y: 20,
+        transformOrigin: 'top',
+        stagger: 0.05,
+      });
+  });
+  const thirdClock = document.querySelectorAll('#animate-clock-3');
+  thirdClock.forEach((char) => {
+    const splitText = new this.$SplitType(char, { types: 'chars' });
+      this.$gsap.from(splitText.chars, {
+        scrollTrigger: {
+          // pin: true,
+          trigger: char,
+          start: 'top 50%',
+          end: 'top 45%',   
+          scrub: true,
+          markers: false,
+        },
+        opacity: 0,
+        scaleY: 0,
+        y: 20,
+        transformOrigin: 'bottom',
+          stagger: 0.05,
+      });
+      // Exit Animation
+      this.$gsap.to(splitText.chars, {
+        scrollTrigger: {
+          trigger: char,
+          start: 'top 40%', 
+          end: 'top 35%',  
+          scrub: true,
+          markers: false,
+        },
+        opacity: 0,
+        scaleY: 0,
+        y: 20,
+        transformOrigin: 'top',
+        stagger: 0.05,
+      });
+  });
+  const fourthClock = document.querySelectorAll('#animate-clock-4');
+  fourthClock.forEach((char) => {
+    const splitText = new this.$SplitType(char, { types: 'chars' });
+      this.$gsap.from(splitText.chars, {
+        scrollTrigger: {
+          // pin: true,
+          trigger: char,
+          start: 'top 35%',
+          end: 'top 30%',   
+          scrub: true,
+          markers: false,
+        },
+        opacity: 0,
+        scaleY: 0,
+        y: 20,
+        transformOrigin: 'bottom',
+          stagger: 0.05,
+      });
+      // Exit Animation
+      this.$gsap.to(splitText.chars, {
+        scrollTrigger: {
+          trigger: char,
+          start: 'top 25%', 
+          end: 'top 20%',  
+          scrub: true,
+          markers: false,
+        },
+        opacity: 0,
+        scaleY: 0,
+        y: 20,
+        transformOrigin: 'top',
+        stagger: 0.05,
+      });
+  });
+  const fifthClock = document.querySelectorAll('#animate-clock-5');
+  fifthClock.forEach((char) => {
+    const splitText = new this.$SplitType(char, { types: 'chars' });
+      this.$gsap.from(splitText.chars, {
+        scrollTrigger: {
+          // pin: true,
+          trigger: char,
+          start: 'top 20%',
+          end: 'top 15%',   
+          scrub: true,
+          markers: false,
+        },
+        opacity: 0,
+        scaleY: 0,
+        y: 20,
+        transformOrigin: 'bottom',
+          stagger: 0.05,
+      });
+      // Exit Animation
+      this.$gsap.to(splitText.chars, {
+        scrollTrigger: {
+          trigger: char,
+          start: 'top 10%', 
+          end: 'top 5%',  
+          scrub: true,
+          markers: false,
+        },
+        opacity: 0,
+        scaleY: 0,
+        y: 20,
+        transformOrigin: 'top',
+        stagger: 0.05,
+      });
+  });
+  const sixthClock = document.querySelectorAll('#animate-clock-6');
+  sixthClock.forEach((char) => {
+    const splitText = new this.$SplitType(char, { types: 'chars' });
+      this.$gsap.from(splitText.chars, {
+        scrollTrigger: {
+          // pin: true,
+          trigger: char,
+          start: 'top 5%',
+          end: 'top 0%',   
+          scrub: true,
+          markers: false,
+        },
+        opacity: 0,
+        scaleY: 0,
+        y: 20,
+        transformOrigin: 'bottom',
+          stagger: 0.05,
+      });
+  });
   const splitTypeSeven = document.querySelectorAll('#animated-text-7');
   splitTypeSeven.forEach((word) => {
     const splitText = new this.$SplitType(word, { types: 'words' });
@@ -1464,6 +2090,7 @@ section.dlc-platform-content-3 {
     text-orientation: upright;
     writing-mode: vertical-rl;
     letter-spacing: -1rem;
+    letter-spacing: -1rem;
   }
 
   .scroll-down-container {
@@ -1475,6 +2102,7 @@ section.dlc-platform-content-3 {
   }
 
   img.scroll-down {
+    /* z-index: 1; */
     /* z-index: 1; */
     position: absolute;
     width: 5rem;
@@ -1491,8 +2119,17 @@ section.dlc-platform-content-3 {
     content: var(--image-dark);
   }
 
+  #scroll-down {
+    content: var(--image-light);
+  }
+
+  #scroll-down[data-theme="dark"] {
+    content: var(--image-dark);
+  }
+
   .scroll-down-text {
     font-family: PP Neue Montreal Bold;
+    /* z-index: 100; */
     /* z-index: 100; */
     position: absolute;
     font-size: 1rem;
@@ -1530,12 +2167,14 @@ section.dlc-platform-content-3 {
   }
 
   .dlc-overline {
+  .dlc-overline {
     font-size: 2rem;
     font-family: PP Neue Montreal Book;
     font-kerning: 10rem;
     letter-spacing: 2.5rem;
   }
 
+  
   
   .countdown-denominator,
   .countdown-numerator {
@@ -1550,8 +2189,15 @@ section.dlc-platform-content-3 {
     text-transform: uppercase;
     font-family: PP Neue Montreal Bold;
   }
+  
+  .countdown-numerator {
+    font-size: 5.5rem;
+    text-transform: uppercase;
+    font-family: PP Neue Montreal Bold;
+  }
   .countdown-denominator {
     font-family: PP Neue Montreal Bold;
+    font-size: 7.5rem;
     font-size: 7.5rem;
     kerning: 0;
     text-transform: uppercase;
@@ -1795,6 +2441,7 @@ section.dlc-platform-content-3 {
       width: 100%;
       height: 100%;
       padding: 2em 0;
+      z-index: 0;
       z-index: 0;
   }
 
