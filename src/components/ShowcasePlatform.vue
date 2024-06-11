@@ -72,8 +72,8 @@
                             </div>
 
                             <div class="component-countdown-wrapper">
-                              <h3 class="countdown-numerator" id="animated-text-5">Twenty-Five (25)</h3>
-                                <span class="overline" id="animated-text"><span class="no-line-spacing">----------</span> components <span class="no-line-spacing">----------</span></span>
+                              <h3 class="countdown-numerator" id="animated-text-5">Twenty-Seven (27)</h3>
+                                <span class="dlc-overline" id="animated-text"><span class="no-line-spacing">----------</span> components <span class="no-line-spacing">----------</span></span>
                               <h2 class="countdown-denominator" id="animated-text-5"><span class="animated-emphasization">Five (5)</span></h2>
                             </div>
                     </div>
@@ -91,7 +91,7 @@
                   <div class="flex justify-content align-items">
                     <!-- ! LEFT -->
                     <div class="text-left mt-[10%] p-0 w-1/12">
-                      <h2 class="writing-mode-vertical m-0 p-0 leading-0 text-[10rem] uppercase" id="animated-text-7">
+                      <h2 class="writing-mode-vertical m-0 p-0 leading-0 text-[10rem] uppercase font-pp-bold" id="animated-text-7">
                         <span class="animated-emphasization-1">mirabel</span>
                       </h2>
                     </div>
@@ -99,7 +99,7 @@
                     <!-- ? MIDDLE -->
                     <div class="main-content-wrap m-0 p-0 align-items w-10/12">
                       <div class="uniform-container">
-                        <h2 class="presenter-header uppercase text-text-400" id="animated-text-2"><span class="animated-emphasization-1 ">Twenty (20)</span> to be exact.</h2>
+                        <h2 class="presenter-header uppercase text-text-400" id="animated-text-2"><span class="animated-emphasization-1 ">Twenty-Two (22)</span> to be exact.</h2>
                         <div class="component-row">
                           <!-- *** MIRABEL COMPONENTS *** -->
                           <div class="component-left">
@@ -139,8 +139,8 @@
                         </div>
                         
                         <!-- *** TEXT ON THE right -->
-                        <div class="text-right m-0 p-0 w-1/12 absolute top-[20%] left-[85%]" id="animated-text-8">
-                          <h2 class="writing-mode-vertical text-[10rem] uppercase">
+                        <div class="text-right m-0 p-0 w-1/12 absolute top-[20%] left-[85%]" id="animated-text-7">
+                          <h2 class="writing-mode-vertical text-[10rem] font-pp-bold uppercase">
                             <span class="animated-emphasization-2">cruz</span>
                           </h2>
                         </div>
@@ -195,7 +195,7 @@
                             <div class="component-name-container">
                               <h4 class="component-name mb-4">Number Input, Textarea & Tooltip</h4>
                             </div>
-  
+                            
                             
                               <div class="flex gap-2 p-4 border-[0.33rem]">
                                 <div class="p-8 bg-background-300">
@@ -219,18 +219,53 @@
                 </section>
 
                 <section class="dlc-banner-2">
-                  
+                  <h1 id="animated-text-8" class="absolute">We're <span class="animated-emphasization-4"> almost</span> there.</h1>
+                  <h1 id="animated-text-9" class="absolute">Hang on tightly! <span class="animated-emphasization-5">17/25.</span></h1>
                 </section>
 
-                <!-- *** GODES, MAGNAYE, PEREZ COMPONENTS *** -->
-                <section class="dlc-platform-content-3">
-                  <!-- <div class="magnaye-wrap w-[3rem]">
-                    <BreadCrumb/>
-                  </div> -->
-                  <div class="godes-wrap z-[100]">
-                    <SearchComponents/>
+              <section class="dlc-platform-content-3">
+                <div class="border-[0.63rem] border-accent-300 mt-[20rem] ml-[5rem] mr-[5rem] rounded-2xl p-4">
+                  <div class="flex flex-col">
+                    <div class="flex">
+                      <div class="w-1/2 bg-background-700">
+                        <h4 class="font-pp-bold mt-8 text-[3rem] leading-[1.1] text-center text-text-100">Sidebar + Navigation Bar Component</h4>
+                        <h4 class="subheading font-pp-thin text-primary-100 text-center text-[2.5rem] italic">by Perez, Joshua Ezekiel</h4>
+                        <div class="flex">
+                          <div class="w-1/2 sidebar-wrap bg-background-200 ml-4 rounded-2xl">
+                            <SidebarComponent/>
+                          </div>
+                          <div class="w-1/2 navbar-wrap">
+                            <NavbarComponent/>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <div class="w-1/2 bg-background-800">
+                        <h4 class=" font-pp-bold mt-8 text-[3rem] leading-[1.1] text-center text-text-100">Search + Post Component</h4>
+                        <h4 class="subheading font-pp-thin text-primary-100 text-center text-[2.5rem] italic">by Godes, Paul Adrian</h4>
+                        <SearchComponents/>
+                      </div>
+                    </div>
+                    
+                    <!-- Row that spans both columns -->
+                    <div class="flex flex-row flex-wrap ">
+                      <div class="flex flex-col w-1/2 bg-background-300 justify-center items-center">
+                        <h4 class=" font-pp-bold mt-0 text-[3rem] leading-[1.1] text-center text-text-800">Bread Crumb + Tree Component</h4>
+                        <h4 class="subheading font-pp-thin text-primary-900 text-center text-[2.5rem] italic">by Magnaye, Ace Crizzler</h4>
+                      </div>
+                      <div class="w-1/2 flex flex-col bg-background-400 justify-center items-center p-16 gap-2">
+                        <div class="w-full rounded-lg bg-background-200 p-4">
+                          <BreadCrumb :items="breadcrumbItems"/>
+                        </div>
+                        <div class="w-full rounded-lg bg-background-200 p-4">
+                          <TreeComponent :treeData="treeData"/>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                </section>
+                </div>
+              </section>
+
             </div>
 
             <!-- ! SCROLL DOWN SIGN -->
@@ -244,7 +279,6 @@
 
 <script>
 import DarkToggleMode from './DarkToggleMode.vue';
-// import CarouselComponent from './CarouselComponent.vue';
 import TabsComponent from './TabsComponent.vue';
 import CardsComponent from './CardsComponent.vue';
 import CruzNotification from './CruzNotification.vue';
@@ -259,7 +293,12 @@ import SearchBarComponent from './SearchBarComponent.vue';
 import SemifraniaComponent from './SemifraniaComponent.vue';
 import SemifraniaMenuComponent from './SemifraniaMenuComponent.vue';
 import SearchComponents from './SearchComponents.vue';
-// import BreadCrumb from './BreadCrumb.vue';
+import BreadCrumb from './BreadCrumb.vue';
+import TreeComponent from './TreeComponent.vue';
+import SidebarComponent from './SidebarComponent.vue';
+import NavbarComponent from './NavbarComponent.vue';
+
+// import CarouselComponent from './CarouselComponent.vue';
 
 export default {
   components: {
@@ -279,27 +318,80 @@ export default {
     SemifraniaComponent,
     SemifraniaMenuComponent,
     SearchComponents,
-    // BreadCrumb,
+    SidebarComponent,
+    NavbarComponent,
+    BreadCrumb,
+    TreeComponent,
   },
+
+  data() {
+    return {
+      breadcrumbItems: [
+        { label: 'Desktop', link: '/home', icon: 'M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z' },
+        { label: 'Documents', link: '/documents', icon: 'M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z' },
+        { label: 'Add Document', icon: 'M9 13h6m-3-3v6m5 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z', isSpan: true }
+      ],
+      treeData: [
+        {
+          id: 1,
+          name: 'ChuuPurple',
+          children: []
+        },
+        {
+          id: 2,
+          name: 'Desktop',
+          children: [
+            {
+              id: 3,
+              name: 'Documents',
+              children: [
+                {
+                  id: 5,
+                  name: 'Add Document',
+                  children: []
+                }
+              ]
+            },
+            {
+              id: 4,
+              name: 'Desktop',
+              children: []
+            }
+          ]
+        },
+        {
+          id: 6,
+          name: 'Local Drive (C:)',
+          children: []
+        },
+        {
+          id: 7,
+          name: 'Network Drive (S:)',
+          children: []
+        }
+      ]
+    };
+  },
+
   mounted() {
 
     // Animation for the first section of the showcase
-const splitHeader = document.querySelectorAll('.animated-header-1');
-splitHeader.forEach((char) => {
-  const splitText = new this.$SplitType(char, { types: 'chars' });
-  this.$gsap.to(splitText.chars, {
-    scrollTrigger: {
-      trigger: char,
-      start: '50% 25%',
-      end: '100% 25%',
-      scrub: true,
-      markers: false,
-    },
-    opacity: 0.05,
-    y: 95,
-    stagger: 0.1,
-  });
-});
+    const splitHeader = document.querySelectorAll('.animated-header-1');
+    splitHeader.forEach((char) => {
+      const splitText = new this.$SplitType(char, { types: 'chars' });
+      this.$gsap.to(splitText.chars, {
+        scrollTrigger: {
+          trigger: char,
+          start: '50% 25%',
+          end: '100% 25%',
+          scrub: true,
+          markers: false,
+        },
+        opacity: 0.05,
+        y: 95,
+        stagger: 0.1,
+      });
+    });
 
 // Animation for the second section of the showcase
 const splitTypeOne = document.querySelectorAll('.animated-text-1');
@@ -465,8 +557,7 @@ const splitTypeFour = document.querySelectorAll('#animated-text-4');
   });
   });
 
-      const emphasisAnimationScrubThree = document.querySelectorAll('.animated-emphasization-3');
-      const emphasisAnimationScrubThree = document.querySelectorAll('.animated-emphasization-3');
+  const emphasisAnimationScrubThree = document.querySelectorAll('.animated-emphasization-3');
   emphasisAnimationScrubThree.forEach((char) => {
       const splitText = new this.$SplitType(char, { types: 'chars' });
     
@@ -489,6 +580,66 @@ const splitTypeFour = document.querySelectorAll('#animated-text-4');
             trigger: char,
             start: 'top 55%',
             end: 'top 45%',
+            scrub: true,
+            markers: false,
+            // toggleActions: 'play play reverse reverse',
+        }        
+  });
+  });
+
+  const emphasisAnimationScrubFour = document.querySelectorAll('.animated-emphasization-4');
+  emphasisAnimationScrubFour.forEach((char) => {
+      const splitText = new this.$SplitType(char, { types: 'chars' });
+    
+    // Get the computed background color from CSS
+    const fgColor = getComputedStyle(document.documentElement).getPropertyValue('--primary-600');
+
+    // Get the computed foreground color from CSS
+    const bgColor = getComputedStyle(document.documentElement).getPropertyValue('--secondary-800');
+
+
+      this.$gsap.fromTo(splitText.chars, {
+        color: bgColor,
+      },
+    {
+        color: fgColor,
+        duration: 2,
+        stagger: 2,
+        opacity: 1,
+        scrollTrigger: {
+            trigger: char,
+            start: 'top 75%',
+            end: 'top 65%',
+            scrub: true,
+            markers: false,
+            // toggleActions: 'play play reverse reverse',
+        }        
+  });
+  });
+  
+  const emphasisAnimationScrubFive = document.querySelectorAll('.animated-emphasization-5');
+  emphasisAnimationScrubFive.forEach((char) => {
+      const splitText = new this.$SplitType(char, { types: 'chars' });
+    
+    // Get the computed background color from CSS
+    const fgColor = getComputedStyle(document.documentElement).getPropertyValue('--primary-600');
+
+    // Get the computed foreground color from CSS
+    const bgColor = getComputedStyle(document.documentElement).getPropertyValue('--secondary-800');
+
+
+      this.$gsap.fromTo(splitText.chars, {
+        color: bgColor,
+      },
+    {
+        color: fgColor,
+        duration: 2,
+        stagger: 2,
+        opacity: 1,
+        scrollTrigger: {
+            trigger: char,
+            start: 'top 40%',
+            end: 'top 30%',
             scrub: true,
             markers: false,
             // toggleActions: 'play play reverse reverse',
@@ -534,8 +685,8 @@ const splitTypeFour = document.querySelectorAll('#animated-text-4');
       this.$gsap.to(splitText.chars, {
         scrollTrigger: {
           trigger: char,
-          start: 'bottom 35%', 
-          end: 'bottom 15%',  
+          start: 'bottom 50%', 
+          end: 'bottom 25%',  
           scrub: true,
           markers: false,
         },
@@ -565,13 +716,13 @@ const splitTypeFour = document.querySelectorAll('#animated-text-4');
 
   
   const splitTypeEight = document.querySelectorAll('#animated-text-8');
-  splitTypeEight.forEach((word) => {
-    const splitText = new this.$SplitType(word, { types: 'words' });
+  splitTypeEight.forEach((char) => {
+    const splitText = new this.$SplitType(char, { types: 'words, chars' });
       this.$gsap.from(splitText.words, {
         scrollTrigger: {
-          trigger: word,
-          start: 'top 90%', // Adjusted start position
-          end: 'top 50%',   // Adjusted end position
+          trigger: char,
+          start: 'top 105%', // Adjusted start position
+          end: 'top 75%',   // Adjusted end position
           scrub: true,
           markers: false,
         },
@@ -579,6 +730,39 @@ const splitTypeFour = document.querySelectorAll('#animated-text-4');
         x: -50,
         ease: 'power3.inOut',
       });
+
+    this.$gsap.to(splitText.chars, {
+      scrollTrigger: {
+        trigger: char,
+        start: 'top 65%', // Adjusted start position
+        end: 'top 50%',   // Adjusted end position
+        scrub: true,
+        markers: false,
+      },
+      opacity: 0,
+      y: 50,
+      ease: 'power3.inOut',
+
+    });
+
+  });
+  
+  const splitTypeNine = document.querySelectorAll('#animated-text-9');
+  splitTypeNine.forEach((char) => {
+    const splitText = new this.$SplitType(char, { types: 'words, chars' });
+      this.$gsap.from(splitText.words, {
+        scrollTrigger: {
+          trigger: char,
+          start: 'top 75%', // Adjusted start position
+          end: 'top 25%',   // Adjusted end position
+          scrub: true,
+          markers: false,
+        },
+        opacity: 0,
+        y: -50,
+        ease: 'power3.inOut',
+      });
+
   });
 
 // Add a delay before animating the next container
@@ -965,18 +1149,14 @@ section.dlc-platform-content-3 {
     letter-spacing: -0.09em;
   }
 
-  .overline {
+  .dlc-overline {
     font-size: 2rem;
     font-family: PP Neue Montreal Book;
     font-kerning: 10rem;
     letter-spacing: 2.5rem;
   }
 
-  .countdown-numerator {
-    font-size: 5rem;
-    text-transform: uppercase;
-  }
-
+  
   .countdown-denominator,
   .countdown-numerator {
     font-family: PP Neue Montreal Medium;
@@ -984,10 +1164,15 @@ section.dlc-platform-content-3 {
     padding: 0;
     line-height: 1;
   }
-
+  
+  .countdown-numerator {
+    font-size: 5.5rem;
+    text-transform: uppercase;
+    font-family: PP Neue Montreal Bold;
+  }
   .countdown-denominator {
     font-family: PP Neue Montreal Bold;
-    font-size: 5rem;
+    font-size: 7.5rem;
     kerning: 0;
     text-transform: uppercase;
   }
