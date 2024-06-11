@@ -106,23 +106,9 @@ module.exports = {
       '.flex-container': {
         display: 'flex',
         flexWrap: 'wrap',
-        width: '100vw', 
-        height: '100vh',
+        width: '100%', 
+        height: '100%',
       },
-      '.square': {
-        flex: '1 0 33.33%', /* This makes each square take up 1/3 of the container width */
-        boxSizing: 'border-box',
-        border: '1px solid var(--accent-200)',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        height: '100px',
-      },
-      '.square::before': {
-        content: '',
-        display: 'block',
-        paddingTop: '100%', /* This creates a perfect square by setting height equal to width */
-      }
     };
     addUtilities(newUtilities);
   }]

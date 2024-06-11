@@ -1,16 +1,7 @@
-<!-- Ritchmond James Tajarros -->
-<!-- GUSTO MO BAGUHIN YUNG ASSETS? EDI BAGUHIN MO -->
-
-<!-- ICON PARA DUN SA ARROW SLIDER -->
-<!-- npm install --save @fortawesome/fontawesome-free -->
-<!-- TAPOS import "@fortawesome/fontawesome-free/css/all.css"; sa main.js -->
 <template>
   <div class="playlist_container_rjt">
     <div class="title_rjt">
-      <h4>CHUPURPLE'S <span class="highlight_rjt">MUSIC </span>PLAYLIST</h4>
-    </div>
-
-    <div class="main_media_rjt">
+      <h4>ChuuPurple's <span class="highlight_rjt">music</span>&nbsp;Playlist</h4>
       <img :src="currentImage" alt="Selected Image" v-if="currentImage" />
       <img v-else :src="defaultImage" alt="Default Image" />
       <audio v-if="currentAudio" ref="audioPlayer" :src="currentAudio" autoplay></audio>
@@ -37,7 +28,7 @@
     </div>
 
     <div class="playlist_selection_rjt">
-      <h5>Select a Song</h5>
+      <h5 class="">Select a Song</h5>
       <div class="thumbnails_rjt">
         <div
           v-for="song in visibleSongs"
@@ -69,7 +60,7 @@ export default {
       selectedSong: "",
       currentAudio: null,
       currentImage: null,
-      defaultImage: require("@/assets/chupurple.jpg"),
+      defaultImage: require("@/assets/imgs/selection-one/chupurple.jpg"),
       isPlaying: false,
       volume: 0.5,
       currentPage: 0,
@@ -78,38 +69,38 @@ export default {
         {
           id: "song1",
           name: "Taylor Swift - Everything Has Changed",
-          imgSrc: require("@/assets/Taylor Swift - Everything Has Changed.jpg"),
-          audioSrc: require("@/assets/Taylor Swift - Everything Has Changed.mp3"),
+          imgSrc: require("@/assets/imgs/selection-one/Taylor Swift - Everything Has Changed.jpg"),
+          audioSrc: require("@/assets/imgs/selection-one/Taylor Swift - Everything Has Changed.mp3"),
         },
         {
           id: "song2",
           name: "BINI - Pantropiko",
-          imgSrc: require("@/assets/BINI - Pantropiko.jpg"),
-          audioSrc: require("@/assets/BINI - Pantropiko.mp3"),
+          imgSrc: require("@/assets/imgs/selection-one/BINI - Pantropiko.jpg"),
+          audioSrc: require("@/assets/imgs/selection-one/BINI - Pantropiko.mp3"),
         },
         {
           id: "song3",
           name: "TJ Monterde - Palagi",
-          imgSrc: require("@/assets/TJ Monterde - Palagi.jpg"),
-          audioSrc: require("@/assets/TJ Monterde - Palagi.mp3"),
+          imgSrc: require("@/assets/imgs/selection-one/TJ Monterde - Palagi.jpg"),
+          audioSrc: require("@/assets/imgs/selection-one/TJ Monterde - Palagi.mp3"),
         },
         {
           id: "song4",
           name: "Juan Karlos - Buwan",
-          imgSrc: require("@/assets/Juan Karlos - Buwan.jpg"),
-          audioSrc: require("@/assets/Juan Karlos - Buwan.mp3"),
+          imgSrc: require("@/assets/imgs/selection-one/Juan Karlos - Buwan.jpg"),
+          audioSrc: require("@/assets/imgs/selection-one/Juan Karlos - Buwan.mp3"),
         },
         {
           id: "song5",
           name: "Le Sserafim - Smart",
-          imgSrc: require("@/assets/Le Sserafim - Smart.jpg"),
-          audioSrc: require("@/assets/Le Sserafim - Smart.mp3"),
+          imgSrc: require("@/assets/imgs/selection-one/Le Sserafim - Smart.jpg"),
+          audioSrc: require("@/assets/imgs/selection-one/Le Sserafim - Smart.mp3"),
         },
         {
           id: "song6",
           name: "Orange & Lemons - Heaven Knows",
-          imgSrc: require("@/assets/Orange & Lemons - Heaven Knows.jpg"),
-          audioSrc: require("@/assets/Orange & Lemons - Heaven Knows.mp3"),
+          imgSrc: require("@/assets/imgs/selection-one/Orange & Lemons - Heaven Knows.jpg"),
+          audioSrc: require("@/assets/imgs/selection-one/Orange & Lemons - Heaven Knows.mp3"),
         },
         // PWEDE PA MAG ADD KUNG GUSTO PA!!!
       ],
@@ -191,24 +182,25 @@ export default {
 </script>
 
 <style scoped>
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"); */
 
 .playlist_container_rjt {
-  width: 100%;
+  width: 90%;
   max-width: 800px;
-  padding: 30px;
+  padding: 20px;
   border-radius: 20px;
   background: #cba2dd; /* Light Mode Primary Color */
   box-shadow: 0 8px 30px rgba(123, 97, 255, 0.3);
   text-align: center;
-  font-family: "Poppins", sans-serif;
-  margin: auto;
+  font-family: PP Neue Montreal Bold, sans-serif;
+  margin: 20px auto;
 }
 
 .title_rjt h4 {
-  font-size: 28px;
+  font-size: 3vw;
   color: #160326; /* Light Mode Text Color */
   font-weight: 700;
+  text-transform: capitalize;
 }
 
 .title_rjt .highlight_rjt {
@@ -226,12 +218,13 @@ export default {
 .main_media_rjt img {
   width: 100%;
   height: auto;
+  max-height: 300px;
   border-radius: 10px;
 }
 
 .song_name_rjt {
   margin: 10px 0;
-  font-size: 18px;
+  font-size: 3vw;
   font-weight: 600;
   color: #29045d; /* Light Mode Accent Color */
 }
@@ -246,9 +239,9 @@ export default {
 
 .controls_rjt button {
   padding: 10px 20px;
-  font-size: 16px;
+  font-size: 2.5vw;
   color: #160326; /* Light Mode Text Color */
-  background-color: #dddbff; /* Light Mode Secondary Color */
+  background-color: var(--secondary-200); /* Light Mode Secondary Color */
   border: none;
   border-radius: 25px;
   cursor: pointer;
@@ -261,12 +254,12 @@ export default {
 
 .controls_rjt label {
   margin-right: 10px;
-  font-size: 16px;
+  font-size: 2.5vw;
   color: #160326; /* Light Mode Text Color */
 }
 
 .controls_rjt input[type="range"] {
-  width: 200px;
+  width: 40%;
   -webkit-appearance: none;
   appearance: none;
   background: transparent;
@@ -309,9 +302,9 @@ export default {
   color: #160326; /* Light Mode Text Color */
   border: none;
   padding: 10px;
-  border-radius: 50%;
+  border-radius: 5rem;
   cursor: pointer;
-  font-size: 24px;
+  font-size: 4vw;
   transition: background-color 0.3s ease;
 }
 
@@ -327,7 +320,7 @@ export default {
 
 .playlist_selection_rjt h5 {
   margin-bottom: 10px;
-  font-size: 20px;
+  font-size: 2.5vw;
   color: #160326; /* Light Mode Text Color */
   font-weight: 600;
 }
@@ -336,6 +329,7 @@ export default {
   display: flex;
   justify-content: center;
   gap: 15px;
+  flex-wrap: wrap;
 }
 
 .thumbnail_rjt {
@@ -356,9 +350,33 @@ export default {
 }
 
 .thumbnail_image_rjt {
-  width: 250px;
+  width: 100px;
   height: 100px;
   border-radius: 10px;
   object-fit: cover;
+}
+
+@media (min-width: 768px) {
+  .playlist_container_rjt {
+    width: 80%;
+  }
+
+  .controls_rjt button,
+  .controls_rjt label {
+    font-size: 16px;
+  }
+
+  .controls_rjt input[type="range"] {
+    width: 200px;
+  }
+
+  .arrow_rjt {
+    font-size: 24px;
+  }
+
+  .thumbnail_image_rjt {
+    width: 250px;
+    height: 100px;
+  }
 }
 </style>

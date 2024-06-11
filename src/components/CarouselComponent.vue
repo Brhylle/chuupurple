@@ -151,7 +151,7 @@ main, section {
 }
 
 .dlc-container {
-  position: absolute;
+  position: relative;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -30%);
@@ -248,7 +248,7 @@ main, section {
   align-items: center;
   flex: 0 1 20px;
   height: 400px;
-  margin: 0 5px;
+  margin: 400px 5px;
   background: var(--background-900);
   overflow: hidden;
   transition: flex 1s cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -281,10 +281,10 @@ main, section {
 
 div.header {
   color: var(--primary-400);
-  text-align: end;
+  text-align: center;
   font-size: 10vw;
   font-family: "Humane SemiBold";
-  margin: 0.5em 3.8em 0em 0em;
+  margin: 0 0em 0em 0em;
   text-transform: uppercase;
 }
 </style>
