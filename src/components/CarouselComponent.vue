@@ -1,6 +1,6 @@
 <template>
-  <main class="bg-dark-background">
-    <section class="">
+  <main class="bg-dark-background h-[0]">
+    <section class="h-[0]">
       <div class="header ">Meet the Team.</div>
       <div class="footer" :class="{ 'blink': !anyHovered }">{{ additionalInfo }}</div>
       <div class="dlc-container">
@@ -35,17 +35,17 @@ export default {
   data() {
     return {
       galleryItems: [
-        { src: require('../assets/imgs/hover-carousel/delacruz_pic.jpg'), alt: 'Leading Programmer 1', isHovered: false },
-        { src: require('../assets/imgs/hover-carousel/ventura_pic.jpg'), alt: 'Leading Programmer 2', isHovered: false },
-        { src: require('../assets/imgs/hover-carousel/tajarros_pic.jpg'), alt: 'Programmer 1', isHovered: false },
-        { src: require('../assets/imgs/hover-carousel/fortin_pic.jpg'), alt: 'Programmer 2', isHovered: false },
-        { src: require('../assets/imgs/hover-carousel/perez_pic.jpg'), alt: 'Programmer 3', isHovered: false },
-        { src: require('../assets/imgs/hover-carousel/semifrania_pic.jpg'), alt: 'Programmer 4', isHovered: false },
-        { src: require('../assets/imgs/hover-carousel/leomar_pic.jpg'), alt: 'Programmer 5', isHovered: false },
-        { src: require('../assets/imgs/hover-carousel/godes_pic.jpg'), alt: 'Programmer 6', isHovered: false },
-        { src: require('../assets/imgs/hover-carousel/magnaye_pic.jpg'), alt: 'Programmer 7', isHovered: false },
-        { src: require('../assets/imgs/hover-carousel/cruz_pic.jpg'), alt: 'Programmer 8', isHovered: false },
-        { src: require('../assets/imgs/hover-carousel/mirabel_pic.jpg'), alt: 'Programmer 9', isHovered: false },
+        { src: require('../assets/imgs/hover-carousel/delacruz_pic.jpg'), alt: 'CEO', isHovered: false },
+        { src: require('../assets/imgs/hover-carousel/ventura_pic.jpg'), alt: 'Leading Programmer 1', isHovered: false },
+        { src: require('../assets/imgs/hover-carousel/tajarros_pic.jpg'), alt: 'CyberOps Especialist', isHovered: false },
+        { src: require('../assets/imgs/hover-carousel/fortin_pic.jpg'), alt: 'Backend Developer', isHovered: false },
+        { src: require('../assets/imgs/hover-carousel/perez_pic.jpg'), alt: 'UI/UX Designer', isHovered: false },
+        { src: require('../assets/imgs/hover-carousel/semifrania_pic.jpg'), alt: 'Graphic Designer', isHovered: false },
+        { src: require('../assets/imgs/hover-carousel/leomar_pic.jpg'), alt: 'Data Analyst', isHovered: false },
+        { src: require('../assets/imgs/hover-carousel/godes_pic.jpg'), alt: 'Project Manager', isHovered: false },
+        { src: require('../assets/imgs/hover-carousel/magnaye_pic.jpg'), alt: 'Multimedia Director', isHovered: false },
+        { src: require('../assets/imgs/hover-carousel/cruz_pic.jpg'), alt: 'Technical Writer', isHovered: false },
+        { src: require('../assets/imgs/hover-carousel/mirabel_pic.jpg'), alt: 'Art Director', isHovered: false },
       ],
       defaultItemFlex: '0 1 20px',
       hoveredItemFlex: '1 1 400px',
@@ -67,11 +67,8 @@ export default {
       if (this.galleryItems[index].alt.includes('Leading')) {
 
         switch ($compareValue) {
-          case 'Leading Programmer 1':
-            this.additionalInfo = 'jheizon brhylle "gm" dela cruz'.toUpperCase();
-            break;
             
-          case 'Leading Programmer 2':
+          case 'Leading Programmer 1':
             this.additionalInfo = 'gabriel "gabe" ventura'.toUpperCase();
             break;
         
@@ -81,32 +78,35 @@ export default {
         }
       } else {
         switch ($compareValue) {
-          case 'Programmer 1':
-            this.additionalInfo = 'ritchmond james "mondo" tajarros'.toUpperCase();
+          case 'CEO':
+            this.additionalInfo = 'jheizon brhylle dela cruz'.toUpperCase();
             break;
-          case 'Programmer 2':
-            this.additionalInfo = 'raven "veven" fortin'.toUpperCase();
+          case 'CyberOps Especialist':
+            this.additionalInfo = 'ritchmond james tajarros'.toUpperCase();
             break;
-          case 'Programmer 3':
-            this.additionalInfo = 'joshua ezekiel "kel" perez'.toUpperCase();
+          case 'Backend Developer':
+            this.additionalInfo = 'raven fortin'.toUpperCase();
             break;
-          case 'Programmer 4':
-            this.additionalInfo = 'joshua jehiel "saint ino" semifrania'.toUpperCase();
+          case 'UI/UX Designer':
+            this.additionalInfo = 'joshua ezekiel perez'.toUpperCase();
             break;
-          case 'Programmer 5':
-            this.additionalInfo = 'leomar "leo" tuazon'.toUpperCase();
+          case 'Graphic Designer':
+            this.additionalInfo = 'joshua jehiel semifrania'.toUpperCase();
             break;
-          case 'Programmer 6':
-            this.additionalInfo = 'paul adrian "malata" godes'.toUpperCase();
+          case 'Data Analyst':
+            this.additionalInfo = 'leomar tuazon'.toUpperCase();
             break;
-          case 'Programmer 7':
-            this.additionalInfo = 'ace crizzler "eys" magnaye'.toUpperCase();
+          case 'Project Manager':
+            this.additionalInfo = 'paul adrian godes'.toUpperCase();
             break;
-          case 'Programmer 8':
-            this.additionalInfo = 'raven drake "ben" cruz'.toUpperCase();
+          case 'Multimedia Director':
+            this.additionalInfo = 'ace crizzler magnaye'.toUpperCase();
             break;
-          case 'Programmer 9':
-            this.additionalInfo = 'robert leoni "bert" mirabel'.toUpperCase();
+          case 'Technical Writer':
+            this.additionalInfo = 'raven drake cruz'.toUpperCase();
+            break;
+          case 'Art Director':
+            this.additionalInfo = 'robert leoni mirabel'.toUpperCase();
             break;
         
           default:
@@ -144,11 +144,7 @@ export default {
   box-sizing: border-box;
 }
 
-main, section {
-  /* width: 100vw;
-  height: 100vh; */
-  overflow: hidden;
-}
+/* main, section */
 
 .dlc-container {
   position: relative;
@@ -156,16 +152,17 @@ main, section {
   left: 50%;
   transform: translate(-50%, -30%);
   transform-origin: center;
-  width: 1000px;
+  width: 100%;
   margin: 0 auto 0em auto;
   padding: 1em 0.5em;
   display: flex;
   justify-content: center;
 }
 
+/* dot */
 .dlc-indicator {
   position: absolute;
-  top: 0;
+  top: 32.5%;
   left: 0;
   width: 5px;
   height: 5px;
@@ -173,7 +170,20 @@ main, section {
   transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
   background: var(--primary-500);
 }
-
+/* label sa taas ng dot */
+.dlc-label {
+  position: absolute;
+  /* top: 30%; */ /* top */
+  top: 67%;
+  left: 0;
+  transform: translateX(-50%);
+  background: var(--transparent-200);
+  color: var(--text-200);
+  padding: 5px 10px;
+  border-radius: 1rem;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
 .pulsate {
   animation: pulsate 1s infinite;
 }
@@ -209,18 +219,6 @@ main, section {
   }
 }
 
-.dlc-label {
-  position: absolute;
-  top: -40px; /* Adjust this value as needed to position the label at the top */
-  left: 0;
-  transform: translateX(-50%);
-  background: var(--transparent-200);
-  color: var(--text-200);
-  padding: 5px 10px;
-  border-radius: 1rem;
-  pointer-events: none;
-  transition: all 0.3s ease;
-}
 
 .blink {
   animation: blink 5s infinite;
@@ -238,7 +236,7 @@ main, section {
 .dlc-gallery {
   display: flex;
   justify-content: space-around;
-  width: 100%;
+  width: 85%;
   overflow: hidden;
 }
 
@@ -276,7 +274,7 @@ main, section {
   font-family: "PP Neue Montreal Medium";
   margin: -3rem 5rem 0 0;
   z-index: 0;
-  width: 100%
+  width: 100%;
 }
 
 div.header {

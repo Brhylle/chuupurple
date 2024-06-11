@@ -189,7 +189,7 @@ export default {
   max-width: 800px;
   padding: 20px;
   border-radius: 20px;
-  background: #cba2dd; /* Light Mode Primary Color */
+  background: var(--primary-200); /* Light Mode Primary Color */
   box-shadow: 0 8px 30px rgba(123, 97, 255, 0.3);
   text-align: center;
   font-family: PP Neue Montreal Bold, sans-serif;
@@ -198,13 +198,13 @@ export default {
 
 .title_rjt h4 {
   font-size: 3vw;
-  color: #160326; /* Light Mode Text Color */
+  color: var(--text-900); /* Light Mode Text Color */
   font-weight: 700;
   text-transform: capitalize;
 }
 
 .title_rjt .highlight_rjt {
-  color: #29045d; /* Light Mode Accent Color */
+  color: var(--primary-700); /* Light Mode Accent Color */
 }
 
 .main_media_rjt {
@@ -226,7 +226,7 @@ export default {
   margin: 10px 0;
   font-size: 3vw;
   font-weight: 600;
-  color: #29045d; /* Light Mode Accent Color */
+  color: var(--text-700); /* Light Mode Accent Color */
 }
 
 .controls_rjt {
@@ -240,8 +240,8 @@ export default {
 .controls_rjt button {
   padding: 10px 20px;
   font-size: 2.5vw;
-  color: #160326; /* Light Mode Text Color */
-  background-color: var(--secondary-200); /* Light Mode Secondary Color */
+  color: var(--text-900); /* Light Mode Text Color */
+  background-color: var(--primary-200); /* Light Mode Secondary Color */
   border: none;
   border-radius: 25px;
   cursor: pointer;
@@ -249,20 +249,20 @@ export default {
 }
 
 .controls_rjt button:hover {
-  background-color: #c4c2e5; /* Light Mode Secondary Color Hover */
+  background-color: var(--secondary-300); /* Light Mode Secondary Color Hover */
 }
 
 .controls_rjt label {
   margin-right: 10px;
   font-size: 2.5vw;
-  color: #160326; /* Light Mode Text Color */
+  color: var(--text-800); /* Light Mode Text Color */
 }
 
 .controls_rjt input[type="range"] {
   width: 40%;
   -webkit-appearance: none;
   appearance: none;
-  background: transparent;
+  background: var(--accent-700);
   outline: none;
   height: 5px;
   --value: 50%;
@@ -271,7 +271,7 @@ export default {
 .controls_rjt input[type="range"]::-webkit-slider-runnable-track {
   width: 100%;
   height: 5px;
-  background: linear-gradient(to right, #dddbff var(--value), #ddd var(--value)); /* Light Mode Secondary Color */
+  background: linear-gradient(to right, var(--accent-600) var(--value), var(--primary-200) var(--value)); /* Light Mode Secondary Color */
   border-radius: 5px;
 }
 
@@ -279,7 +279,7 @@ export default {
   -webkit-appearance: none;
   width: 10px;
   height: 20px;
-  background: #dddbff; /* Light Mode Secondary Color */
+  background: var(--secondary-300); /* Light Mode Secondary Color */
   cursor: pointer;
   border-radius: 50%;
   margin-top: -7.5px;
@@ -298,8 +298,8 @@ export default {
 }
 
 .arrow_rjt {
-  background-color: #c4c2e5; /* Light Mode Secondary Color */
-  color: #160326; /* Light Mode Text Color */
+  background-color: var(--primary-300); /* Light Mode Secondary Color */
+  color: var(--text-900); /* Light Mode Text Color */
   border: none;
   padding: 10px;
   border-radius: 5rem;
@@ -309,13 +309,13 @@ export default {
 }
 
 .arrow_rjt:disabled {
-  background-color: #c0c0c0;
+  background-color: var(--secondary-50);
   cursor: not-allowed;
 }
 
 .arrow_rjt:not(:disabled):hover {
-  background-color: #29045d; /* Light Mode Accent Color */
-  color: #dddbff; /* Light Mode Secondary Color */
+  background-color: var(--accent-600); /* Light Mode Accent Color */
+  color: var(--secondary-300); /* Light Mode Secondary Color */
 }
 
 .playlist_selection_rjt h5 {
@@ -330,6 +330,7 @@ export default {
   justify-content: center;
   gap: 15px;
   flex-wrap: wrap;
+  border-radius: 25px;
 }
 
 .thumbnail_rjt {
@@ -342,17 +343,19 @@ export default {
 .thumbnail_rjt:hover {
   transform: scale(1.1);
   box-shadow: 0 4px 20px rgba(117, 92, 175, 0.5);
+  border-radius: 25px;
 }
 
 .thumbnail_rjt.selected_rjt {
   transform: scale(1.1);
-  border: 3px solid #29045d; /* Light Mode Accent Color */
+  border: 3px solid var(--accent-600); /* Light Mode Accent Color */
+  border-radius: 25px;
 }
 
 .thumbnail_image_rjt {
   width: 100px;
   height: 100px;
-  border-radius: 10px;
+  border-radius: 25px;
   object-fit: cover;
 }
 
