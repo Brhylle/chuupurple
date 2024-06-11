@@ -18,11 +18,6 @@
 </template>
 
 <script>
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
-gsap.registerPlugin(ScrollTrigger);
-
 export default {
   name: 'PaginationComponent',
   data() {
@@ -43,7 +38,7 @@ export default {
   mounted() {
     this.$nextTick(() => {
       this.$refs.cards.forEach((card, index) => {
-        gsap.from(card, {
+        this.$gsap.from(card, {
           x: -100,
           scale: 0,
           opacity: 0,

@@ -149,14 +149,14 @@
                     <!-- ! TOP TEXT -->
                   <div class="marquee">
                     <div>
-                      <span id="marquee-text"><span class="animated-emphasization-3">Semifrania</span>, Joshua Jehiel</span>
-                      <span class="seperator-x">×</span>
-                      <span id="marquee-text"><span class="animated-emphasization-3">Fortin</span>, Raven</span>
-                      <span class="seperator-x">×</span>
-                      <span id="marquee-text"><span class="animated-emphasization-3">Semifrania</span>, Joshua Jehiel</span>
-                      <span class="seperator-x">×</span>
-                      <span id="marquee-text"><span class="animated-emphasization-3">Fortin</span>, Raven</span>
-                      <span class="seperator-x">×</span>
+                      <span id="marquee-text"><span class="animated-emphasization-6">Semifrania</span>, Joshua Jehiel</span>
+                      <span id="marquee-text"> ×</span>
+                      <span id="marquee-text"><span class="animated-emphasization-6">Fortin</span>, Raven</span>
+                      <span id="marquee-text"> ×</span>
+                      <span id="marquee-text"><span class="animated-emphasization-6">Semifrania</span>, Joshua Jehiel</span>
+                      <span id="marquee-text"> ×</span>
+                      <span id="marquee-text"><span class="animated-emphasization-6">Fortin</span>, Raven</span>
+                      <span id="marquee-text"> ×</span>
                     </div>
                   </div>
 
@@ -168,6 +168,7 @@
                         <div class="flex gap-2">
                           <div class="semifrania-wrap">
                             <h4 class="component-name mb-4">Feedback, Menu & Bottom Sheets</h4>
+                            <h4 class="subheading font-pp-thin text-primary-100 text-center text-[2.5rem] italic">by Semifrania, Joshua Jehiel</h4>                        
                             <div class="flex component-container border-[0.33rem] p-4">
                               <div class="bg-background-600 p-8">
                                 <SemifraniaComponent/>
@@ -181,6 +182,8 @@
                           <div class="fortin-wrap">
                             <div class="component-name-container">
                               <h4 class="component-name mb-4">Number Input, Textarea & Tooltip</h4>
+                              <h4 class="subheading font-pp-thin text-primary-100 text-center text-[2.5rem] italic">by Fortin, Raven </h4>
+                            
                             </div>
                             
                             
@@ -261,6 +264,34 @@
                 </div>
               </section>
 
+                <section class="dlc-banner-3">
+                  <h1 id="animated-text-8" class="absolute">Now warping towards <span class="animated-emphasization-4">Final Phase V...</span></h1>
+                  <h1 id="animated-text-9" class="absolute"><span class="animated-emphasization-5">>>></span></h1>
+                </section>
+
+                <section class="dlc-platform-content-4"> 
+                  <div class="uniform-container">
+                    <div class="flex-container">
+                      <div class="square">
+                        <TuazonDialog/>
+                      </div>
+                      <div class="square">
+                        <TuazonList/>
+                      </div>
+                      <div class="square">
+                        <SelectionOne/> 
+                      </div>
+                      <div class="square">
+                        <SelectionTwo/>
+                      </div>
+                    </div>
+
+                    <div class="dela-cruz-content">
+                      <CarouselComponent/>
+                    </div>
+                  </div>
+                </section>
+
             </div>
 
             <!-- ! SCROLL DOWN SIGN -->
@@ -292,13 +323,14 @@ import BreadCrumb from './BreadCrumb.vue';
 import TreeComponent from './TreeComponent.vue';
 import SidebarComponent from './SidebarComponent.vue';
 import NavbarComponent from './NavbarComponent.vue';
-
-// import CarouselComponent from './CarouselComponent.vue';
+import SelectionOne from './SelectionOne.vue';
+import SelectionTwo from './SelectionTwo.vue';
+import CarouselComponent from './CarouselComponent.vue';
 
 export default {
   components: {
     DarkToggleMode,
-    // CarouselComponent,
+    CarouselComponent,
     TabsComponent,
     CardsComponent,
     SearchBarComponent,
@@ -317,6 +349,8 @@ export default {
     NavbarComponent,
     BreadCrumb,
     TreeComponent,
+    SelectionOne,
+    SelectionTwo,
   },
 
   data() {
@@ -494,7 +528,7 @@ const splitTypeFour = document.querySelectorAll('#animated-text-4');
   });
   });
 
-    const emphasisAnimationScrub = document.querySelectorAll('.animated-emphasization-1');
+  const emphasisAnimationScrub = document.querySelectorAll('.animated-emphasization-1');
   emphasisAnimationScrub.forEach((char) => {
       const splitText = new this.$SplitType(char, { types: 'chars' });
     
@@ -524,7 +558,7 @@ const splitTypeFour = document.querySelectorAll('#animated-text-4');
   });
   });
 
-      const emphasisAnimationScrubTwo = document.querySelectorAll('.animated-emphasization-2');
+  const emphasisAnimationScrubTwo = document.querySelectorAll('.animated-emphasization-2');
   emphasisAnimationScrubTwo.forEach((char) => {
       const splitText = new this.$SplitType(char, { types: 'chars' });
     
@@ -637,6 +671,35 @@ const splitTypeFour = document.querySelectorAll('#animated-text-4');
             trigger: char,
             start: 'top 40%',
             end: 'top 30%',
+            scrub: true,
+            markers: false,
+            // toggleActions: 'play play reverse reverse',
+        }        
+  });
+  });
+  const emphasisAnimationScrubSix = document.querySelectorAll('.animated-emphasization-6');
+  emphasisAnimationScrubSix.forEach((char) => {
+      const splitText = new this.$SplitType(char, { types: 'chars' });
+    
+    // Get the computed background color from CSS
+    const fgColor = getComputedStyle(document.documentElement).getPropertyValue('--primary-200');
+
+    // Get the computed foreground color from CSS
+    const bgColor = getComputedStyle(document.documentElement).getPropertyValue('--text-100');
+
+
+      this.$gsap.fromTo(splitText.chars, {
+        color: bgColor,
+      },
+    {
+        color: fgColor,
+        duration: 2,
+        stagger: 2,
+        opacity: 1,
+        scrollTrigger: {
+            trigger: char,
+            start: 'top 85%',
+            end: 'top 50%',
             scrub: true,
             markers: false,
             // toggleActions: 'play play reverse reverse',
@@ -1097,10 +1160,37 @@ requestAnimationFrame(raf);
 </script>
 
 <style scoped>
+  section.dlc-platform-content-4 {
+      position: absolute;
+      top: 1060vh;
+      height: 300vh;
+      width: 100%;
+      left: 0;
+      background: var(--background-900);
+  }
 
+  section.dlc-banner-3 {
+    position: absolute;
+    top: 1000vh;
+    height: 420px;
+    width: 100%;
+    background: var(--background-200);
+    z-index: 1;
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    font-size: 10rem; 
+    color: var(--secondary-800); 
+    text-align: center;
+    font-family: Humane Bold; 
+    padding: 0;
+    margin: 0;
+    text-transform: uppercase;
+    line-height: 0.4;
+  }
   section.dlc-banner-2 {
     position: absolute;
-    top: 725vh;
+    top: 730vh;
     height: 420px;
     width: 100%;
     background: var(--background-200);
@@ -1130,21 +1220,21 @@ section.dlc-platform-content-3 {
   /* marquee div container */
 .marquee {
     font-size: 10vw;
-    color: var(--text-800);
+    color: var(--text-900);
     font-family: Humane SemiBold;
     height: 14.5vw;
     overflow: hidden;
-    background-color: var(--background-200);
+    background-color: var(--background-600);
     position: relative;
 }  /* marquee div container */
 
 .marquee-reverse {
     font-size: 10vw;
-    color: var(--text-700);
+    color: var(--text-900);
     font-family: Humane SemiBold;
     height: 14.5vw;
     overflow: hidden;
-    background-color: var(--background-200);
+    background-color: var(--background-400);
     position: relative;
 }
 
