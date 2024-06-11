@@ -11,7 +11,7 @@
                         <div class="dlc-links">
                             <a href="#our-team" id="">Our Team</a>
                             <a href="#section-header">Components</a>
-                            <DarkToggleMode class="dark-mode"></DarkToggleMode>
+                            <DarkToggleMode :currentTheme="currentTheme" @toggleTheme="toggleTheme" :scrollDownImageSrc="scrollDownImageSrc"/>
                         </div>
                     </nav>
 
@@ -200,8 +200,8 @@
                             </div>
                             
                             
-                              <div class="flex gap-2 p-4 border-[0.33rem]">
-                                <div class="p-8 bg-background-300">
+                              <div class="flex p-4 border-[0.33rem]">
+                                <div class="p-8 bg-background-300 w-full">
                                   <Fortin_NumberInput/>
                                 </div>
                                 <div class="bg-background-500 p-8">
@@ -279,12 +279,8 @@
               </section>
 
                   <section class="dlc-banner-3">
-                  <h1 id="animate-clock-1" class="absolute">Now</h1>
-                  <h1 id="animate-clock-2" class="absolute">warping</h1>
-                  <h1 id="animate-clock-3" class="absolute">towards </h1>
-                  <h1 id="animate-clock-4" class="absolute"><span class="animated-emphasization-4">Final</span></h1>
-                  <h1 id="animate-clock-5" class="absolute"><span class="animated-emphasization-4">Final Phase V...</span></h1>
-                  <h1 id="animated-text-6" class="absolute"><span class="animated-emphasization-5">>>></span></h1>
+                  <h1 id="animated-text-9" class="absolute">Warping to <span class="animated-emphasization-4">Phase V...</span></h1>
+                  <h1 id="animated-text-8" class="absolute"><span class="animated-emphasization-5">>>></span></h1>
                   </section>
                   
                   <section class="dlc-platform-content-4"> 
@@ -348,7 +344,7 @@
             <!-- ! SCROLL DOWN SIGN -->
             <div class="scroll-down-container">
               <h5 class="scroll-down-text">scroll down to start.</h5>
-              <img src="../assets/public/scroll-down.gif" alt="scroll-down-to-scroll" class="scroll-down">
+              <img src="" data-theme="light" alt="scroll-down-to-scroll" id="scroll-down" class="scroll-down">
             </div>
         </section>
     </main>
@@ -406,8 +402,20 @@ export default {
     TuazonDialog
   },
 
+  methods: {
+    toggleTheme() {
+      this.currentTheme = this.currentTheme === 'light' ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', this.currentTheme);
+      localStorage.setItem('theme', this.currentTheme);
+
+        // Change scroll-down image source based on theme
+      this.scrollDownImageSrc = this.currentTheme === 'light' ? 'var(--image-light)' : 'var(--image-dark)';
+    }
+  },
+
   data() {
     return {
+      currentTheme: 'light',
       breadcrumbItems: [
         { label: 'Desktop', link: '/home', icon: 'M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z' },
         { label: 'Documents', link: '/documents', icon: 'M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z' },
@@ -453,6 +461,11 @@ export default {
         }
       ]
     };
+  },
+    computed: {
+    scrollDownImageSrc() {
+      return this.currentTheme === 'light' ? 'var(--scroll-down-light)' : 'var(--scroll-down-dark)';
+    }
   },
 
   mounted() {
@@ -1468,6 +1481,14 @@ section.dlc-platform-content-3 {
     height: 5rem;
     top: 88%;
     animation: blink 1.5s infinite;
+  }
+
+  #scroll-down {
+    content: var(--image-light);
+  }
+
+  #scroll-down[data-theme="dark"] {
+    content: var(--image-dark);
   }
 
   .scroll-down-text {

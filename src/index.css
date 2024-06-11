@@ -111,6 +111,11 @@
     text-rendering: optimizeLegibility;
 }
 
+:root {
+  --image-light: url('./assets/public/scroll-down.gif');
+  --image-dark: url('./assets/public/scroll-down-dark.gif');
+}
+
 /* reusable palettes */
 :root[data-theme="light"] {
   --text-50: #f1eef7;

@@ -6,7 +6,7 @@
     <div v-if="dialogVisible" class="dialog-overlay">
       <div class="dialog background-color">
         <div class="dialog-header">
-          <h2>Chuupurple Department</h2>
+          <h2>ChuuPurple Department</h2>
         </div>
         <div class="dialog-body">
           <ul id="leo-app-container">
@@ -77,7 +77,7 @@ export default {
 }
 
 .background-color {
-  background-color: var(--background-300);
+  background-color: var(--background-100);
 }
 
 .dialog-header h2 {
