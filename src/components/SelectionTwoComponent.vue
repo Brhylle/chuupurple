@@ -11,10 +11,13 @@
         </div>
       </div>
       <div class="member-info">
+        
         <h2 v-if="currentMember">{{ currentMember.name }}</h2>
         <p v-if="currentMember"><strong>Position:</strong> {{ currentMember.position }}</p>
         <p v-if="currentMember"><strong>Birthdate:</strong> {{ currentMember.birthdate }}</p>
-        <img :src="currentMember?.image || defaultImage" :alt="currentMember?.name || 'Default Image'" />
+        <div class="flex justify-center items-center">
+          <img :src="currentMember?.image || defaultImage" :alt="currentMember?.name || 'Default Image'" />
+        </div>
       </div>
     </div>
   </div>
@@ -27,55 +30,55 @@ export default {
       members: [
         {
           name: "Jhoanna",
-          image: require("@/assets/Jhoanna.jpg"),
+          image: require("@/assets/imgs/selection-two/Jhoanna.jpg"),
           position: "Leader, Lead Vocalist, Lead Rapper",
           birthdate: "January 26, 2004",
         },
         {
           name: "Aiah",
-          image: require("@/assets/Aiah.jpg"),
+          image: require("@/assets/imgs/selection-two/Aiah.jpg"),
           position: "Main Rapper, Sub Vocalist, Visual",
           birthdate: "January 27, 2001",
         },
         {
           name: "Colet",
-          image: require("@/assets/Colet.jpg"),
+          image: require("@/assets/imgs/selection-two/Colet.jpg"),
           position: "Main Vocalist, Lead Dancer, Lead Rapper",
           birthdate: "September 14, 2001",
         },
         {
           name: "Maloi",
-          image: require("@/assets/Maloi.jpg"),
+          image: require("@/assets/imgs/selection-two/Maloi.jpg"),
           position: "Main Vocalist",
           birthdate: "May 27, 2002",
         },
         {
           name: "Gwen",
-          image: require("@/assets/Gwen.jpg"),
+          image: require("@/assets/imgs/selection-two/Gwen.jpg"),
           position: "Lead Vocalist, Lead Rapper",
           birthdate: "June 19, 2003",
         },
         {
           name: "Stacey",
-          image: require("@/assets/Stacey.jpg"),
+          image: require("@/assets/imgs/selection-two/Stacey.jpg"),
           position: "Main Rapper, Lead Dancer, Sub Vocalist",
           birthdate: "July 13, 2003",
         },
         {
           name: "Mikha",
-          image: require("@/assets/Mikha.jpg"),
+          image: require("@/assets/imgs/selection-two/Mikha.jpg"),
           position: "Main Rapper, Lead Dancer, Visual",
           birthdate: "November 8, 2003",
         },
         {
           name: "Sheena",
-          image: require("@/assets/Sheena.jpg"),
+          image: require("@/assets/imgs/selection-two/Sheena.jpg"),
           position: "Main Dancer, Sub Vocalist, Maknae",
           birthdate: "May 9, 2004",
         },
       ],
       currentMember: null,
-      defaultImage: require("@/assets/BINI.jpg"),
+      defaultImage: require("@/assets/imgs/selection-two/BINI.jpg"),
     };
   },
   methods: {
@@ -95,8 +98,8 @@ export default {
   background: linear-gradient(135deg, #cba2dd, #e3c6f5);
   border-radius: 20px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  max-width: 1200px;
-  margin: 40px auto;
+  width: 80%;
+  max-width: 100%;
 }
 
 .member-details {

@@ -264,8 +264,8 @@
                       <div class="flex flex-col w-1/2 bg-background-300 justify-center items-center">
                         <h4 class=" font-pp-bold mt-0 text-[3rem] leading-[1.1] text-center text-text-800">Bread Crumb + Tree Component</h4>
                         <h4 class="subheading font-pp-thin text-primary-900 text-center text-[2.5rem] italic">by Magnaye, Ace Crizzler</h4>
-                      </div>
-                      <div class="w-1/2 flex flex-col bg-background-400 justify-center items-center p-16 gap-2">
+                        </div>
+                        <div class="w-1/2 flex flex-col bg-background-400 justify-center items-center p-16 gap-2">
                         <div class="w-full rounded-lg bg-background-200 p-4">
                           <BreadCrumb :items="breadcrumbItems"/>
                         </div>
@@ -281,27 +281,43 @@
                 <section class="dlc-banner-3">
                   <h1 id="animated-text-8" class="absolute">Now warping towards <span class="animated-emphasization-4">Final Phase V...</span></h1>
                   <h1 id="animated-text-9" class="absolute"><span class="animated-emphasization-5">>>></span></h1>
-                </section>
-
-                <section class="dlc-platform-content-4"> 
-                  <div class="uniform-container">
-                    <div class="flex-container">
-                      <div class="square">
-                        <TuazonDialog/>
+                  </section>
+                  
+                  <section class="dlc-platform-content-4"> 
+                    <div class="uniform-container">
+                      <div class="flex-container flex-col">
+                        
+                        <div class="flex flex-row pak_row">
+                          <div class="square bg-background-200 w-[30%] h-auto text-text-800 p-4">
+                            <h4 class=" font-pp-bold mt-0 text-[5rem] leading-[1.1] text-right text-text-800 mb-2">Selection One + Dialog & List</h4>
+                            <h4 class="subheading font-pp-thin text-primary-900 text-right text-[2.5rem] italic mb-2">by</h4>
+                            <!-- <h4 class=" font-pp-bold mt-0 text-[5rem] leading-[1.1] text-right text-text-800">Bread Crumb + Tree Component</h4> -->
+                            <h4 class="subheading font-pp-thin text-primary-900 text-right text-[2.5rem] italic mb-2">Tajarros, Ritchmond James</h4>
+                            <h4 class="subheading font-pp-thin text-primary-900 text-right text-[2.5rem] italic mb-2">Tuazon, Leomar</h4>
+                            
+                            </div>
+                            <div class="square bg-background-300 w-[70%] h-auto text-text-900 p-4 flex-grow">
+                              <SelectionOne/> 
+                              <TuazonDialog/>
+                        </div>
+                        </div>
+                          <div class="flex flex-row pak_row"> 
+                            <div class="square bg-background-800 w-[70%] h-auto text-text-100 p-4 flex-grow">
+                              <CarouselComponent/>
+                            </div>
+                            
+                            <div class="w-[30%] h-auto text-text-100 bg-background-700 p-4">
+                              <h4 class="font-pp-bold mt-0 text-[5rem] leading-[1.1] text-right text-text-100 mb-2">Hover-Type Carousel Component</h4>
+                            </div>
+                          </div>
+                      
+                      
                       </div>
-                      <div class="square">
-                        <TuazonList/>
-                      </div>
-                      <div class="square">
-                        <SelectionOne/> 
-                      </div>
-                      <div class="square">
-                        <SelectionTwo/>
-                      </div>
-                    </div>
-
-                    <div class="dela-cruz-content">
-                      <CarouselComponent/>
+                      
+                      <div class="dela-cruz-content">
+                        <div class="wrapper mt-8 flex items-center">
+                                <SelectionTwo/>
+                              </div>
                     </div>
                   </div>
                 </section>
@@ -338,8 +354,9 @@ import TreeComponent from './TreeComponent.vue';
 import SidebarComponent from './SidebarComponent.vue';
 import NavbarComponent from './NavbarComponent.vue';
 import SelectionOne from './SelectionOne.vue';
-import SelectionTwo from './SelectionTwo.vue';
+import SelectionTwo from './SelectionTwoComponent.vue';
 import CarouselComponent from './CarouselComponent.vue';
+import TuazonDialog from './TuazonDialog.vue';
 
 export default {
   components: {
@@ -365,6 +382,7 @@ export default {
     TreeComponent,
     SelectionOne,
     SelectionTwo,
+    TuazonDialog
   },
 
   data() {
@@ -1176,7 +1194,7 @@ requestAnimationFrame(raf);
 <style scoped>
   section.dlc-platform-content-4 {
       position: absolute;
-      top: 1060vh;
+      top: 1050vh;
       height: 300vh;
       width: 100%;
       left: 0;
