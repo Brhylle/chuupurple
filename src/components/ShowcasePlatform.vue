@@ -441,8 +441,8 @@ this.$gsap.from(".component-card-container", {
     x: 50,
     scrollTrigger: {
         trigger: ".component-left",
-        start: `top 60%`, // Adjust according to your needs
-        end: `bottom 100%`, // Adjust according to your needs
+        start: `top 150%`, // Adjust according to your needs
+        end: `bottom 80%`, // Adjust according to your needs
         scrub: false,
       markers: false,
       toggleActions: 'play play reverse reverse',
