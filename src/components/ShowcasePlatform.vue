@@ -1,9 +1,7 @@
-<!-- eslint-disable vue/no-parsing-error -->
 <template>
     <main>
         <section>
             <div class="dlc-container">
-                
                 <section class="dlc-sticky" ref="sticky">
                     <nav>
                         <div class="dlc-logo">
@@ -12,41 +10,35 @@
                         <div class="dlc-links">
                             <a href="#our-team" id="">Our Team</a>
                             <a href="#section-header">Components</a>
-                            <DarkToggleMode :currentTheme="currentTheme" @toggleTheme="toggleTheme" :scrollDownImageSrc="scrollDownImageSrc"/>
+                            <DarkToggleMode :currentTheme="currentTheme" @toggleTheme="toggleTheme" :scrollDownImageSrc="scrollDownImageSrc" />
                         </div>
                     </nav>
-
                     <h5 class="dlc-sub-logo">× presents</h5>
-
-                    <div class="dlc-header" >
+                    <div class="dlc-header">
                         <h1 class="animated-header-1">purple</h1>
                     </div>
-                    
                     <div class="dlc-badge-container">
                         <h2 class="dlc-badge-name">chuu</h2>
                         <img src="../assets/public/chuu-light-badge.svg" alt="chuupurple">
                     </div>
-
                     <div class="dlc-tracker" ref="tracker">
                         <div class="dlc-emoji" ref="emoji">
                             <div class="dlc-emoji-face" ref="emojiFace">
                                 <div class="dlc-eyes">
                                     <svg width="106" height="104" viewBox="0 0 106 104" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M42.0172 0H67.5889C70.4661 0 72.4739 2.84469 71.5039 5.54673L57.2205 45.3312L86.0692 15.6965C87.9916 13.7216 91.2739 14.1282 92.6537 16.5122L105.439 38.603C106.878 41.0886 105.412 44.2454 102.581 44.7585L62.6197 52L102.581 59.2415C105.412 59.7546 106.878 62.9114 105.439 65.397L92.6537 87.4878C91.2739 89.8718 87.9916 90.2784 86.0692 88.3035L56.3307 57.7547L67.9833 98.7195C68.7366 101.368 66.7424 104 63.9828 104H38.4111C35.5339 104 33.5261 101.155 34.4961 98.4533L48.7795 58.6688L19.9308 88.3035C18.0084 90.2784 14.7261 89.8718 13.3463 87.4878L0.560541 65.397C-0.878207 62.9114 0.587663 59.7546 3.4186 59.2415L43.3803 52L3.4186 44.7585C0.587663 44.2454 -0.878207 41.0886 0.560541 38.603L13.3463 16.5122C14.7261 14.1282 18.0084 13.7216 19.9308 15.6965L49.6693 46.2453L38.0167 5.28045C37.2634 2.63223 39.2576 0 42.0172 0Z" fill="black"/>
+                                        <path d="M42.0172 0H67.5889C70.4661 0 72.4739 2.84469 71.5039 5.54673L57.2205 45.3312L86.0692 15.6965C87.9916 13.7216 91.2739 14.1282 92.6537 16.5122L105.439 38.603C106.878 41.0886 105.412 44.2454 102.581 44.7585L62.6197 52L102.581 59.2415C105.412 59.7546 106.878 62.9114 105.439 65.397L92.6537 87.4878C91.2739 89.8718 87.9916 90.2784 86.0692 88.3035L56.3307 57.7547L67.9833 98.7195C68.7366 101.368 66.7424 104 63.9828 104H38.4111C35.5339 104 33.5261 101.155 34.4961 98.4533L48.7795 58.6688L19.9308 88.3035C18.0084 90.2784 14.7261 89.8718 13.3463 87.4878L0.560541 65.397C-0.878207 62.9114 0.587663 59.7546 3.4186 59.2415L43.3803 52L3.4186 44.7585C0.587663 44.2454 -0.878207 41.0886 0.560541 38.603L13.3463 16.5122C14.7261 14.1282 18.0084 13.7216 19.9308 15.6965L49.6693 46.2453L38.0167 5.28045C37.2634 2.63223 39.2576 0 42.0172 0Z" fill="black" />
                                     </svg>
                                     <svg width="106" height="104" viewBox="0 0 106 104" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M42.0172 0H67.5889C70.4661 0 72.4739 2.84469 71.5039 5.54673L57.2205 45.3312L86.0692 15.6965C87.9916 13.7216 91.2739 14.1282 92.6537 16.5122L105.439 38.603C106.878 41.0886 105.412 44.2454 102.581 44.7585L62.6197 52L102.581 59.2415C105.412 59.7546 106.878 62.9114 105.439 65.397L92.6537 87.4878C91.2739 89.8718 87.9916 90.2784 86.0692 88.3035L56.3307 57.7547L67.9833 98.7195C68.7366 101.368 66.7424 104 63.9828 104H38.4111C35.5339 104 33.5261 101.155 34.4961 98.4533L48.7795 58.6688L19.9308 88.3035C18.0084 90.2784 14.7261 89.8718 13.3463 87.4878L0.560541 65.397C-0.878207 62.9114 0.587663 59.7546 3.4186 59.2415L43.3803 52L3.4186 44.7585C0.587663 44.2454 -0.878207 41.0886 0.560541 38.603L13.3463 16.5122C14.7261 14.1282 18.0084 13.7216 19.9308 15.6965L49.6693 46.2453L38.0167 5.28045C37.2634 2.63223 39.2576 0 42.0172 0Z" fill="black"/>
+                                        <path d="M42.0172 0H67.5889C70.4661 0 72.4739 2.84469 71.5039 5.54673L57.2205 45.3312L86.0692 15.6965C87.9916 13.7216 91.2739 14.1282 92.6537 16.5122L105.439 38.603C106.878 41.0886 105.412 44.2454 102.581 44.7585L62.6197 52L102.581 59.2415C105.412 59.7546 106.878 62.9114 105.439 65.397L92.6537 87.4878C91.2739 89.8718 87.9916 90.2784 86.0692 88.3035L56.3307 57.7547L67.9833 98.7195C68.7366 101.368 66.7424 104 63.9828 104H38.4111C35.5339 104 33.5261 101.155 34.4961 98.4533L48.7795 58.6688L19.9308 88.3035C18.0084 90.2784 14.7261 89.8718 13.3463 87.4878L0.560541 65.397C-0.878207 62.9114 0.587663 59.7546 3.4186 59.2415L43.3803 52L3.4186 44.7585C0.587663 44.2454 -0.878207 41.0886 0.560541 38.603L13.3463 16.5122C14.7261 14.1282 18.0084 13.7216 19.9308 15.6965L49.6693 46.2453L38.0167 5.28045C37.2634 2.63223 39.2576 0 42.0172 0Z" fill="black" />
                                     </svg>
                                 </div>
                             </div>
-                            
                             <div class="dlc-mouth-wrapper">
                                 <div class="dlc-mouth"></div>
                             </div>
                         </div>
                     </div>
                 </section>
-
                 <!-- *** VENTURA COMPONENTS *** -->
                 <!-- *** VENTURA COMPONENTS *** -->
                 <section class="dlc-platform-content" ref="websiteContent">
@@ -54,294 +46,254 @@
                         <h1 class="animated-text-1"><span class="animated-emphasization-10">Components</span> Crafted By...</h1>
                         <p class="animated-text-1">These components, <span class="animated-emphasization-10">lovingly created</span> by the team, beckon you to delve into a realm brimming with creativity and innovation. Embark on a journey of exploration filled with happiness and excitement, and <span class="animated-emphasization-10">uncover the enchantment</span> meticulously woven into every <span class="animated-emphasization-10">intricate detail</span>.</p>
                     </div>
-
                     <!-- *** GAB COMPONENTS *** -->
                     <div class="uniform-container">
                         <h2 class="presenter-header" id="animated-text-5"><span class="animated-emphasization">Gabriel</span> Ventura,</h2>
-                            <h4 class="component-name" id="animated-text-5"><span class="animated-emphasization">Tabs</span> Component & <span class="animated-emphasization">Search Bar</span> Component 1</h4>
-                                <div class="component-row">
-                                    <div class="component-left">
-                                        <TabsComponent/>
-                                    </div>
-                                    <div class="component-right">
-                                        <SearchBarComponent class="search-bar-wrapper"/>
-                                    </div>
-                                </div>
-                        
-                            <div class="component-card-container">
-                                <h4 class="component-name" id="animated-text-5"><span class="animated-emphasization">Cards</span> Component</h4>
-                                <CardsComponent/>
+                        <h4 class="component-name" id="animated-text-5"><span class="animated-emphasization">Tabs</span> Component & <span class="animated-emphasization">Search Bar</span> Component 1</h4>
+                        <div class="component-row">
+                            <div class="component-left">
+                                <TabsComponent />
                             </div>
-
-                            <div class="component-countdown-wrapper">
-                              <h3 class="countdown-numerator" id="animated-text-5">Twenty-Seven (27)</h3>
-                                <span class="dlc-overline" id="animated-text"><span class="no-line-spacing">----------</span> components <span class="no-line-spacing">----------</span></span>
-                              <h2 class="countdown-denominator" id="animated-text-5"><span class="animated-emphasization">Five (5)</span></h2>
+                            <div class="component-right">
+                                <SearchBarComponent class="search-bar-wrapper" />
                             </div>
+                        </div>
+                        <div class="component-card-container">
+                            <h4 class="component-name" id="animated-text-5"><span class="animated-emphasization">Cards</span> Component</h4>
+                            <CardsComponent />
+                        </div>
+                        <div class="component-countdown-wrapper">
+                            <h3 class="countdown-numerator" id="animated-text-5">Twenty-Seven (27)</h3>
+                            <span class="dlc-overline" id="animated-text"><span class="no-line-spacing">----------</span> components <span class="no-line-spacing">----------</span></span>
+                            <h2 class="countdown-denominator" id="animated-text-5"><span class="animated-emphasization">Five (5)</span></h2>
+                        </div>
                     </div>
                 </section>
-
-
                 <!-- ? CHECKPOINT 1 -->
                 <section class="dlc-banner-1" id="animated-text-6">
-  
-                  <h1>More 
-                      components, waiting to be <span class="animated-emphasization-1"> scrolled.</span></h1>
+                    <h1>More components, waiting to be <span class="animated-emphasization-1"> scrolled.</span></h1>
                 </section>
-
-               
                 <!-- *** MIRABEL, CRUZ, FORTIN, SEMIFRANIA COMPONENTS -->
                 <section class="dlc-platform-content-2" ref="websiteContent">
-                  <div class="flex justify-content align-items">
-                    <!-- ! LEFT -->
-                    <div class="text-left mt-[10%] p-0 w-1/12">
-                      <h2 class="writing-mode-vertical m-0 p-0 leading-0 text-[10rem] uppercase font-pp-bold" id="animated-text-7">
-                        <span class="animated-emphasization-1">mirabel</span>
-                      </h2>
-                    </div>
-                    
-                    <!-- ? MIDDLE -->
-                    <div class="main-content-wrap m-0 p-0 align-items w-10/12">
-                      <div class="uniform-container">
-                        <h2 class="presenter-header uppercase text-text-400" id="animated-text-2"><span class="animated-emphasization-1 ">Twenty-Two (22)</span> to be exact.</h2>
-                        <div class="component-row">
-                          <!-- *** MIRABEL COMPONENTS *** -->
-                          <div class="component-left">
-                            <div class="component-wrapper">
-                              <h4 class="component-name" id="animated-text-5"><span class="animated-emphasization">Pagination</span></h4>
-                              <MirabelPagination/>
-                            </div>
-                            
-                            <div class="component-wrapper">
-                                <h4 class="component-name" id="animated-text-5"><span class="animated-emphasization">Progress Bar</span> </h4>
-                                <MirabelProgressBar/> 
-                              </div>
-                              
-                              <div class="component-wrapper">
-                                <h4 class="component-name mb-4" id="animated-text-5"><span class="animated-emphasization">Accordion</span> </h4>
-                                <MirabelAccordion/>
-                              </div>
-                            </div>
-                            
-                            <!-- *** CRUZ COMPONENTS *** -->
-                            <div class="component-right-2">
-                              <h4 class="component-name mb-2" id="animated-text-5">
-                                <span class="animated-emphasization-1">Notifications</span> &
-                              </h4>
-                              <CruzNotification/>
-                              <CruzPopup/>
-                              <h4 class="component-name mt-2" id="animated-text-5"><span class="animated-emphasization">Pop-Up</span></h4>
-                            </div>
-                            
-                          </div>
-                          <div class="text-foot-wrap flex flex-col">
-                            <h4 class="font-pp-bold text-[3.5rem] gap-0 leading-none m-2 p-0 text-text-400" id="animated-text-2"><span class="animated-emphasization-2">Robert Leoni</span> <span class="animated-emphasization-1">&</span></h4>
-                            <h2 class="font-humane-bold leading-none gap-0 uppercase m-2 p-0 text-[14rem] text-center" id="animated-text-2">components</h2>
-                            <h4 class="font-pp-bold text-[3.5rem] gap-0 leading-none m-2 p-0 text-text-400 text-right" id="animated-text-2"><span class="animated-emphasization-2">&</span> <span class="animated-emphasization-1">Raven Drake</span></h4>
-                          </div>
+                    <div class="flex justify-content align-items">
+                        <!-- ! LEFT -->
+                        <div class="text-left mt-[10%] p-0 w-1/12">
+                            <h2 class="writing-mode-vertical m-0 p-0 leading-0 text-[10rem] uppercase font-pp-bold" id="animated-text-7">
+                                <span class="animated-emphasization-1">mirabel</span>
+                            </h2>
                         </div>
+                        <!-- ? MIDDLE -->
+                        <div class="main-content-wrap m-0 p-0 align-items w-10/12">
+                            <div class="uniform-container">
+                                <h2 class="presenter-header uppercase text-text-400" id="animated-text-2"><span class="animated-emphasization-1 ">Twenty-Two (22)</span> to be exact.</h2>
+                                <div class="component-row">
+                                    <!-- *** MIRABEL COMPONENTS *** -->
+                                    <div class="component-left">
+                                        <div class="component-wrapper">
+                                            <h4 class="component-name" id="animated-text-5"><span class="animated-emphasization">Pagination</span></h4>
+                                            <MirabelPagination />
+                                        </div>
+                                        <div class="component-wrapper">
+                                            <h4 class="component-name" id="animated-text-5"><span class="animated-emphasization">Progress Bar</span> </h4>
+                                            <MirabelProgressBar />
+                                        </div>
+                                        <div class="component-wrapper">
+                                            <h4 class="component-name mb-4" id="animated-text-5"><span class="animated-emphasization">Accordion</span> </h4>
+                                            <MirabelAccordion />
+                                        </div>
+                                    </div>
+                                    <!-- *** CRUZ COMPONENTS *** -->
+                                    <div class="component-right-2">
+                                        <h4 class="component-name mb-2" id="animated-text-5">
+                                            <span class="animated-emphasization-1">Notifications</span> &
+                                        </h4>
+                                        <CruzNotification />
+                                        <CruzPopup />
+                                        <h4 class="component-name mt-2" id="animated-text-5"><span class="animated-emphasization">Pop-Up</span></h4>
+                                    </div>
+                                </div>
+                                <div class="text-foot-wrap flex flex-col">
+                                    <h4 class="font-pp-bold text-[3.5rem] gap-0 leading-none m-2 p-0 text-text-400" id="animated-text-2"><span class="animated-emphasization-2">Robert Leoni</span> <span class="animated-emphasization-1">&</span></h4>
+                                    <h2 class="font-humane-bold leading-none gap-0 uppercase m-2 p-0 text-[14rem] text-center" id="animated-text-2">components</h2>
+                                    <h4 class="font-pp-bold text-[3.5rem] gap-0 leading-none m-2 p-0 text-text-400 text-right" id="animated-text-2"><span class="animated-emphasization-2">&</span> <span class="animated-emphasization-1">Raven Drake</span></h4>
+                                </div>
+                            </div>
                         </div>
-                        
                         <!-- *** TEXT ON THE right -->
                         <div class="text-right m-0 p-0 w-1/12 absolute top-[20%] left-[85%]" id="animated-text-7">
-                          <h2 class="writing-mode-vertical text-[10rem] font-pp-bold uppercase">
-                            <span class="animated-emphasization-2">cruz</span>
-                          </h2>
+                            <h2 class="writing-mode-vertical text-[10rem] font-pp-bold uppercase">
+                                <span class="animated-emphasization-2">cruz</span>
+                            </h2>
                         </div>
-                  </div>
-                  <!-- ! TOP TEXT -->
-                  <div class="marquee">
-                  <div>
-                  <span id="marquee-text"><span class="animated-emphasization-3">Semifrania</span>, Joshua Jehiel</span>
-                  <span id="marquee-text"> ×</span>
-                  <span id="marquee-text"><span class="animated-emphasization-3">Fortin</span>, Raven</span>
-                  <span id="marquee-text"> ×</span>
-                  <span id="marquee-text"><span class="animated-emphasization-3">Semifrania</span>, Joshua Jehiel</span>
-                  <span id="marquee-text"> ×</span>
-                  <span id="marquee-text"><span class="animated-emphasization-3">Fortin</span>, Raven</span>
-                  <span id="marquee-text"> ×</span>
-                  </div>
-                  </div>
-
-                <!-- ? MIDDLE -->
-                <div class="main-content-wrap m-0 p-0">
-                  <div class="uniform-container">
-                    <div class="flex gap-2">
-                      <div class="semifrania-wrap">
-                        <h4 class="component-name mb-4">Feedback, Menu & Bottom Sheets</h4>
-                        <h4 class="subheading font-pp-thin text-primary-100 text-center text-[2.5rem] italic">by Semifrania, Joshua Jehiel</h4>                        
-                        <div class="flex component-container border-[0.33rem] p-4">
-                          <div class="bg-background-600 p-8">
-                            <SemifraniaComponent/>
-                          </div>
-                          <div class="bg-background-800 p-8 w-full">
-                            <SemifraniaMenuComponent/>
-                          </div>
-                        </div>
-                      </div>
-
-
-                        <div class="fortin-wrap">
-                        <div class="component-name-container">
-                          <h4 class="component-name mb-4">Number Input, Textarea & Tooltip</h4>
-                          <h4 class="subheading font-pp-thin text-primary-100 text-center text-[2.5rem] italic">by Fortin, Raven </h4>
-                        
-                        </div>
-                        
-                        
-                          <div class="flex p-4 border-[0.33rem]">
-                            <div class="p-8 bg-background-300 w-full">
-                              <Fortin_NumberInput/>
-                            </div>
-                            <div class="bg-background-500 p-8">
-                              <Fortin_Textarea/>
-                            </div>
-                          </div>
-                            <div class="border-[0.33rem] mt-2">
-                          <div class="flex justify-center items-center bg-background-400 m-4 p-8">
-                            <Fortin_Tooltip/>
-                          </div>
-                        </div>
-                      </div>
-                    </div> 
-                    </div> 
-                  </div>
-                </div>
-                  </section>
-                  
-                    <!-- *********** ************* -->
-
-                         <!-- *** FORTIN & SEMIFRANIA COMPONENTS *** -->
-                </section>
-                          
-
-                  <section class="dlc-banner-2">
-                  <h1 id="animated-text-8" class="absolute">We're <span class="animated-emphasization-4"> almost</span> there.</h1>
-                  <h1 id="animated-text-9" class="absolute">Hang on tightly! <span class="animated-emphasization-5">17/25.</span></h1>
-                  </section>
-
-                  <section class="dlc-platform-content-3">
-                <div class="border-[0.63rem] border-accent-300 mt-[20rem] ml-[5rem] mr-[5rem] rounded-2xl p-4">
-                  <div class="flex flex-col">
-                    <div class="flex">
-                      <div class="w-1/2 bg-background-700">
-                        <h4 class="font-pp-bold mt-8 text-[3rem] leading-[1.1] text-center text-text-100">Sidebar + Navigation Bar Component</h4>
-                        <h4 class="subheading font-pp-thin text-primary-100 text-center text-[2.5rem] italic">by Perez, Joshua Ezekiel</h4>
-                        <div class="flex">
-                          <div class="w-1/2 sidebar-wrap bg-background-200 ml-4 rounded-2xl">
-                            <SidebarComponent/>
-                          </div>
-                          <div class="w-1/2 navbar-wrap">
-                            <NavbarComponent/>
-                          </div>
-                        </div>
-                        <div class="clock-wrapper flex flex-col countdown justify-center items-center" ref="clockWrapper">
-                          <p class="clock-text text-[25rem] text-text-300 font-pp-bold m-0 p-0 " id="animate-clock-1">18</p>
-                          <p class="clock-text text-[25rem] text-text-300 font-pp-bold m-0 p-0 absolute" id="animate-clock-2">19</p>
-                          <p class="clock-text text-[25rem] text-text-300 font-pp-bold m-0 p-0 absolute" id="animate-clock-3">20</p>
-                          <p class="clock-text text-[25rem] text-text-300 font-pp-bold m-0 p-0 absolute" id="animate-clock-4">21</p>
-                          <p class="clock-text text-[25rem] text-text-300 font-pp-bold m-0 p-0 absolute" id="animate-clock-5">22</p>
-                          <p class="clock-text text-[25rem] text-text-300 font-pp-bold m-0 p-0 absolute" id="animate-clock-6">23</p>
-                          <p class="divider text-[5.5rem] text-primary-800 font-pp-bold m-0 p-0 absolute">/</p>
-                          <p class="components-displayed text-[2.5rem] text-text-50 font-pp-medium m-0 p-0 top-[] absolute" id="stays-at-50-perc-viewport-only-scrolls">components displayed.</p>
-                        </div>
-                      </div>
-                      <div class="w-1/2 bg-background-800">
-                        <h4 class=" font-pp-bold mt-8 text-[3rem] leading-[1.1] text-center text-text-100">Search + Post Component</h4>
-                        <h4 class="subheading font-pp-thin text-primary-100 text-center text-[2.5rem] italic">by Godes, Paul Adrian</h4>
-                        <SearchComponents/>
-                      </div>
                     </div>
-                    
+                    <!-- ! TOP TEXT -->
+                    <div class="marquee">
+                        <div>
+                            <span id="marquee-text"><span class="animated-emphasization-3">Semifrania</span>, Joshua Jehiel</span>
+                            <span id="marquee-text"> ×</span>
+                            <span id="marquee-text"><span class="animated-emphasization-3">Fortin</span>, Raven</span>
+                            <span id="marquee-text"> ×</span>
+                            <span id="marquee-text"><span class="animated-emphasization-3">Semifrania</span>, Joshua Jehiel</span>
+                            <span id="marquee-text"> ×</span>
+                            <span id="marquee-text"><span class="animated-emphasization-3">Fortin</span>, Raven</span>
+                            <span id="marquee-text"> ×</span>
+                        </div>
+                    </div>
+                    <!-- ? MIDDLE -->
+                    <div class="main-content-wrap m-0 p-0">
+                        <div class="uniform-container">
+                            <div class="flex gap-2">
+                                <div class="semifrania-wrap">
+                                    <h4 class="component-name mb-4">Feedback, Menu & Bottom Sheets</h4>
+                                    <h4 class="subheading font-pp-thin text-primary-100 text-center text-[2.5rem] italic">by Semifrania, Joshua Jehiel</h4>
+                                    <div class="flex component-container border-[0.33rem] p-4">
+                                        <div class="bg-background-600 p-8">
+                                            <SemifraniaComponent />
+                                        </div>
+                                        <div class="bg-background-800 p-8 w-full">
+                                            <SemifraniaMenuComponent />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="fortin-wrap">
+                                    <div class="component-name-container">
+                                        <h4 class="component-name mb-4">Number Input, Textarea & Tooltip</h4>
+                                        <h4 class="subheading font-pp-thin text-primary-100 text-center text-[2.5rem] italic">by Fortin, Raven </h4>
+                                    </div>
+                                    <div class="flex p-4 border-[0.33rem]">
+                                        <div class="p-8 bg-background-300 w-full">
+                                            <Fortin_NumberInput />
+                                        </div>
+                                        <div class="bg-background-500 p-8">
+                                            <Fortin_Textarea />
+                                        </div>
+                                    </div>
+                                    <div class="border-[0.33rem] mt-2">
+                                        <div class="flex justify-center items-center bg-background-400 m-4 p-8">
+                                            <Fortin_Tooltip />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            
+            <!-- *********** ************* -->
+            <!-- *** FORTIN & SEMIFRANIA COMPONENTS *** -->
+             
+        </section>
+
+        <section class="dlc-banner-2">
+            <h1 id="animated-text-8" class="absolute">We're <span class="animated-emphasization-4"> almost</span> there.</h1>
+            <h1 id="animated-text-9" class="absolute">Hang on tightly! <span class="animated-emphasization-5">17/25.</span></h1>
+        </section>
+
+        <section class="dlc-platform-content-3">
+            <div class="border-[0.63rem] border-accent-300 mt-[20rem] ml-[5rem] mr-[5rem] rounded-2xl p-4">
+                <div class="flex flex-col">
+                    <div class="flex">
+                        <div class="w-1/2 bg-background-700">
+                            <h4 class="font-pp-bold mt-8 text-[3rem] leading-[1.1] text-center text-text-100">Sidebar + Navigation Bar Component</h4>
+                            <h4 class="subheading font-pp-thin text-primary-100 text-center text-[2.5rem] italic">by Perez, Joshua Ezekiel</h4>
+                            <div class="flex">
+                                <div class="w-1/2 sidebar-wrap bg-background-200 ml-4 rounded-2xl">
+                                    <SidebarComponent />
+                                </div>
+                                <div class="w-1/2 navbar-wrap">
+                                    <NavbarComponent />
+                                </div>
+                            </div>
+                            <div class="clock-wrapper flex flex-col countdown justify-center items-center" ref="clockWrapper">
+                                <p class="clock-text text-[25rem] text-text-300 font-pp-bold m-0 p-0 " id="animate-clock-1">18</p>
+                                <p class="clock-text text-[25rem] text-text-300 font-pp-bold m-0 p-0 absolute" id="animate-clock-2">19</p>
+                                <p class="clock-text text-[25rem] text-text-300 font-pp-bold m-0 p-0 absolute" id="animate-clock-3">20</p>
+                                <p class="clock-text text-[25rem] text-text-300 font-pp-bold m-0 p-0 absolute" id="animate-clock-4">21</p>
+                                <p class="clock-text text-[25rem] text-text-300 font-pp-bold m-0 p-0 absolute" id="animate-clock-5">22</p>
+                                <p class="clock-text text-[25rem] text-text-300 font-pp-bold m-0 p-0 absolute" id="animate-clock-6">23</p>
+                                <p class="divider text-[5.5rem] text-primary-800 font-pp-bold m-0 p-0 absolute">/</p>
+                                <p class="components-displayed text-[2.5rem] text-text-50 font-pp-medium m-0 p-0 top-[] absolute" id="stays-at-50-perc-viewport-only-scrolls">components displayed.</p>
+                            </div>
+                        </div>
+                        <div class="w-1/2 bg-background-800">
+                            <h4 class=" font-pp-bold mt-8 text-[3rem] leading-[1.1] text-center text-text-100">Search + Post Component</h4>
+                            <h4 class="subheading font-pp-thin text-primary-100 text-center text-[2.5rem] italic">by Godes, Paul Adrian</h4>
+                            <SearchComponents />
+                        </div>
+                    </div>
                     <!-- Row that spans both columns -->
                     <div class="flex flex-row flex-wrap ">
-                      <div class="flex flex-col w-1/2 bg-background-300 justify-center items-center">
-                        <h4 class=" font-pp-bold mt-0 text-[3rem] leading-[1.1] text-center text-text-800">Bread Crumb + Tree Component</h4>
-                        <h4 class="subheading font-pp-thin text-primary-900 text-center text-[2.5rem] italic">by Magnaye, Ace Crizzler</h4>
+                        <div class="flex flex-col w-1/2 bg-background-300 justify-center items-center">
+                            <h4 class=" font-pp-bold mt-0 text-[3rem] leading-[1.1] text-center text-text-800">Bread Crumb + Tree Component</h4>
+                            <h4 class="subheading font-pp-thin text-primary-900 text-center text-[2.5rem] italic">by Magnaye, Ace Crizzler</h4>
                         </div>
                         <div class="w-1/2 flex flex-col bg-background-400 justify-center items-center p-16 gap-2">
-                        <div class="w-full rounded-lg bg-background-200 p-4">
-                          <BreadCrumb :items="breadcrumbItems"/>
+                            <div class="w-full rounded-lg bg-background-200 p-4">
+                                <BreadCrumb :items="breadcrumbItems" />
+                            </div>
+                            <div class="w-full rounded-lg bg-background-200 p-4">
+                                <TreeComponent :treeData="treeData" />
+                            </div>
                         </div>
-                        <div class="w-full rounded-lg bg-background-200 p-4">
-                          <TreeComponent :treeData="treeData"/>
-                        </div>
-                      </div>
                     </div>
-                  </div>
                 </div>
-                  </section>
+            </div>
+        </section>
 
-                  <section class="dlc-banner-3">
-                  <h1 id="animated-text-9" class="absolute">Warping to <span class="animated-emphasization-4">Phase V...</span></h1>
-                  <h1 id="animated-text-8" class="absolute"><span class="animated-emphasization-5">>>></span></h1>
-                  </section>
-                  
-                  <section class="dlc-platform-content-4"> 
-                    <div class="uniform-container">
-                      <div class="flex-container flex-col">
-                        
-                        <div class="flex flex-row pak_row">
-                          <div class="square bg-background-200 w-[30%] h-auto text-text-800 p-4">
+        <section class="dlc-banner-3">
+            <h1 id="animated-text-9" class="absolute">Warping to <span class="animated-emphasization-4">Phase V...</span></h1>
+            <h1 id="animated-text-8" class="absolute"><span class="animated-emphasization-5">>>></span></h1>
+        </section>
+
+        <section class="dlc-platform-content-4">
+            <div class="uniform-container">
+                <div class="flex-container flex-col">
+                    <div class="flex flex-row pak_row">
+                        <div class="square bg-background-200 w-[30%] h-auto text-text-800 p-4">
                             <h4 class=" font-pp-bold mt-0 text-[5rem] leading-[1.1] text-right text-text-800 mb-2">Selection One + Dialog & List</h4>
                             <h4 class="subheading font-pp-thin text-primary-900 text-right text-[2.5rem] italic mb-2">by</h4>
                             <!-- <h4 class=" font-pp-bold mt-0 text-[5rem] leading-[1.1] text-right text-text-800">Bread Crumb + Tree Component</h4> -->
                             <h4 class="subheading font-pp-thin text-primary-900 text-right text-[2.5rem] italic mb-2">Tajarros, Ritchmond James</h4>
                             <h4 class="subheading font-pp-thin text-primary-900 text-right text-[2.5rem] italic mb-2">Tuazon, Leomar</h4>
-                            
-                            </div>
-                            <div class="square bg-background-300 w-[70%] h-auto text-text-900 p-4 flex-grow">
-                              <TuazonDialog/>
-                              <SelectionOne/> 
                         </div>
+                        <div class="square bg-background-300 w-[70%] h-auto text-text-900 p-4 flex-grow">
+                            <TuazonDialog />
+                            <SelectionOne />
                         </div>
-                      
-                      
-                      </div>
-
-                          <div class="flex flex-row pak_row"> 
-                            <div class="square bg-background-800 w-[70%] h-auto text-text-100 p-4 flex-grow">
-                              <CarouselComponent/>
-                            </div>
-                            
-                            <div class="w-[30%] h-[55rem] text-text-100 bg-background-700 p-4 text-wrap">
-                              <h4 class="font-pp-bold mt-0 text-[5rem] leading-[1.1] text-left text-text-100">Hovered-On Carousel</h4>
-                              <h4 class="subheading font-pp-thin text-primary-100 text-left text-[2.5rem] italic">by</h4>
-                              <h4 class="subheading font-pp-thin text-primary-100 text-left text-[2.5rem] italic">Dela Cruz, Jheizon Brhylle</h4>
-                            </div>
-                          </div>
-
-                          <div class="flex flex-row pak_row"> 
-                            <div class="w-[30%] h-auto text-text-800 p-8 bg-background-400">
-                              <h4 class="font-pp-bold mt-0 text-[5rem] leading-[1.1] text-left text-text-800">Selection Two</h4>
-                              <h4 class="subheading font-pp-thin text-primary-950 text-left text-[2.5rem] italic">by</h4>
-                              <h4 class="subheading font-pp-thin text-primary-950 text-left text-[2.5rem] italic">Tajarros, Ritchmond James</h4>
-                            </div>
-                            <div class="square bg-background-600 w-[70%] h-auto text-text-900 p-4 flex-grow">
-                              <SelectionTwo/>
-                            </div>
-                            
-                          </div>
-                  </div>
-                  <div class="flex flex-col justify-center items-center text-[25rem] font-humane-bold" id="animated-text-5">
-         
-
-                      <h1>The <span class="animated-emphasization-2" id="animated-text-9">End.</span></h1>
-                      <h4 class="subheading font-pp-bold text-primary-200 text-left text-[10rem] absolute top-[230rem]" id="animated-text-4">27/27</h4>
-
-                
-                  </div>
-
-                      
-                  </section>
-
-   
-
-            <!-- ! SCROLL DOWN SIGN -->
-            <div class="scroll-down-container">
-              <h5 class="scroll-down-text">scroll down to start.</h5>
-              <img src="" data-theme="light" alt="scroll-down-to-scroll" id="scroll-down" class="scroll-down">
+                    </div>
+                </div>
+                <div class="flex flex-row pak_row">
+                    <div class="square bg-background-800 w-[70%] h-auto text-text-100 p-4 flex-grow">
+                        <CarouselComponent />
+                    </div>
+                    <div class="w-[30%] h-[55rem] text-text-100 bg-background-700 p-4 text-wrap">
+                        <h4 class="font-pp-bold mt-0 text-[5rem] leading-[1.1] text-left text-text-100">Hovered-On Carousel</h4>
+                        <h4 class="subheading font-pp-thin text-primary-100 text-left text-[2.5rem] italic">by</h4>
+                        <h4 class="subheading font-pp-thin text-primary-100 text-left text-[2.5rem] italic">Dela Cruz, Jheizon Brhylle</h4>
+                    </div>
+                </div>
+                <div class="flex flex-row pak_row">
+                    <div class="w-[30%] h-auto text-text-800 p-8 bg-background-400">
+                        <h4 class="font-pp-bold mt-0 text-[5rem] leading-[1.1] text-left text-text-800">Selection Two</h4>
+                        <h4 class="subheading font-pp-thin text-primary-950 text-left text-[2.5rem] italic">by</h4>
+                        <h4 class="subheading font-pp-thin text-primary-950 text-left text-[2.5rem] italic">Tajarros, Ritchmond James</h4>
+                    </div>
+                    <div class="square bg-background-600 w-[70%] h-auto text-text-900 p-4 flex-grow">
+                        <SelectionTwo />
+                    </div>
+                </div>
             </div>
+            <div class="flex flex-col justify-center items-center text-[25rem] font-humane-bold" id="animated-text-6">
+                <h1>The <span class="animated-emphasization-2" id="animated-text-9">End.</span></h1>
+                <h4 class="subheading font-pp-bold text-primary-200 text-left text-[10rem] absolute top-[230rem]" id="animated-text-4">27/27</h4>
+            </div>
+        </section>
+        <!-- ! SCROLL DOWN SIGN -->
+        <div class="scroll-down-container">
+            <h5 class="scroll-down-text">scroll down to start.</h5>
+            <img src="" data-theme="light" alt="scroll-down-to-scroll" id="scroll-down" class="scroll-down">
+        </div>
     </main>
 </template>
 
