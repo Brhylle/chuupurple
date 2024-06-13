@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-  <div class="rdc-background-Notif rounded-xl bg-background-300 h-full flex justify-center p-4 items-center">
+  <div class="rdc-background-Popup rounded-xl bg-background-300 h-full flex justify-center p-4 items-center">
     <div class="bg-background-100 p-8 rounded-lg shadow-md w-96">
       <!-- Button Container -->
       <div class="mb-6 text-center">
