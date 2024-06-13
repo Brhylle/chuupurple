@@ -107,9 +107,9 @@
                                         <h4 class="component-name mb-2" id="animated-text-5">
                                             <span class="animated-emphasization-1">Notifications</span> &
                                         </h4>
-                                        <CruzNotification />
-                                        <CruzPopup />
+                                        <CruzNotification/>
                                         <h4 class="component-name mt-2" id="animated-text-5"><span class="animated-emphasization">Pop-Up</span></h4>
+                                          <CruzPopup/>
                                     </div>
                                 </div>
                                 <div class="text-foot-wrap flex flex-col">

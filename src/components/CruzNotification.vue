@@ -1,5 +1,5 @@
 <template>
-  <div class="rdc-background-popup rounded-xl bg-background-300 h-full flex justify-center p-4 items-center">
+  <div class="rdc-background-Notif rounded-xl bg-background-300 h-full flex justify-center p-4 items-center">
     <div class="bg-background-100 p-8 rounded-lg shadow-md w-96">
       <p class="text-sm font-medium mb-4 text-center text-text-700">
         The notification component supports different types of notifications such as success, error, warning, and info messages, making it versatile and essential for user communication. Here are the various designs or formats a notification can take:
@@ -10,18 +10,16 @@
         <h2 class="text-2xl font-bold mb-4 text-text-700">Default Notifications</h2>
         <div class="flex gap-2">
           <button class="btn-light w-1/2 py-2 px-4 bg-primary-600 text-text-50 rounded-md hover:bg-primary-700" @click="RDCshowNotification('Notification Light', 'This is a notification in light mode.', 'light')">Notification Light</button>
-
           <button class="btn-dark w-1/2 py-2 px-4 bg-primary-800 text-text-50 rounded-md hover:bg-primary-900" @click="RDCshowNotification('Notification Dark', 'This is a notification in dark mode.', 'dark')">Notification Dark</button>
         </div>
       </div>
 
       <!-- *** NOTIFICATION POSITIONS -->
-      <div class="mb-6 text-center">
+      <div class="mb-6 text-center">  
         <h2 class="text-2xl font-bold mb-4 text-text-700">Notification Positions</h2>
         <div class="flex flex-col gap-2 justify-center align-items">
           <div class="flex justify-center align-items gap-2">
             <button class="btn-light w-1/2 py-2 px-4 bg-primary-600 text-text-50 rounded-md hover:bg-primary-700" @click="RDCshowPositionNotification('Notification', 'This is a top right notification.', 'info', 'tr')">Top Right</button>
-
             <button class="btn-light w-1/2 py-2 px-4 bg-primary-600 text-text-50 rounded-md hover:bg-primary-700" @click="RDCshowPositionNotification('Notification', 'This is a top left notification.', 'info', 'tl')">Top Left</button>
           </div>
 
@@ -30,7 +28,6 @@
             <button class="btn-light w-1/3 py-2 px-4 bg-primary-600 text-text-50 rounded-md hover:bg-primary-700" @click="RDCshowPositionNotification('Notification', 'This is a bottom left notification.', 'info', 'll')">Bottom Left</button>
             <button class="btn-light w-1/3 py-2 px-4 bg-primary-600 text-text-50 rounded-md hover:bg-primary-700" @click="RDCshowPositionNotification('Notification', 'This is a center notification.', 'info', 'tc')">Center</button>
           </div>
-
         </div>
       </div>
        
