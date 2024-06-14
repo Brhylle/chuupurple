@@ -1620,6 +1620,7 @@ section.dlc-platform-content-3 {
   .dlc-sub-logo {
       color: var(--text-600);
       margin: 92px 0 0 34px;
+      position: absolute;
   }
 
   .dlc-links {
