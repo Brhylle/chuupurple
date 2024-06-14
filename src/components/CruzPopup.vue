@@ -1,49 +1,49 @@
 <template>
   <div id="app">
-  <div class="rdc-background-Popup rounded-xl bg-background-300 h-full flex justify-center p-4 items-center">
-    <div class="bg-background-100 p-8 rounded-lg shadow-md w-96">
-      <!-- Button Container -->
-      <div class="mb-6 text-center">
-        <div class="justify-center align-items">
-          <div class="flex justify-center align-items gap-2">
-            <button @click="openBasicPopup" class="btn-light w-1/2 py-2 px-7 bg-primary-600 text-text-50 rounded-md hover:bg-primary-700">Basic Popup</button>
-            <button @click="openBackgroundPopup" class="btn-light w-1/2 py-2 px-3 bg-primary-600 text-text-50 rounded-md hover:bg-primary-700">Background Popup</button>
-            <button @click="openFullscreenPopup" class="btn-light w-1/2 py-2 px-4 bg-primary-600 text-text-50 rounded-md hover:bg-primary-700">Fullscreen Popup</button>
+    <div class="rdc-background-Popup rounded-xl bg-background-300 h-full flex justify-center p-4 items-center">
+      <div class="bg-background-100 p-8 rounded-lg shadow-md w-96">
+        <!-- Button Container -->
+        <div class="mb-6 text-center">
+          <div class="justify-center align-items">
+            <div class="flex justify-center align-items gap-2">
+              <button @click="openBasicPopup" class="btn-light w-1/2 py-2 px-7 bg-primary-600 text-text-50 rounded-md hover:bg-primary-700">Basic Popup</button>
+              <button @click="openBackgroundPopup" class="btn-light w-1/2 py-2 px-3 bg-primary-600 text-text-50 rounded-md hover:bg-primary-700">Background Popup</button>
+              <button @click="openFullscreenPopup" class="btn-light w-1/2 py-2 px-4 bg-primary-600 text-text-50 rounded-md hover:bg-primary-700">Fullscreen Popup</button>
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- Basic Popup -->
-      <div v-if="basicPopupVisible" class="basic-popup">
-        <button class="close-button" @click="closeBasicPopup">×</button>
-        <div class="popup-content">
-          <h2>Basic Popup</h2>
-          <p>This is a basic popup.</p>
-        </div>
-      </div>
-
-      <!-- Background Popup -->
-      <div v-if="backgroundPopupVisible" class="background-popup" :style="{ width: basicPopupWidth + 'px', height: basicPopupHeight + 'px' }">
-        <button class="close-button" @click="closeBackgroundPopup">×</button>
-        <div class="popup-content">
-          <div class="popup-content-inner">
-            <h2>Background Popup</h2>
-            <p>This popup has a background.</p>
+        <!-- Basic Popup -->
+        <div v-if="basicPopupVisible" class="basic-popup">
+          <button class="close-button" @click="closeBasicPopup">×</button>
+          <div class="popup-content">
+            <h2>Basic Popup</h2>
+            <p>This is a basic popup.</p>
           </div>
         </div>
-      </div>
 
-      <!-- Fullscreen Popup -->
-      <div v-if="fullscreenPopupVisible" class="fullscreen-popup">
-        <button class="close-button" @click="closeFullscreenPopup">×</button>
-        <div class="popup-content">
-          <h2>Fullscreen Popup</h2>
-          <p>This is a fullscreen popup.</p>
+        <!-- Background Popup -->
+        <div v-if="backgroundPopupVisible" class="background-popup" :style="{ width: basicPopupWidth + 'px', height: basicPopupHeight + 'px' }">
+          <button class="close-button" @click="closeBackgroundPopup">×</button>
+          <div class="popup-content">
+            <div class="popup-content-inner">
+              <h2>Background Popup</h2>
+              <p>This popup has a background.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Fullscreen Popup -->
+        <div v-if="fullscreenPopupVisible" class="fullscreen-popup">
+          <button class="close-button" @click="closeFullscreenPopup">×</button>
+          <div class="popup-content">
+            <h2>Fullscreen Popup</h2>
+            <p>This is a fullscreen popup.</p>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
 </template>
 
 <script>
@@ -91,7 +91,7 @@ export default {
 
 .button-container {
   display: flex;
-  justify-content: center; /* Centering horizontally */
+  justify-content: center;
   margin-bottom: 20px;
 }
 
@@ -100,7 +100,7 @@ export default {
   padding: 10px 20px;
   font-size: 16px;
   cursor: pointer;
-  background-color: #007bff; /* Button background color */
+  background-color: #007bff;
   color: white;
   border: none;
   border-radius: 5px;
@@ -108,7 +108,7 @@ export default {
 }
 
 .popup-button:hover {
-  background-color: #0056b3; /* Darker color on hover */
+  background-color: #0056b3;
 }
 
 .close-button {
@@ -124,7 +124,7 @@ export default {
 }
 
 .close-button:hover {
-  color: #333; /* Darker color on hover */
+  color: #333;
 }
 
 .popup-content {
@@ -140,25 +140,36 @@ export default {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: #f9f9f9;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
   z-index: 5;
 }
 
+.basic-popup {
+  background: #c999ff;
+  font-weight: bolder;
+}
+
 .background-popup {
+  background: #9233ff;
   display: flex;
   justify-content: center;
   align-items: center;
+  color: white;
+  font-weight: bolder;
 }
 
 .fullscreen-popup {
-  width: 90%;
-  max-width: 600px;
-  height: 90%;
-  max-height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 95%;
+  height: 95%;
+  background: #c999ff;
   overflow-y: auto;
+  font-size: 25px;
+  font-weight: bolder;
 }
 
 @media (min-width: 768px) {
