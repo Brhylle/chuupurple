@@ -63,8 +63,8 @@
                             <CardsComponent />
                         </div>
                         <div class="component-countdown-wrapper">
-                            <h3 class="countdown-numerator" id="animated-text-5">Twenty-Seven (27)</h3>
-                            <span class="dlc-overline" id="animated-text"><span class="no-line-spacing">----------</span> components <span class="no-line-spacing">----------</span></span>
+                            <h3 class="countdown-numerator text-text-300" id="animated-text-5">Twenty-Seven (27)</h3>
+                            <span class="dlc-overline text-primary-500" id="animated-text"><span class="no-line-spacing text-primary-500">----------</span> components <span class="no-line-spacing text-primary-500">----------</span></span>
                             <h2 class="countdown-denominator" id="animated-text-5"><span class="animated-emphasization">Five (5)</span></h2>
                         </div>
                     </div>
@@ -284,7 +284,7 @@
                     </div>
                 </div>
             </div>
-            <div class="flex flex-col justify-center items-center text-[25rem] font-humane-bold" id="animated-text-6">
+            <div class="flex flex-col justify-center items-center text-[25rem] font-humane-bold text-primary-500" id="animated-text-6">
                 <h1>The <span class="animated-emphasization-2" id="animated-text-9">End.</span></h1>
                 <h4 class="subheading font-pp-bold text-primary-200 text-left text-[10rem] absolute top-[230rem]" id="animated-text-4">27/27</h4>
             </div>
@@ -1214,7 +1214,7 @@ requestAnimationFrame(raf);
 
   section.dlc-banner-3 {
     position: absolute;
-    top: 1000vh;
+    top: 1005vh;
     height: 420px;
     width: 100%;
     background: var(--background-200);
@@ -1233,8 +1233,8 @@ requestAnimationFrame(raf);
   }
   section.dlc-banner-2 {
     position: absolute;
-    top: 730vh;
-    height: 420px;
+    top: 760vh;
+    height: 360px;
     width: 100%;
     background: var(--background-200);
     z-index: 1;
@@ -1253,7 +1253,7 @@ requestAnimationFrame(raf);
 
 section.dlc-platform-content-3 {
     position: absolute;
-    top: 750vh;
+    top: 769vh;
     height: 300vh;
     width: 100%;
     left: 0;
@@ -1313,15 +1313,6 @@ section.dlc-platform-content-3 {
 @keyframes marquee-reverse {
     0% { transform: translateX(-50%); }
     100% { transform: translateX(0); }
-}
-
-section.dlc-platform-content-3 {
-    position: absolute;
-    top: 750vh;
-    height: 300vh;
-    width: 100%;
-    left: 0;
-    background: var(--background-900);
 }
 
   /* marquee div container */
@@ -1700,8 +1691,8 @@ section.dlc-platform-content-3 {
 
   section.dlc-banner-1 {
     position: absolute;
-    top: 350vh;
-    height: 420px;
+    top: 362.2vh;
+    height: 360px;
     width: 100%;
     background: var(--background-200);
     background: var(--background-200);
