@@ -114,7 +114,7 @@
                                 </div>
                                 <div class="text-foot-wrap flex flex-col">
                                     <h4 class="font-pp-bold text-[3.5rem] gap-0 leading-none m-2 p-0 text-text-400" id="animated-text-2"><span class="animated-emphasization-2">Robert Leoni</span> <span class="animated-emphasization-1">&</span></h4>
-                                    <h2 class="font-humane-bold leading-none gap-0 uppercase m-2 p-0 text-[14rem] text-center" id="animated-text-2">components</h2>
+                                    <h2 class="font-humane-bold leading-none gap-0 uppercase m-2 p-0 text-[14rem] text-center text-primary-500" id="animated-text-2">components</h2>
                                     <h4 class="font-pp-bold text-[3.5rem] gap-0 leading-none m-2 p-0 text-text-400 text-right" id="animated-text-2"><span class="animated-emphasization-2">&</span> <span class="animated-emphasization-1">Raven Drake</span></h4>
                                 </div>
                             </div>
