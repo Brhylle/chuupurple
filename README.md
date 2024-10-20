@@ -100,7 +100,3 @@ Here's what **chuupurple** looks like in action:
 
  ## 🧱 Contributor's Wall
  _These are the respected contributors, contributed throughout the start 'till the end🗣️📢._
-
-- <img src="https://avatars.githubusercontent.com/u/12345678?v=4" width="50" height="50" style="border-radius: 50rem;" /> [Contributor Name](https://github.com/contributor-username)
-- <img src="https://avatars.githubusercontent.com/u/87654321?v=4" width="50" height="50" style="border-radius: 50rem;" /> [Another Contributor](https://github.com/another-contributor-username)
-
