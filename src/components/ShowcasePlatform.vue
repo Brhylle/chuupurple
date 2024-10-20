@@ -1379,10 +1379,10 @@ section.dlc-platform-content-3 {
   }
 
   .writing-mode-vertical {
-    text-orientation: upright;
+    /* text-orientation: upright; */
     writing-mode: vertical-rl;
-    letter-spacing: -1rem;
-    letter-spacing: -1rem;
+    letter-spacing: 0.2rem;
+    /* letter-spacing: -1rem; */
   }
 
   .scroll-down-container {
