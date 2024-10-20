@@ -69,7 +69,7 @@ export default {
         switch ($compareValue) {
             
           case 'Leading Programmer 1':
-            this.additionalInfo = 'gabriel "gabe" ventura'.toUpperCase();
+            this.additionalInfo = 'gabriel ventura'.toUpperCase();
             break;
         
           default:
