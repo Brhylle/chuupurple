@@ -88,7 +88,7 @@ export default {
 .toggle-button {
   position: relative;
   top: 8.5rem;
-  left: 4.5rem;
+  left: 0rem;
   z-index: 5; /* Ensure the button stays on top */
   background-color: var(--primary-800);
   border: none;
