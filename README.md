@@ -100,3 +100,32 @@ Here's what **chuupurple** looks like in action:
 
  ## 🧱 Contributor's Wall
  _These are the respected contributors, contributed throughout the start 'till the end🗣️📢._
+
+<table>
+  <thead>
+    <tr>
+      <th>Column 1 Header</th>
+      <th>Column 2 Header</th>
+      <th>Column 3 Header</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><img src='https://avatars.githubusercontent.com/u/115861757?s=400&u=d081fa3ab8e0d9a299707655753184a512f481a7&v=4' width=50 height=50 border-radius: '50px'></td>
+      <td>Row 1, Column 2</td>
+      <td>Row 1, Column 3</td>
+    </tr>
+    <tr>
+      <td>Row 2, Column 1</td>
+      <td>Row 2, Column 2</td>
+      <td>Row 2, Column 3</td>
+    </tr>
+    <tr>
+      <td>Row 3, Column 1</td>
+      <td>Row 3, Column 2</td>
+      <td>Row 3, Column 3</td>
+    </tr>
+  </tbody>
+</table>
+
+
