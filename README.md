@@ -79,11 +79,16 @@ You may checkout deployed version here: [https://chuupurple.vercel.app/]
 
 ### 📸 Snapshots
 Here's what **chuupurple** looks like in action:
-- Light/Dark Mode & Adaptive Color Palette
-[chuupurple_feature_1](https://github.com/user-attachments/assets/b9b03c2f-af2a-441d-8b0d-ad6d954c3ea9)
+- <b>Light/Dark Mode & Adaptive Color Palette<br><br></b>
+![chuupurple_feature_1](https://github.com/user-attachments/assets/ecbd9af7-d6d4-47b8-a65b-6d5c0c7429b2)
+![chuupurple_feature_1-1](https://github.com/user-attachments/assets/142b3eda-63a8-401a-8738-6c998af837f8)
 
-- Scroll-Based SPA & Theme-Aware Interactive Elements
-[chuupurple_feature_2](https://github.com/user-attachments/assets/9df1db5b-bdc9-4fc7-859a-1fff89c4a2a4)
+<br>
+
+- <b>Scroll-Based SPA & Theme-Aware Interactive Elements<br></b>
+![chuupurple_feature_2](https://github.com/user-attachments/assets/77f578b1-f1d7-434f-95e1-669f8f4db37c)
+
+
 
 
 ### 🏗️ Project Structure
