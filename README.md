@@ -1,65 +1,26 @@
-# chuupurple
+# 😮 chuupurple
 
-a showcase of components as a project.
+### 🌟 Description
+**chuupurple** is a _showcase of collective components_ as a project in a _Single-Paged Application (SPA)_. It serves as the **_showcase platform_** where all of website components made by **_different minds_** comes together to form a **single piece of artwork**, this ensures that even if they're made by different people, each components assigned to them will blend cohesively, if not perfectly... then seamlessly. **Built** using _Vue.js_ on Webpack, Tailwind CSS for comfort styling, and has numerous features such as:
+- Light/Dark Mode
+- Scroll-Based SPA
+- Adaptive Color Palette
+- Interactive State-Aware Color Scheme
+- Theme-Aware Interactive Elements
+- Client-Side Rendered (CSR)
 
-## Color Usage Guidelines for Website Design
+### 🔗 Live Demo
+You may checkout deployed version here: https://chuupurple.vercel.app/
 
-## Primary Color
+### 🛠️ Tech Stack
+**_Frontend:_**
+- Vue.js (JavaScript framework)
+- HTML/CSS (for structuring and styling)
+- TailwindCSS (utility-first CSS framework)
+- DaisyUI (UI component library based on TailwindCSS)
+- JavaScript (with Vue.js)
 
-- **Usage:** The primary color is the most dominant color in your palette and is used for the most important elements that you want to stand out.
   
-- **Examples:**
-  
-  - Main navigation bar
-  - Call-to-action buttons
-  - Links
-- **Consistency:** Ensure it is used consistently across your site to create a cohesive look and feel.
-
-## Secondary Color
-
-- **Usage:** The secondary color complements the primary color and is used for secondary elements that still need attention but are not as crucial.
-- **Examples:**
-  - Subheadings
-  - Secondary buttons
-  - Hover states of primary elements
-- **Balance:** It should support the primary color without overwhelming it.
-
-## Accent Color
-
-- **Usage:** The accent color is used sparingly to highlight critical information and add contrast.
-- **Examples:**
-  - Notifications
-  - Error messages
-  - Highlights
-  - Interactive elements (e.g., sliders, progress bars)
-- **Attention:** It should draw attention to specific parts of the content without being overused.
-
-## Background Color
-
-- **Usage:** The background color sets the foundation for your design and should be chosen to ensure readability and visual comfort.
-- **Examples:**
-  - Neutral or light background color for the main content area to enhance readability.
-  - Darker shades for footers or sidebars.
-- **Contrast:** Ensure there is enough contrast between the background color and text to maintain readability.
-
-## Practical Tips
-
-1. **Readability and Accessibility:**
-   - Ensure sufficient contrast between text and background colors.
-   - Use tools like the Web Content Accessibility Guidelines (WCAG) to check color contrast ratios.
-
-2. **Hierarchy and Emphasis:**
-   - Use colors to create a visual hierarchy, guiding users through your content.
-   - Reserve the primary color for the most critical elements to naturally draw the user's eye.
-
-3. **Consistency:**
-   - Use a consistent color scheme across all pages of your website to create a unified look.
-   - Develop a style guide to maintain consistency in the use of colors.
-
-4. **Emotion and Branding:**
-   - Choose colors that align with your brand’s identity and the emotions you want to evoke.
-   - The primary and secondary colors should reflect your brand’s personality, while the accent color can be used to add a touch of vibrancy or urgency.
-
-5. **Testing and Feedback:**
-   - Test your color scheme with real users to get feedback on its effectiveness.
-   - Make adjustments based on usability and aesthetic preferences.
+**_Build Tools:_**
+- Webpack (module bundler)
+- Node.js (used to run Webpack and development scripts)
