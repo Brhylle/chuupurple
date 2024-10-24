@@ -9,8 +9,12 @@
 - Theme-Aware Interactive Elements
 - Client-Side Rendered (CSR)
 
+---
+
 ### 🔗 Live Demo
 You may checkout deployed version here: [https://chuupurple.vercel.app/]
+
+---
 
 ### 🛠️ Tech Stack
 <!-- Frontend -->
@@ -70,12 +74,16 @@ You may checkout deployed version here: [https://chuupurple.vercel.app/]
   </tr>
 </table>
 
+---
+
 ### 🚀 Features
 - Light/Dark Mode
 - Scroll-Based SPA
 - Adaptive Color Palette
 - Theme-Aware Interactive Elements
 - Client-Side Rendered (CSR)
+
+---
 
 ### 📸 Snapshots
 Here's what **chuupurple** looks like in action:
@@ -89,9 +97,11 @@ Here's what **chuupurple** looks like in action:
 ![chuupurple_feature_2](https://github.com/user-attachments/assets/77f578b1-f1d7-434f-95e1-669f8f4db37c)
 
 
+---
 
 
 ### 🏗️ Project Structure
+```
 📦chuupurple<br>
  ┣ 📂plugins<br>
  ┃  ┗ 📜animations.js<br>
@@ -149,6 +159,9 @@ Here's what **chuupurple** looks like in action:
  ┣ 📜package.json<br>
  ┣ 📜postcss.config.js<br>
  ┗ ℹ️README.md       # Project documentation
+```
+
+---
  
  ## 🧱 Contributor's Wall
  _These are the respected contributors, contributed throughout the start 'till the end🗣️📢._
