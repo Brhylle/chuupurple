@@ -1,5 +1,6 @@
 <!-- RAVEN DRAKE CRUZ -->
 <!-- CruzNotification -->
+<!--SAMPU-->
 <template>
   <div class="rdc-background-Notif rounded-xl bg-background-300 h-full flex justify-center p-4 items-center">
     <div class="bg-background-100 p-8 rounded-lg shadow-md w-96">
