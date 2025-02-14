@@ -1,3 +1,4 @@
+src/components/CruzNotification.vue
 <template>
   <div id="app">
     <div class="rdc-background-Popup rounded-xl bg-background-300 h-full flex justify-center p-4 items-center">
